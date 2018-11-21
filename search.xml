@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[macOS如何让视频按照时长排序]]></title>
+    <url>%2F2018%2F10%2F11%2Fmacos-video-sort-by-duration%2F</url>
+    <content type="text"><![CDATA[今天在处理视频的时候需要按照视频的时长进行排序，因为视频比较多而且格式也有三四种，不能简单的按照视频文件大小排列。 开始以为只能使用命令或其他的软件辅助，搜索后发现对Finder简单的设置就能实现。具体操作如下： 打开Finder（访达）- Movies（影片）目录，切换视图方式为列表 在名称上面右键，弹出的菜单中就有持续时间，勾选即可看到目录下面的视频文件的时长 注： wmv 这种神奇的格式不支持 完成，如果到这里就结束，那么你肯定觉得我是个大骗子，这谁不会。如果我的视频文件在u盘或者移动硬盘，还得拷贝到电脑里面来看？就Mac那点地方能放多少东西？而且这个排序成本也太高了吧。 下面才是重点： 如果想在移动存储设备里面也查看视频时长，请在相应的设备中建立名称为 Movies 的目录并把视频文件移动进去即可。 也就是说只要这个目录名称是 Movies 那么这个目录就可以通过视频时长排序-_-!。]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>sort</tag>
+        <tag>duration</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Emacs配置-Org导出HTML代码高亮显示]]></title>
     <url>%2F2018%2F10%2F04%2Forg-export-html-highlight%2F</url>
     <content type="text"><![CDATA[前端时间一直用Emacs编辑Org模式的文档，然后导出html文件用浏览器导出为pdf。但是发现导出的html文件没有代码高亮，搜索了一下，发现方法比较简单，安装 htmlize.el 包然后在配置文件启用即可。 具体操作如下： 第一种方案： 去htmlize.el的 github地址 下载 htmlize.el文件放在你的 ~/.emacs.d 中。也可以直接执行如下命令直接下载。wget https://raw.githubusercontent.com/hniksic/emacs-htmlize/master/htmlize.el 然后在配置文件中加入 (require &#39;htmlize) 启用插件。 第二种方案：（直接安装，但我没有试过） 打开Emacs然后输入 M-x package-refresh-contents 刷新包信息 然后输入 M-x package-list 列出可安装的所有包，然后用 C-s 查找一下 htmlize.el 点击安装即可。 第二种方案需要配置包管理，我使用的子龙山人的配置，具体教程在 Master Emacs in 21 Days 也可以使用我的配置文件，位置在 myconfigfiles]]></content>
@@ -269,8 +281,20 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>链路聚合</tag>
         <tag>三层交换机</tag>
+        <tag>链路聚合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[思科交换机配置2——单交换机VLAN划分]]></title>
+    <url>%2F2017%2F03%2F05%2Fswitch-config-2%2F</url>
+    <content type="text"><![CDATA[单交换机VLAN配置配置好的思科模拟器文件地址:cisco-pkt 配置参数 名称 IP地址 所属VLAN 连接端口 网关 PC1 192.168.1.11/24 VLAN10 f0/1 192.168.1.254/24 PC2 192.168.1.12/24 VLAN10 f0/2 192.168.1.254/24 PC3 192.168.2.11/24 VLAN20 f0/11 192.168.2.254/24 PC4 192.168.2.12/24 VLAN20 f0/12 192.168.2.254/24 创建VLAN为了不占用太大的篇幅，一些命令的常规提示将不会写出来 全局模式下配置12345Switch#configure terminal Switch(config)#vlan 10 // 创建vlan 10Switch(config-vlan)#name v10 // 为 vlan10 命名Switch(config-vlan)#exitSwitch(config)#exit VLAN database 模式1234Switch#vlan database Switch(vlan)#vlan 20 name v20VLAN 20 added: Name: v20 把端口加入相应的VLAN端口的配置可以配置单个端口，也可以多个端口一块配置 把1~10号端口加入vlan1012345678910Switch(config)#interface f0/1 // 设置端口1Switch(config-if)#switchport mode access // 设置端口模式Switch(config-if)#switchport access vlan 10 // 把此端口加入vlan10中Switch(config-if)#exit // 退回全局配置Switch(config)#interface range fastEthernet ? // 查看帮助 &lt;0-9&gt; FastEthernet interface numberSwitch(config)#interface range fastEthernet 0/2-10 // 设置2~10端口Switch(config-if-range)#switchport mode access // 设置模式Switch(config-if-range)#switchport access vlan 10 Switch(config-if-range)#exit 把11-20号端口加入vlan20123Switch(config)#interface range f0/11-20Switch(config-if-range)#switchport mode accessSwitch(config-if-range)#switchport access vlan 20 把配置写入123456Switch#write // 一种方式Switch#copy running-config startup-config // 另一种方法Destination filename [startup-config]? Building configuration...[OK]Switch# 查看vlan的配置123Switch#show vlan // 查看vlan配置Switch#show running-config // 查看交换机配置 测试pc1与pc2可以互相ping通，与pc3和pc4无法ping通 更改pc3或pc4与pc1为一个网段的IP，依然无法与pc1通信。]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>switch</tag>
+        <tag>VLAN</tag>
       </tags>
   </entry>
   <entry>
@@ -283,18 +307,6 @@
       <tags>
         <tag>VLAN</tag>
         <tag>switchs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[思科交换机配置2——单交换机VLAN划分]]></title>
-    <url>%2F2017%2F03%2F05%2Fswitch-config-2%2F</url>
-    <content type="text"><![CDATA[单交换机VLAN配置配置好的思科模拟器文件地址:cisco-pkt 配置参数 名称 IP地址 所属VLAN 连接端口 网关 PC1 192.168.1.11/24 VLAN10 f0/1 192.168.1.254/24 PC2 192.168.1.12/24 VLAN10 f0/2 192.168.1.254/24 PC3 192.168.2.11/24 VLAN20 f0/11 192.168.2.254/24 PC4 192.168.2.12/24 VLAN20 f0/12 192.168.2.254/24 创建VLAN为了不占用太大的篇幅，一些命令的常规提示将不会写出来 全局模式下配置12345Switch#configure terminal Switch(config)#vlan 10 // 创建vlan 10Switch(config-vlan)#name v10 // 为 vlan10 命名Switch(config-vlan)#exitSwitch(config)#exit VLAN database 模式1234Switch#vlan database Switch(vlan)#vlan 20 name v20VLAN 20 added: Name: v20 把端口加入相应的VLAN端口的配置可以配置单个端口，也可以多个端口一块配置 把1~10号端口加入vlan1012345678910Switch(config)#interface f0/1 // 设置端口1Switch(config-if)#switchport mode access // 设置端口模式Switch(config-if)#switchport access vlan 10 // 把此端口加入vlan10中Switch(config-if)#exit // 退回全局配置Switch(config)#interface range fastEthernet ? // 查看帮助 &lt;0-9&gt; FastEthernet interface numberSwitch(config)#interface range fastEthernet 0/2-10 // 设置2~10端口Switch(config-if-range)#switchport mode access // 设置模式Switch(config-if-range)#switchport access vlan 10 Switch(config-if-range)#exit 把11-20号端口加入vlan20123Switch(config)#interface range f0/11-20Switch(config-if-range)#switchport mode accessSwitch(config-if-range)#switchport access vlan 20 把配置写入123456Switch#write // 一种方式Switch#copy running-config startup-config // 另一种方法Destination filename [startup-config]? Building configuration...[OK]Switch# 查看vlan的配置123Switch#show vlan // 查看vlan配置Switch#show running-config // 查看交换机配置 测试pc1与pc2可以互相ping通，与pc3和pc4无法ping通 更改pc3或pc4与pc1为一个网段的IP，依然无法与pc1通信。]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>VLAN</tag>
-        <tag>switch</tag>
       </tags>
   </entry>
   <entry>
@@ -522,8 +534,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>github pages</tag>
         <tag>hexo</tag>
+        <tag>github pages</tag>
       </tags>
   </entry>
 </search>

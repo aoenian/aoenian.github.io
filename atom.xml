@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2018-10-06T04:19:37.262Z</updated>
+  <updated>2018-11-21T13:04:43.394Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS如何让视频按照时长排序</title>
+    <link href="https://aoenian.github.io/2018/10/11/macos-video-sort-by-duration/"/>
+    <id>https://aoenian.github.io/2018/10/11/macos-video-sort-by-duration/</id>
+    <published>2018-10-10T16:00:00.000Z</published>
+    <updated>2018-11-21T13:04:43.394Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天在处理视频的时候需要按照视频的时长进行排序，因为视频比较多而且格式也有三四种，不能简单的按照视频文件大小排列。&lt;/p&gt;
+&lt;p&gt;开始以为只能使用命令或其他的软件辅助，搜索后发现对Finder简单的设置就能实现。具体操作如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;打开Finder（访达）- Movies（影片）目录，切换视图方式为列表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在名称上面右键，弹出的菜单中就有持续时间，勾选即可看到目录下面的视频文件的时长&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
+    
+    
+      <category term="sort" scheme="https://aoenian.github.io/tags/sort/"/>
+    
+      <category term="duration" scheme="https://aoenian.github.io/tags/duration/"/>
+    
+  </entry>
   
   <entry>
     <title>Emacs配置-Org导出HTML代码高亮显示</title>
@@ -492,31 +521,6 @@
       <category term="router" scheme="https://aoenian.github.io/tags/router/"/>
     
       <category term="one-armed" scheme="https://aoenian.github.io/tags/one-armed/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>思科交换机配置6——生成树协议(STP)</title>
-    <link href="https://aoenian.github.io/2017/03/22/switch-config-6/"/>
-    <id>https://aoenian.github.io/2017/03/22/switch-config-6/</id>
-    <published>2017-03-21T16:00:00.000Z</published>
-    <updated>2018-06-24T01:23:34.190Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://github.com/aoenian/cisco-pkt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;配置好的pkt文件&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;网络的拓扑结构以及配置参考 《网络设置配置与管理》 吴伯桥主编清华大学出版社&lt;/strong&gt; &lt;/p&gt;
-&lt;p&gt;&lt;em&gt;书中部分配置命令在模拟器中并不存在，下文中已更改&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;拓扑图：&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/switch6.PNG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
-    
-    
-      <category term="switch" scheme="https://aoenian.github.io/tags/switch/"/>
-    
-      <category term="STP" scheme="https://aoenian.github.io/tags/STP/"/>
     
   </entry>
   
