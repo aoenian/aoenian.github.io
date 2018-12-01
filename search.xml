@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[macOS系统在u盘中文件搜索功能不起作用]]></title>
+    <url>%2F2018%2F11%2F21%2Fmacos-file-search-not-work%2F</url>
+    <content type="text"><![CDATA[由于u盘的文件比较多，想用finder搜索一下，但是发现不管怎么换关键字没有任何反应，后来测试了一下，明明看到文件就在目录下面，但搜索后就是没有结果，不过硬盘上的文件就可以搜到。 为了排除u盘本身的问题，我在windows下面试了一下是可以搜索得到。那么就要寻找解决方法了，在网络搜索了一下，找到了解决的方法。具体操作如下： 我的macOS版本High Sierra 10.13.6 系统偏好设置——聚焦(Spotlight) 切换到隐私选项卡，然后有一个防止聚焦搜索这些位置把你的u盘添加到此列表中 还是在此列表再把你的u盘删除 不是吃饱了撑得 -_-! 然后退出系统偏好设置，重新尝试搜索，问题应该就能解决了 我猜测以上操作的主要目的应该是让系统重新生成索引，这可能也是为什么无法搜索u盘的原因，因为有时候在windows下面的时候我就会把mac下生成的隐藏文件给删除掉，可能会误删除索引文件。 参考： 文件搜索不起作用]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>file search</tag>
+        <tag>not work</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[macOS如何让视频按照时长排序]]></title>
     <url>%2F2018%2F10%2F11%2Fmacos-video-sort-by-duration%2F</url>
     <content type="text"><![CDATA[今天在处理视频的时候需要按照视频的时长进行排序，因为视频比较多而且格式也有三四种，不能简单的按照视频文件大小排列。 开始以为只能使用命令或其他的软件辅助，搜索后发现对Finder简单的设置就能实现。具体操作如下： 打开Finder（访达）- Movies（影片）目录，切换视图方式为列表 在名称上面右键，弹出的菜单中就有持续时间，勾选即可看到目录下面的视频文件的时长 注： wmv 这种神奇的格式不支持 完成，如果到这里就结束，那么你肯定觉得我是个大骗子，这谁不会。如果我的视频文件在u盘或者移动硬盘，还得拷贝到电脑里面来看？就Mac那点地方能放多少东西？而且这个排序成本也太高了吧。 下面才是重点： 如果想在移动存储设备里面也查看视频时长，请在相应的设备中建立名称为 Movies 的目录并把视频文件移动进去即可。 也就是说只要这个目录名称是 Movies 那么这个目录就可以通过视频时长排序-_-!。]]></content>
@@ -197,8 +209,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>samba</tag>
         <tag>centos</tag>
+        <tag>samba</tag>
       </tags>
   </entry>
   <entry>
@@ -534,8 +546,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>github pages</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>

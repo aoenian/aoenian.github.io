@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2018-11-21T13:04:43.394Z</updated>
+  <updated>2018-12-01T07:06:36.557Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS系统在u盘中文件搜索功能不起作用</title>
+    <link href="https://aoenian.github.io/2018/11/21/macos-file-search-not-work/"/>
+    <id>https://aoenian.github.io/2018/11/21/macos-file-search-not-work/</id>
+    <published>2018-11-20T16:00:00.000Z</published>
+    <updated>2018-12-01T07:06:36.557Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于u盘的文件比较多，想用finder搜索一下，但是发现不管怎么换关键字没有任何反应，后来测试了一下，明明看到文件就在目录下面，但搜索后就是没有结果，不过硬盘上的文件就可以搜到。&lt;/p&gt;
+&lt;p&gt;为了排除u盘本身的问题，我在windows下面试了一下是可以搜索得到。那么就要寻找解决方法了，在网络搜索了一下，找到了解决的方法。具体操作如下：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
+    
+    
+      <category term="file search" scheme="https://aoenian.github.io/tags/file-search/"/>
+    
+      <category term="not work" scheme="https://aoenian.github.io/tags/not-work/"/>
+    
+  </entry>
   
   <entry>
     <title>macOS如何让视频按照时长排序</title>
@@ -443,9 +466,9 @@
       <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
     
     
-      <category term="samba" scheme="https://aoenian.github.io/tags/samba/"/>
-    
       <category term="centos" scheme="https://aoenian.github.io/tags/centos/"/>
+    
+      <category term="samba" scheme="https://aoenian.github.io/tags/samba/"/>
     
   </entry>
   
@@ -498,29 +521,6 @@
       <category term="Emacs" scheme="https://aoenian.github.io/tags/Emacs/"/>
     
       <category term="hard link" scheme="https://aoenian.github.io/tags/hard-link/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>思科路由器配置2——单臂路由</title>
-    <link href="https://aoenian.github.io/2017/04/17/router-config-2/"/>
-    <id>https://aoenian.github.io/2017/04/17/router-config-2/</id>
-    <published>2017-04-16T16:00:00.000Z</published>
-    <updated>2018-06-23T10:00:58.059Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;http://baike.baidu.com/item/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;单臂路由&lt;/a&gt;:是指在路由器的一个接口上通过配置子接口（或“逻辑接口”，并不存在真正物理接口）的方式，实现原来相互隔离的不同VLAN（虚拟局域网）之间的互联互通。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/aoenian/cisco-pkt&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;配置好的pkt文件&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
-    
-    
-      <category term="router" scheme="https://aoenian.github.io/tags/router/"/>
-    
-      <category term="one-armed" scheme="https://aoenian.github.io/tags/one-armed/"/>
     
   </entry>
   
