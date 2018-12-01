@@ -154,7 +154,7 @@
 <meta property="og:site_name" content="aoenian">
 <meta property="og:description" content="一直想在代码块上面显示这个代码块使用的程序语言的名字，但是没有找到好的方法，这两天在搜索的时候发现了一个高手的博客里面介绍了这个方法，就借鉴了过来。 因为自己的水平有限，后端基本啥也不会，所以原理就不多说了（其实看不懂），这里把步骤、代码以及一些小的修改记录如下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-14T13:50:29.474Z">
+<meta property="og:updated_time" content="2018-12-01T08:43:44.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Next主题样式配置2-代码块显示程序语言名字">
 <meta name="twitter:description" content="一直想在代码块上面显示这个代码块使用的程序语言的名字，但是没有找到好的方法，这两天在搜索的时候发现了一个高手的博客里面介绍了这个方法，就借鉴了过来。 因为自己的水平有限，后端基本啥也不会，所以原理就不多说了（其实看不懂），这里把步骤、代码以及一些小的修改记录如下。">
@@ -436,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-14 21:50:29" itemprop="dateModified" datetime="2018-08-14T21:50:29+08:00">2018-08-14</time>
+                <time title="修改时间：2018-12-01 16:43:44" itemprop="dateModified" datetime="2018-12-01T16:43:44+08:00">2018-12-01</time>
               
             
           </span>
@@ -507,7 +507,7 @@
 <p>一个小问题的解决，我这边出现了，如果大家也出现可以参考一下，在完成js文件配置以后我发现我的代码块上方有一部分代码被盖住了，下面呢出现了一部分白条，感觉整个代码块上移了一样。</p>
 <p>通过开发者工具查看以后，调整了代码块的 <code>margin</code> 搞定了。修改的内容也在 <code>highlight.styl</code> 文件中，代码如下：</p>
 <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="STYLUS"><figure class="iseeu highlight /stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$code</span>-block &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">34px</span> <span class="number">0px</span> <span class="number">0px</span> <span class="number">0px</span>;  <span class="comment">// 把margin-top调整为34px就可以了</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">font-size</span> <span class="variable">$code</span>-font-size;</span><br><span class="line">  <span class="attribute">color</span>: <span class="variable">$highlight</span>-foreground;</span><br><span class="line">  <span class="attribute">background</span>: <span class="variable">$highlight</span>-background;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="variable">$line</span>-height-code-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p><strong>今天在写其他博文的时候发现代码有个bug，无法正确显示 =JSON= 文件，现在还未找到解决方法。</strong></p>
+<p><strong>今天在写其他博文的时候发现代码有个bug，无法正确显示 <code>JSON</code> 文件，现在还未找到解决方法。</strong></p>
 <p><strong>参考博文</strong></p>
 <ul>
 <li><a href="https://w3ctrain.com/2017/12/11/hexo-code-block/" target="_blank" rel="noopener">自定义 Hexo博客代码块</a>(博客中简单的介绍了一下原理，大家可以看看)</li>
