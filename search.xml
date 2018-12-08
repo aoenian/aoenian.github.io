@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java的replaceAll方法]]></title>
+    <url>%2F2018%2F12%2F05%2Fjava-replaceall%2F</url>
+    <content type="text"><![CDATA[今天遇到了一个js的题目，题目主要的意思就是要把字符串替换成用连字符连接的单词，其中不好处理的是字符串中单词的分隔不同。主要是以下几种 “thisIsTheBook” 以大写字母分隔 “This_is_The_book” 以下划线分隔 “this,is,The,book” 以逗号分隔 “this Is the book” 以空格分隔 如果按照测试数据通过这个题目没有太大的难度，判断好间隔的符号然后替换为-，再转换为小写即可。不过在程序的编写过程中遇到了replaceAll()的一些使用问题，具体记录如下： thisIsTheBook 这种情况需要把大写字母替换为-再加上替换的大写字母。 这里面使用到了正则表达式中的小括号(pattern)，这个圆括号的作用是匹配pattern并获取这一匹配。当然在java中可以通过$1 $2 ... $9来获取这一匹配。 具体此题目使用示例： s.replaceAll(&quot;([A-Z])&quot;,&quot;-$1&quot;); 匹配特殊符号如* + .等 因为这些符号在正则中都有使用，如果直接使用则会报错在使用中需要告诉程序你需要替换的是字面的*号。这里就需要转义。split()方法同样也存在这种问题。 具体使用示例： String str = s.replaceAll(&quot;\\*&quot;, &quot;-&quot;); 参考： replaceAll in a regex with $1]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>replaceall</tag>
+        <tag>正则</tag>
+        <tag>$1</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[macOS系统在u盘中文件搜索功能不起作用]]></title>
     <url>%2F2018%2F11%2F21%2Fmacos-file-search-not-work%2F</url>
     <content type="text"><![CDATA[由于u盘的文件比较多，想用finder搜索一下，但是发现不管怎么换关键字没有任何反应，后来测试了一下，明明看到文件就在目录下面，但搜索后就是没有结果，不过硬盘上的文件就可以搜到。 为了排除u盘本身的问题，我在windows下面试了一下是可以搜索得到。那么就要寻找解决方法了，在网络搜索了一下，找到了解决的方法。具体操作如下： 我的macOS版本High Sierra 10.13.6 系统偏好设置——聚焦(Spotlight) 切换到隐私选项卡，然后有一个防止聚焦搜索这些位置把你的u盘添加到此列表中 还是在此列表再把你的u盘删除 不是吃饱了撑得 -_-! 然后退出系统偏好设置，重新尝试搜索，问题应该就能解决了 我猜测以上操作的主要目的应该是让系统重新生成索引，这可能也是为什么无法搜索u盘的原因，因为有时候在windows下面的时候我就会把mac下生成的隐藏文件给删除掉，可能会误删除索引文件。 参考： 文件搜索不起作用]]></content>
