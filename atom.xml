@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2018-12-08T09:21:52.247Z</updated>
+  <updated>2018-12-19T08:54:55.879Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS下git忽略.DS_Store文件</title>
+    <link href="https://aoenian.github.io/2018/12/19/git-ignore-config/"/>
+    <id>https://aoenian.github.io/2018/12/19/git-ignore-config/</id>
+    <published>2018-12-18T16:00:00.000Z</published>
+    <updated>2018-12-19T08:54:55.879Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;平时用git不是太多，一般就是保存一下配置文件和博文，所以有时候在提交的时候就把一些macOS的隐藏文件删除以后再跟踪提交。不过随着使用频率增加了一点点（主要是强迫自己每周写一些内容，不知能否坚持），然后觉得每次这样做就太浪费人力了。&lt;/p&gt;
+&lt;p&gt;然后就在项目中写了个&lt;code&gt;.gitignore&lt;/code&gt;文件，不过这个文件管理的范围太小，只能管本层目录，子目录下面的就无能为力，而且每个项目都要有一个（之前不知道还有全部忽略这种玩意-_-!)，然后在网络上找到添加全局忽略的方法，具体操作如下：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
+    
+    
+      <category term=".DS_Store" scheme="https://aoenian.github.io/tags/DS-Store/"/>
+    
+      <category term="gitignore" scheme="https://aoenian.github.io/tags/gitignore/"/>
+    
+  </entry>
   
   <entry>
     <title>Java的replaceAll方法</title>
@@ -496,38 +519,9 @@
       <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
     
     
-      <category term="centos" scheme="https://aoenian.github.io/tags/centos/"/>
-    
       <category term="samba" scheme="https://aoenian.github.io/tags/samba/"/>
     
-  </entry>
-  
-  <entry>
-    <title>网站备份</title>
-    <link href="https://aoenian.github.io/2017/04/29/website-collect/"/>
-    <id>https://aoenian.github.io/2017/04/29/website-collect/</id>
-    <published>2017-04-28T16:00:00.000Z</published>
-    <updated>2018-06-24T05:39:01.771Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这段时间整理了一下浏览器的书签发现里面收藏了很多书签，然后重新整理了一下，把一些感觉不错的记录下来，然后把浏览器里面的都删除掉。其实平时浏览的网站基本就那几个。&lt;/p&gt;
-&lt;p&gt;按照网站的内容分类吧，比较直观。 &lt;em&gt;站点后有 &lt;code&gt;@&lt;/code&gt; 符号表示需要特殊渠道访问&lt;/em&gt;&lt;/p&gt;
-&lt;h1 id=&quot;软件下载&quot;&gt;&lt;a href=&quot;#软件下载&quot; class=&quot;headerlink&quot; title=&quot;软件下载&quot;&gt;&lt;/a&gt;软件下载&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.itmop.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;IT猫扑网&lt;/a&gt; 无意间看到，有各平台的软件下载&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.xdowns.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;绿盟&lt;/a&gt; 之前的良心软件网站。（现在下载需要登录了，也很久没用过了）&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://emlvirus.gitbooks.io/windows-apps-that-amaze-us/content/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Windows绝赞应用&lt;/a&gt;    介绍Windows绝妙应用的项目，同时也介绍一些流氓应用&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.zdfans.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;zd423&lt;/a&gt; 良心软件下载站&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
-    
-    
-      <category term="website" scheme="https://aoenian.github.io/tags/website/"/>
-    
-      <category term="bookmark" scheme="https://aoenian.github.io/tags/bookmark/"/>
+      <category term="centos" scheme="https://aoenian.github.io/tags/centos/"/>
     
   </entry>
   

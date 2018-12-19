@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[macOS下git忽略.DS_Store文件]]></title>
+    <url>%2F2018%2F12%2F19%2Fgit-ignore-config%2F</url>
+    <content type="text"><![CDATA[平时用git不是太多，一般就是保存一下配置文件和博文，所以有时候在提交的时候就把一些macOS的隐藏文件删除以后再跟踪提交。不过随着使用频率增加了一点点（主要是强迫自己每周写一些内容，不知能否坚持），然后觉得每次这样做就太浪费人力了。 然后就在项目中写了个.gitignore文件，不过这个文件管理的范围太小，只能管本层目录，子目录下面的就无能为力，而且每个项目都要有一个（之前不知道还有全部忽略这种玩意-_-!)，然后在网络上找到添加全局忽略的方法，具体操作如下： 在你的home目录下面建立.gitignore_global文件，内容如下： 12345678# .gitignore_global.DS_Store.DS_Store?*.swp._*.Spotlight-V100.Trashes 如果大家需要忽略更多的文件，可以直接写入即可。 然后在你的home目录下的.gitconfig文件中引入上面的.igtignore_global文件。 注意： 如果目录下面找不到.gitconfig配置文件，可能你还没有配置git，可以执行如下命令 12git config --global user.name "xxx" # xxx 是你的用户名git config --global user.email "xxx@xx" # xxx@xx 是你的邮箱地址 在.gitconfig里面加入内容如下： 12345[user] name = aoenian email = aoenian@zoho.com.cn[core] excludesfile = /Users/aoenian/.gitignore_global 里面的home目录的名字要替换成你自己的 参考博客： https://www.jianshu.com/p/9386124cb5b5]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>.DS_Store</tag>
+        <tag>gitignore</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Java的replaceAll方法]]></title>
     <url>%2F2018%2F12%2F05%2Fjava-replaceall%2F</url>
     <content type="text"><![CDATA[今天遇到了一个js的题目，题目主要的意思就是要把字符串替换成用连字符连接的单词，其中不好处理的是字符串中单词的分隔不同。主要是以下几种 “thisIsTheBook” 以大写字母分隔 “This_is_The_book” 以下划线分隔 “this,is,The,book” 以逗号分隔 “this Is the book” 以空格分隔 如果按照测试数据通过这个题目没有太大的难度，判断好间隔的符号然后替换为-，再转换为小写即可。不过在程序的编写过程中遇到了replaceAll()的一些使用问题，具体记录如下： thisIsTheBook 这种情况需要把大写字母替换为-再加上替换的大写字母。 这里面使用到了正则表达式中的小括号(pattern)，这个圆括号的作用是匹配pattern并获取这一匹配。当然在java中可以通过$1 $2 ... $9来获取这一匹配。 具体此题目使用示例： s.replaceAll(&quot;([A-Z])&quot;,&quot;-$1&quot;); 匹配特殊符号如* + .等 因为这些符号在正则中都有使用，如果直接使用则会报错在使用中需要告诉程序你需要替换的是字面的*号。这里就需要转义。split()方法同样也存在这种问题。 具体使用示例： String str = s.replaceAll(&quot;\\*&quot;, &quot;-&quot;); 参考： replaceAll in a regex with $1]]></content>
@@ -222,8 +234,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>samba</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
