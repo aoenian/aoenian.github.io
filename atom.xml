@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2018-12-19T08:54:55.879Z</updated>
+  <updated>2018-12-23T06:55:40.488Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Chrome禁止“请停用以开发者模式运行的扩展程序”的提示</title>
+    <link href="https://aoenian.github.io/2018/12/22/chrome-disable-developer-mode-extensions/"/>
+    <id>https://aoenian.github.io/2018/12/22/chrome-disable-developer-mode-extensions/</id>
+    <published>2018-12-21T16:00:00.000Z</published>
+    <updated>2018-12-23T06:55:40.488Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Windows7系统下的Chrome里面使用开发者模式导入了一个插件，就是为了登录一下最大的那个搜索引擎（&lt;a href=&quot;https://github.com/haotian-wang/google-access-helper&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;）。然后每次登录就会出现“请停用以开发者模式运行的扩展程序”的提示，而且必须点击一下才能关掉。&lt;/p&gt;
+&lt;p&gt;去网络搜索了一下，操作还挺复杂，具体的操作步骤等会我写在下面，不过如果懒得自己操作，国外有高手写了批处理文件，我也会放在下面。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Web" scheme="https://aoenian.github.io/categories/Web/"/>
+    
+    
+      <category term="Windows" scheme="https://aoenian.github.io/tags/Windows/"/>
+    
+      <category term="chrome developer" scheme="https://aoenian.github.io/tags/chrome-developer/"/>
+    
+      <category term="disable" scheme="https://aoenian.github.io/tags/disable/"/>
+    
+  </entry>
   
   <entry>
     <title>macOS下git忽略.DS_Store文件</title>
@@ -497,31 +522,6 @@
     
     
       <category term="SUID" scheme="https://aoenian.github.io/tags/SUID/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7安装配置Samba</title>
-    <link href="https://aoenian.github.io/2017/10/29/centos-samba/"/>
-    <id>https://aoenian.github.io/2017/10/29/centos-samba/</id>
-    <published>2017-10-28T16:00:00.000Z</published>
-    <updated>2018-06-09T01:44:42.477Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;em&gt;性子急的可以跳过，直接看后面的配置&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h2&gt;&lt;p&gt;树莓派安装了CentOS7以后感觉还不错，正好大部分学习linux的资料都是CentOS为主，所以就准备长期使用，然后这两天用you-get下载了一些视频，然后想拷贝出来，这时候突然发现CentOS不能写入ntfs格式的U盘，哎，开源和微软之间总有那么一道肉隐肉现的鸿沟。&lt;/p&gt;
-&lt;p&gt;那么需求来了，让CentOS读取ntfs，搜索一番，发现很简单就是安装一个ntfs-3g的软件的事情，不过就这么个问题废老大劲了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2018-06-05更新：32位安装ntfs-3g可&lt;a href=&quot;https://www.tuxera.com/community/open-source-ntfs-3g/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt;下载源码直接编译安装，64位的可以直接安装&lt;a href=&quot;https://fedoraproject.org/wiki/EPEL&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;EPEL&lt;/a&gt;然后再安装相应的软件&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
-    
-    
-      <category term="centos" scheme="https://aoenian.github.io/tags/centos/"/>
-    
-      <category term="samba" scheme="https://aoenian.github.io/tags/samba/"/>
     
   </entry>
   

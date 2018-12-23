@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Chrome禁止“请停用以开发者模式运行的扩展程序”的提示]]></title>
+    <url>%2F2018%2F12%2F22%2Fchrome-disable-developer-mode-extensions%2F</url>
+    <content type="text"><![CDATA[在Windows7系统下的Chrome里面使用开发者模式导入了一个插件，就是为了登录一下最大的那个搜索引擎（传送门）。然后每次登录就会出现“请停用以开发者模式运行的扩展程序”的提示，而且必须点击一下才能关掉。 去网络搜索了一下，操作还挺复杂，具体的操作步骤等会我写在下面，不过如果懒得自己操作，国外有高手写了批处理文件，我也会放在下面。 第一种方法如果你经常使用自己导入的插件，建议使用Chrome Canary版本，这个是没有提示的，而且图标是金色的哦。下载地址可以看一下这里 第二种方法如果你想使用稳定版，但是又不想看到那个提示，请按照下面的操作处理。 如果你不想自己操作，请下载批处理文件DevWarningPatch.bat 请使用管理员模式运行。如果觉得不安全，或者文件失效请移步文末的参考文章，那里是代码的原地址。 手动操作步骤如下： 转自：stackoverflow 建议大家还是查看原文。下面是引用内容 you can patch it manually using HIEW: exit Chrome fully by pressing Ctrl+Shift+Q and terminating any chrome.exe processes in Windows Task Manager’s Processes tab (it’s a second tab, not the default tab). open chrome.dll in hiew press Enter to switch the view press F7, paste ExtensionDeveloperModeWarning in the first input field, press Enter press F3 to enter the edit mode type 00 press F9 to save press Left to position the cursor on 00 press F6 to find the reference look for cmp eax,3 or cmp eax,2 on the screen and the adjacent few pages up and down navigate the cursor using Up and Down to that line’s binary code (a column on the left) press F3 to enter the edit mode navigate the cursor using Left and Right to 03 or 02 in that line’s code type 09 press F9 to save Close hiew, otherwise Chrome won’t launch. 参考文章： How to get rid of “disable developer mode extensions” pop-up]]></content>
+      <categories>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>chrome developer</tag>
+        <tag>disable</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[macOS下git忽略.DS_Store文件]]></title>
     <url>%2F2018%2F12%2F19%2Fgit-ignore-config%2F</url>
     <content type="text"><![CDATA[平时用git不是太多，一般就是保存一下配置文件和博文，所以有时候在提交的时候就把一些macOS的隐藏文件删除以后再跟踪提交。不过随着使用频率增加了一点点（主要是强迫自己每周写一些内容，不知能否坚持），然后觉得每次这样做就太浪费人力了。 然后就在项目中写了个.gitignore文件，不过这个文件管理的范围太小，只能管本层目录，子目录下面的就无能为力，而且每个项目都要有一个（之前不知道还有全部忽略这种玩意-_-!)，然后在网络上找到添加全局忽略的方法，具体操作如下： 在你的home目录下面建立.gitignore_global文件，内容如下： 12345678# .gitignore_global.DS_Store.DS_Store?*.swp._*.Spotlight-V100.Trashes 如果大家需要忽略更多的文件，可以直接写入即可。 然后在你的home目录下的.gitconfig文件中引入上面的.igtignore_global文件。 注意： 如果目录下面找不到.gitconfig配置文件，可能你还没有配置git，可以执行如下命令 12git config --global user.name "xxx" # xxx 是你的用户名git config --global user.email "xxx@xx" # xxx@xx 是你的邮箱地址 在.gitconfig里面加入内容如下： 12345[user] name = aoenian email = aoenian@zoho.com.cn[core] excludesfile = /Users/aoenian/.gitignore_global 里面的home目录的名字要替换成你自己的 参考博客： https://www.jianshu.com/p/9386124cb5b5]]></content>
