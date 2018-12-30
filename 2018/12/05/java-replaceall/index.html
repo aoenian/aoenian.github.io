@@ -147,14 +147,14 @@
 
 
   <meta name="description" content="今天遇到了一个js的题目，题目主要的意思就是要把字符串替换成用连字符连接的单词，其中不好处理的是字符串中单词的分隔不同。主要是以下几种  “thisIsTheBook” 以大写字母分隔 “This_is_The_book” 以下划线分隔 “this,is,The,book” 以逗号分隔 “this Is the book” 以空格分隔">
-<meta name="keywords" content="replaceall,正则,$1">
+<meta name="keywords" content="replaceall,正则">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java的replaceAll方法">
 <meta property="og:url" content="https://aoenian.github.io/2018/12/05/java-replaceall/index.html">
 <meta property="og:site_name" content="aoenian">
 <meta property="og:description" content="今天遇到了一个js的题目，题目主要的意思就是要把字符串替换成用连字符连接的单词，其中不好处理的是字符串中单词的分隔不同。主要是以下几种  “thisIsTheBook” 以大写字母分隔 “This_is_The_book” 以下划线分隔 “this,is,The,book” 以逗号分隔 “this Is the book” 以空格分隔">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-08T09:21:52.247Z">
+<meta property="og:updated_time" content="2018-12-30T10:00:45.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的replaceAll方法">
 <meta name="twitter:description" content="今天遇到了一个js的题目，题目主要的意思就是要把字符串替换成用连字符连接的单词，其中不好处理的是字符串中单词的分隔不同。主要是以下几种  “thisIsTheBook” 以大写字母分隔 “This_is_The_book” 以下划线分隔 “this,is,The,book” 以逗号分隔 “this Is the book” 以空格分隔">
@@ -436,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-12-08 17:21:52" itemprop="dateModified" datetime="2018-12-08T17:21:52+08:00">2018-12-08</time>
+                <time title="修改时间：2018-12-30 18:00:45" itemprop="dateModified" datetime="2018-12-30T18:00:45+08:00">2018-12-30</time>
               
             
           </span>
@@ -509,8 +509,8 @@
 <p> 这里面使用到了正则表达式中的小括号<code>(pattern)</code>，这个圆括号的作用是<strong>匹配pattern并获取这一匹配</strong>。当然在java中可以通过<code>$1 $2 ... $9</code>来获取这一匹配。</p>
 <p> 具体此题目使用示例： <code>s.replaceAll(&quot;([A-Z])&quot;,&quot;-$1&quot;);</code></p>
 </li>
-<li><p>匹配特殊符号如<code>* + .</code>等</p>
-<p> 因为这些符号在正则中都有使用，如果直接使用则会报错在使用中需要告诉程序你需要替换的是字面的<code>*</code>号。这里就需要转义。<code>split()</code>方法同样也存在这种问题。</p>
+<li><p>匹配特殊符号如<code>* + .</code>等</p>
+<p> 因为这些符号在正则中都有使用，如果直接使用则会报错在使用中需要告诉程序你需要替换的是字面的<code>*</code>号。这里就需要转义。<code>split()</code>方法同样也存在这种问题。</p>
 <p> 具体使用示例： <code>String str = s.replaceAll(&quot;\\*&quot;, &quot;-&quot;);</code></p>
 </li>
 </ol>
@@ -555,8 +555,6 @@
             <a href="/tags/replaceall/" rel="tag"># replaceall</a>
           
             <a href="/tags/正则/" rel="tag"># 正则</a>
-          
-            <a href="/tags/1/" rel="tag"># $1</a>
           
         </div>
       
@@ -866,9 +864,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">85</span>
+                    <span class="site-state-item-count">84</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
