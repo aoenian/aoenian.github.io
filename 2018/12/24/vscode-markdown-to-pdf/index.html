@@ -146,20 +146,18 @@
 
 
 
-  <meta name="description" content="三层和二层交换机的链路聚合没有成功。可以通信，但聚合链路中拿走一条链路后则通信中断，这个是PT5.3版本的坑！！ PT5.3这个大坑我上来就踩上了，这个版本的链路聚合有问题，当只有一条链路的时候，无法ping通。所以直觉就是链路聚合没有配置成功。请用6.2版本。 拓扑图如下：">
-<meta name="keywords" content="三层交换机,链路聚合">
+  <meta name="description" content="之前一直用vscode编辑md文件，然后在chrome预览导出pdf文件。有段时间没用了突然发现chrome无法预览md文件了。把md文件拖入浏览器就会直接下载，而不能出现预览。 更有意思的是我写了三个md文件，其中有一个可以预览，另外两个不管是改名字换目录都不行，拖入浏览器就是直接把原文件又下载一遍，网络搜索了一下几乎没人遇到，可能运气不好。不过搜索过程中了解到vscode可以直接导出，索性就不">
+<meta name="keywords" content="markdown,vscode,pdf">
 <meta property="og:type" content="article">
-<meta property="og:title" content="思科交换机配置4——三层交换机VLAN联通">
-<meta property="og:url" content="https://aoenian.github.io/2017/03/08/switch-config-4/index.html">
+<meta property="og:title" content="vscode编辑markdown文件并导出为PDF格式">
+<meta property="og:url" content="https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/index.html">
 <meta property="og:site_name" content="aoenian">
-<meta property="og:description" content="三层和二层交换机的链路聚合没有成功。可以通信，但聚合链路中拿走一条链路后则通信中断，这个是PT5.3版本的坑！！ PT5.3这个大坑我上来就踩上了，这个版本的链路聚合有问题，当只有一条链路的时候，无法ping通。所以直觉就是链路聚合没有配置成功。请用6.2版本。 拓扑图如下：">
+<meta property="og:description" content="之前一直用vscode编辑md文件，然后在chrome预览导出pdf文件。有段时间没用了突然发现chrome无法预览md文件了。把md文件拖入浏览器就会直接下载，而不能出现预览。 更有意思的是我写了三个md文件，其中有一个可以预览，另外两个不管是改名字换目录都不行，拖入浏览器就是直接把原文件又下载一遍，网络搜索了一下几乎没人遇到，可能运气不好。不过搜索过程中了解到vscode可以直接导出，索性就不">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/switch4.png">
-<meta property="og:updated_time" content="2018-06-23T10:05:24.479Z">
+<meta property="og:updated_time" content="2018-12-30T06:58:22.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="思科交换机配置4——三层交换机VLAN联通">
-<meta name="twitter:description" content="三层和二层交换机的链路聚合没有成功。可以通信，但聚合链路中拿走一条链路后则通信中断，这个是PT5.3版本的坑！！ PT5.3这个大坑我上来就踩上了，这个版本的链路聚合有问题，当只有一条链路的时候，无法ping通。所以直觉就是链路聚合没有配置成功。请用6.2版本。 拓扑图如下：">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/switch4.png">
+<meta name="twitter:title" content="vscode编辑markdown文件并导出为PDF格式">
+<meta name="twitter:description" content="之前一直用vscode编辑md文件，然后在chrome预览导出pdf文件。有段时间没用了突然发现chrome无法预览md文件了。把md文件拖入浏览器就会直接下载，而不能出现预览。 更有意思的是我写了三个md文件，其中有一个可以预览，另外两个不管是改名字换目录都不行，拖入浏览器就是直接把原文件又下载一遍，网络搜索了一下几乎没人遇到，可能运气不好。不过搜索过程中了解到vscode可以直接导出，索性就不">
 
 
 
@@ -168,7 +166,7 @@
 
 
 
-  <link rel="canonical" href="https://aoenian.github.io/2017/03/08/switch-config-4/"/>
+  <link rel="canonical" href="https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/"/>
 
 
 
@@ -178,7 +176,7 @@
   };
 </script>
 
-  <title>思科交换机配置4——三层交换机VLAN联通 | aoenian</title>
+  <title>vscode编辑markdown文件并导出为PDF格式 | aoenian</title>
   
 
 
@@ -379,7 +377,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://aoenian.github.io/2017/03/08/switch-config-4/">
+    <link itemprop="mainEntityOfPage" href="https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="aoenian">
@@ -396,7 +394,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">思科交换机配置4——三层交换机VLAN联通
+          <h1 class="post-title" itemprop="name headline">vscode编辑markdown文件并导出为PDF格式
               
             
           </h1>
@@ -421,7 +419,7 @@
                 
               
 
-              <time title="创建时间：2017-03-08 00:00:00" itemprop="dateCreated datePublished" datetime="2017-03-08T00:00:00+08:00">2017-03-08</time>
+              <time title="创建时间：2018-12-24 00:00:00" itemprop="dateCreated datePublished" datetime="2018-12-24T00:00:00+08:00">2018-12-24</time>
             
 
             
@@ -438,7 +436,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-06-23 18:05:24" itemprop="dateModified" datetime="2018-06-23T18:05:24+08:00">2018-06-23</time>
+                <time title="修改时间：2018-12-30 14:58:22" itemprop="dateModified" datetime="2018-12-30T14:58:22+08:00">2018-12-30</time>
               
             
           </span>
@@ -455,7 +453,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Net/" itemprop="url" rel="index"><span itemprop="name">Net</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Editor/" itemprop="url" rel="index"><span itemprop="name">Editor</span></a></span>
 
                 
                 
@@ -497,57 +495,34 @@
       
 
       
-        <p><strong>三层和二层交换机的链路聚合没有成功。可以通信，但聚合链路中拿走一条链路后则通信中断，这个是PT5.3版本的坑！！</strong></p>
-<p><strong>PT5.3这个大坑我上来就踩上了，这个版本的链路聚合有问题，当只有一条链路的时候，无法ping通。所以直觉就是链路聚合没有配置成功。请用6.2版本。</strong></p>
-<p>拓扑图如下：<br><img src="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/switch4.png" alt=""></p>
+        <p>之前一直用vscode编辑md文件，然后在chrome预览导出pdf文件。有段时间没用了突然发现chrome无法预览md文件了。把md文件拖入浏览器就会直接下载，而不能出现预览。</p>
+<p>更有意思的是我写了三个md文件，其中有一个可以预览，另外两个不管是改名字换目录都不行，拖入浏览器就是直接把原文件又下载一遍，网络搜索了一下几乎没人遇到，可能运气不好。不过搜索过程中了解到vscode可以直接导出，索性就不再用chrome的插件处理md文件了，直接用vscode。</p>
 <a id="more"></a>
-<p>配置好的思科模拟器文件地址：<a href="https://github.com/aoenian/cisco-pkt/" target="_blank" rel="noopener">cisco-pkt</a></p>
-<h1 id="二层交换机配置"><a href="#二层交换机配置" class="headerlink" title="二层交换机配置"></a>二层交换机配置</h1><p>S1和S2的配置类似与之前的<a href="https://aoenian.github.io/2017/03/05/switch-config-3/">跨交换机vlan划分</a>这里不再重复，需要的配置如下：</p>
-<ul>
-<li>在S1和S2上划分vlan10和vlan20</li>
-<li>把相应的端口加入vlan<ul>
-<li>PC2-S1-f0/2 PC4-S2-f0/2 vlan20</li>
-<li>PC1-S1-f0/1 PC3-S2-f0/1 vlan10</li>
-</ul>
+<h1 id="markdown-pdf-插件的使用"><a href="#markdown-pdf-插件的使用" class="headerlink" title="markdown-pdf 插件的使用"></a>markdown-pdf 插件的使用</h1><ol>
+<li><p>安装<code>Chrome</code>或者<code>Chromium</code>，如果已安装可跳过此步骤。</p>
 </li>
-<li>把PC的IP地址和网关地址配置完成</li>
-</ul>
-<h1 id="三层交换机S0的配置"><a href="#三层交换机S0的配置" class="headerlink" title="三层交换机S0的配置"></a>三层交换机S0的配置</h1><h2 id="三层交换机和二层交换机的接口"><a href="#三层交换机和二层交换机的接口" class="headerlink" title="三层交换机和二层交换机的接口"></a>三层交换机和二层交换机的接口</h2><table>
-<thead>
-<tr>
-<th></th>
-<th>S1</th>
-<th>S2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>S0</td>
-<td>f0/22 f0/23</td>
-<td>f0/24</td>
-</tr>
-</tbody>
-</table>
-<p>注：这里我把S1与S0之间用两条链路主要为了配置链路聚合。</p>
-<h2 id="S0的具体配置"><a href="#S0的具体配置" class="headerlink" title="S0的具体配置"></a>S0的具体配置</h2><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Switch&gt;enable</span><br><span class="line">Switch<span class="meta">#configure terminal </span></span><br><span class="line">Switch(config)<span class="meta">#hostname S0</span></span><br><span class="line">S0(config)<span class="meta">#vlan 10</span></span><br><span class="line">S0(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">S0(config-vlan)<span class="meta">#exit</span></span><br><span class="line">S0(config)<span class="meta">#vlan 20</span></span><br><span class="line">S0(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">S0(config-vlan)<span class="meta">#exit</span></span><br><span class="line">S0(config)<span class="meta">#interface vlan 10</span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#ip address 192.168.1.254 255.255.255.0    <span class="comment">// 设置vlan的网关地址</span></span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#no shutdown       <span class="comment">// 启用vlan</span></span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">S0(config)<span class="meta">#interface vlan 20</span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#ip address 192.168.2.254 255.255.255.0</span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#no shutdown </span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">S0(config)<span class="meta">#ip routing       <span class="comment">// 启用ip路由</span></span></span><br><span class="line">S0<span class="meta">#show ip route        <span class="comment">// 查看三层交换机路由表</span></span></span><br></pre></td></tr></table></figure></div>
-<p>注：这个时候如果二层交换机和三层交换机连接的接口模式都已经配置为 <code>trunk</code>，vlan间即可通信。</p>
-<h2 id="S1和S0之间聚合链路的配置"><a href="#S1和S0之间聚合链路的配置" class="headerlink" title="S1和S0之间聚合链路的配置"></a>S1和S0之间聚合链路的配置</h2><p>首先配置S0路由器的 22 和 23号端口，这里在网络上搜索的配置不尽相同，有多有少。所以这里根据我自己的理解进行配置，如果不正确或者需要补充，请大家留言或通过邮件联系我，谢谢！</p>
-<h3 id="S0三层交换机的配置"><a href="#S0三层交换机的配置" class="headerlink" title="S0三层交换机的配置"></a>S0三层交换机的配置</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">S0(config)<span class="meta">#interface range f0/22-23</span></span><br><span class="line">S0(config-<span class="keyword">if</span>-range)<span class="meta">#channel-protocol pagp   <span class="comment">// 设置聚合协议为pagp</span></span></span><br><span class="line">S0(config-<span class="keyword">if</span>-range)<span class="meta">#channel-group 1 mode auto   <span class="comment">// 设置工作模式</span></span></span><br><span class="line">S0(config-<span class="keyword">if</span>-range)<span class="meta">#exit</span></span><br><span class="line">S0(config)<span class="meta">#interface port-channel 1</span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#switchport trunk encapsulation dot1q <span class="comment">// 802.1Q封装</span></span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk     <span class="comment">// 更改端口模式</span></span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#switchport trunk allowed vlan all     <span class="comment">// 允许vlan通过</span></span></span><br><span class="line"></span><br><span class="line">S0(config)<span class="meta">#interface f0/24      <span class="comment">// 与S2的相连端口设置</span></span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#switchport trunk allowed vlan all</span></span><br><span class="line">S0(config-<span class="keyword">if</span>)<span class="meta">#switchport trunk encapsulation dot1q</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="S1的配置"><a href="#S1的配置" class="headerlink" title="S1的配置"></a>S1的配置</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">S1(config)<span class="meta">#interface range f0/22-23</span></span><br><span class="line">S1(config-<span class="keyword">if</span>-range)<span class="meta">#channel-protocol pagp </span></span><br><span class="line">S1(config-<span class="keyword">if</span>-range)<span class="meta">#channel-group 1 mode auto</span></span><br><span class="line">S1(config-<span class="keyword">if</span>-range)<span class="meta">#exit</span></span><br><span class="line">S1(config)<span class="meta">#interface port-channel 1</span></span><br><span class="line">S1(config-<span class="keyword">if</span>)<span class="meta">#switchport trunk allowed vlan all</span></span><br><span class="line">S1(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk </span></span><br><span class="line"></span><br><span class="line">S1<span class="meta">#show etherchannel summary</span></span><br></pre></td></tr></table></figure></div>
-<h3 id="S2配置"><a href="#S2配置" class="headerlink" title="S2配置"></a>S2配置</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">S2<span class="meta">#configure </span></span><br><span class="line">S2(config)<span class="meta">#interface f0/24</span></span><br><span class="line">S2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk</span></span><br><span class="line">S2(config-<span class="keyword">if</span>)<span class="meta">#switchport trunk allowed vlan all</span></span><br></pre></td></tr></table></figure></div>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><ul>
-<li>不同vlan之间的pc可以互相通信</li>
-<li>S1和S0之间的两条链路都可传输信息，<br><strong>但是如果去除一条链路和无法通信</strong></li>
-</ul>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
-<li><a href="http://www.jb51.net/softjc/56598.html" target="_blank" rel="noopener">通过三层交换实现VLAN间互通的方法(图文教程)</a></li>
-<li><a href="http://www.cnblogs.com/mchina/archive/2012/07/14/2591598.html" target="_blank" rel="noopener">Packet Tracer 5.0实验(四)<br>利用三层交换机实现VLAN间路由</a></li>
-<li><a href="http://www.cisco.com/c/zh_cn/support/docs/lan-switching/inter-vlan-routing/41860-howto-L3-intervlanrouting.html" target="_blank" rel="noopener">在第三层交换机的配置VLAN间路由</a></li>
-</ul>
-<h2 id="拓展阅读"><a href="#拓展阅读" class="headerlink" title="拓展阅读"></a>拓展阅读</h2><ul>
-<li><a href="http://blog.csdn.net/dog250/article/details/8219141" target="_blank" rel="noopener">VLAN/Trunk以及三层交换</a></li>
-<li><a href="http://www.maiziedu.com/article/11162/" target="_blank" rel="noopener">链路聚合、Trunk、端口绑定和捆绑简析</a></li>
-<li><a href="https://gnu4cn.gitbooks.io/ccna-60d/content/d33-EtherChannels-and-Link-Aggregation-Protocols.html" target="_blank" rel="noopener">以太网通道及链路聚合协议</a></li>
+<li><p>在vscode中安装插件<code>Markdown PDF</code>，重启vscode后那个插件会自动下载<code>Chromium</code>，右下角会有个提示，不过放心它是不会成功的。</p>
+</li>
+<li><p>如果没有任何设置就直接在md文件右键执行<code>Markdown PDF: Export(pdf)</code>，十有八九会出现<code>TypeError: Cannot read property &#39;newPage&#39; of undefined</code>，<code>ERROR: puppeteer.launch()</code>，<code>Error: spawn EACCES</code>这些错误，如果没有提示且pdf正常导出则不用继续往下看了，直接用就可以了。</p>
+</li>
+<li><p>如果出现了第三步的错误提示，打开vscode的<strong>首选项</strong>-<strong>设置</strong>，然后在搜索框中搜索<code>markdown-pdf.executablePath</code>，点击右边的<strong>在 settings.json 中编辑</strong>。</p>
+<p> 在用户配置文件中写入如下配置：</p>
+ <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Mac下面Chrome的位置</span></span><br><span class="line"><span class="string">"markdown-pdf.executablePath"</span>: <span class="string">"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"</span>,</span><br><span class="line"><span class="comment">// Windows 请根据自己系统情况配置</span></span><br><span class="line"><span class="string">"markdown-pdf.executablePath"</span>: <span class="string">"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>保存并重启vscode。试试吧！！</p>
+</li>
+</ol>
+<h1 id="如何使用自定义css"><a href="#如何使用自定义css" class="headerlink" title="如何使用自定义css"></a>如何使用自定义css</h1><p>在mac下面导出的pdf文件个人感觉还是很不错的，不过在windows下面导出后汉字的字体大小不一，而且颜色也有深有浅，这样就需要我们使用自定义css。</p>
+<p>同样在<strong>setting.json</strong>里面加入如下配置</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 路径和css文件名以你的文件为准</span></span><br><span class="line"><span class="string">"markdown-pdf.styles"</span>: [<span class="string">"E:\\css\\markdowncss.css"</span>],</span><br></pre></td></tr></table></figure></div>
+<p>css文件可以去github上面或者网络找一下，选一个自己喜欢的。</p>
+<p>PS：这里推荐一个md文件语法检查插件<code>markdownlint</code>，还有就是打开vscode的<strong>查看</strong>-<strong>切换控制字符</strong>可以看到一些误输入的奇怪的符号。</p>
+<p>参考文章：</p>
+<ul>
+<li><p><a href="https://github.com/yzane/vscode-markdown-pdf/issues/77" target="_blank" rel="noopener">can not work with lastest VS Code version</a></p>
+</li>
+<li><p><a href="https://github.com/jwsky/markdowncss" target="_blank" rel="noopener">markdowncss_github_style_blue_by_jwsky</a></p>
+</li>
 </ul>
 
       
@@ -570,7 +545,7 @@
     <strong>本文作者： </strong>aoenian</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://aoenian.github.io/2017/03/08/switch-config-4/" title="思科交换机配置4——三层交换机VLAN联通">https://aoenian.github.io/2017/03/08/switch-config-4/</a>
+    <a href="https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/" title="vscode编辑markdown文件并导出为PDF格式">https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -583,9 +558,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/三层交换机/" rel="tag"># 三层交换机</a>
+            <a href="/tags/markdown/" rel="tag"># markdown</a>
           
-            <a href="/tags/链路聚合/" rel="tag"># 链路聚合</a>
+            <a href="/tags/vscode/" rel="tag"># vscode</a>
+          
+            <a href="/tags/pdf/" rel="tag"># pdf</a>
           
         </div>
       
@@ -598,8 +575,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/05/switch-config-2/" rel="next" title="思科交换机配置2——单交换机VLAN划分">
-                <i class="fa fa-chevron-left"></i> 思科交换机配置2——单交换机VLAN划分
+              <a href="/2018/12/22/chrome-disable-developer-mode-extensions/" rel="next" title="Chrome禁止“请停用以开发者模式运行的扩展程序”的提示">
+                <i class="fa fa-chevron-left"></i> Chrome禁止“请停用以开发者模式运行的扩展程序”的提示
               </a>
             
           </div>
@@ -607,10 +584,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/12/router-config-1/" rel="prev" title="思科路由器配置1——密码配置">
-                思科路由器配置1——密码配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -977,7 +950,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二层交换机配置"><span class="nav-number">1.</span> <span class="nav-text">二层交换机配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三层交换机S0的配置"><span class="nav-number">2.</span> <span class="nav-text">三层交换机S0的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三层交换机和二层交换机的接口"><span class="nav-number">2.1.</span> <span class="nav-text">三层交换机和二层交换机的接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S0的具体配置"><span class="nav-number">2.2.</span> <span class="nav-text">S0的具体配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#S1和S0之间聚合链路的配置"><span class="nav-number">2.3.</span> <span class="nav-text">S1和S0之间聚合链路的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#S0三层交换机的配置"><span class="nav-number">2.3.1.</span> <span class="nav-text">S0三层交换机的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S1的配置"><span class="nav-number">2.3.2.</span> <span class="nav-text">S1的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#S2配置"><span class="nav-number">2.3.3.</span> <span class="nav-text">S2配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">2.4.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">2.5.</span> <span class="nav-text">参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓展阅读"><span class="nav-number">2.6.</span> <span class="nav-text">拓展阅读</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#markdown-pdf-插件的使用"><span class="nav-number">1.</span> <span class="nav-text">markdown-pdf 插件的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何使用自定义css"><span class="nav-number">2.</span> <span class="nav-text">如何使用自定义css</span></a></li></ol></div>
             
 
           </div>

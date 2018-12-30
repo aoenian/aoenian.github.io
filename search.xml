@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vscode编辑markdown文件并导出为PDF格式]]></title>
+    <url>%2F2018%2F12%2F24%2Fvscode-markdown-to-pdf%2F</url>
+    <content type="text"><![CDATA[之前一直用vscode编辑md文件，然后在chrome预览导出pdf文件。有段时间没用了突然发现chrome无法预览md文件了。把md文件拖入浏览器就会直接下载，而不能出现预览。 更有意思的是我写了三个md文件，其中有一个可以预览，另外两个不管是改名字换目录都不行，拖入浏览器就是直接把原文件又下载一遍，网络搜索了一下几乎没人遇到，可能运气不好。不过搜索过程中了解到vscode可以直接导出，索性就不再用chrome的插件处理md文件了，直接用vscode。 markdown-pdf 插件的使用 安装Chrome或者Chromium，如果已安装可跳过此步骤。 在vscode中安装插件Markdown PDF，重启vscode后那个插件会自动下载Chromium，右下角会有个提示，不过放心它是不会成功的。 如果没有任何设置就直接在md文件右键执行Markdown PDF: Export(pdf)，十有八九会出现TypeError: Cannot read property &#39;newPage&#39; of undefined，ERROR: puppeteer.launch()，Error: spawn EACCES这些错误，如果没有提示且pdf正常导出则不用继续往下看了，直接用就可以了。 如果出现了第三步的错误提示，打开vscode的首选项-设置，然后在搜索框中搜索markdown-pdf.executablePath，点击右边的在 settings.json 中编辑。 在用户配置文件中写入如下配置： 1234// Mac下面Chrome的位置"markdown-pdf.executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",// Windows 请根据自己系统情况配置"markdown-pdf.executablePath": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe" 保存并重启vscode。试试吧！！ 如何使用自定义css在mac下面导出的pdf文件个人感觉还是很不错的，不过在windows下面导出后汉字的字体大小不一，而且颜色也有深有浅，这样就需要我们使用自定义css。 同样在setting.json里面加入如下配置 12// 路径和css文件名以你的文件为准"markdown-pdf.styles": ["E:\\css\\markdowncss.css"], css文件可以去github上面或者网络找一下，选一个自己喜欢的。 PS：这里推荐一个md文件语法检查插件markdownlint，还有就是打开vscode的查看-切换控制字符可以看到一些误输入的奇怪的符号。 参考文章： can not work with lastest VS Code version markdowncss_github_style_blue_by_jwsky]]></content>
+      <categories>
+        <category>Editor</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>vscode</tag>
+        <tag>pdf</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Chrome禁止“请停用以开发者模式运行的扩展程序”的提示]]></title>
     <url>%2F2018%2F12%2F22%2Fchrome-disable-developer-mode-extensions%2F</url>
     <content type="text"><![CDATA[在Windows7系统下的Chrome里面使用开发者模式导入了一个插件，就是为了登录一下最大的那个搜索引擎（传送门）。然后每次登录就会出现“请停用以开发者模式运行的扩展程序”的提示，而且必须点击一下才能关掉。 去网络搜索了一下，操作还挺复杂，具体的操作步骤等会我写在下面，不过如果懒得自己操作，国外有高手写了批处理文件，我也会放在下面。 第一种方法如果你经常使用自己导入的插件，建议使用Chrome Canary版本，这个是没有提示的，而且图标是金色的哦。下载地址可以看一下这里 第二种方法如果你想使用稳定版，但是又不想看到那个提示，请按照下面的操作处理。 如果你不想自己操作，请下载批处理文件DevWarningPatch.bat 请使用管理员模式运行。如果觉得不安全，或者文件失效请移步文末的参考文章，那里是代码的原地址。 手动操作步骤如下： 转自：stackoverflow 建议大家还是查看原文。下面是引用内容 you can patch it manually using HIEW: exit Chrome fully by pressing Ctrl+Shift+Q and terminating any chrome.exe processes in Windows Task Manager’s Processes tab (it’s a second tab, not the default tab). open chrome.dll in hiew press Enter to switch the view press F7, paste ExtensionDeveloperModeWarning in the first input field, press Enter press F3 to enter the edit mode type 00 press F9 to save press Left to position the cursor on 00 press F6 to find the reference look for cmp eax,3 or cmp eax,2 on the screen and the adjacent few pages up and down navigate the cursor using Up and Down to that line’s binary code (a column on the left) press F3 to enter the edit mode navigate the cursor using Left and Right to 03 or 02 in that line’s code type 09 press F9 to save Close hiew, otherwise Chrome won’t launch. 参考文章： How to get rid of “disable developer mode extensions” pop-up]]></content>
