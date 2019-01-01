@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2018-12-30T06:58:22.303Z</updated>
+  <updated>2019-01-01T04:16:46.247Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2019年的小目标</title>
+    <link href="https://aoenian.github.io/2019/01/01/2019-goal/"/>
+    <id>https://aoenian.github.io/2019/01/01/2019-goal/</id>
+    <published>2018-12-31T16:00:00.000Z</published>
+    <updated>2019-01-01T04:16:46.247Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;又是新的一年，很多时候总觉得时间很多，可回顾一年发现最少的还是时间。希望新的一年能够珍惜。&lt;/p&gt;
+&lt;p&gt;写下新年的期望和目标，在新的一年督促自己。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂谈" scheme="https://aoenian.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="goal" scheme="https://aoenian.github.io/tags/goal/"/>
+    
+  </entry>
   
   <entry>
     <title>vscode编辑markdown文件并导出为PDF格式</title>
@@ -499,31 +520,6 @@
     
     
       <category term="versions" scheme="https://aoenian.github.io/tags/versions/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>加快国内访问Github网站的速度</title>
-    <link href="https://aoenian.github.io/2018/05/12/github-access-fast/"/>
-    <id>https://aoenian.github.io/2018/05/12/github-access-fast/</id>
-    <published>2018-05-11T16:00:00.000Z</published>
-    <updated>2018-08-05T03:31:42.574Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;有时候查看一些开源的项目和代码都会访问Github，自己的博客也在Page上，不过访问总是比较慢，原因不用说大家都知道，不过幸亏是还能访问，所以感觉已经挺知足了。&lt;/p&gt;
-&lt;p&gt;但是慢点没关系，你不能最后样式都加载不出来吧，这有点过分了，所以搜索了一下解决方法，确实挺有效，记录如下。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;2018-06-13更新：这种方法在家庭宽带的作用还是蛮大的，但是在非独立宽带如机房环境中可能没有效果。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;方法简单说就是在本地 &lt;code&gt;hosts&lt;/code&gt; 文件中加入 &lt;code&gt;github.com&lt;/code&gt; 的网站IP，绕过DNS解析。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
-    
-    
-      <category term="github" scheme="https://aoenian.github.io/tags/github/"/>
-    
-      <category term="fast" scheme="https://aoenian.github.io/tags/fast/"/>
     
   </entry>
   
