@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows7安装VirtualBox失败解决方法]]></title>
+    <url>%2F2019%2F01%2F05%2Fvirtualbox-install-error%2F</url>
+    <content type="text"><![CDATA[由于需要在windows下面使用linux环境，所以就想着用一下虚拟机做一个完整的系统。cygwin之类也用过，确实无法驾驭。 不如虚拟机来的完整和直接。 不过安装的时候遇到了一些问题，开始是安装不上去，接着是安装以后无法启动，我就郁闷了，在自己的电脑上从没遇到过的情况，一到别人那里就出问题。搜索了一下问题解决了，备忘如下。 安装的virtualbox版本是5.2.8-121009，系统是Win7旗舰版，后来的虚拟机版本好像有时候就没有这种问题。 如果安装不成功，查看电脑中是否有AutoCAD，如果确实需要安装虚拟机则需要卸载AutoCAD。 进入 控制面板-卸载程序-卸载 AutoCAD2007 再次安装虚拟机 安装完成后如果启动出问题，建议查看软件出错提示以后再做处理。如果出现获取VirtualBox COM对象失败，则可以尝试按照下面的方式修改注册表，再次尝试启动 win+r 输入 regedit 回车 修改注册表 HKEY_CLASSES_ROOT\CLSID{00020420-0000-0000-C000-000000000046} InprocServer32 的值修改为 C:\Windows\system32\oleaut32.dll HKEY_CLASSES_ROOT\CLSID{00020424-0000-0000-C000-000000000046} InprocServer32 的值修改为 C:\Windows\system32\oleaut32.dll 有时候无法启动也可能是安装的虚拟系统与之前的虚拟系统文件重名，具体要注意软件的错误提示]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>virtualbox</tag>
+        <tag>error</tag>
+        <tag>注册表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019年的小目标]]></title>
     <url>%2F2019%2F01%2F01%2F2019-goal%2F</url>
     <content type="text"><![CDATA[又是新的一年，很多时候总觉得时间很多，可回顾一年发现最少的还是时间。新的一年要更加珍惜。 写下新年的期望和目标，在新的一年督促自己。 每周一篇博客 做事情不要太纠结 重新培养阅读习惯（怀念没有网络和手机的时光） 很多事情缺少的不是方法，而是要把寻找方法的时间用在做事上 英文（一直是最恐怖的-_-!） 先写到这里吧，估计写太多，最后又作废了。其实也不是小目标了，应该是很长时间需要努力的方向。]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-01-01T04:22:21.163Z</updated>
+  <updated>2019-01-06T03:53:18.393Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows7安装VirtualBox失败解决方法</title>
+    <link href="https://aoenian.github.io/2019/01/05/virtualbox-install-error/"/>
+    <id>https://aoenian.github.io/2019/01/05/virtualbox-install-error/</id>
+    <published>2019-01-04T16:00:00.000Z</published>
+    <updated>2019-01-06T03:53:18.393Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于需要在windows下面使用linux环境，所以就想着用一下虚拟机做一个完整的系统。&lt;em&gt;cygwin之类也用过，确实无法驾驭。&lt;/em&gt; 不如虚拟机来的完整和直接。&lt;/p&gt;
+&lt;p&gt;不过安装的时候遇到了一些问题，开始是安装不上去，接着是安装以后无法启动，我就郁闷了，在自己的电脑上从没遇到过的情况，一到别人那里就出问题。搜索了一下问题解决了，备忘如下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
+    
+    
+      <category term="virtualbox" scheme="https://aoenian.github.io/tags/virtualbox/"/>
+    
+      <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
+    
+      <category term="注册表" scheme="https://aoenian.github.io/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>2019年的小目标</title>
@@ -492,34 +517,6 @@
     
     
       <category term="concat video" scheme="https://aoenian.github.io/tags/concat-video/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>查看树莓派版本</title>
-    <link href="https://aoenian.github.io/2018/05/20/rasp-versions/"/>
-    <id>https://aoenian.github.io/2018/05/20/rasp-versions/</id>
-    <published>2018-05-19T16:00:00.000Z</published>
-    <updated>2018-06-20T08:16:52.008Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;安装软件的时候想查看树莓派系统是32位还是64位就出现了以下的操作&lt;/p&gt;
-&lt;p&gt;具体命令及作用如下：&lt;/p&gt;
-&lt;div class=&quot;highlight-wrap&quot;autocomplete=&quot;off&quot; autocorrect=&quot;off&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Raspberry Pi" scheme="https://aoenian.github.io/categories/Raspberry-Pi/"/>
-    
-    
-      <category term="versions" scheme="https://aoenian.github.io/tags/versions/"/>
     
   </entry>
   
