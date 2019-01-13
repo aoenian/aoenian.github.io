@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-01-06T03:53:18.393Z</updated>
+  <updated>2019-01-13T13:09:38.903Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VirtualBox虚拟系统使用共享文件夹和摄像头</title>
+    <link href="https://aoenian.github.io/2019/01/08/virtualbox-install-extpack/"/>
+    <id>https://aoenian.github.io/2019/01/08/virtualbox-install-extpack/</id>
+    <published>2019-01-07T16:00:00.000Z</published>
+    <updated>2019-01-13T13:09:38.903Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;macOS用着挺好，不过Windows依然离不了，所以虚拟机还得用。为啥不用双系统？切换太麻烦。而且浪费空间，本来硬盘就不大。&lt;/p&gt;
+&lt;p&gt;虚拟机如果没有特殊要求，个人推荐&lt;a href=&quot;https://www.virtualbox.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;VirtualBox&lt;/a&gt;，安装包个头小，而且免费使用，稳定性也不错。&lt;/p&gt;
+&lt;p&gt;具体的安装过程就不说了，你都用上虚拟机了，这点问题应该能解决，给大家一个下载系统的网站 &lt;a href=&quot;https://msdn.itellyou.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;I Tell You&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;这里要说的就是如何扩展虚拟机的功能实现与主机文件共享并在虚拟机中使用摄像头。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
+    
+    
+      <category term="虚拟机" scheme="https://aoenian.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+      <category term="增强功能" scheme="https://aoenian.github.io/tags/%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows7安装VirtualBox失败解决方法</title>
@@ -495,28 +520,6 @@
       <category term="Mac" scheme="https://aoenian.github.io/tags/Mac/"/>
     
       <category term="Chrome Helper" scheme="https://aoenian.github.io/tags/Chrome-Helper/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>FFmpeg剪切连接音视频</title>
-    <link href="https://aoenian.github.io/2018/05/26/ffmpeg-concat-video/"/>
-    <id>https://aoenian.github.io/2018/05/26/ffmpeg-concat-video/</id>
-    <published>2018-05-25T16:00:00.000Z</published>
-    <updated>2018-06-13T02:35:10.629Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这几天需要处理一下视频，开始以为就是简单的剪切和连接，没想到耗费了很多时间，现在把使用过的方法总结出来，以后就不用重复寻找。&lt;/p&gt;
-&lt;h1 id=&quot;音频&quot;&gt;&lt;a href=&quot;#音频&quot; class=&quot;headerlink&quot; title=&quot;音频&quot;&gt;&lt;/a&gt;音频&lt;/h1&gt;&lt;p&gt;平时用音频操作基本就是剪切制作手机铃声，所以就只记录剪切的方法&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ffmpeg -i input.mp3 -ss 00:01:12 -t 00:01:42 -acodec copy output.mp3&lt;/code&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="FFmpeg" scheme="https://aoenian.github.io/categories/FFmpeg/"/>
-    
-    
-      <category term="concat video" scheme="https://aoenian.github.io/tags/concat-video/"/>
     
   </entry>
   
