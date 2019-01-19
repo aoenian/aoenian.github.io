@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[vscode配置js编程环境]]></title>
+    <url>%2F2019%2F01%2F19%2Fvscode-debug-js%2F</url>
+    <content type="text"><![CDATA[新版的vscode（1.30以上版本）不用配置即可调试js代码，不过建议安装插件Code Runner方便代码执行。然后编辑的时候如果习惯Tab跳出右括号，那你不能错过插件Tab out。 本来准备去年12月底写这个博客，那时候vscode在调试js文件的时候还需要launch.json这个配置文件。后来耽搁了一段时间，一直没有完成。而当我更新了新版本的vscode以后发现根本不需要任何配置就可以调试js文件了，不得不佩服软件的更新速度。当然这篇博文就没有再写下去的必要了。 最后，如果你还在用着老版本而且不想更新那么可以参考vscode如何F5运行调试多个js文件]]></content>
+      <categories>
+        <category>Editor</category>
+      </categories>
+      <tags>
+        <tag>debug</tag>
+        <tag>javascript</tag>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[VirtualBox虚拟系统使用共享文件夹和摄像头]]></title>
     <url>%2F2019%2F01%2F08%2Fvirtualbox-install-extpack%2F</url>
     <content type="text"><![CDATA[macOS用着挺好，不过Windows依然离不了，所以虚拟机还得用。为啥不用双系统？切换太麻烦。而且浪费空间，本来硬盘就不大。 虚拟机如果没有特殊要求，个人推荐VirtualBox，安装包个头小，而且免费使用，稳定性也不错。 具体的安装过程就不说了，你都用上虚拟机了，这点问题应该能解决，给大家一个下载系统的网站 I Tell You。 这里要说的就是如何扩展虚拟机的功能实现与主机文件共享并在虚拟机中使用摄像头。 环境 macOS 10.13.6 VirtualBox 5.2.6 虚拟系统 Windows7 专业版 操作方法主要就是安装增强功能。 完成虚拟系统的安装后启动Windows系统，然后在VirtualBox的菜单栏单击设备-增强功能。 然后Windows系统就会弹出VirtualBox Guest Additions的光盘自动运行界面，然后点击运行VBoxWindowsAdditions.exe即可。 安装完成后关闭虚拟系统，选中虚拟系统右键设置，选择共享文件夹。 然后添加共享文件夹（右边有一个绿色的加号的文件夹图标）。选择路径（注意这个共享目录是mac中的），键入共享名称，勾选自动挂载。这里注意共享文件夹是固定分配。 完成后启动Windows，在资源管理器中—计算机下即可看到共享目录（以网络驱动器形式展现）。 如果你没有在Windows中使用摄像头的需求就可以结束了。如果需要则继续操作。 在virtualbox下载与你的虚拟机版本相同的extpack来使用mac的摄像头。 如我的VirtualBox版本为5.2.6，则下载Oracle_VM_VirtualBox_Extension_Pack-5.2.6-120293.vbox-extpack。 下载完成后安装，然后打开虚拟系统，点击VirtualBox软件菜单中的设备即可看到摄像头（Webcams）。 注意：VBoxGuestAdditions_5.2.6.iso也可下载后安装。下载地址同extpack地址。 参考： Virtualbox 虚拟机支持硬件摄像头 VboxDownload]]></content>

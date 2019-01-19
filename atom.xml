@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-01-13T13:09:38.903Z</updated>
+  <updated>2019-01-19T08:52:42.154Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vscode配置js编程环境</title>
+    <link href="https://aoenian.github.io/2019/01/19/vscode-debug-js/"/>
+    <id>https://aoenian.github.io/2019/01/19/vscode-debug-js/</id>
+    <published>2019-01-18T16:00:00.000Z</published>
+    <updated>2019-01-19T08:52:42.154Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;新版的vscode（1.30以上版本）不用配置即可调试js代码，不过建议安装插件&lt;code&gt;Code Runner&lt;/code&gt;方便代码执行。然后编辑的时候如果习惯&lt;strong&gt;Tab&lt;/strong&gt;跳出右括号，那你不能错过插件&lt;code&gt;Tab out&lt;/code&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
+    
+    
+      <category term="debug" scheme="https://aoenian.github.io/tags/debug/"/>
+    
+      <category term="javascript" scheme="https://aoenian.github.io/tags/javascript/"/>
+    
+      <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
+    
+  </entry>
   
   <entry>
     <title>VirtualBox虚拟系统使用共享文件夹和摄像头</title>
@@ -492,34 +516,6 @@
       <category term="manjaro" scheme="https://aoenian.github.io/tags/manjaro/"/>
     
       <category term="ibus" scheme="https://aoenian.github.io/tags/ibus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决Mac系统Chrome Helper进程占用100%CPU</title>
-    <link href="https://aoenian.github.io/2018/06/27/chrome-helper-high-cpu/"/>
-    <id>https://aoenian.github.io/2018/06/27/chrome-helper-high-cpu/</id>
-    <published>2018-06-26T16:00:00.000Z</published>
-    <updated>2018-06-27T03:18:18.396Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前段时间在用Mac的时候突然风扇狂转，一会温度就起来了。觉得很奇怪没有看视频，玩游戏，就是浏览网页，找到系统监视器查看，发现 &lt;code&gt;Google Chrome Helper&lt;/code&gt; 的CPU占用率达到120%，谷歌以后找到解决方法。&lt;/p&gt;
-&lt;p&gt;解决方法如下：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://apple.stackexchange.com/questions/272000/how-to-make-google-chrome-helper-not-use-as-much-cpu&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文地址&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Invoke ⋮ Chrome Menu → More Tools → Task Manager to see what exactly consumes CPU. Because the helper is a black box from the OS’ side of view. I personally found a mining extension that way.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;一般是插件的问题，不过我遇到有一次居然是百度贴吧网页出现100%占用，找到占用资源的插件网页关掉即可。&lt;/em&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
-    
-    
-      <category term="Mac" scheme="https://aoenian.github.io/tags/Mac/"/>
-    
-      <category term="Chrome Helper" scheme="https://aoenian.github.io/tags/Chrome-Helper/"/>
     
   </entry>
   
