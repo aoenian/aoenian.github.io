@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[鼠须管更新0.10.0部署出错解决]]></title>
+    <url>%2F2019%2F01%2F24%2Fsquirrel-update-error%2F</url>
+    <content type="text"><![CDATA[今天刚打开电脑然后Rime输入法更新提示弹出来了，真的很惊喜，一直以为这个输入法不会更新了。不过前几个月Windows上的已经更新了，想来macOS上更新也就不奇怪了。Linux上面可能就没这么好运了。 点击更新以后，保险期间重启了电脑，然后重新部署，谁知道居然出错了，但是却不影响输入，对了可能是因为我用的小鹤双拼。 首先找到出错信息的位置，提示出错信息在$TMPDIR中。在终端中输入env命令查看$TMPDIR的具体位置。通过终端进入相应的目录后，可以执行open .命令在当前目录打开Finder查看。 查看rime.squirrel.ERROR里面的出错信息发现如下提示： 1234567# 意思就是提示好多输入方案需要的文件不存在"stroke.reverse.binluna_pinyin_simp.prism.binluna_pinyin_tw.prism.bin..."No such file or di rectory 解决方法在这里主要是因为新版精简了安装包，如果需要预设输入方案或其他输入方案请执行以下命令 1234# 安装预设输入方案curl -fsSL https://git.io/rime-install | bash -s -- :preset# 安装双拼方案curl -fsSL https://git.io/rime-install | bash -s -- :preset double-pinyin 其他的输入方案可参考plum。]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>Rime</tag>
+        <tag>error</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vscode配置js编程环境]]></title>
     <url>%2F2019%2F01%2F19%2Fvscode-debug-js%2F</url>
     <content type="text"><![CDATA[新版的vscode（1.30以上版本）不用配置即可调试js代码，不过建议安装插件Code Runner方便代码执行。然后编辑的时候如果习惯Tab跳出右括号，那你不能错过插件Tab out。 本来准备去年12月底写这个博客，那时候vscode在调试js文件的时候还需要launch.json这个配置文件。后来耽搁了一段时间，一直没有完成。而当我更新了新版本的vscode以后发现根本不需要任何配置就可以调试js文件了，不得不佩服软件的更新速度。当然这篇博文就没有再写下去的必要了。 最后，如果你还在用着老版本而且不想更新那么可以参考vscode如何F5运行调试多个js文件]]></content>
@@ -33,8 +45,8 @@
         <category>Windows</category>
       </categories>
       <tags>
-        <tag>virtualbox</tag>
         <tag>error</tag>
+        <tag>virtualbox</tag>
         <tag>注册表</tag>
       </tags>
   </entry>
@@ -392,20 +404,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>三层交换机</tag>
         <tag>链路聚合</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
-    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
-    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>VLAN</tag>
-        <tag>switchs</tag>
+        <tag>三层交换机</tag>
       </tags>
   </entry>
   <entry>
@@ -418,6 +418,18 @@
       <tags>
         <tag>switch</tag>
         <tag>VLAN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
+    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
+    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>VLAN</tag>
+        <tag>switchs</tag>
       </tags>
   </entry>
   <entry>

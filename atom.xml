@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-01-19T08:52:42.154Z</updated>
+  <updated>2019-01-24T03:19:25.216Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>鼠须管更新0.10.0部署出错解决</title>
+    <link href="https://aoenian.github.io/2019/01/24/squirrel-update-error/"/>
+    <id>https://aoenian.github.io/2019/01/24/squirrel-update-error/</id>
+    <published>2019-01-23T16:00:00.000Z</published>
+    <updated>2019-01-24T03:19:25.216Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天刚打开电脑然后Rime输入法更新提示弹出来了，真的很惊喜，一直以为这个输入法不会更新了。&lt;em&gt;不过前几个月Windows上的已经更新了，想来macOS上更新也就不奇怪了。Linux上面可能就没这么好运了。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;点击更新以后，保险期间重启了电脑，然后重新部署，谁知道居然出错了，但是却不影响输入，对了可能是因为我用的&lt;strong&gt;小鹤双拼&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;首先找到出错信息的位置，提示出错信息在&lt;code&gt;$TMPDIR&lt;/code&gt;中。在终端中输入&lt;code&gt;env&lt;/code&gt;命令查看&lt;code&gt;$TMPDIR&lt;/code&gt;的具体位置。通过终端进入相应的目录后，可以执行&lt;code&gt;open .&lt;/code&gt;命令在当前目录打开&lt;strong&gt;Finder&lt;/strong&gt;查看。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
+    
+    
+      <category term="Rime" scheme="https://aoenian.github.io/tags/Rime/"/>
+    
+      <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
+    
+  </entry>
   
   <entry>
     <title>vscode配置js编程环境</title>
@@ -82,9 +106,9 @@
       <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
     
     
-      <category term="virtualbox" scheme="https://aoenian.github.io/tags/virtualbox/"/>
-    
       <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
+    
+      <category term="virtualbox" scheme="https://aoenian.github.io/tags/virtualbox/"/>
     
       <category term="注册表" scheme="https://aoenian.github.io/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
     
@@ -485,37 +509,6 @@
       <category term="fedora" scheme="https://aoenian.github.io/tags/fedora/"/>
     
       <category term="xfce" scheme="https://aoenian.github.io/tags/xfce/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Manjaro从使用到放弃</title>
-    <link href="https://aoenian.github.io/2018/06/30/manjaro-linux-start-end/"/>
-    <id>https://aoenian.github.io/2018/06/30/manjaro-linux-start-end/</id>
-    <published>2018-06-29T16:00:00.000Z</published>
-    <updated>2018-07-01T01:56:46.650Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这段时间准备把一个老台式机换成Linux系统，然后就准备不在折腾了，慢慢打磨一段时间。在搜索选择发行版的时候发现了&lt;a href=&quot;https://www.manjaro.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;欢迎使用Manjaro&lt;/a&gt;这个网站，看到很多优点，然后就安装了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;对用户友好、全球排名第1的Linux发行版&lt;/li&gt;
-&lt;li&gt;滚动更新可以使软件保持最新&lt;/li&gt;
-&lt;li&gt;AUR软件仓库有着世界上最齐全的Linux软件&lt;/li&gt;
-&lt;li&gt;丰富的wiki和活跃的社区让所有问题都可以快速得到满意的答案&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;em&gt;具体细节大家可以去网站了解&lt;/em&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
-    
-    
-      <category term="manjaro" scheme="https://aoenian.github.io/tags/manjaro/"/>
-    
-      <category term="ibus" scheme="https://aoenian.github.io/tags/ibus/"/>
     
   </entry>
   
