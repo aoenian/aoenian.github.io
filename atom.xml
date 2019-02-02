@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-01-24T03:19:25.216Z</updated>
+  <updated>2019-02-02T04:21:17.373Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树莓派最佳伴侣pi-hole安装</title>
+    <link href="https://aoenian.github.io/2019/02/02/rasp-pi-hole/"/>
+    <id>https://aoenian.github.io/2019/02/02/rasp-pi-hole/</id>
+    <published>2019-02-01T16:00:00.000Z</published>
+    <updated>2019-02-02T04:21:17.373Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;树莓派放在那里吃灰又快一年了，平时偶尔想起来更新一下系统然后又给关掉了。不过小机器质量还不错，一直很坚挺。这段时间不是太忙了，想着还是让它发挥一下余热。网络搜索以后发现&lt;a href=&quot;https://github.com/pi-hole/pi-hole&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;pi-hole&lt;/a&gt;这个东西不错，下面开工。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Raspberry Pi" scheme="https://aoenian.github.io/categories/Raspberry-Pi/"/>
+    
+    
+      <category term="pi-hole" scheme="https://aoenian.github.io/tags/pi-hole/"/>
+    
+      <category term="advertisement" scheme="https://aoenian.github.io/tags/advertisement/"/>
+    
+  </entry>
   
   <entry>
     <title>鼠须管更新0.10.0部署出错解决</title>
@@ -483,32 +505,6 @@
       <category term="fedora" scheme="https://aoenian.github.io/tags/fedora/"/>
     
       <category term="system beauty" scheme="https://aoenian.github.io/tags/system-beauty/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fedora28配置记录1——基本配置</title>
-    <link href="https://aoenian.github.io/2018/07/07/fedora28-config-1/"/>
-    <id>https://aoenian.github.io/2018/07/07/fedora28-config-1/</id>
-    <published>2018-07-06T16:00:00.000Z</published>
-    <updated>2018-07-21T10:47:11.622Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;从使用manjaro以后感觉对中文的支持不是太好以后，就想换一个发行版，然后想到了fedora。&lt;/p&gt;
-&lt;p&gt;之前虽然也用过但是那时候觉得不是太好，好像连exfat格式的u盘都无法识别。现在趁着这个机会再装一次看看。&lt;/p&gt;
-&lt;h1 id=&quot;安装系统&quot;&gt;&lt;a href=&quot;#安装系统&quot; class=&quot;headerlink&quot; title=&quot;安装系统&quot;&gt;&lt;/a&gt;安装系统&lt;/h1&gt;&lt;p&gt;依然选择轻量级桌面，这次不再用lxde，选择了xfce，主要是相对kde和gnome要轻量，同时呢也有主题、图标的配置，终端的配色支持都有。比较折中。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://spins.fedoraproject.org/xfce/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;xfce镜像&lt;/a&gt;记得下载完成后验证镜像是否完整，写入u盘的软件我使用的是 &lt;a href=&quot;https://sourceforge.net/projects/win32diskimager/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Win32 Disk Imager&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;建议安装的时候选择中文版，这样输入法中文字体都会有，可以安装完成后再修改为英文。&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
-    
-    
-      <category term="fedora" scheme="https://aoenian.github.io/tags/fedora/"/>
-    
-      <category term="xfce" scheme="https://aoenian.github.io/tags/xfce/"/>
     
   </entry>
   
