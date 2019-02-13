@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-02-02T04:21:17.373Z</updated>
+  <updated>2019-02-13T03:31:36.388Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>老台式安装Windows10的问题解决</title>
+    <link href="https://aoenian.github.io/2019/02/13/install-win10/"/>
+    <id>https://aoenian.github.io/2019/02/13/install-win10/</id>
+    <published>2019-02-12T16:00:00.000Z</published>
+    <updated>2019-02-13T03:31:36.388Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;过年回家准备把家里面的台式机重装系统，想想就直接Windows10了，省得以后麻烦。&lt;/p&gt;
+&lt;p&gt;谁知道都是老司机了，居然翻车了，轻车熟路通过u盘启动微pe系统，然后把Windows10的镜像加载到虚拟光驱，双击打开，启动&lt;code&gt;setup.exe&lt;/code&gt;。嘣，弹出对话框提示：&lt;strong&gt;使用其他标明64位的安装光盘…&lt;/strong&gt;，当时蒙了，这什么情况，32位的系统还装不了？于是进行了以下的操作。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
+    
+    
+      <category term="install" scheme="https://aoenian.github.io/tags/install/"/>
+    
+      <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
+    
+  </entry>
   
   <entry>
     <title>树莓派最佳伴侣pi-hole安装</title>
@@ -56,9 +79,9 @@
       <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
     
     
-      <category term="Rime" scheme="https://aoenian.github.io/tags/Rime/"/>
-    
       <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
+    
+      <category term="Rime" scheme="https://aoenian.github.io/tags/Rime/"/>
     
   </entry>
   
@@ -481,30 +504,6 @@
       <category term="fedora" scheme="https://aoenian.github.io/tags/fedora/"/>
     
       <category term="keyring" scheme="https://aoenian.github.io/tags/keyring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fedora28配置记录2——系统美化</title>
-    <link href="https://aoenian.github.io/2018/07/14/fedora28-config-2/"/>
-    <id>https://aoenian.github.io/2018/07/14/fedora28-config-2/</id>
-    <published>2018-07-13T16:00:00.000Z</published>
-    <updated>2018-07-14T13:43:56.290Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;接上篇，搞定输入法然后想把系统整得好看一点。&lt;/p&gt;
-&lt;h1 id=&quot;输入法安装&quot;&gt;&lt;a href=&quot;#输入法安装&quot; class=&quot;headerlink&quot; title=&quot;输入法安装&quot;&gt;&lt;/a&gt;输入法安装&lt;/h1&gt;&lt;p&gt;如果对中文输入法需求不高，ibus的自带拼音输入也就够用了，不过这个经常打交道的家伙还是来个顺手的更好。这里依然推荐&lt;a href=&quot;https://rime.im/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Rime&lt;/a&gt;中州韵输入法，安装很简单一条命令就可以处理，而且如果你用全拼的话基本不用配置即可使用，需要了解的是输入法的配置快捷键是&lt;code&gt;CTRL+`&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;sudo dnf install ibus-rime&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
-    
-    
-      <category term="fedora" scheme="https://aoenian.github.io/tags/fedora/"/>
-    
-      <category term="system beauty" scheme="https://aoenian.github.io/tags/system-beauty/"/>
     
   </entry>
   
