@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-02-13T03:31:36.388Z</updated>
+  <updated>2019-02-16T10:46:30.722Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小米电视4x与Windows10局域网文件共享</title>
+    <link href="https://aoenian.github.io/2019/02/16/mi4x-win10-shar/"/>
+    <id>https://aoenian.github.io/2019/02/16/mi4x-win10-shar/</id>
+    <published>2019-02-15T16:00:00.000Z</published>
+    <updated>2019-02-16T10:46:30.722Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;过年买了小米电视4x，之前用过小米盒子，感觉小米的电视系统个人还是比较习惯。然后在使用过程中整体还不错，不过有一个问题搞得很头疼，就是局域网共享的问题。&lt;/p&gt;
+&lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;家里的电脑和电视都在一个局域网中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;电脑是Windows10系统，电脑下载的电影在一个目录中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;问题来了，把目录共享了以后，电视却死活看不到共享目录，当然直接在电视里面添加共享电脑的IP地址也是无法获得共享，但是奇怪的是同局域网的其他电脑和手机都能看到&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
+    
+    
+      <category term="文件共享" scheme="https://aoenian.github.io/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/"/>
+    
+      <category term="小米电视4x" scheme="https://aoenian.github.io/tags/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%A7%864x/"/>
+    
+  </entry>
   
   <entry>
     <title>老台式安装Windows10的问题解决</title>
@@ -474,36 +504,6 @@
       <category term="Win7" scheme="https://aoenian.github.io/tags/Win7/"/>
     
       <category term="pavilion" scheme="https://aoenian.github.io/tags/pavilion/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fedora28去掉Chrome/Opera浏览器的默认密钥环</title>
-    <link href="https://aoenian.github.io/2018/07/18/fedora28-erase-default-keyring/"/>
-    <id>https://aoenian.github.io/2018/07/18/fedora28-erase-default-keyring/</id>
-    <published>2018-07-17T16:00:00.000Z</published>
-    <updated>2018-07-22T12:47:18.738Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;安装浏览器的时候弹出的设置默认密钥，建议大家不要设置，不过既然你看到这篇文章估计已经晚了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;那么解决方法如下：&lt;/p&gt;
-&lt;p&gt;打开终端 执行命令 &lt;code&gt;seahorse&lt;/code&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
-    
-    
-      <category term="fedora" scheme="https://aoenian.github.io/tags/fedora/"/>
-    
-      <category term="keyring" scheme="https://aoenian.github.io/tags/keyring/"/>
     
   </entry>
   
