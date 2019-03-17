@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-02-16T10:46:30.722Z</updated>
+  <updated>2019-03-17T12:29:31.705Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用U盘安装macOS High Sierra</title>
+    <link href="https://aoenian.github.io/2019/03/16/install-macos/"/>
+    <id>https://aoenian.github.io/2019/03/16/install-macos/</id>
+    <published>2019-03-15T16:00:00.000Z</published>
+    <updated>2019-03-17T12:29:31.705Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;手边有一台10年的macbookpro，配置还行，不过由于安装了windows系统，驱动可能有问题，一直没有声音，触摸板也很奇怪，然后准备重新装回macOS。&lt;/p&gt;
+&lt;h1 id=&quot;安装方式&quot;&gt;&lt;a href=&quot;#安装方式&quot; class=&quot;headerlink&quot; title=&quot;安装方式&quot;&gt;&lt;/a&gt;安装方式&lt;/h1&gt;&lt;h2 id=&quot;联网自动安装&quot;&gt;&lt;a href=&quot;#联网自动安装&quot; class=&quot;headerlink&quot; title=&quot;联网自动安装&quot;&gt;&lt;/a&gt;联网自动安装&lt;/h2&gt;&lt;p&gt;这个是最先想到的方法，因为现在用的mba就是这样重装的，只要连上网络，干会儿其他的事情，等会回来崭新的系统就在迎接你了，不得不说苹果公司在软硬件的结合方面真的很厉害。让人越用越懒，用了以后基本就没再手动装过系统了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;但是重点来了&lt;/strong&gt;，由于笔记本的年龄太大了，直接开机&lt;code&gt;Command+R&lt;/code&gt;找到重新安装macOS，谁知道自动恢复的系统是&lt;code&gt;OS X Mountain Lion&lt;/code&gt;，直接提示&lt;strong&gt;已经下架&lt;/strong&gt;，网络上找了解决的方法，说是中国区下架了，把appleID更改为国外即可，&lt;em&gt;经测试更改为美国依然无法自动安装。&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
+    
+    
+      <category term="Sierra" scheme="https://aoenian.github.io/tags/Sierra/"/>
+    
+      <category term="install" scheme="https://aoenian.github.io/tags/install/"/>
+    
+  </entry>
   
   <entry>
     <title>小米电视4x与Windows10局域网文件共享</title>
@@ -475,35 +499,6 @@
       <category term="next" scheme="https://aoenian.github.io/tags/next/"/>
     
       <category term="style" scheme="https://aoenian.github.io/tags/style/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>惠普Pavilion笔记本安装Windows7</title>
-    <link href="https://aoenian.github.io/2018/08/05/hp-pavilion-install-win7/"/>
-    <id>https://aoenian.github.io/2018/08/05/hp-pavilion-install-win7/</id>
-    <published>2018-08-04T16:00:00.000Z</published>
-    <updated>2018-08-05T03:24:01.907Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;注意：惠普的Pavilion系列的CPU可能Win7不支持，触摸屏Win7也不支持，还有就是笔记本的功能按键可能也不行，如果Win7不是必需，建议安装Win10系统。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果一定需要安装Win7则需要更改BIOS，不然系统安装完
-        
-      
-    
-    </summary>
-    
-      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
-    
-    
-      <category term="Win7" scheme="https://aoenian.github.io/tags/Win7/"/>
-    
-      <category term="pavilion" scheme="https://aoenian.github.io/tags/pavilion/"/>
     
   </entry>
   
