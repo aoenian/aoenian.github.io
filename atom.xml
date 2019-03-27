@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-03-17T12:29:31.705Z</updated>
+  <updated>2019-03-27T09:04:53.467Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树莓派Raspbian系统安装过程</title>
+    <link href="https://aoenian.github.io/2019/03/24/install-raspberrypi/"/>
+    <id>https://aoenian.github.io/2019/03/24/install-raspberrypi/</id>
+    <published>2019-03-23T16:00:00.000Z</published>
+    <updated>2019-03-27T09:04:53.467Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;周末了，发现树莓派的pi-hole出问题了，无法提供dns服务了，没有查原因，想着用很长时间了，这次正好重新装一次系统，把之前不用的功能和软件全部处理掉。&lt;/p&gt;
+&lt;p&gt;英文不错请查看官方的&lt;a href=&quot;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;安装指南&lt;/a&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Raspberry Pi" scheme="https://aoenian.github.io/categories/Raspberry-Pi/"/>
+    
+    
+      <category term="ssh" scheme="https://aoenian.github.io/tags/ssh/"/>
+    
+      <category term="stretch" scheme="https://aoenian.github.io/tags/stretch/"/>
+    
+  </entry>
   
   <entry>
     <title>用U盘安装macOS High Sierra</title>
@@ -476,29 +499,6 @@
       <category term="next" scheme="https://aoenian.github.io/tags/next/"/>
     
       <category term="code block" scheme="https://aoenian.github.io/tags/code-block/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Next主题样式配置1-行内代码、下划线、字体</title>
-    <link href="https://aoenian.github.io/2018/08/06/next-theme-customized-1/"/>
-    <id>https://aoenian.github.io/2018/08/06/next-theme-customized-1/</id>
-    <published>2018-08-05T16:00:00.000Z</published>
-    <updated>2018-08-08T12:45:46.016Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用Github Pages做博客以后，一直用的主题就是Next，中间换过一次，但是太折腾了，后来又换回来了。&lt;/p&gt;
-&lt;p&gt;不过在使用过程中修改了一些配置和样式，让有些地方更适合自己，这里把配置记录一下，以便以后参考。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://aoenian.github.io/categories/Hexo/"/>
-    
-    
-      <category term="next" scheme="https://aoenian.github.io/tags/next/"/>
-    
-      <category term="style" scheme="https://aoenian.github.io/tags/style/"/>
     
   </entry>
   
