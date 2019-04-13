@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-03-27T09:04:53.467Z</updated>
+  <updated>2019-04-13T08:36:48.993Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日常使用中一些小问题汇总(一)</title>
+    <link href="https://aoenian.github.io/2019/04/03/macos-problem-collection-one/"/>
+    <id>https://aoenian.github.io/2019/04/03/macos-problem-collection-one/</id>
+    <published>2019-04-02T16:00:00.000Z</published>
+    <updated>2019-04-13T08:36:48.993Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;安装Eclipse&quot;&gt;&lt;a href=&quot;#安装Eclipse&quot; class=&quot;headerlink&quot; title=&quot;安装Eclipse&quot;&gt;&lt;/a&gt;安装Eclipse&lt;/h2&gt;&lt;p&gt;直接在Eclipse的 &lt;a href=&quot;http://www.eclipse.org/downloads/packages/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt; 下载&lt;strong&gt;Eclipse IDE for Java Developers&lt;/strong&gt;这个版本即可。&lt;/p&gt;
+&lt;p&gt;然后双击安装，启动后系统会提示安装 &lt;strong&gt;旧javaSE6运行环境才能打开&lt;/strong&gt; 点击 &lt;strong&gt;更多信息&lt;/strong&gt;，下载安装 &lt;strong&gt;Java for OS X 2017-001&lt;/strong&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="collection" scheme="https://aoenian.github.io/categories/collection/"/>
+    
+    
+      <category term="you-get" scheme="https://aoenian.github.io/tags/you-get/"/>
+    
+      <category term="java" scheme="https://aoenian.github.io/tags/java/"/>
+    
+      <category term="virtual box" scheme="https://aoenian.github.io/tags/virtual-box/"/>
+    
+      <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
+    
+  </entry>
   
   <entry>
     <title>树莓派Raspbian系统安装过程</title>
@@ -178,11 +205,11 @@
       <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
     
     
+      <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
+    
       <category term="debug" scheme="https://aoenian.github.io/tags/debug/"/>
     
       <category term="javascript" scheme="https://aoenian.github.io/tags/javascript/"/>
-    
-      <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
     
   </entry>
   
@@ -274,9 +301,9 @@
       <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
     
     
-      <category term="markdown" scheme="https://aoenian.github.io/tags/markdown/"/>
-    
       <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
+    
+      <category term="markdown" scheme="https://aoenian.github.io/tags/markdown/"/>
     
       <category term="pdf" scheme="https://aoenian.github.io/tags/pdf/"/>
     
@@ -476,29 +503,6 @@
       <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
     
       <category term="snippet" scheme="https://aoenian.github.io/tags/snippet/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Next主题样式配置2-代码块显示程序语言名字</title>
-    <link href="https://aoenian.github.io/2018/08/09/next-theme-customized-2/"/>
-    <id>https://aoenian.github.io/2018/08/09/next-theme-customized-2/</id>
-    <published>2018-08-08T16:00:00.000Z</published>
-    <updated>2018-12-01T08:43:44.324Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一直想在代码块上面显示这个代码块使用的程序语言的名字，但是没有找到好的方法，这两天在搜索的时候发现了一个高手的&lt;a href=&quot;https://w3ctrain.com/2017/12/11/hexo-code-block/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;博客&lt;/a&gt;里面介绍了这个方法，就借鉴了过来。&lt;/p&gt;
-&lt;p&gt;因为自己的水平有限，后端基本啥也不会，所以原理就不多说了（其实看不懂），这里把步骤、代码以及一些小的修改记录如下。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://aoenian.github.io/categories/Hexo/"/>
-    
-    
-      <category term="next" scheme="https://aoenian.github.io/tags/next/"/>
-    
-      <category term="code block" scheme="https://aoenian.github.io/tags/code-block/"/>
     
   </entry>
   

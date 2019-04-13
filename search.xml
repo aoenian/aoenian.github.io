@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[日常使用中一些小问题汇总(一)]]></title>
+    <url>%2F2019%2F04%2F03%2Fmacos-problem-collection-one%2F</url>
+    <content type="text"><![CDATA[安装Eclipse直接在Eclipse的 官网 下载Eclipse IDE for Java Developers这个版本即可。 然后双击安装，启动后系统会提示安装 旧javaSE6运行环境才能打开 点击 更多信息，下载安装 Java for OS X 2017-001。 树莓派安装you-get平时在线看视频比较少，有时还是喜欢下载下来，树莓派可以担此重任，那就要用到you-get。不过安装之前需要处理依赖： Python 3.2 or above FFmpeg 1.0 or above (Optional) RTMPDump 执行如下命令解决依赖问题 123456789# python3 树莓派已经安装# ffmpeg 安装 (如果视频无需连接也可不安装，如有一些b站的视频)sudo apt install ffmpeg# 安装pip3sudo apt install python3-pip# 安装you-getsudo pip3 install you-get 完成后即可使用you-get命令。 安装虚拟机virtualbox在macOS之前的版本安装虚拟机（virtualbox）并没有出现这种情况，后来mac系统更新后出现的。 主要的问题就是安装过程失败，在最后一步安装失败，提示严重错误，这个主要是 High Sierra comes with a new security feature: Secure Kernel Extension Loading, which blocks kernel extension loading. 解决方法：进入 Preferences &gt; Security &amp; Privacy &gt; General 手动允许。 vscode文本乱码在windows系统下面下载了一些文本文件，拷贝到mac以后在vscode中打开出现乱码，选择文件编码依然没有效果，但是emacs打开没有问题。 解决方法如下：将vscode设置中的”files.autoGuessEncoding”项的值改为true即可。 参考链接： raspberry-doesnt-find-pip3 macOS 10.13 安装Virtualbox失败 VS Code 中文注释显示乱码]]></content>
+      <categories>
+        <category>collection</category>
+      </categories>
+      <tags>
+        <tag>you-get</tag>
+        <tag>java</tag>
+        <tag>virtual box</tag>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[树莓派Raspbian系统安装过程]]></title>
     <url>%2F2019%2F03%2F24%2Finstall-raspberrypi%2F</url>
     <content type="text"><![CDATA[周末了，发现树莓派的pi-hole出问题了，无法提供dns服务了，没有查原因，想着用很长时间了，这次正好重新装一次系统，把之前不用的功能和软件全部处理掉。 英文不错请查看官方的安装指南。 Raspbian系统安装系统下载下载地址这次不装桌面了，基本用不到，占资源，在这里下载Lite系统，建议使用种子下载，很快。 校验镜像因为在Windows上面做的镜像，所以这里的校验软件推荐Hasher，下载地址请点击这里。这个软件能够生成的校验码如下：CRC32, MD2, MD4, MD5, SHA1, SHA256, SHA512, RipeMD128, RipeMD160, ED2K。 系统安装很久没装系统了，现在发现官方还是很贴心的，直接把烧录镜像的软件也推荐了，名字是Etcher，页面中间根据自己的操作系统选择下载，因为这种软件用的频率不高，这里建议大家就不要安装了，选择Portable。 接着就没啥好说的，下载的系统是压缩包，打开Etcher选择压缩包（不用解压），选择U盘（软件会自动识别），然后点击Flash就可以了。 系统完成后注意，先不要插入树莓派启动，因为新版的系统默认没有开启ssh，系统烧录完成，请在系统中boot目录下新建一个名字为ssh的空文件（没有后缀）打开ssh。 系统登录和基本配置系统登录在同一局域网的电脑上用ssh登录到树莓派系统，至于IP可以在路由器上查看。新系统的用户名为pi 密码为 raspberry。官方文档 基本配置登入系统后，执行如下命令 123456# 启动树莓派设置程序 也可用 sudo -i 切换为 rootsudo raspi-config # 更改密码选择 change User Password# 扩展系统空间选择 Advanced Options Expand Filesystem 这里说一下固定IP的配置，在网络找了很多方法，没有成功，最后我用路由器给树莓派分配了固定IP. 遇到的问题在配置的时候会出现如下问题： 12345678perl: warning: Setting locale failed.perl: warning: Please check that your locale settings: LANGUAGE = (unset), LC_ALL = (unset), LC_CTYPE = "zh_CN.UTF-8", LANG = "en_GB.UTF-8" are supported and installed on your system.perl: warning: Falling back to a fallback locale ("en_GB.UTF-8"). 解决方法如下： 执行 sudo raspi-config 命令，然后选择 Localisation Options - change locale - 勾选 en_US.UTF-8 zh_CN.UTF-8 取消 en_GB.UTF-8 下一步 Default locale for the system environment 选择 en_US.UTF-8 确定]]></content>
@@ -80,9 +94,9 @@
         <category>Editor</category>
       </categories>
       <tags>
+        <tag>vscode</tag>
         <tag>debug</tag>
         <tag>javascript</tag>
-        <tag>vscode</tag>
       </tags>
   </entry>
   <entry>
@@ -129,8 +143,8 @@
         <category>Editor</category>
       </categories>
       <tags>
-        <tag>markdown</tag>
         <tag>vscode</tag>
+        <tag>markdown</tag>
         <tag>pdf</tag>
       </tags>
   </entry>
