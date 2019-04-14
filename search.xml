@@ -394,8 +394,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>samba</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
@@ -478,20 +478,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>三层交换机</tag>
         <tag>链路聚合</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
-    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
-    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>VLAN</tag>
-        <tag>switchs</tag>
+        <tag>三层交换机</tag>
       </tags>
   </entry>
   <entry>
@@ -503,6 +491,18 @@
       </categories>
       <tags>
         <tag>switch</tag>
+        <tag>VLAN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
+    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
+    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>switchs</tag>
         <tag>VLAN</tag>
       </tags>
   </entry>
@@ -731,8 +731,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>github pages</tag>
         <tag>hexo</tag>
+        <tag>github pages</tag>
       </tags>
   </entry>
 </search>
