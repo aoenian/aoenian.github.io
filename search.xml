@@ -478,8 +478,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>三层交换机</tag>
         <tag>链路聚合</tag>
+        <tag>三层交换机</tag>
       </tags>
   </entry>
   <entry>
@@ -490,8 +490,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>switch</tag>
         <tag>VLAN</tag>
+        <tag>switch</tag>
       </tags>
   </entry>
   <entry>
@@ -731,8 +731,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>github pages</tag>
         <tag>hexo</tag>
+        <tag>github pages</tag>
       </tags>
   </entry>
 </search>

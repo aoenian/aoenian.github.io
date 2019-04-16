@@ -147,7 +147,7 @@
 
 
   <meta name="description" content="之前一直用现成的博客网站写博客（其实就是记性不好），后来感觉限制太多，而且编辑方式也不是很方便（没有markdown）。也想到建一个自己的网站，不过太麻烦（其实不会弄）。后来发现了githubpages，良心产品，所以就整了一个。 不说废话，第一篇博客还是记录一下自己的配置过程。">
-<meta name="keywords" content="github pages,hexo">
+<meta name="keywords" content="hexo,github pages">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GithubPages和Hexo建立个人博客">
 <meta property="og:url" content="https://aoenian.github.io/2016/08/08/github-hexo-blog/index.html">
@@ -463,16 +463,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/08/08/github-hexo-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2016/08/08/github-hexo-blog/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -594,9 +584,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/github-pages/" rel="tag"># github pages</a>
-          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/github-pages/" rel="tag"># github pages</a>
           
         </div>
       
@@ -1222,8 +1212,8 @@
 <!-- LOCAL: You can save these files to your site and update links -->
     
         
-        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
-        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+        <link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css">
+        <script src="https://www.wenjunjiang.win/js/gitment.js"></script>
     
 <!-- END LOCAL -->
 
@@ -1232,12 +1222,10 @@
     
       <script type="text/javascript">
       function renderGitment(){
-        var gitment = new Gitmint({
+        var gitment = new Gitment({
             id: window.location.pathname,
             owner: 'aoenian',
-            repo: 'aoenian.github.io',
-            
-            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            repo: 'gitment-comments',
             
             oauth: {
             
