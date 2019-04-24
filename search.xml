@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows7+Github+Hexo搭建个人博客]]></title>
+    <url>%2F2019%2F04%2F24%2Fwindows-hexo-blog%2F</url>
+    <content type="text"><![CDATA[准备工作 github帐号一枚 注册github，输入用户名，邮箱，密码即可注册。然后新建一个repo，命名为username.github.io其中username替换为你的用户名。建议勾选Initialize this repository with a README`。 仓库建立完成后，即可访问 https://username.github.io 能够看到一个白色页面，写着你的仓库名及仓库描述（如果你建立仓库的时候写了的话） 下载安装node 下载地址：node 建议使用LTS版本，安装完成后打开CMD执行命令 node -v 返回相应的版本号则安装成功。 下载安装git 下载地址：git 安装完成后在CMD中执行命令 git --version 返回相应的版本则安装成功。 安装hexo 安装淘宝npm镜像 由于网络环境的原因，建议更换淘宝npm镜像，具体可查看淘宝 NPM 镜像。 在cmd中执行如下命令进行更换： npm install -g cnpm --registry=https://registry.npm.taobao.org 使用方法：更换完成后，即可用cnpm替换后面命令中的npm。 安装hexo 具体可参照官方网站Hexo。 这里介绍如下： 123456789101112131415161718# 在cmd中执行此命令安装hexo# 如使用淘宝镜像，则记得替换为cnpmnpm install hexo-cli -g# 初始化博客命令，会建立一个blog的目录# blog 只是目录名，可以修改# 可能出现警告 Failed to install dependencies# 不用担心警告继续向下执行即可hexo init blog# 进入blog目录cd blog# 依赖安装，可以替换为cnpmnpm install# 启动hexohexo server 启动hexo以后，在命令行会出现：Hexo is running at http://localhost:4000 这个时候就可以用浏览器访问这个地址，到此本地的博客框架已经搭建完成。 注：CTRL+C 是停止本地的博客服务。 部署 安装 hexo-deployer-git 在blog目录中执行 cnpm install hexo-deployer-git --save 修改hexo配置文件 hexo的配置文件位置：blog/_config.yml 建议使用vscode、nodepad++等编辑器打开，不要使用Windows记事本。 具体的配置信息请查看官方网站：配置 这里只简单介绍github的部署配置 打开_config.yml文件，然后找到文件最后的 # Deployment 这一段，更改如下： 123456# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: &lt;repository url&gt; #你的仓库的url 如：https://github.com/aoenian/aoenian.github.io.git branch: master 完成后即可在CMD窗口中切换到blog目录下执行命令hexo clean &amp;&amp; hexo g &amp;&amp; hexo d，输入用户名和密码(密码在终端不会显示)即可部署成功。]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>windows</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Next主题增加Gitment评论系统]]></title>
     <url>%2F2019%2F04%2F14%2Fnext-theme-gitment%2F</url>
     <content type="text"><![CDATA[刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。 准备工作 一个github帐号（当我没说) 用你做博客的github帐号注册一个OAuth application 注册地址点这里，填写内容如下图： 注意： Authorization callback URL用你的博客的域名，其他的可以随便填写。点击注册按钮后会出现Client ID和Client Secret记录下来，等会会用到。 （此步骤可选）新建一个repo，用这个repo的issue来存储博客 我建立了一个blog-comments来存储。 修改主题配置文件修改next主题的配置文件_config.yml，找到 gitment 选项修改如下： 12345678910111213gitment: enable: true mint: false # 建议false count: true # Show comments count in post meta area lazy: false # Comments lazy loading with a button cleanly: false # Hide 'Powered by ...' on footer, and more language: # Force language, or auto switch by theme github_user: aoenian # MUST HAVE, Your Github Username github_repo: blog-comments # 你存储评论的repo 如果没有新建可以是 你的博客repo 如：aoenian.github.io client_id: '你的Client ID' # MUST HAVE, Github client id for the Gitment client_secret: '你的Client Secret' # EITHER this or proxy_gateway, Github access secret token for the Gitment proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled 正常情况，到这里就完成了，接下来就是执行hexo clean &amp;&amp; hexo g &amp;&amp; hexo d然后在评论区会显示未开放评论，这时用自己的帐号点击登入，然后验证即可手动开放（每篇文章需要这样做一遍）。 但是我在输入用户名密码登录后，页面出现错误提示：object ProgressEvent，评论登录一直转圈圈，具体原因可查看 https://github.com/imsun/gitment/issues/170 object ProgressEvent问题解决找到next主题中的gitment评论文件 next/layout/_third-party/comments/gitment.swig，更改以下代码 1234567&lt;!-- 原代码 --&gt;&lt;link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"&gt;&lt;script src="https://imsun.github.io/gitment/dist/gitment.browser.js"&gt;&lt;/script&gt;&lt;!-- 更改后 --&gt;&lt;link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css"&gt;&lt;script src="https://www.wenjunjiang.win/js/gitment.js"&gt;&lt;/script&gt; 重新清理缓存，部署博客即可留言。 参考博文： Hexo博客主题NexT相关配置 hexo添加gitment评论系统 添加Gitment评论系统踩过的坑]]></content>
@@ -407,8 +419,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>samba</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
@@ -491,20 +503,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>三层交换机</tag>
         <tag>链路聚合</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[思科交换机配置2——单交换机VLAN划分]]></title>
-    <url>%2F2017%2F03%2F05%2Fswitch-config-2%2F</url>
-    <content type="text"><![CDATA[单交换机VLAN配置配置好的思科模拟器文件地址:cisco-pkt 配置参数 名称 IP地址 所属VLAN 连接端口 网关 PC1 192.168.1.11/24 VLAN10 f0/1 192.168.1.254/24 PC2 192.168.1.12/24 VLAN10 f0/2 192.168.1.254/24 PC3 192.168.2.11/24 VLAN20 f0/11 192.168.2.254/24 PC4 192.168.2.12/24 VLAN20 f0/12 192.168.2.254/24 创建VLAN为了不占用太大的篇幅，一些命令的常规提示将不会写出来 全局模式下配置12345Switch#configure terminal Switch(config)#vlan 10 // 创建vlan 10Switch(config-vlan)#name v10 // 为 vlan10 命名Switch(config-vlan)#exitSwitch(config)#exit VLAN database 模式1234Switch#vlan database Switch(vlan)#vlan 20 name v20VLAN 20 added: Name: v20 把端口加入相应的VLAN端口的配置可以配置单个端口，也可以多个端口一块配置 把1~10号端口加入vlan1012345678910Switch(config)#interface f0/1 // 设置端口1Switch(config-if)#switchport mode access // 设置端口模式Switch(config-if)#switchport access vlan 10 // 把此端口加入vlan10中Switch(config-if)#exit // 退回全局配置Switch(config)#interface range fastEthernet ? // 查看帮助 &lt;0-9&gt; FastEthernet interface numberSwitch(config)#interface range fastEthernet 0/2-10 // 设置2~10端口Switch(config-if-range)#switchport mode access // 设置模式Switch(config-if-range)#switchport access vlan 10 Switch(config-if-range)#exit 把11-20号端口加入vlan20123Switch(config)#interface range f0/11-20Switch(config-if-range)#switchport mode accessSwitch(config-if-range)#switchport access vlan 20 把配置写入123456Switch#write // 一种方式Switch#copy running-config startup-config // 另一种方法Destination filename [startup-config]? Building configuration...[OK]Switch# 查看vlan的配置123Switch#show vlan // 查看vlan配置Switch#show running-config // 查看交换机配置 测试pc1与pc2可以互相ping通，与pc3和pc4无法ping通 更改pc3或pc4与pc1为一个网段的IP，依然无法与pc1通信。]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>switch</tag>
-        <tag>VLAN</tag>
+        <tag>三层交换机</tag>
       </tags>
   </entry>
   <entry>
@@ -517,6 +517,18 @@
       <tags>
         <tag>VLAN</tag>
         <tag>switchs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[思科交换机配置2——单交换机VLAN划分]]></title>
+    <url>%2F2017%2F03%2F05%2Fswitch-config-2%2F</url>
+    <content type="text"><![CDATA[单交换机VLAN配置配置好的思科模拟器文件地址:cisco-pkt 配置参数 名称 IP地址 所属VLAN 连接端口 网关 PC1 192.168.1.11/24 VLAN10 f0/1 192.168.1.254/24 PC2 192.168.1.12/24 VLAN10 f0/2 192.168.1.254/24 PC3 192.168.2.11/24 VLAN20 f0/11 192.168.2.254/24 PC4 192.168.2.12/24 VLAN20 f0/12 192.168.2.254/24 创建VLAN为了不占用太大的篇幅，一些命令的常规提示将不会写出来 全局模式下配置12345Switch#configure terminal Switch(config)#vlan 10 // 创建vlan 10Switch(config-vlan)#name v10 // 为 vlan10 命名Switch(config-vlan)#exitSwitch(config)#exit VLAN database 模式1234Switch#vlan database Switch(vlan)#vlan 20 name v20VLAN 20 added: Name: v20 把端口加入相应的VLAN端口的配置可以配置单个端口，也可以多个端口一块配置 把1~10号端口加入vlan1012345678910Switch(config)#interface f0/1 // 设置端口1Switch(config-if)#switchport mode access // 设置端口模式Switch(config-if)#switchport access vlan 10 // 把此端口加入vlan10中Switch(config-if)#exit // 退回全局配置Switch(config)#interface range fastEthernet ? // 查看帮助 &lt;0-9&gt; FastEthernet interface numberSwitch(config)#interface range fastEthernet 0/2-10 // 设置2~10端口Switch(config-if-range)#switchport mode access // 设置模式Switch(config-if-range)#switchport access vlan 10 Switch(config-if-range)#exit 把11-20号端口加入vlan20123Switch(config)#interface range f0/11-20Switch(config-if-range)#switchport mode accessSwitch(config-if-range)#switchport access vlan 20 把配置写入123456Switch#write // 一种方式Switch#copy running-config startup-config // 另一种方法Destination filename [startup-config]? Building configuration...[OK]Switch# 查看vlan的配置123Switch#show vlan // 查看vlan配置Switch#show running-config // 查看交换机配置 测试pc1与pc2可以互相ping通，与pc3和pc4无法ping通 更改pc3或pc4与pc1为一个网段的IP，依然无法与pc1通信。]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>switch</tag>
+        <tag>VLAN</tag>
       </tags>
   </entry>
   <entry>

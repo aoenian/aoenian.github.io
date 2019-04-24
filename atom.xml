@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-04-24T03:32:49.536Z</updated>
+  <updated>2019-04-24T08:49:23.689Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows7+Github+Hexo搭建个人博客</title>
+    <link href="https://aoenian.github.io/2019/04/24/windows-hexo-blog/"/>
+    <id>https://aoenian.github.io/2019/04/24/windows-hexo-blog/</id>
+    <published>2019-04-23T16:00:00.000Z</published>
+    <updated>2019-04-24T08:49:23.689Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;github帐号一枚&lt;/p&gt;
+&lt;p&gt; 注册github，输入用户名，邮箱，密码即可注册。然后新建一个repo，命名为&lt;code&gt;username.github.io&lt;/code&gt;其中username替换为你的用户名。建议勾选&lt;strong&gt;Initialize this repository with a README&lt;/strong&gt;`。&lt;/p&gt;
+&lt;p&gt; 仓库建立完成后，即可访问 &lt;a href=&quot;https://username.github.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://username.github.io&lt;/a&gt; 能够看到一个白色页面，写着你的仓库名及仓库描述（&lt;em&gt;如果你建立仓库的时候写了的话&lt;/em&gt;）&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://aoenian.github.io/categories/Hexo/"/>
+    
+    
+      <category term="windows" scheme="https://aoenian.github.io/tags/windows/"/>
+    
+      <category term="git" scheme="https://aoenian.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Next主题增加Gitment评论系统</title>
     <link href="https://aoenian.github.io/2019/04/14/next-theme-gitment/"/>
     <id>https://aoenian.github.io/2019/04/14/next-theme-gitment/</id>
     <published>2019-04-13T16:00:00.000Z</published>
-    <updated>2019-04-24T03:32:49.536Z</updated>
+    <updated>2019-04-24T03:40:43.017Z</updated>
     
     <summary type="html">
     
@@ -481,29 +506,6 @@
       <category term="Org" scheme="https://aoenian.github.io/tags/Org/"/>
     
       <category term="highlight" scheme="https://aoenian.github.io/tags/highlight/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>控制打印的css样式</title>
-    <link href="https://aoenian.github.io/2018/09/25/control-print-style/"/>
-    <id>https://aoenian.github.io/2018/09/25/control-print-style/</id>
-    <published>2018-09-24T16:00:00.000Z</published>
-    <updated>2018-10-03T02:37:55.872Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前段时间遇到一个问题，有很多图片然后需要打印出来，但是呢图片太大放在word里面以后发现只有一半在打印区域，剩下的都出去了。&lt;/p&gt;
-&lt;p&gt;首先想到的解决方法就是找一下如何在word里面批量修改图片大小，你别说还真有，但是步骤很复杂，当然复杂不怕，关键是起作用就行。不过里面有个操作很可怕，里面需要图片的插入方式是 &lt;strong&gt;四周型&lt;/strong&gt;，我一看我的这个word文件，里面的图片都是嵌入式，一张张改类型还不如我直接一张张改大小得了。对了， &lt;em&gt;word里面的格式刷好像对图片也没用。&lt;/em&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
-    
-    
-      <category term="front" scheme="https://aoenian.github.io/tags/front/"/>
-    
-      <category term="web" scheme="https://aoenian.github.io/tags/web/"/>
     
   </entry>
   
