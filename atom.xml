@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-04-14T09:06:56.864Z</updated>
+  <updated>2019-04-24T03:32:49.536Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Next主题增加Gitment评论系统</title>
+    <link href="https://aoenian.github.io/2019/04/14/next-theme-gitment/"/>
+    <id>https://aoenian.github.io/2019/04/14/next-theme-gitment/</id>
+    <published>2019-04-13T16:00:00.000Z</published>
+    <updated>2019-04-24T03:32:49.536Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了&lt;strong&gt;DISQUS&lt;/strong&gt;，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。&lt;/p&gt;
+&lt;p&gt;前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://aoenian.github.io/categories/Hexo/"/>
+    
+    
+      <category term="next" scheme="https://aoenian.github.io/tags/next/"/>
+    
+      <category term="评论" scheme="https://aoenian.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
+    
+      <category term="gitment" scheme="https://aoenian.github.io/tags/gitment/"/>
+    
+  </entry>
   
   <entry>
     <title>日常使用中一些小问题汇总(一)</title>
@@ -479,30 +504,6 @@
       <category term="front" scheme="https://aoenian.github.io/tags/front/"/>
     
       <category term="web" scheme="https://aoenian.github.io/tags/web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode建立用户代码片段</title>
-    <link href="https://aoenian.github.io/2018/08/13/vscode-user-snippet/"/>
-    <id>https://aoenian.github.io/2018/08/13/vscode-user-snippet/</id>
-    <published>2018-08-12T16:00:00.000Z</published>
-    <updated>2018-08-14T13:45:06.546Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;编辑器尝试过很多，感觉没有特别适合的，当然我并不是深度用户，所以不做过多的评论。遇到VSCode以后感觉还是蛮不错，从一个普通用户的角度来说。&lt;/p&gt;
-&lt;p&gt;现在主要用的编辑器是两个 &lt;code&gt;Emacs&lt;/code&gt; 和 &lt;code&gt;VSCode&lt;/code&gt; ，前者用来写org文件，后者编辑修改一些小程序和配置文件。&lt;/p&gt;
-&lt;p&gt;遇到这个问题是因为在编写简单的 &lt;code&gt;HTML&lt;/code&gt; 文件时使用VSCode自带的补全有些内容暂时不需要，所以想自己写一个类似 &lt;code&gt;emmet&lt;/code&gt; 官方的自动补全，试了一下操作很方便，这里做个记录备份。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
-    
-    
-      <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
-    
-      <category term="snippet" scheme="https://aoenian.github.io/tags/snippet/"/>
     
   </entry>
   

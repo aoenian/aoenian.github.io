@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Next主题增加Gitment评论系统]]></title>
+    <url>%2F2019%2F04%2F14%2Fnext-theme-gitment%2F</url>
+    <content type="text"><![CDATA[刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。 准备工作 一个github帐号（当我没说) 用你做博客的github帐号注册一个OAuth application 注册地址点这里，填写内容如下图： 注意： Authorization callback URL用你的博客的域名，其他的可以随便填写。点击注册按钮后会出现Client ID和Client Secret记录下来，等会会用到。 （此步骤可选）新建一个repo，用这个repo的issue来存储博客 我建立了一个blog-comments来存储。 修改主题配置文件修改next主题的配置文件_config.yml，找到 gitment 选项修改如下： 12345678910111213gitment: enable: true mint: false # 建议false count: true # Show comments count in post meta area lazy: false # Comments lazy loading with a button cleanly: false # Hide 'Powered by ...' on footer, and more language: # Force language, or auto switch by theme github_user: aoenian # MUST HAVE, Your Github Username github_repo: blog-comments # 你存储评论的repo 如果没有新建可以是 你的博客repo 如：aoenian.github.io client_id: '你的Client ID' # MUST HAVE, Github client id for the Gitment client_secret: '你的Client Secret' # EITHER this or proxy_gateway, Github access secret token for the Gitment proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled 正常情况，到这里就完成了，接下来就是执行hexo clean &amp;&amp; hexo g &amp;&amp; hexo d然后在评论区会显示未开放评论，这时用自己的帐号点击登入，然后验证即可手动开放（每篇文章需要这样做一遍）。 但是我在输入用户名密码登录后，页面出现错误提示：object ProgressEvent，评论登录一直转圈圈，具体原因可查看 https://github.com/imsun/gitment/issues/170 object ProgressEvent问题解决找到next主题中的gitment评论文件 next/layout/_third-party/comments/gitment.swig，更改以下代码 1234567&lt;!-- 原代码 --&gt;&lt;link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"&gt;&lt;script src="https://imsun.github.io/gitment/dist/gitment.browser.js"&gt;&lt;/script&gt;&lt;!-- 更改后 --&gt;&lt;link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css"&gt;&lt;script src="https://www.wenjunjiang.win/js/gitment.js"&gt;&lt;/script&gt; 重新清理缓存，部署博客即可留言。 参考博文： Hexo博客主题NexT相关配置 hexo添加gitment评论系统 添加Gitment评论系统踩过的坑]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+        <tag>评论</tag>
+        <tag>gitment</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[日常使用中一些小问题汇总(一)]]></title>
     <url>%2F2019%2F04%2F03%2Fmacos-problem-collection-one%2F</url>
     <content type="text"><![CDATA[安装Eclipse直接在Eclipse的 官网 下载Eclipse IDE for Java Developers这个版本即可。 然后双击安装，启动后系统会提示安装 旧javaSE6运行环境才能打开 点击 更多信息，下载安装 Java for OS X 2017-001。 树莓派安装you-get平时在线看视频比较少，有时还是喜欢下载下来，树莓派可以担此重任，那就要用到you-get。不过安装之前需要处理依赖： Python 3.2 or above FFmpeg 1.0 or above (Optional) RTMPDump 执行如下命令解决依赖问题 123456789# python3 树莓派已经安装# ffmpeg 安装 (如果视频无需连接也可不安装，如有一些b站的视频)sudo apt install ffmpeg# 安装pip3sudo apt install python3-pip# 安装you-getsudo pip3 install you-get 完成后即可使用you-get命令。 安装虚拟机virtualbox在macOS之前的版本安装虚拟机（virtualbox）并没有出现这种情况，后来mac系统更新后出现的。 主要的问题就是安装过程失败，在最后一步安装失败，提示严重错误，这个主要是 High Sierra comes with a new security feature: Secure Kernel Extension Loading, which blocks kernel extension loading. 解决方法：进入 Preferences &gt; Security &amp; Privacy &gt; General 手动允许。 vscode文本乱码在windows系统下面下载了一些文本文件，拷贝到mac以后在vscode中打开出现乱码，选择文件编码依然没有效果，但是emacs打开没有问题。 解决方法如下：将vscode设置中的”files.autoGuessEncoding”项的值改为true即可。 参考链接： raspberry-doesnt-find-pip3 macOS 10.13 安装Virtualbox失败 VS Code 中文注释显示乱码]]></content>
@@ -478,8 +491,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>链路聚合</tag>
         <tag>三层交换机</tag>
+        <tag>链路聚合</tag>
       </tags>
   </entry>
   <entry>
@@ -490,8 +503,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>VLAN</tag>
         <tag>switch</tag>
+        <tag>VLAN</tag>
       </tags>
   </entry>
   <entry>
@@ -731,8 +744,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
         <tag>github pages</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
