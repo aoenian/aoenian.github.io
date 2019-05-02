@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[手机QQ邮箱日历同步问题]]></title>
+    <url>%2F2019%2F04%2F30%2Fqq-email-calendar-sync%2F</url>
+    <content type="text"><![CDATA[随着临时的工作越来越多，记忆空间的有限，考虑使用日历提醒来记录一些重要的事情。一个是避免忘记，另一个是能够在后面的时候查看日程找到处理事件的时间。 日历的选用经过了这样一个过程，首先是用的手机自带的日历，感觉不方便，同步比较麻烦。然后换用了tim，用了一段时间后发现新建日程的时间只能是将来，不能是过去，有时候把已经干完的事情做一个备忘就很麻烦了。 因为需求较低，只用过三种日历，系统自带、Tim日程、QQ邮箱日历。根据我的使用时的需求对比如下： 日历 主要问题 系统自带 更换手机同步不方便 Tim日程 无法同步，日程时间只能设定为将来 QQ邮箱日历 能够满足基本需求（当时以为能够随帐号同步） 最后呢使用了QQ邮箱客户端的日历，基本符合自己的要求，不过当时天真的以为日历记录会随着帐号同步。可是换手机的时候才发现完全不是那么回事。手机客户端和网页客户端无法同步。当然客户端之间也无法同步。 经过一番折腾，连exchange服务都用上了，还给QQ邮箱客户端提了建议，不过回复让我截图之类，就没有再回复，考虑其他的解决方案。没想到最后解决的方法很简单，更改一下设置就可以了。 打开安卓QQ邮箱的客户端，右上角的三个点-设置-应用-日历-开启日历同步-默认日历-更改为QQ日历（默认是选择系统日历，之前不能同步的问题就在这里）]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>QQ邮箱</tag>
+        <tag>同步</tag>
+        <tag>电脑</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Windows7+Github+Hexo搭建个人博客]]></title>
     <url>%2F2019%2F04%2F24%2Fwindows-hexo-blog%2F</url>
     <content type="text"><![CDATA[准备工作 github帐号一枚 注册github，输入用户名，邮箱，密码即可注册。然后新建一个repo，命名为username.github.io其中username替换为你的用户名。建议勾选Initialize this repository with a README`。 仓库建立完成后，即可访问 https://username.github.io 能够看到一个白色页面，写着你的仓库名及仓库描述（如果你建立仓库的时候写了的话） 下载安装node 下载地址：node 建议使用LTS版本，安装完成后打开CMD执行命令 node -v 返回相应的版本号则安装成功。 下载安装git 下载地址：git 安装完成后在CMD中执行命令 git --version 返回相应的版本则安装成功。 安装hexo 安装淘宝npm镜像 由于网络环境的原因，建议更换淘宝npm镜像，具体可查看淘宝 NPM 镜像。 在cmd中执行如下命令进行更换： npm install -g cnpm --registry=https://registry.npm.taobao.org 使用方法：更换完成后，即可用cnpm替换后面命令中的npm。 安装hexo 具体可参照官方网站Hexo。 这里介绍如下： 123456789101112131415161718# 在cmd中执行此命令安装hexo# 如使用淘宝镜像，则记得替换为cnpmnpm install hexo-cli -g# 初始化博客命令，会建立一个blog的目录# blog 只是目录名，可以修改# 可能出现警告 Failed to install dependencies# 不用担心警告继续向下执行即可hexo init blog# 进入blog目录cd blog# 依赖安装，可以替换为cnpmnpm install# 启动hexohexo server 启动hexo以后，在命令行会出现：Hexo is running at http://localhost:4000 这个时候就可以用浏览器访问这个地址，到此本地的博客框架已经搭建完成。 注：CTRL+C 是停止本地的博客服务。 部署 安装 hexo-deployer-git 在blog目录中执行 cnpm install hexo-deployer-git --save 修改hexo配置文件 hexo的配置文件位置：blog/_config.yml 建议使用vscode、nodepad++等编辑器打开，不要使用Windows记事本。 具体的配置信息请查看官方网站：配置 这里只简单介绍github的部署配置 打开_config.yml文件，然后找到文件最后的 # Deployment 这一段，更改如下： 123456# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: &lt;repository url&gt; #你的仓库的url 如：https://github.com/aoenian/aoenian.github.io.git branch: master 完成后即可在CMD窗口中切换到blog目录下执行命令hexo clean &amp;&amp; hexo g &amp;&amp; hexo d，输入用户名和密码(密码在终端不会显示)即可部署成功。]]></content>
@@ -419,8 +432,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>samba</tag>
         <tag>centos</tag>
+        <tag>samba</tag>
       </tags>
   </entry>
   <entry>
@@ -503,20 +516,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>链路聚合</tag>
         <tag>三层交换机</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
-    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
-    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>VLAN</tag>
-        <tag>switchs</tag>
+        <tag>链路聚合</tag>
       </tags>
   </entry>
   <entry>
@@ -529,6 +530,18 @@
       <tags>
         <tag>switch</tag>
         <tag>VLAN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
+    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
+    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>VLAN</tag>
+        <tag>switchs</tag>
       </tags>
   </entry>
   <entry>

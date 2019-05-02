@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-04-24T08:49:23.689Z</updated>
+  <updated>2019-05-02T02:37:42.270Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手机QQ邮箱日历同步问题</title>
+    <link href="https://aoenian.github.io/2019/04/30/qq-email-calendar-sync/"/>
+    <id>https://aoenian.github.io/2019/04/30/qq-email-calendar-sync/</id>
+    <published>2019-04-29T16:00:00.000Z</published>
+    <updated>2019-05-02T02:37:42.270Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;随着临时的工作越来越多，记忆空间的有限，考虑使用日历提醒来记录一些重要的事情。一个是避免忘记，另一个是能够在后面的时候查看日程找到处理事件的时间。&lt;/p&gt;
+&lt;p&gt;日历的选用经过了这样一个过程，首先是用的手机自带的日历，感觉不方便，同步比较麻烦。然后换用了tim，用了一段时间后发现新建日程的时间只能是将来，不能是过去，有时候把已经干完的事情做一个备忘就很麻烦了。&lt;/p&gt;
+&lt;p&gt;因为需求较低，只用过三种日历，系统自带、Tim日程、QQ邮箱日历。根据我的使用时的需求对比如下：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="https://aoenian.github.io/categories/Android/"/>
+    
+    
+      <category term="QQ邮箱" scheme="https://aoenian.github.io/tags/QQ%E9%82%AE%E7%AE%B1/"/>
+    
+      <category term="同步" scheme="https://aoenian.github.io/tags/%E5%90%8C%E6%AD%A5/"/>
+    
+      <category term="电脑" scheme="https://aoenian.github.io/tags/%E7%94%B5%E8%84%91/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows7+Github+Hexo搭建个人博客</title>
@@ -484,28 +510,6 @@
       <category term="sort" scheme="https://aoenian.github.io/tags/sort/"/>
     
       <category term="duration" scheme="https://aoenian.github.io/tags/duration/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Emacs配置-Org导出HTML代码高亮显示</title>
-    <link href="https://aoenian.github.io/2018/10/04/org-export-html-highlight/"/>
-    <id>https://aoenian.github.io/2018/10/04/org-export-html-highlight/</id>
-    <published>2018-10-03T16:00:00.000Z</published>
-    <updated>2018-10-06T04:19:37.262Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前端时间一直用Emacs编辑Org模式的文档，然后导出html文件用浏览器导出为pdf。但是发现导出的html文件没有代码高亮，搜索了一下，发现方法比较简单，安装 &lt;code&gt;htmlize.el&lt;/code&gt; 包然后在配置文件启用即可。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
-    
-    
-      <category term="Org" scheme="https://aoenian.github.io/tags/Org/"/>
-    
-      <category term="highlight" scheme="https://aoenian.github.io/tags/highlight/"/>
     
   </entry>
   
