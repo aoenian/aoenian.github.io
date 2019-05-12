@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-05-02T02:37:42.270Z</updated>
+  <updated>2019-05-12T08:56:19.379Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS通过FTP管理小米手机文件</title>
+    <link href="https://aoenian.github.io/2019/05/12/macOS-miui-ftp/"/>
+    <id>https://aoenian.github.io/2019/05/12/macOS-miui-ftp/</id>
+    <published>2019-05-11T16:00:00.000Z</published>
+    <updated>2019-05-12T08:56:19.379Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;手机和电脑之间的文件传输一直感觉比较麻烦，很多时候我用的是树莓派作为家庭的局域网的文件中转，然后用ES文件管理器。后来ES更新以后感觉不好用就没再安装。而前面把树莓派给重装了以后还没有配置共享。&lt;/p&gt;
+&lt;p&gt;今天需要处理手机里面的文件，突然想起小米手机自带的文件管理器有一个ftp功能。这次试了一下，感觉还不错，简单的管理都是可以满足的，也不用额外安装手机软件。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
+    
+    
+      <category term="miui" scheme="https://aoenian.github.io/tags/miui/"/>
+    
+      <category term="ftp" scheme="https://aoenian.github.io/tags/ftp/"/>
+    
+      <category term="Android" scheme="https://aoenian.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>手机QQ邮箱日历同步问题</title>
@@ -481,35 +506,6 @@
       <category term="file search" scheme="https://aoenian.github.io/tags/file-search/"/>
     
       <category term="not work" scheme="https://aoenian.github.io/tags/not-work/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>macOS如何让视频按照时长排序</title>
-    <link href="https://aoenian.github.io/2018/10/11/macos-video-sort-by-duration/"/>
-    <id>https://aoenian.github.io/2018/10/11/macos-video-sort-by-duration/</id>
-    <published>2018-10-10T16:00:00.000Z</published>
-    <updated>2018-11-21T13:04:43.394Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天在处理视频的时候需要按照视频的时长进行排序，因为视频比较多而且格式也有三四种，不能简单的按照视频文件大小排列。&lt;/p&gt;
-&lt;p&gt;开始以为只能使用命令或其他的软件辅助，搜索后发现对Finder简单的设置就能实现。具体操作如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;打开Finder（访达）- Movies（影片）目录，切换视图方式为列表&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在名称上面右键，弹出的菜单中就有持续时间，勾选即可看到目录下面的视频文件的时长&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
-    
-    
-      <category term="sort" scheme="https://aoenian.github.io/tags/sort/"/>
-    
-      <category term="duration" scheme="https://aoenian.github.io/tags/duration/"/>
     
   </entry>
   
