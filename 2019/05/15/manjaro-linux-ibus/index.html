@@ -146,16 +146,18 @@
 
 
 
-  <meta name="description" content="read code blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="aoenian">
-<meta property="og:url" content="https://aoenian.github.io/archives/2019/04/index.html">
+  <meta name="description" content="经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看这里。中间居然还萌生了要试试LFS的想法（太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生)。 不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（如果能做到那是个很好的事）。 安装系统的事情简单的说一句，我用rufu">
+<meta name="keywords" content="ibus,rime">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Manjaro安装IBUS输入法">
+<meta property="og:url" content="https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/index.html">
 <meta property="og:site_name" content="aoenian">
-<meta property="og:description" content="read code blog">
+<meta property="og:description" content="经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看这里。中间居然还萌生了要试试LFS的想法（太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生)。 不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（如果能做到那是个很好的事）。 安装系统的事情简单的说一句，我用rufu">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-05-26T08:25:00.990Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="aoenian">
-<meta name="twitter:description" content="read code blog">
+<meta name="twitter:title" content="Manjaro安装IBUS输入法">
+<meta name="twitter:description" content="经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看这里。中间居然还萌生了要试试LFS的想法（太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生)。 不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（如果能做到那是个很好的事）。 安装系统的事情简单的说一句，我用rufu">
 
 
 
@@ -164,7 +166,7 @@
 
 
 
-  <link rel="canonical" href="https://aoenian.github.io/archives/2019/04/"/>
+  <link rel="canonical" href="https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/"/>
 
 
 
@@ -174,7 +176,7 @@
   };
 </script>
 
-  <title>归档 | aoenian</title>
+  <title>Manjaro安装IBUS输入法 | aoenian</title>
   
 
 
@@ -230,7 +232,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,7 +293,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -311,25 +313,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -378,190 +361,255 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="aoenian">
+      <meta itemprop="description" content="read code blog">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aoenian">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
-         
+          <h1 class="post-title" itemprop="name headline">Manjaro安装IBUS输入法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-05-15T00:00:00+08:00">2019-05-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-26 16:25:00" itemprop="dateModified" datetime="2019-05-26T16:25:00+08:00">2019-05-26</time>
+              
+            
+          </span>
+
           
-        不错! 目前共计 66 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/30/qq-email-calendar-sync/" itemprop="url">
-              
-                <span itemprop="name">手机QQ邮箱日历同步问题</span>
-              
-            </a>
-        
-      </h2>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-30T00:00:00+08:00"
-              content="2019-04-30" >
-          04-30
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/24/windows-hexo-blog/" itemprop="url">
-              
-                <span itemprop="name">Windows7+Github+Hexo搭建个人博客</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-24T00:00:00+08:00"
-              content="2019-04-24" >
-          04-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/14/next-theme-gitment/" itemprop="url">
-              
-                <span itemprop="name">Next主题增加Gitment评论系统</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-14T00:00:00+08:00"
-              content="2019-04-14" >
-          04-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看<a href="https://aoenian.github.io/2018/06/30/manjaro-linux-start-end/">这里</a>。中间居然还萌生了要试试LFS的想法（<del>太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生</del>)。</p>
+<p>不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（<em>如果能做到那是个很好的事</em>）。</p>
+<p>安装系统的事情简单的说一句，<strong>我用rufus做的系统无法引导，后来改用了win32disk可以了。</strong></p>
+<h2 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h2><ul>
+<li><a href="https://mirrors.ustc.edu.cn/manjaro-cd/" target="_blank" rel="noopener">manjaro</a> 选择的KDE桌面</li>
+</ul>
+<a id="more"></a>
+<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更换源</span></span><br><span class="line">sudo pacman-mirrors -i -c China -m rank</span><br><span class="line">sudo pacman -Syy        <span class="comment"># 换源后更新缓存</span></span><br><span class="line">sudo pacman -Syyu       <span class="comment"># 更新系统</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="安装配置ibus-rime"><a href="#安装配置ibus-rime" class="headerlink" title="安装配置ibus-rime"></a>安装配置ibus-rime</h3><p>由于还不熟练这个系统的命令，这里就用软件安装啦，见谅见谅</p>
+<ol>
+<li>打开 Octopi 安装 ibus-rime ibus-pinyin ibus-qt</li>
+<li><p>在你的 home 目录下的 <strong>.xprofile</strong> 文件中增加如下代码（没有请创建）</p>
+ <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=ibus</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=ibus</span><br><span class="line">ibus-daemon -x -d</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>注销系统（建议重启）应该就搞定了</p>
+</li>
+<li>如果依然无法使用则需要执行 <code>qtconfig-qt4</code> 在 <strong>Interface</strong> -&gt; <strong>Default Input Method</strong>，把默认的输入法引擎由 <strong>xim</strong> 更改为 <strong>ibus</strong>。</li>
+</ol>
+<p>参考博文：</p>
+<ul>
+<li><a href="https://blog.csdn.net/Tangcuyuha/article/details/80297905" target="_blank" rel="noopener">Arch 安装中文输入法</a></li>
+</ul>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/03/macos-problem-collection-one/" itemprop="url">
-              
-                <span itemprop="name">日常使用中一些小问题汇总(一)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-03T00:00:00+08:00"
-              content="2019-04-03" >
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>aoenian</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/" title="Manjaro安装IBUS输入法">https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ibus/" rel="tag"># ibus</a>
+          
+            <a href="/tags/rime/" rel="tag"># rime</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/12/macOS-miui-ftp/" rel="next" title="macOS通过FTP管理小米手机文件">
+                <i class="fa fa-chevron-left"></i> macOS通过FTP管理小米手机文件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -582,8 +630,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -948,6 +1005,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本环境"><span class="nav-number">1.</span> <span class="nav-text">基本环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#软件安装"><span class="nav-number">2.</span> <span class="nav-text">软件安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#更新系统"><span class="nav-number">2.1.</span> <span class="nav-text">更新系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装配置ibus-rime"><span class="nav-number">2.2.</span> <span class="nav-text">安装配置ibus-rime</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1092,6 +1165,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
@@ -1133,6 +1210,28 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitment({
+            id: window.location.pathname,
+            owner: 'aoenian',
+            repo: 'gitment-comments',
+            
+            oauth: {
+            
+            
+                client_secret: '3841c6cccb4170c7411c5d09909460f0e1c2f326',
+            
+                client_id: '695cfd3b42a33d920f45'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 

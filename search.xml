@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Manjaro安装IBUS输入法]]></title>
+    <url>%2F2019%2F05%2F15%2Fmanjaro-linux-ibus%2F</url>
+    <content type="text"><![CDATA[经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看这里。中间居然还萌生了要试试LFS的想法（太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生)。 不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（如果能做到那是个很好的事）。 安装系统的事情简单的说一句，我用rufus做的系统无法引导，后来改用了win32disk可以了。 基本环境 manjaro 选择的KDE桌面 软件安装更新系统1234# 更换源sudo pacman-mirrors -i -c China -m ranksudo pacman -Syy # 换源后更新缓存sudo pacman -Syyu # 更新系统 安装配置ibus-rime由于还不熟练这个系统的命令，这里就用软件安装啦，见谅见谅 打开 Octopi 安装 ibus-rime ibus-pinyin ibus-qt 在你的 home 目录下的 .xprofile 文件中增加如下代码（没有请创建） 1234export GTK_IM_MODULE=ibusexport XMODIFIERS=@im=ibusexport QT_IM_MODULE=ibusibus-daemon -x -d 注销系统（建议重启）应该就搞定了 如果依然无法使用则需要执行 qtconfig-qt4 在 Interface -&gt; Default Input Method，把默认的输入法引擎由 xim 更改为 ibus。 参考博文： Arch 安装中文输入法]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>ibus</tag>
+        <tag>rime</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[macOS通过FTP管理小米手机文件]]></title>
     <url>%2F2019%2F05%2F12%2FmacOS-miui-ftp%2F</url>
     <content type="text"><![CDATA[手机和电脑之间的文件传输一直感觉比较麻烦，很多时候我用的是树莓派作为家庭的局域网的文件中转，然后用ES文件管理器。后来ES更新以后感觉不好用就没再安装。而前面把树莓派给重装了以后还没有配置共享。 今天需要处理手机里面的文件，突然想起小米手机自带的文件管理器有一个ftp功能。这次试了一下，感觉还不错，简单的管理都是可以满足的，也不用额外安装手机软件。 具体的使用如下： 手机里面的文件下载 手机端启动ftp服务 保证手机和电脑在同一个wifi下 打开手机的文件管理应用-最上面切换到分类-最后一项远程管理-启动服务 手机端可看到让你在我的电脑的地址栏输入一个ftp地址如：ftp://192.168.*.*:2121 电脑端访问 Windows请通过我的电脑的地址栏访问上一步中出现的地址，即可进行文件管理（下面的不用看了） macOS建议浏览器（极大的避免乱码的出现，macOS用finder会出现乱码） 把电脑的文件上传到手机（macOS）macOS的finder以及浏览器只能查看和下载手机中的文件，不能进一步管理如删除、新建等操作。而且新版的系统也把ftp命令删除掉了。 ftp软件方法 这里推荐两个个人用过的：FileZilla cyberduck 第一个是开源软件，第二个是官网下载免费。 如何连接不多说了，只是注意一点编码使用GBK。 命令行方法 这个没有试过，想在命令行使用ftp命令需要安装inetutils，命令如下brew install inetutils。 参考博文： MacOS High Sierra kills terminal FTP? 无线FTP里的中文乱码 OS X 下，最理想的 FTP 工具是什么？]]></content>
@@ -376,8 +388,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>manjaro</tag>
         <tag>ibus</tag>
+        <tag>manjaro</tag>
       </tags>
   </entry>
   <entry>

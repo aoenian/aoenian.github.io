@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-05-12T08:56:19.379Z</updated>
+  <updated>2019-05-26T08:25:00.990Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Manjaro安装IBUS输入法</title>
+    <link href="https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/"/>
+    <id>https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/</id>
+    <published>2019-05-14T16:00:00.000Z</published>
+    <updated>2019-05-26T08:25:00.990Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看&lt;a href=&quot;https://aoenian.github.io/2018/06/30/manjaro-linux-start-end/&quot;&gt;这里&lt;/a&gt;。中间居然还萌生了要试试LFS的想法（&lt;del&gt;太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生&lt;/del&gt;)。&lt;/p&gt;
+&lt;p&gt;不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（&lt;em&gt;如果能做到那是个很好的事&lt;/em&gt;）。&lt;/p&gt;
+&lt;p&gt;安装系统的事情简单的说一句，&lt;strong&gt;我用rufus做的系统无法引导，后来改用了win32disk可以了。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;基本环境&quot;&gt;&lt;a href=&quot;#基本环境&quot; class=&quot;headerlink&quot; title=&quot;基本环境&quot;&gt;&lt;/a&gt;基本环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mirrors.ustc.edu.cn/manjaro-cd/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;manjaro&lt;/a&gt; 选择的KDE桌面&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
+    
+    
+      <category term="ibus" scheme="https://aoenian.github.io/tags/ibus/"/>
+    
+      <category term="rime" scheme="https://aoenian.github.io/tags/rime/"/>
+    
+  </entry>
   
   <entry>
     <title>macOS通过FTP管理小米手机文件</title>
@@ -483,29 +510,6 @@
       <category term="replaceall" scheme="https://aoenian.github.io/tags/replaceall/"/>
     
       <category term="正则" scheme="https://aoenian.github.io/tags/%E6%AD%A3%E5%88%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>macOS系统在u盘中文件搜索功能不起作用</title>
-    <link href="https://aoenian.github.io/2018/11/21/macos-file-search-not-work/"/>
-    <id>https://aoenian.github.io/2018/11/21/macos-file-search-not-work/</id>
-    <published>2018-11-20T16:00:00.000Z</published>
-    <updated>2018-12-01T07:06:36.557Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于u盘的文件比较多，想用finder搜索一下，但是发现不管怎么换关键字没有任何反应，后来测试了一下，明明看到文件就在目录下面，但搜索后就是没有结果，不过硬盘上的文件就可以搜到。&lt;/p&gt;
-&lt;p&gt;为了排除u盘本身的问题，我在windows下面试了一下是可以搜索得到。那么就要寻找解决方法了，在网络搜索了一下，找到了解决的方法。具体操作如下：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
-    
-    
-      <category term="file search" scheme="https://aoenian.github.io/tags/file-search/"/>
-    
-      <category term="not work" scheme="https://aoenian.github.io/tags/not-work/"/>
     
   </entry>
   
