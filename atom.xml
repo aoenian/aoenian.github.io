@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-05-26T08:25:00.990Z</updated>
+  <updated>2019-06-26T11:33:49.740Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日常使用问题汇总（二）</title>
+    <link href="https://aoenian.github.io/2019/06/25/problem-collection2/"/>
+    <id>https://aoenian.github.io/2019/06/25/problem-collection2/</id>
+    <published>2019-06-24T16:00:00.000Z</published>
+    <updated>2019-06-26T11:33:49.740Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;公共DNS服务器&quot;&gt;&lt;a href=&quot;#公共DNS服务器&quot; class=&quot;headerlink&quot; title=&quot;公共DNS服务器&quot;&gt;&lt;/a&gt;公共DNS服务器&lt;/h2&gt;&lt;p&gt;这个本来是个很正常的事情，几乎在上网的过程中应该是忽略不计的事，但是却让我花费了很多时间寻找。&lt;/p&gt;
+&lt;p&gt;情况大家都懂，就不多介绍了。这里说几个常见的问题（纯属个人观点，欢迎讨论）：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Collection" scheme="https://aoenian.github.io/categories/Collection/"/>
+    
+    
+      <category term="gitment" scheme="https://aoenian.github.io/tags/gitment/"/>
+    
+      <category term="dns" scheme="https://aoenian.github.io/tags/dns/"/>
+    
+      <category term="pandoc" scheme="https://aoenian.github.io/tags/pandoc/"/>
+    
+      <category term="Bad credentials" scheme="https://aoenian.github.io/tags/Bad-credentials/"/>
+    
+      <category term="vscode font" scheme="https://aoenian.github.io/tags/vscode-font/"/>
+    
+  </entry>
   
   <entry>
     <title>Manjaro安装IBUS输入法</title>
@@ -146,8 +175,8 @@
   
   <entry>
     <title>日常使用中一些小问题汇总(一)</title>
-    <link href="https://aoenian.github.io/2019/04/03/macos-problem-collection-one/"/>
-    <id>https://aoenian.github.io/2019/04/03/macos-problem-collection-one/</id>
+    <link href="https://aoenian.github.io/2019/04/03/problem-collection1/"/>
+    <id>https://aoenian.github.io/2019/04/03/problem-collection1/</id>
     <published>2019-04-02T16:00:00.000Z</published>
     <updated>2019-04-14T09:06:56.864Z</updated>
     
@@ -482,34 +511,6 @@
       <category term=".DS_Store" scheme="https://aoenian.github.io/tags/DS-Store/"/>
     
       <category term="gitignore" scheme="https://aoenian.github.io/tags/gitignore/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java的replaceAll方法</title>
-    <link href="https://aoenian.github.io/2018/12/05/java-replaceall/"/>
-    <id>https://aoenian.github.io/2018/12/05/java-replaceall/</id>
-    <published>2018-12-04T16:00:00.000Z</published>
-    <updated>2018-12-30T10:00:45.756Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天遇到了一个js的题目，题目主要的意思就是要把字符串替换成用连字符连接的单词，其中不好处理的是字符串中单词的分隔不同。主要是以下几种&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;“thisIsTheBook” 以大写字母分隔&lt;/li&gt;
-&lt;li&gt;“This_is_The_book” 以下划线分隔&lt;/li&gt;
-&lt;li&gt;“this,is,The,book” 以逗号分隔&lt;/li&gt;
-&lt;li&gt;“this Is the book” 以空格分隔&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Java" scheme="https://aoenian.github.io/categories/Java/"/>
-    
-    
-      <category term="replaceall" scheme="https://aoenian.github.io/tags/replaceall/"/>
-    
-      <category term="正则" scheme="https://aoenian.github.io/tags/%E6%AD%A3%E5%88%99/"/>
     
   </entry>
   
