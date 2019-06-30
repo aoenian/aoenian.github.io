@@ -80,7 +80,7 @@
   <entry>
     <title><![CDATA[Next主题增加Gitment评论系统]]></title>
     <url>%2F2019%2F04%2F14%2Fnext-theme-gitment%2F</url>
-    <content type="text"><![CDATA[刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。 准备工作 一个github帐号（当我没说) 用你做博客的github帐号注册一个OAuth application 注册地址点这里，填写内容如下图： 注意： Authorization callback URL用你的博客的域名，其他的可以随便填写。点击注册按钮后会出现Client ID和Client Secret记录下来，等会会用到。 （此步骤可选）新建一个repo，用这个repo的issue来存储博客 我建立了一个blog-comments来存储。 修改主题配置文件修改next主题的配置文件_config.yml，找到 gitment 选项修改如下： 12345678910111213gitment: enable: true mint: false # 建议false count: true # Show comments count in post meta area lazy: false # Comments lazy loading with a button cleanly: false # Hide 'Powered by ...' on footer, and more language: # Force language, or auto switch by theme github_user: aoenian # MUST HAVE, Your Github Username github_repo: blog-comments # 你存储评论的repo 如果没有新建可以是 你的博客repo 如：aoenian.github.io client_id: '你的Client ID' # MUST HAVE, Github client id for the Gitment client_secret: '你的Client Secret' # EITHER this or proxy_gateway, Github access secret token for the Gitment proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled 正常情况，到这里就完成了，接下来就是执行hexo clean &amp;&amp; hexo g &amp;&amp; hexo d然后在评论区会显示未开放评论，这时用自己的帐号点击登入，然后验证即可手动开放（每篇文章需要这样做一遍）。 但是我在输入用户名密码登录后，页面出现错误提示：object ProgressEvent，评论登录一直转圈圈，具体原因可查看 https://github.com/imsun/gitment/issues/170 object ProgressEvent问题解决找到next主题中的gitment评论文件 next/layout/_third-party/comments/gitment.swig，更改以下代码 1234567&lt;!-- 原代码 --&gt;&lt;link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"&gt;&lt;script src="https://imsun.github.io/gitment/dist/gitment.browser.js"&gt;&lt;/script&gt;&lt;!-- 更改后 --&gt;&lt;link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css"&gt;&lt;script src="https://www.wenjunjiang.win/js/gitment.js"&gt;&lt;/script&gt; 重新清理缓存，部署博客即可留言。 参考博文： Hexo博客主题NexT相关配置 hexo添加gitment评论系统 添加Gitment评论系统踩过的坑]]></content>
+    <content type="text"><![CDATA[2019-06-30更新：object ProgressEvent错误再次出现，更新可用代码，具体可查看文章最后。 刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。 准备工作 一个github帐号（当我没说) 用你做博客的github帐号注册一个OAuth application 注册地址点这里，填写内容如下图： 注意： Authorization callback URL用你的博客的域名，其他的可以随便填写。点击注册按钮后会出现Client ID和Client Secret记录下来，等会会用到。 （此步骤可选）新建一个repo，用这个repo的issue来存储博客 我建立了一个blog-comments来存储。 修改主题配置文件修改next主题的配置文件_config.yml，找到 gitment 选项修改如下： 12345678910111213gitment: enable: true mint: false # 建议false count: true # Show comments count in post meta area lazy: false # Comments lazy loading with a button cleanly: false # Hide 'Powered by ...' on footer, and more language: # Force language, or auto switch by theme github_user: aoenian # MUST HAVE, Your Github Username github_repo: blog-comments # 你存储评论的repo 如果没有新建可以是 你的博客repo 如：aoenian.github.io client_id: '你的Client ID' # MUST HAVE, Github client id for the Gitment client_secret: '你的Client Secret' # EITHER this or proxy_gateway, Github access secret token for the Gitment proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled 正常情况，到这里就完成了，接下来就是执行hexo clean &amp;&amp; hexo g &amp;&amp; hexo d然后在评论区会显示未开放评论，这时用自己的帐号点击登入，然后验证即可手动开放（每篇文章需要这样做一遍）。 但是我在输入用户名密码登录后，页面出现错误提示：object ProgressEvent，评论登录一直转圈圈，具体原因可查看 https://github.com/imsun/gitment/issues/170 object ProgressEvent问题解决找到next主题中的gitment评论文件 next/layout/_third-party/comments/gitment.swig，更改以下代码 1234567891011&lt;!-- 原代码 --&gt;&lt;link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css"&gt;&lt;script src="https://imsun.github.io/gitment/dist/gitment.browser.js"&gt;&lt;/script&gt;&lt;!-- 更改后 此代码已经无法使用--&gt;&lt;link rel="stylesheet" href="https://www.wenjunjiang.win/css/gitment.css"&gt;&lt;script src="https://www.wenjunjiang.win/js/gitment.js"&gt;&lt;/script&gt;&lt;!-- 请使用下面的替换 2019-06-30更新--&gt;&lt;link rel="stylesheet" href="https://billts.site/extra_css/gitment.css"&gt;&lt;script src="https://billts.site/js/gitment.js"&gt;&lt;/script&gt; 重新清理缓存，部署博客即可留言。 参考博文： Hexo博客主题NexT相关配置 hexo添加gitment评论系统 添加Gitment评论系统踩过的坑 GitHub Pages个人博客搭建流程 2019-06-30更新代码出处博客]]></content>
       <categories>
         <category>Hexo</category>
       </categories>
@@ -484,8 +484,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>samba</tag>
         <tag>centos</tag>
+        <tag>samba</tag>
       </tags>
   </entry>
   <entry>
@@ -573,18 +573,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
-    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
-    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>switchs</tag>
-        <tag>VLAN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[思科交换机配置2——单交换机VLAN划分]]></title>
     <url>%2F2017%2F03%2F05%2Fswitch-config-2%2F</url>
     <content type="text"><![CDATA[单交换机VLAN配置配置好的思科模拟器文件地址:cisco-pkt 配置参数 名称 IP地址 所属VLAN 连接端口 网关 PC1 192.168.1.11/24 VLAN10 f0/1 192.168.1.254/24 PC2 192.168.1.12/24 VLAN10 f0/2 192.168.1.254/24 PC3 192.168.2.11/24 VLAN20 f0/11 192.168.2.254/24 PC4 192.168.2.12/24 VLAN20 f0/12 192.168.2.254/24 创建VLAN为了不占用太大的篇幅，一些命令的常规提示将不会写出来 全局模式下配置12345Switch#configure terminal Switch(config)#vlan 10 // 创建vlan 10Switch(config-vlan)#name v10 // 为 vlan10 命名Switch(config-vlan)#exitSwitch(config)#exit VLAN database 模式1234Switch#vlan database Switch(vlan)#vlan 20 name v20VLAN 20 added: Name: v20 把端口加入相应的VLAN端口的配置可以配置单个端口，也可以多个端口一块配置 把1~10号端口加入vlan1012345678910Switch(config)#interface f0/1 // 设置端口1Switch(config-if)#switchport mode access // 设置端口模式Switch(config-if)#switchport access vlan 10 // 把此端口加入vlan10中Switch(config-if)#exit // 退回全局配置Switch(config)#interface range fastEthernet ? // 查看帮助 &lt;0-9&gt; FastEthernet interface numberSwitch(config)#interface range fastEthernet 0/2-10 // 设置2~10端口Switch(config-if-range)#switchport mode access // 设置模式Switch(config-if-range)#switchport access vlan 10 Switch(config-if-range)#exit 把11-20号端口加入vlan20123Switch(config)#interface range f0/11-20Switch(config-if-range)#switchport mode accessSwitch(config-if-range)#switchport access vlan 20 把配置写入123456Switch#write // 一种方式Switch#copy running-config startup-config // 另一种方法Destination filename [startup-config]? Building configuration...[OK]Switch# 查看vlan的配置123Switch#show vlan // 查看vlan配置Switch#show running-config // 查看交换机配置 测试pc1与pc2可以互相ping通，与pc3和pc4无法ping通 更改pc3或pc4与pc1为一个网段的IP，依然无法与pc1通信。]]></content>
@@ -592,8 +580,20 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>VLAN</tag>
         <tag>switch</tag>
+        <tag>VLAN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
+    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
+    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>VLAN</tag>
+        <tag>switchs</tag>
       </tags>
   </entry>
   <entry>

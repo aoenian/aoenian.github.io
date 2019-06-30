@@ -146,19 +146,19 @@
 
 
 
-  <meta name="description" content="刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。">
+  <meta name="description" content="2019-06-30更新：object ProgressEvent错误再次出现，更新可用代码，具体可查看文章最后。 刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这">
 <meta name="keywords" content="next,评论,gitment">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Next主题增加Gitment评论系统">
 <meta property="og:url" content="https://aoenian.github.io/2019/04/14/next-theme-gitment/index.html">
 <meta property="og:site_name" content="aoenian">
-<meta property="og:description" content="刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。">
+<meta property="og:description" content="2019-06-30更新：object ProgressEvent错误再次出现，更新可用代码，具体可查看文章最后。 刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/aoenian/blog-images/master/2019041401.png">
-<meta property="og:updated_time" content="2019-04-24T03:40:43.017Z">
+<meta property="og:updated_time" content="2019-06-30T13:56:10.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Next主题增加Gitment评论系统">
-<meta name="twitter:description" content="刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。">
+<meta name="twitter:description" content="2019-06-30更新：object ProgressEvent错误再次出现，更新可用代码，具体可查看文章最后。 刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了DISQUS，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。 前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/aoenian/blog-images/master/2019041401.png">
 
 
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-24 11:40:43" itemprop="dateModified" datetime="2019-04-24T11:40:43+08:00">2019-04-24</time>
+                <time title="修改时间：2019-06-30 21:56:10" itemprop="dateModified" datetime="2019-06-30T21:56:10+08:00">2019-06-30</time>
               
             
           </span>
@@ -497,7 +497,8 @@
       
 
       
-        <p>刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了<strong>DISQUS</strong>，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。</p>
+        <p>2019-06-30更新：<code>object ProgressEvent</code>错误再次出现，更新可用代码，具体可查看文章最后。</p>
+<p>刚开始建立博客的时候用了评论系统，由于当时觉得国内的注册太麻烦，就用了<strong>DISQUS</strong>，不过国内一直无法访问，不知道为啥。后来重装系统后再次建立博客时，就把评论关掉了。</p>
 <p>前段时间突然看到了gitment（用github的issue做博客评论系统），觉得这个还不错，就准备试试。然后就有了这篇文章。</p>
 <a id="more"></a>
 <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
@@ -517,7 +518,7 @@
 <p>正常情况，到这里就完成了，接下来就是执行<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>然后在评论区会显示<strong>未开放评论</strong>，这时用自己的帐号点击登入，然后验证即可手动开放（每篇文章需要这样做一遍）。</p>
 <p>但是我在输入用户名密码登录后，页面出现错误提示：<strong>object ProgressEvent</strong>，评论登录一直转圈圈，具体原因可查看 <a href="https://github.com/imsun/gitment/issues/170" target="_blank" rel="noopener">https://github.com/imsun/gitment/issues/170</a></p>
 <h2 id="object-ProgressEvent问题解决"><a href="#object-ProgressEvent问题解决" class="headerlink" title="object ProgressEvent问题解决"></a>object ProgressEvent问题解决</h2><p>找到next主题中的gitment评论文件 <strong>next/layout/_third-party/comments/gitment.swig</strong>，更改以下代码</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 原代码 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 更改后 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://www.wenjunjiang.win/css/gitment.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.wenjunjiang.win/js/gitment.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 原代码 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://imsun.github.io/gitment/style/default.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://imsun.github.io/gitment/dist/gitment.browser.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 更改后 此代码已经无法使用--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://www.wenjunjiang.win/css/gitment.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://www.wenjunjiang.win/js/gitment.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 请使用下面的替换  2019-06-30更新--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://billts.site/extra_css/gitment.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://billts.site/js/gitment.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
 <p>重新清理缓存，部署博客即可留言。</p>
 <p>参考博文：</p>
 <ul>
@@ -526,6 +527,8 @@
 <li><p><a href="http://kuring.me/post/gitment/" target="_blank" rel="noopener">hexo添加gitment评论系统</a></p>
 </li>
 <li><p><a href="http://xichen.pub/2018/01/31/2018-01-31-gitment/" target="_blank" rel="noopener">添加Gitment评论系统踩过的坑</a></p>
+</li>
+<li><p><a href="https://adamhu.github.io/2019/06/GitHub-Pages%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%B5%81%E7%A8%8B/" target="_blank" rel="noopener">GitHub Pages个人博客搭建流程</a> 2019-06-30更新代码出处博客</p>
 </li>
 </ul>
 
