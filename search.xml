@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[zsh执行python脚本输出的内容最后多了一个%]]></title>
+    <url>%2F2019%2F06%2F30%2Fpython-zsh-percent-prompt%2F</url>
+    <content type="text"><![CDATA[zsh执行python脚本出现 %准备重新拾起python，不仅仅因为他简单优雅，更是因为他能够随手处理很多繁杂的事情，而且也是第一个自己特别喜欢的语言。但是因为种种原因，自己错过他的时间太久了。 重新学习、练习编程的时候出现了一个问题，在一次终端执行python脚本的时候输出文本的最后多了一个%，而且终端还着重显示了。 感觉很奇怪，程序的输出并没有这个%，然后我使用了ipython，在里面用run命令执行，发现%并没有出现，看来是终端的问题，在网络上搜索后得到如下结论，简单说就是如果你输出的文本最后没有换行符，那么zsh会在后面加一个反色显示的%，如果你是root用户则会看到#。具体的官方英文解释如下： When a partial line is preserved, by default you will see an inverse+bold character at the end of the partial line: a ‘%’ for a normal user or a ‘#’ for root. If set, the shell parameter PROMPT_EOL_MARK can be used to customize how the end of partial lines are shown. 解决方法：也不能说是解决方法，这也不是问题，如果不想看到，那就在输出的文本最后加个换行符，或者用ipython。 这里多说一点，在编写python脚本的时候，由于经常在Windows和macOS之间切换，所以换行符有点不一样，这里可以使用vscode来更改换行符，右下角直接切换即可。 mac查看文件换行符如果想在windows下查看文件的换行符，可推荐notepad++。mac下面没有好用的软件，vim好像也无法很好的显示。经过搜索，mac下查看换行符的方法如下： 123# 文件名可根据需要进行替换od -c filename.csv# CR as \r and LF as \n. 参考： Why is a percent sign at the end of the output of the python script? Why ZSH ends a line with a highlighted percent symbol? Prompting How to view (Windows) line ending characters on Mac OSX]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>zsh</tag>
+        <tag>percent sign</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[日常使用问题汇总（二）]]></title>
     <url>%2F2019%2F06%2F25%2Fproblem-collection2%2F</url>
     <content type="text"><![CDATA[公共DNS服务器这个本来是个很正常的事情，几乎在上网的过程中应该是忽略不计的事，但是却让我花费了很多时间寻找。 情况大家都懂，就不多介绍了。这里说几个常见的问题（纯属个人观点，欢迎讨论）： 如果你对DNS服务器有了解并且想更换dns配置，不建议选择114（个人经历过劫持，不知道现在是否还有），但我有时候会临时使用。好记而且速度还不错。 有特殊功能的DNS肯定见光死，建议不要费力寻找，有条件可以自己搭建。 测试DNS速度建议使用dig命令，有时ping命令并不准确，更有的DNS服务器会拒绝ping。 国外的速度非常慢，建议能不用就不用。国内的几个大的公司凑合找一个用吧。 如果没有特殊需求，不想折腾，运营商默认就很快了（如果运营商没有给你下套），少折腾留点时间干点别的，别太较真，容易内伤。 公共dns服务器 收集 gitment 出现 Error: Bad credentials这个好解决，使用你的账户登入然后再登出即可搞定。具体的issues在这里。 vscode更改编程字体不起作用这几天想把vscode的英文字体更改一下，更适合编程，但是首选项-设置里面的用户设置更改了字体后，不起作用，很郁闷。 刚开始以为字体问题，更换其他的依然无效，但是总觉得这种大bug应该不会一直留到现在吧，google了一下，在官方的issues中找到了原因，具体可查看Can’t set editor font，主要的原因是工作区的配置优先级比较高，所以工作区的字体配置覆盖了用户的配置，所以把工作区的字体修改为你想要的就可以看到效果了。 修改的方法有两种，一种直接首选项-设置-工作区即可；另一种直接修改配置文件，具体的位置在工作区中的.vscode目录下面的settings.json文件。 如果想改变中文字体，直接在英文字体后面加上中文字体即可生效。我的配置如下，我使用的中文字体是华文仿宋，可供参考。 1"editor.fontFamily": "Hack, STFangsong, Monaco, monospace", macOS使用pandoc命令出现pdflatex not found错误本来想测试pandoc命令把markdown文件导出成pdf的质量如何，但是执行命令后出现pdflatex not found错误，在网络搜索后找到如下解决方法： 1234# 不用安装pdflatex，需要安装mactex$ brew cask install mactex# 重启终端后可查看$ which pdflatex 参考博文： Visual Studio Code 设置中文字体 VSCode–setting CSS font-family 各字体一览表 where-do-i-get-the-pdflatex-program-for-mac]]></content>

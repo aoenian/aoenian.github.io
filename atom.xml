@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-06-26T11:33:49.740Z</updated>
+  <updated>2019-06-30T09:12:16.998Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zsh执行python脚本输出的内容最后多了一个%</title>
+    <link href="https://aoenian.github.io/2019/06/30/python-zsh-percent-prompt/"/>
+    <id>https://aoenian.github.io/2019/06/30/python-zsh-percent-prompt/</id>
+    <published>2019-06-29T16:00:00.000Z</published>
+    <updated>2019-06-30T09:12:16.998Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;zsh执行python脚本出现&quot;&gt;&lt;a href=&quot;#zsh执行python脚本出现&quot; class=&quot;headerlink&quot; title=&quot;zsh执行python脚本出现 %&quot;&gt;&lt;/a&gt;zsh执行python脚本出现 %&lt;/h2&gt;&lt;p&gt;准备重新拾起python，不仅仅因为他简单优雅，更是因为他能够随手处理很多繁杂的事情，而且也是第一个自己特别喜欢的语言。但是因为种种原因，自己错过他的时间太久了。&lt;/p&gt;
+&lt;p&gt;重新学习、练习编程的时候出现了一个问题，在一次终端执行python脚本的时候输出文本的最后多了一个&lt;code&gt;%&lt;/code&gt;，而且&lt;strong&gt;终端还着重显示了&lt;/strong&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
+    
+    
+      <category term="zsh" scheme="https://aoenian.github.io/tags/zsh/"/>
+    
+      <category term="percent sign" scheme="https://aoenian.github.io/tags/percent-sign/"/>
+    
+  </entry>
   
   <entry>
     <title>日常使用问题汇总（二）</title>
@@ -488,29 +511,6 @@
       <category term="chrome developer" scheme="https://aoenian.github.io/tags/chrome-developer/"/>
     
       <category term="disable" scheme="https://aoenian.github.io/tags/disable/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>macOS下git忽略.DS_Store文件</title>
-    <link href="https://aoenian.github.io/2018/12/19/git-ignore-config/"/>
-    <id>https://aoenian.github.io/2018/12/19/git-ignore-config/</id>
-    <published>2018-12-18T16:00:00.000Z</published>
-    <updated>2018-12-19T08:54:55.879Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;平时用git不是太多，一般就是保存一下配置文件和博文，所以有时候在提交的时候就把一些macOS的隐藏文件删除以后再跟踪提交。不过随着使用频率增加了一点点（主要是强迫自己每周写一些内容，不知能否坚持），然后觉得每次这样做就太浪费人力了。&lt;/p&gt;
-&lt;p&gt;然后就在项目中写了个&lt;code&gt;.gitignore&lt;/code&gt;文件，不过这个文件管理的范围太小，只能管本层目录，子目录下面的就无能为力，而且每个项目都要有一个（之前不知道还有全部忽略这种玩意-_-!)，然后在网络上找到添加全局忽略的方法，具体操作如下：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
-    
-    
-      <category term=".DS_Store" scheme="https://aoenian.github.io/tags/DS-Store/"/>
-    
-      <category term="gitignore" scheme="https://aoenian.github.io/tags/gitignore/"/>
     
   </entry>
   
