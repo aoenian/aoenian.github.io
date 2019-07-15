@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-07-15T01:24:22.351Z</updated>
+  <updated>2019-07-15T03:19:36.000Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows系统下MySQL忘记密码后如何重置</title>
+    <link href="https://aoenian.github.io/2019/07/15/windows-mysql-forget-password/"/>
+    <id>https://aoenian.github.io/2019/07/15/windows-mysql-forget-password/</id>
+    <published>2019-07-14T16:00:00.000Z</published>
+    <updated>2019-07-15T03:19:36.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这段时间试着用了一下MySQL，谁知道隔得时间长了忘记了密码，在网络搜索后发现可以通过命令重置密码。原文的部分操作并不是太详细，这里把自己的具体操作介绍如下，希望能帮到大家。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
+    
+    
+      <category term="password" scheme="https://aoenian.github.io/tags/password/"/>
+    
+      <category term="mysql" scheme="https://aoenian.github.io/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>常见字体的中英文对照表（转载备忘）</title>
@@ -484,31 +506,6 @@
     
     
       <category term="goal" scheme="https://aoenian.github.io/tags/goal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vscode编辑markdown文件并导出为PDF格式</title>
-    <link href="https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/"/>
-    <id>https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/</id>
-    <published>2018-12-23T16:00:00.000Z</published>
-    <updated>2018-12-30T06:58:22.303Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;之前一直用vscode编辑md文件，然后在chrome预览导出pdf文件。有段时间没用了突然发现chrome无法预览md文件了。把md文件拖入浏览器就会直接下载，而不能出现预览。&lt;/p&gt;
-&lt;p&gt;更有意思的是我写了三个md文件，其中有一个可以预览，另外两个不管是改名字换目录都不行，拖入浏览器就是直接把原文件又下载一遍，网络搜索了一下几乎没人遇到，可能运气不好。不过搜索过程中了解到vscode可以直接导出，索性就不再用chrome的插件处理md文件了，直接用vscode。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
-    
-    
-      <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
-    
-      <category term="markdown" scheme="https://aoenian.github.io/tags/markdown/"/>
-    
-      <category term="pdf" scheme="https://aoenian.github.io/tags/pdf/"/>
     
   </entry>
   
