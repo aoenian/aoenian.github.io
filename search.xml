@@ -44,9 +44,9 @@
         <category>Collection</category>
       </categories>
       <tags>
-        <tag>gitment</tag>
         <tag>dns</tag>
         <tag>pandoc</tag>
+        <tag>gitment</tag>
         <tag>Bad credentials</tag>
         <tag>vscode font</tag>
       </tags>
@@ -110,8 +110,8 @@
       </categories>
       <tags>
         <tag>next</tag>
-        <tag>评论</tag>
         <tag>gitment</tag>
+        <tag>评论</tag>
       </tags>
   </entry>
   <entry>
@@ -508,8 +508,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>samba</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
@@ -597,18 +597,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[思科交换机配置2——单交换机VLAN划分]]></title>
-    <url>%2F2017%2F03%2F05%2Fswitch-config-2%2F</url>
-    <content type="text"><![CDATA[单交换机VLAN配置配置好的思科模拟器文件地址:cisco-pkt 配置参数 名称 IP地址 所属VLAN 连接端口 网关 PC1 192.168.1.11/24 VLAN10 f0/1 192.168.1.254/24 PC2 192.168.1.12/24 VLAN10 f0/2 192.168.1.254/24 PC3 192.168.2.11/24 VLAN20 f0/11 192.168.2.254/24 PC4 192.168.2.12/24 VLAN20 f0/12 192.168.2.254/24 创建VLAN为了不占用太大的篇幅，一些命令的常规提示将不会写出来 全局模式下配置12345Switch#configure terminal Switch(config)#vlan 10 // 创建vlan 10Switch(config-vlan)#name v10 // 为 vlan10 命名Switch(config-vlan)#exitSwitch(config)#exit VLAN database 模式1234Switch#vlan database Switch(vlan)#vlan 20 name v20VLAN 20 added: Name: v20 把端口加入相应的VLAN端口的配置可以配置单个端口，也可以多个端口一块配置 把1~10号端口加入vlan1012345678910Switch(config)#interface f0/1 // 设置端口1Switch(config-if)#switchport mode access // 设置端口模式Switch(config-if)#switchport access vlan 10 // 把此端口加入vlan10中Switch(config-if)#exit // 退回全局配置Switch(config)#interface range fastEthernet ? // 查看帮助 &lt;0-9&gt; FastEthernet interface numberSwitch(config)#interface range fastEthernet 0/2-10 // 设置2~10端口Switch(config-if-range)#switchport mode access // 设置模式Switch(config-if-range)#switchport access vlan 10 Switch(config-if-range)#exit 把11-20号端口加入vlan20123Switch(config)#interface range f0/11-20Switch(config-if-range)#switchport mode accessSwitch(config-if-range)#switchport access vlan 20 把配置写入123456Switch#write // 一种方式Switch#copy running-config startup-config // 另一种方法Destination filename [startup-config]? Building configuration...[OK]Switch# 查看vlan的配置123Switch#show vlan // 查看vlan配置Switch#show running-config // 查看交换机配置 测试pc1与pc2可以互相ping通，与pc3和pc4无法ping通 更改pc3或pc4与pc1为一个网段的IP，依然无法与pc1通信。]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>switch</tag>
-        <tag>VLAN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
     <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
     <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
@@ -616,8 +604,20 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>VLAN</tag>
         <tag>switchs</tag>
+        <tag>VLAN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[思科交换机配置2——单交换机VLAN划分]]></title>
+    <url>%2F2017%2F03%2F05%2Fswitch-config-2%2F</url>
+    <content type="text"><![CDATA[单交换机VLAN配置配置好的思科模拟器文件地址:cisco-pkt 配置参数 名称 IP地址 所属VLAN 连接端口 网关 PC1 192.168.1.11/24 VLAN10 f0/1 192.168.1.254/24 PC2 192.168.1.12/24 VLAN10 f0/2 192.168.1.254/24 PC3 192.168.2.11/24 VLAN20 f0/11 192.168.2.254/24 PC4 192.168.2.12/24 VLAN20 f0/12 192.168.2.254/24 创建VLAN为了不占用太大的篇幅，一些命令的常规提示将不会写出来 全局模式下配置12345Switch#configure terminal Switch(config)#vlan 10 // 创建vlan 10Switch(config-vlan)#name v10 // 为 vlan10 命名Switch(config-vlan)#exitSwitch(config)#exit VLAN database 模式1234Switch#vlan database Switch(vlan)#vlan 20 name v20VLAN 20 added: Name: v20 把端口加入相应的VLAN端口的配置可以配置单个端口，也可以多个端口一块配置 把1~10号端口加入vlan1012345678910Switch(config)#interface f0/1 // 设置端口1Switch(config-if)#switchport mode access // 设置端口模式Switch(config-if)#switchport access vlan 10 // 把此端口加入vlan10中Switch(config-if)#exit // 退回全局配置Switch(config)#interface range fastEthernet ? // 查看帮助 &lt;0-9&gt; FastEthernet interface numberSwitch(config)#interface range fastEthernet 0/2-10 // 设置2~10端口Switch(config-if-range)#switchport mode access // 设置模式Switch(config-if-range)#switchport access vlan 10 Switch(config-if-range)#exit 把11-20号端口加入vlan20123Switch(config)#interface range f0/11-20Switch(config-if-range)#switchport mode accessSwitch(config-if-range)#switchport access vlan 20 把配置写入123456Switch#write // 一种方式Switch#copy running-config startup-config // 另一种方法Destination filename [startup-config]? Building configuration...[OK]Switch# 查看vlan的配置123Switch#show vlan // 查看vlan配置Switch#show running-config // 查看交换机配置 测试pc1与pc2可以互相ping通，与pc3和pc4无法ping通 更改pc3或pc4与pc1为一个网段的IP，依然无法与pc1通信。]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>VLAN</tag>
+        <tag>switch</tag>
       </tags>
   </entry>
   <entry>

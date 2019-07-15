@@ -100,11 +100,11 @@
       <category term="Collection" scheme="https://aoenian.github.io/categories/Collection/"/>
     
     
-      <category term="gitment" scheme="https://aoenian.github.io/tags/gitment/"/>
-    
       <category term="dns" scheme="https://aoenian.github.io/tags/dns/"/>
     
       <category term="pandoc" scheme="https://aoenian.github.io/tags/pandoc/"/>
+    
+      <category term="gitment" scheme="https://aoenian.github.io/tags/gitment/"/>
     
       <category term="Bad credentials" scheme="https://aoenian.github.io/tags/Bad-credentials/"/>
     
@@ -235,9 +235,9 @@
     
       <category term="next" scheme="https://aoenian.github.io/tags/next/"/>
     
-      <category term="评论" scheme="https://aoenian.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
-    
       <category term="gitment" scheme="https://aoenian.github.io/tags/gitment/"/>
+    
+      <category term="评论" scheme="https://aoenian.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
     
   </entry>
   
