@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-06-30T09:12:16.998Z</updated>
+  <updated>2019-07-15T01:24:22.351Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常见字体的中英文对照表（转载备忘）</title>
+    <link href="https://aoenian.github.io/2019/07/14/english-name-of-chinese-font/"/>
+    <id>https://aoenian.github.io/2019/07/14/english-name-of-chinese-font/</id>
+    <published>2019-07-13T16:00:00.000Z</published>
+    <updated>2019-07-15T01:24:22.351Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在设置vscode的中文字体时发现需要配置相应中文字体的英文名字才能起作用，在网络上搜索后，找到一个比较全面的中英文对照表保存下来作为以后备用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Mac" scheme="https://aoenian.github.io/categories/Mac/"/>
+    
+    
+      <category term="font" scheme="https://aoenian.github.io/tags/font/"/>
+    
+      <category term="english" scheme="https://aoenian.github.io/tags/english/"/>
+    
+  </entry>
   
   <entry>
     <title>zsh执行python脚本输出的内容最后多了一个%</title>
@@ -487,31 +509,6 @@
       <category term="markdown" scheme="https://aoenian.github.io/tags/markdown/"/>
     
       <category term="pdf" scheme="https://aoenian.github.io/tags/pdf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome禁止“请停用以开发者模式运行的扩展程序”的提示</title>
-    <link href="https://aoenian.github.io/2018/12/22/chrome-disable-developer-mode-extensions/"/>
-    <id>https://aoenian.github.io/2018/12/22/chrome-disable-developer-mode-extensions/</id>
-    <published>2018-12-21T16:00:00.000Z</published>
-    <updated>2018-12-23T06:55:40.488Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在Windows7系统下的Chrome里面使用开发者模式导入了一个插件，就是为了登录一下最大的那个搜索引擎（&lt;a href=&quot;https://github.com/haotian-wang/google-access-helper&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;传送门&lt;/a&gt;）。然后每次登录就会出现“请停用以开发者模式运行的扩展程序”的提示，而且必须点击一下才能关掉。&lt;/p&gt;
-&lt;p&gt;去网络搜索了一下，操作还挺复杂，具体的操作步骤等会我写在下面，不过如果懒得自己操作，国外有高手写了批处理文件，我也会放在下面。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="https://aoenian.github.io/categories/Web/"/>
-    
-    
-      <category term="Windows" scheme="https://aoenian.github.io/tags/Windows/"/>
-    
-      <category term="chrome developer" scheme="https://aoenian.github.io/tags/chrome-developer/"/>
-    
-      <category term="disable" scheme="https://aoenian.github.io/tags/disable/"/>
     
   </entry>
   
