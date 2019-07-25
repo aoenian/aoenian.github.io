@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-07-18T03:26:50.773Z</updated>
+  <updated>2019-07-25T12:36:20.438Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python装饰器（一）</title>
+    <link href="https://aoenian.github.io/2019/07/24/python-decorator1/"/>
+    <id>https://aoenian.github.io/2019/07/24/python-decorator1/</id>
+    <published>2019-07-23T16:00:00.000Z</published>
+    <updated>2019-07-25T12:36:20.438Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这段时间学习Python，之前已经学习过基本的语法，现在准备重新拾起来，看的教程是github上面的&lt;a href=&quot;https://github.com/jackfrued/Python-100-Days&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Python - 100天从新手到大师&lt;/a&gt;。进度相对一般的教程比较快，虽然没有那么详细，但是能够快速了解整体的框架。&lt;/p&gt;
+&lt;p&gt;第九天的教程里面讲到了装饰器，这个之前了解过，但是一直似懂非懂，加上之前用的比较少，也是看过就算了。这次又出现了，不能再糊弄过去，要认真理解透彻。这里把个人的理解过程记录下来。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
+    
+    
+      <category term="装饰器" scheme="https://aoenian.github.io/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网件R6400V2固件升级导致小米盒子无法联网</title>
     <link href="https://aoenian.github.io/2019/07/17/mibox-netgear-incompatible/"/>
     <id>https://aoenian.github.io/2019/07/17/mibox-netgear-incompatible/</id>
     <published>2019-07-16T16:00:00.000Z</published>
-    <updated>2019-07-18T03:26:50.773Z</updated>
+    <updated>2019-07-18T03:27:52.932Z</updated>
     
     <summary type="html">
     
@@ -484,31 +505,6 @@
       <category term="虚拟机" scheme="https://aoenian.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
     
       <category term="增强功能" scheme="https://aoenian.github.io/tags/%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows7安装VirtualBox失败解决方法</title>
-    <link href="https://aoenian.github.io/2019/01/05/virtualbox-install-error/"/>
-    <id>https://aoenian.github.io/2019/01/05/virtualbox-install-error/</id>
-    <published>2019-01-04T16:00:00.000Z</published>
-    <updated>2019-01-06T03:53:18.393Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;由于需要在windows下面使用linux环境，所以就想着用一下虚拟机做一个完整的系统。&lt;em&gt;cygwin之类也用过，确实无法驾驭。&lt;/em&gt; 不如虚拟机来的完整和直接。&lt;/p&gt;
-&lt;p&gt;不过安装的时候遇到了一些问题，开始是安装不上去，接着是安装以后无法启动，我就郁闷了，在自己的电脑上从没遇到过的情况，一到别人那里就出问题。搜索了一下问题解决了，备忘如下。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
-    
-    
-      <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
-    
-      <category term="virtualbox" scheme="https://aoenian.github.io/tags/virtualbox/"/>
-    
-      <category term="注册表" scheme="https://aoenian.github.io/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
     
   </entry>
   
