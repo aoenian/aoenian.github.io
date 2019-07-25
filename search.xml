@@ -532,8 +532,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>samba</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
@@ -628,8 +628,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>VLAN</tag>
         <tag>switch</tag>
+        <tag>VLAN</tag>
       </tags>
   </entry>
   <entry>
