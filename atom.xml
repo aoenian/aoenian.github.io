@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-07-25T12:36:20.438Z</updated>
+  <updated>2019-09-01T09:04:47.214Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次视频下载过程1</title>
+    <link href="https://aoenian.github.io/2019/08/31/download-the-m3u8-1/"/>
+    <id>https://aoenian.github.io/2019/08/31/download-the-m3u8-1/</id>
+    <published>2019-08-30T16:00:00.000Z</published>
+    <updated>2019-09-01T09:04:47.214Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在一个网站看视频的时候，感觉视频缓冲太慢，而且快进容易被卡死。然后就想把视频下载下来。还是和以前一样，通过开发者工具看了看视频传输的数据。原以为会找到一个mp4文件直接下载，谁知道全是一段一段的ts文件，这是什么时候出现的变态技术，我也是多长时间没有下载视频了。&lt;/p&gt;
+&lt;p&gt;更变态的是ts文件只有几兆大小，而且下载下来以后还无法观看，后面知道因为加密的原因。&lt;strong&gt;这里先说结论：我没有搞定ts的解密&lt;/strong&gt;。所以这篇文章可能没有你想看的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
+    
+    
+      <category term="m3u8" scheme="https://aoenian.github.io/tags/m3u8/"/>
+    
+      <category term="requests" scheme="https://aoenian.github.io/tags/requests/"/>
+    
+  </entry>
   
   <entry>
     <title>Python装饰器（一）</title>
@@ -480,31 +503,6 @@
       <category term="debug" scheme="https://aoenian.github.io/tags/debug/"/>
     
       <category term="javascript" scheme="https://aoenian.github.io/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VirtualBox虚拟系统使用共享文件夹和摄像头</title>
-    <link href="https://aoenian.github.io/2019/01/08/virtualbox-install-extpack/"/>
-    <id>https://aoenian.github.io/2019/01/08/virtualbox-install-extpack/</id>
-    <published>2019-01-07T16:00:00.000Z</published>
-    <updated>2019-01-13T13:09:38.903Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;macOS用着挺好，不过Windows依然离不了，所以虚拟机还得用。为啥不用双系统？切换太麻烦。而且浪费空间，本来硬盘就不大。&lt;/p&gt;
-&lt;p&gt;虚拟机如果没有特殊要求，个人推荐&lt;a href=&quot;https://www.virtualbox.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;VirtualBox&lt;/a&gt;，安装包个头小，而且免费使用，稳定性也不错。&lt;/p&gt;
-&lt;p&gt;具体的安装过程就不说了，你都用上虚拟机了，这点问题应该能解决，给大家一个下载系统的网站 &lt;a href=&quot;https://msdn.itellyou.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;I Tell You&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;这里要说的就是如何扩展虚拟机的功能实现与主机文件共享并在虚拟机中使用摄像头。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
-    
-    
-      <category term="虚拟机" scheme="https://aoenian.github.io/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-      <category term="增强功能" scheme="https://aoenian.github.io/tags/%E5%A2%9E%E5%BC%BA%E5%8A%9F%E8%83%BD/"/>
     
   </entry>
   
