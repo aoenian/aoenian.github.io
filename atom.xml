@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-09-01T09:04:47.214Z</updated>
+  <updated>2019-09-08T10:41:58.277Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次视频下载过程2</title>
+    <link href="https://aoenian.github.io/2019/09/02/download-the-m3u8-2/"/>
+    <id>https://aoenian.github.io/2019/09/02/download-the-m3u8-2/</id>
+    <published>2019-09-01T16:00:00.000Z</published>
+    <updated>2019-09-08T10:41:58.277Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章基本跟视频下载没啥关系了，主要是一些环境的配置和编辑软件的使用。不想每个单写了，所以就写在一起，省点地方。&lt;/p&gt;
+&lt;h2 id=&quot;Vim自动生成连续数字列&quot;&gt;&lt;a href=&quot;#Vim自动生成连续数字列&quot; class=&quot;headerlink&quot; title=&quot;Vim自动生成连续数字列&quot;&gt;&lt;/a&gt;Vim自动生成连续数字列&lt;/h2&gt;&lt;p&gt;这个是生成视频名称的时候使用的，因为想生成如 001.ts 002.ts 003.ts … 之类，并且需要每一个视频名称占一行，其实就是制作下载地址的文件。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
+    
+    
+      <category term="pyenv" scheme="https://aoenian.github.io/tags/pyenv/"/>
+    
+      <category term="vim" scheme="https://aoenian.github.io/tags/vim/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次视频下载过程1</title>
@@ -479,30 +502,6 @@
       <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
     
       <category term="Rime" scheme="https://aoenian.github.io/tags/Rime/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vscode配置js编程环境</title>
-    <link href="https://aoenian.github.io/2019/01/19/vscode-debug-js/"/>
-    <id>https://aoenian.github.io/2019/01/19/vscode-debug-js/</id>
-    <published>2019-01-18T16:00:00.000Z</published>
-    <updated>2019-01-19T08:52:42.154Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;新版的vscode（1.30以上版本）不用配置即可调试js代码，不过建议安装插件&lt;code&gt;Code Runner&lt;/code&gt;方便代码执行。然后编辑的时候如果习惯&lt;strong&gt;Tab&lt;/strong&gt;跳出右括号，那你不能错过插件&lt;code&gt;Tab out&lt;/code&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
-    
-    
-      <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
-    
-      <category term="debug" scheme="https://aoenian.github.io/tags/debug/"/>
-    
-      <category term="javascript" scheme="https://aoenian.github.io/tags/javascript/"/>
     
   </entry>
   
