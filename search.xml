@@ -568,14 +568,14 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>samba</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[网站备份]]></title>
     <url>%2F2017%2F04%2F29%2Fwebsite-collect%2F</url>
-    <content type="text"><![CDATA[这段时间整理了一下浏览器的书签发现里面收藏了很多书签，然后重新整理了一下，把一些感觉不错的记录下来，然后把浏览器里面的都删除掉。其实平时浏览的网站基本就那几个。 按照网站的内容分类吧，比较直观。 站点后有 @ 符号表示需要特殊渠道访问 软件下载 IT猫扑网 无意间看到，有各平台的软件下载 绿盟 之前的良心软件网站。（现在下载需要登录了，也很久没用过了） Windows绝赞应用 介绍Windows绝妙应用的项目，同时也介绍一些流氓应用 zd423 良心软件下载站 个人博客 逗比根据地 国内站逗比根据地 @ （网站不再提供国内访问镜像了） 土豆不好吃 跟著工作熊玩賺部落格 伟大航路 freess iShadow freess 木料集 小结 @ 教程 Emacs教程 子龙山人的 Emacs 教程 Org-mode简明手册 沉浸式学Git Git教程，很简短 python初学者资料推荐 Learn X in Y minutes Take a whirlwind tour of your next favorite language 自化 类似网易云课堂，不过全是设计类的 其他类网站资讯类 LINUXTOY 就是上面 Git 教程所在的网站，关于linux的 苹果fans博客 今天看啥 微信公众号文章查看，我喜欢的都有，主要更新比较及时 图灵社区 计算机类图书文章 工具类 ytb视频下载 pythontutor 可视化执行程序，支持 python java ruby 等语言 W3C validators 检验网页代码是否标准 娱乐类 FIX字幕侠 美剧，类似人人 美丽化学 挺不错，不过感觉更新的不多 知识类 地球知识局 人文和地理 混乱博物馆 柴知道 不知道哪一类 知乎万赞答案汇总以及排名 DNS服务器 应对一下DNS污染、劫持之类 BAI DNS 试过几个dns，这个还是比较块，114就算了，小广告整得也是顺溜]]></content>
+    <content type="text"><![CDATA[这段时间整理了一下浏览器的书签发现里面收藏了很多书签，然后重新整理了一下，把一些感觉不错的记录下来，然后把浏览器里面的都删除掉。其实平时浏览的网站基本就那几个。 按照网站的内容分类吧，比较直观。站点后有@符号表示需要特殊渠道访问 2019-09-23更新：整理书签，增加网站，更新不能访问的网站 软件下载 IT猫扑网 无意间看到，有各平台的软件下载 绿盟 之前的良心软件网站，不过现在很久不用了。（下载需要登录了） Windows绝赞应用 介绍Windows绝妙应用的项目，同时也介绍一些流氓应用 zd423 软件下载 个人博客 土豆不好吃 跟著工作熊玩賺部落格 访问比较慢，经营个人博客方面 依云’s Blog The Musings of an Optimist YouMeek 专注于IntelliJ IDEA 伟大航路 iShadow freess 木料集 小结 教程 Emacs教程 子龙山人的Emacs教程 Org-mode简明手册 用了一段时间，又改回markdown 沉浸式学Git Git教程，很简短 python初学者资料推荐 Learn X in Y minutes Take a whirlwind tour of your next favorite language 自化 类似网易云课堂，不过全是设计类的 科技爱好者博客 树莓派方面比较多 UEFI和BIOS探秘 计算机硬件方面 IntelliJ IDEA 简体中文专题教程 资讯类 LINUXTOY 就是上面Git教程所在的网站，关于linux的 苹果fans博客 今天看啥 微信公众号文章查看，我喜欢的都有，主要更新比较及时 图灵社区 计算机类图书文章 利器 工具类 ytb视频下载 Download Free Videos 视频下载 pythontutor 可视化执行程序，支持 python java ruby 等语言 W3C validators 检验网页代码是否标准 文件格式转换网站 Vim配色选择网站 pdftoimage pdf文件转图片 轻松玩转pdf draw 在线绘制UML、流程图等 ImageToTxt 图片转文字网站 YTB to MP4 youtobe to MP4 Mahua 在线markdown编辑器 Python Tutor 把python代码执行过程可视化 freenom 申请免费域名 娱乐类 FIX字幕侠 美剧，类似人人 美丽化学 喜欢化学的可以看看 lyricstranslate 歌词翻译网站 好奇心研究所 PixiVision 插画、漫画、小说 NEL 漫画连载，不过都是英文 知识类 地球知识局 人文和地理 混乱博物馆 柴知道 李永乐老师 一些软件 Tixati Tixati is a peer-to-peer file sharing program that uses the popular BitTorrent protocol. Motrix 全能全平台下载工具 Karabiner-Elements MacOS的键盘映射软件 den4b 一些好用的小软件 如Hasher Resizer、RandPass等 其他 知乎万赞答案汇总以及排名 DNS服务器 应对一下DNS污染、劫持之类 BAI DNS 试过几个dns，这个还是比较块，114就算了，小广告整得也是顺溜]]></content>
       <categories>
         <category>Net</category>
       </categories>
@@ -657,6 +657,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
+    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
+    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>switchs</tag>
+        <tag>VLAN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[思科交换机配置2——单交换机VLAN划分]]></title>
     <url>%2F2017%2F03%2F05%2Fswitch-config-2%2F</url>
     <content type="text"><![CDATA[单交换机VLAN配置配置好的思科模拟器文件地址:cisco-pkt 配置参数 名称 IP地址 所属VLAN 连接端口 网关 PC1 192.168.1.11/24 VLAN10 f0/1 192.168.1.254/24 PC2 192.168.1.12/24 VLAN10 f0/2 192.168.1.254/24 PC3 192.168.2.11/24 VLAN20 f0/11 192.168.2.254/24 PC4 192.168.2.12/24 VLAN20 f0/12 192.168.2.254/24 创建VLAN为了不占用太大的篇幅，一些命令的常规提示将不会写出来 全局模式下配置12345Switch#configure terminal Switch(config)#vlan 10 // 创建vlan 10Switch(config-vlan)#name v10 // 为 vlan10 命名Switch(config-vlan)#exitSwitch(config)#exit VLAN database 模式1234Switch#vlan database Switch(vlan)#vlan 20 name v20VLAN 20 added: Name: v20 把端口加入相应的VLAN端口的配置可以配置单个端口，也可以多个端口一块配置 把1~10号端口加入vlan1012345678910Switch(config)#interface f0/1 // 设置端口1Switch(config-if)#switchport mode access // 设置端口模式Switch(config-if)#switchport access vlan 10 // 把此端口加入vlan10中Switch(config-if)#exit // 退回全局配置Switch(config)#interface range fastEthernet ? // 查看帮助 &lt;0-9&gt; FastEthernet interface numberSwitch(config)#interface range fastEthernet 0/2-10 // 设置2~10端口Switch(config-if-range)#switchport mode access // 设置模式Switch(config-if-range)#switchport access vlan 10 Switch(config-if-range)#exit 把11-20号端口加入vlan20123Switch(config)#interface range f0/11-20Switch(config-if-range)#switchport mode accessSwitch(config-if-range)#switchport access vlan 20 把配置写入123456Switch#write // 一种方式Switch#copy running-config startup-config // 另一种方法Destination filename [startup-config]? Building configuration...[OK]Switch# 查看vlan的配置123Switch#show vlan // 查看vlan配置Switch#show running-config // 查看交换机配置 测试pc1与pc2可以互相ping通，与pc3和pc4无法ping通 更改pc3或pc4与pc1为一个网段的IP，依然无法与pc1通信。]]></content>
@@ -666,18 +678,6 @@
       <tags>
         <tag>switch</tag>
         <tag>VLAN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[思科交换机配置3——多交换机VLAN划分]]></title>
-    <url>%2F2017%2F03%2F05%2Fswitch-config-3%2F</url>
-    <content type="text"><![CDATA[配置好的思科模拟器文件地址：cisco-pkt 拓扑图: s1配置1234567891011121314151617181920212223242526Switch(config)#vlan 10Switch(config-vlan)#name v10Switch(config-vlan)#exitSwitch(config)#vlan 20Switch(config-vlan)#name v20Switch(config-vlan)#exitSwitch(config)#interface f0/1Switch(config-if)#switchport mode access Switch(config-if)#switchport access vlan 10Switch(config-if)#exitSwitch(config)#interface f0/2Switch(config-if)#switchport mode accessSwitch(config-if)#switchport access vlan 20Switch(config-if)#exitSwitch(config)#interface f0/24Switch(config-if)#switchport mode trunk // 把24端口模式设置为trunk来进行交换机之间的通信%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to down%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/24, changed state to upSwitch(config-if)#exitSwitch(config)#exitSwitch#writeBuilding configuration...[OK] s2的配置s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释 12345678910111213141516171819Switch(config)#hostname s2 // 把交换机的名称改为s2s2(config)#interface f0/1s2(config-if)#exits2(config)#vlan 10s2(config-vlan)#name v10s2(config-vlan)#exits2(config)#vlan 20s2(config-vlan)#name v20s2(config-vlan)#exits2(config)#interface f0/1s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 10s2(config-if)#exits2(config)#interface f0/2s2(config-if)#switchport mode access s2(config-if)#switchport access vlan 20s2(config-if)#exits2(config)#interface f0/24s2(config-if)#switchport mode trunk 测试pc1与pc3可以通信但与pc2无法通信 pc2与pc4可以通信但与pc3无法通信 参考链接以及拓展阅读 Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分 跨交换机的Vlan配置与管理]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>VLAN</tag>
-        <tag>switchs</tag>
       </tags>
   </entry>
   <entry>
