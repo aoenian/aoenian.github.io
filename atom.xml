@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-09-12T09:40:49.340Z</updated>
+  <updated>2019-09-26T05:29:03.377Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装Windows操作系统工具汇总</title>
+    <link href="https://aoenian.github.io/2019/09/26/install-windows/"/>
+    <id>https://aoenian.github.io/2019/09/26/install-windows/</id>
+    <published>2019-09-25T16:00:00.000Z</published>
+    <updated>2019-09-26T05:29:03.377Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录自己安装操作系统过程中使用过的感觉还不错的软件。&lt;/p&gt;
+&lt;h2 id=&quot;PE推荐&quot;&gt;&lt;a href=&quot;#PE推荐&quot; class=&quot;headerlink&quot; title=&quot;PE推荐&quot;&gt;&lt;/a&gt;PE推荐&lt;/h2&gt;&lt;p&gt;现在安装操作系统一般都不用刻录光盘了，直接U盘安装所以PE软件是需要的。这里推荐两个比较好用的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
+    
+    
+      <category term="hash" scheme="https://aoenian.github.io/tags/hash/"/>
+    
+      <category term="PE" scheme="https://aoenian.github.io/tags/PE/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows7安装FTP服务器</title>
@@ -479,28 +502,6 @@
       <category term="install" scheme="https://aoenian.github.io/tags/install/"/>
     
       <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派最佳伴侣pi-hole安装</title>
-    <link href="https://aoenian.github.io/2019/02/02/rasp-pi-hole/"/>
-    <id>https://aoenian.github.io/2019/02/02/rasp-pi-hole/</id>
-    <published>2019-02-01T16:00:00.000Z</published>
-    <updated>2019-02-02T04:21:17.373Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;树莓派放在那里吃灰又快一年了，平时偶尔想起来更新一下系统然后又给关掉了。不过小机器质量还不错，一直很坚挺。这段时间不是太忙了，想着还是让它发挥一下余热。网络搜索以后发现&lt;a href=&quot;https://github.com/pi-hole/pi-hole&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;pi-hole&lt;/a&gt;这个东西不错，下面开工。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Raspberry Pi" scheme="https://aoenian.github.io/categories/Raspberry-Pi/"/>
-    
-    
-      <category term="pi-hole" scheme="https://aoenian.github.io/tags/pi-hole/"/>
-    
-      <category term="advertisement" scheme="https://aoenian.github.io/tags/advertisement/"/>
     
   </entry>
   

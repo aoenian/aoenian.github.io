@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[安装Windows操作系统工具汇总]]></title>
+    <url>%2F2019%2F09%2F26%2Finstall-windows%2F</url>
+    <content type="text"><![CDATA[记录自己安装操作系统过程中使用过的感觉还不错的软件。 PE推荐现在安装操作系统一般都不用刻录光盘了，直接U盘安装所以PE软件是需要的。这里推荐两个比较好用的。 优启通 推荐这个，安装Windows很快，如果出现使用其他标明64位的安装光盘，请看这里 微PE 用这个PE安装的时候有时也会出现使用其他标明64位的安装光盘。不过在这个PE里面没找到解决的方法。 系统下载 Windows系统的下载地址只推荐 I Tell You Linux 请去官方网站下载 校验软件 Hasher Linux系统U盘写入软件建议使用官方推荐的写入软件，下面这个很多版本都推荐，可以尝试。 balenaEtcher]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>hash</tag>
+        <tag>PE</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Windows7安装FTP服务器]]></title>
     <url>%2F2019%2F09%2F12%2Fwindows7-install-ftp%2F</url>
     <content type="text"><![CDATA[记录Windows7安装FTP服务器，只是简单的安装使用，复杂的功能没有涉及到。 安装FTP控制面板-程序和功能-打开和关闭windows功能-Internet信息服务-勾选 FTP服务和FTP扩展性 安装组件。 新建并设定FTP服务器控制面板-打开管理工具-iis服务器-新建ftp服务器 ftp站点名称 内容目录自行设定 绑定IP地址 如果选用全部为分配（所有满足的IP）那么本地访问的时候可以使用（本机的局域网ip或者用 127.0.0.1） 如果选择本机IP地址绑定则只能使用绑定的IP进行测试访问自动启动ftp站点 虚拟主机名可以暂时不选，ssl可选择无 身份验证选择匿名则所有人可访问，授权方面则需要把允许访问调整为匿名用户，权限可以设置为读取。 参考文章： windows服务器 IIS FTP服务]]></content>
@@ -568,8 +580,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>samba</tag>
         <tag>centos</tag>
+        <tag>samba</tag>
       </tags>
   </entry>
   <entry>
