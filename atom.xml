@@ -40,6 +40,29 @@
   </entry>
   
   <entry>
+    <title>pip换源提升包下载速度</title>
+    <link href="https://aoenian.github.io/2019/09/26/python-pip-change-repositories/"/>
+    <id>https://aoenian.github.io/2019/09/26/python-pip-change-repositories/</id>
+    <published>2019-09-25T16:00:00.000Z</published>
+    <updated>2019-09-26T09:20:51.407Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;快到国庆节了看到公众号有一篇文章是使用python给自己的头像添加国旗。然后感觉挺厉害，可以用几行代码来把图片合成起来。在使用过程中遇到了一些问题，记录如下：&lt;/p&gt;
+&lt;h2 id=&quot;给头像添加国旗&quot;&gt;&lt;a href=&quot;#给头像添加国旗&quot; class=&quot;headerlink&quot; title=&quot;给头像添加国旗&quot;&gt;&lt;/a&gt;给头像添加国旗&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
+    
+    
+      <category term="change" scheme="https://aoenian.github.io/tags/change/"/>
+    
+      <category term="repositories" scheme="https://aoenian.github.io/tags/repositories/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows7安装FTP服务器</title>
     <link href="https://aoenian.github.io/2019/09/12/windows7-install-ftp/"/>
     <id>https://aoenian.github.io/2019/09/12/windows7-install-ftp/</id>
@@ -479,29 +502,6 @@
       <category term="文件共享" scheme="https://aoenian.github.io/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/"/>
     
       <category term="小米电视4x" scheme="https://aoenian.github.io/tags/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%A7%864x/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>老台式安装Windows10的问题解决</title>
-    <link href="https://aoenian.github.io/2019/02/13/install-win10/"/>
-    <id>https://aoenian.github.io/2019/02/13/install-win10/</id>
-    <published>2019-02-12T16:00:00.000Z</published>
-    <updated>2019-02-13T03:31:36.388Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;过年回家准备把家里面的台式机重装系统，想想就直接Windows10了，省得以后麻烦。&lt;/p&gt;
-&lt;p&gt;谁知道都是老司机了，居然翻车了，轻车熟路通过u盘启动微pe系统，然后把Windows10的镜像加载到虚拟光驱，双击打开，启动&lt;code&gt;setup.exe&lt;/code&gt;。嘣，弹出对话框提示：&lt;strong&gt;使用其他标明64位的安装光盘…&lt;/strong&gt;，当时蒙了，这什么情况，32位的系统还装不了？于是进行了以下的操作。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
-    
-    
-      <category term="install" scheme="https://aoenian.github.io/tags/install/"/>
-    
-      <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
     
   </entry>
   
