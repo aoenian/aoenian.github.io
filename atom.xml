@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-09-26T05:29:03.377Z</updated>
+  <updated>2019-10-28T13:44:07.676Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Codewars网站刷题笔记1</title>
+    <link href="https://aoenian.github.io/2019/10/27/python-codewars-kata1/"/>
+    <id>https://aoenian.github.io/2019/10/27/python-codewars-kata1/</id>
+    <published>2019-10-27T12:18:53.000Z</published>
+    <updated>2019-10-28T13:44:07.676Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;很早就注册了&lt;a href=&quot;https://www.codewars.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;codewars&lt;/a&gt;网站，却一直没有刷题，主要原因是懒，一小部分原因是这个网站访问比较慢。现在准备重新练习python，其实python也是很早就学了，一直没有练习，然后基本就一直处于入门水平，知道简单的语法而已，这次要好好练一次。&lt;/p&gt;
+&lt;p&gt;以codewars网站上面的题目为基础进行练习，每周都会刷一些题目，然后把这周做题过程中获得的一些技巧和经验，记录在博客中。作为一个系列，归类在python中。这是第一篇。&lt;/p&gt;
+&lt;p&gt;网站题目的github地址：&lt;a href=&quot;https://github.com/aoenian/codewars-katas-python&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/aoenian/codewars-katas-python&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
+    
+    
+      <category term="codewars" scheme="https://aoenian.github.io/tags/codewars/"/>
+    
+      <category term="kata" scheme="https://aoenian.github.io/tags/kata/"/>
+    
+      <category term="skills" scheme="https://aoenian.github.io/tags/skills/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode增加Python语言用户代码片段</title>
+    <link href="https://aoenian.github.io/2019/10/14/vscode-python-snippets/"/>
+    <id>https://aoenian.github.io/2019/10/14/vscode-python-snippets/</id>
+    <published>2019-10-14T12:28:43.000Z</published>
+    <updated>2019-10-20T04:02:29.135Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这段时间练习Python编程，编写的时候每次都要写文件头有点麻烦，所以就编辑了一个自己使用的代码片段。方便插入文件编码、时间、作者之类的程序信息。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
+    
+    
+      <category term="snippets" scheme="https://aoenian.github.io/tags/snippets/"/>
+    
+      <category term="Variables" scheme="https://aoenian.github.io/tags/Variables/"/>
+    
+  </entry>
   
   <entry>
     <title>安装Windows操作系统工具汇总</title>
@@ -448,60 +496,6 @@
       <category term="ssh" scheme="https://aoenian.github.io/tags/ssh/"/>
     
       <category term="stretch" scheme="https://aoenian.github.io/tags/stretch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用U盘安装macOS High Sierra</title>
-    <link href="https://aoenian.github.io/2019/03/16/install-macos/"/>
-    <id>https://aoenian.github.io/2019/03/16/install-macos/</id>
-    <published>2019-03-15T16:00:00.000Z</published>
-    <updated>2019-03-17T12:29:31.705Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;手边有一台10年的macbookpro，配置还行，不过由于安装了windows系统，驱动可能有问题，一直没有声音，触摸板也很奇怪，然后准备重新装回macOS。&lt;/p&gt;
-&lt;h1 id=&quot;安装方式&quot;&gt;&lt;a href=&quot;#安装方式&quot; class=&quot;headerlink&quot; title=&quot;安装方式&quot;&gt;&lt;/a&gt;安装方式&lt;/h1&gt;&lt;h2 id=&quot;联网自动安装&quot;&gt;&lt;a href=&quot;#联网自动安装&quot; class=&quot;headerlink&quot; title=&quot;联网自动安装&quot;&gt;&lt;/a&gt;联网自动安装&lt;/h2&gt;&lt;p&gt;这个是最先想到的方法，因为现在用的mba就是这样重装的，只要连上网络，干会儿其他的事情，等会回来崭新的系统就在迎接你了，不得不说苹果公司在软硬件的结合方面真的很厉害。让人越用越懒，用了以后基本就没再手动装过系统了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;但是重点来了&lt;/strong&gt;，由于笔记本的年龄太大了，直接开机&lt;code&gt;Command+R&lt;/code&gt;找到重新安装macOS，谁知道自动恢复的系统是&lt;code&gt;OS X Mountain Lion&lt;/code&gt;，直接提示&lt;strong&gt;已经下架&lt;/strong&gt;，网络上找了解决的方法，说是中国区下架了，把appleID更改为国外即可，&lt;em&gt;经测试更改为美国依然无法自动安装。&lt;/em&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
-    
-    
-      <category term="Sierra" scheme="https://aoenian.github.io/tags/Sierra/"/>
-    
-      <category term="install" scheme="https://aoenian.github.io/tags/install/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小米电视4x与Windows10局域网文件共享</title>
-    <link href="https://aoenian.github.io/2019/02/16/mi4x-win10-shar/"/>
-    <id>https://aoenian.github.io/2019/02/16/mi4x-win10-shar/</id>
-    <published>2019-02-15T16:00:00.000Z</published>
-    <updated>2019-02-16T10:46:30.722Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;过年买了小米电视4x，之前用过小米盒子，感觉小米的电视系统个人还是比较习惯。然后在使用过程中整体还不错，不过有一个问题搞得很头疼，就是局域网共享的问题。&lt;/p&gt;
-&lt;h1 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;家里的电脑和电视都在一个局域网中&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;电脑是Windows10系统，电脑下载的电影在一个目录中&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;问题来了，把目录共享了以后，电视却死活看不到共享目录，当然直接在电视里面添加共享电脑的IP地址也是无法获得共享，但是奇怪的是同局域网的其他电脑和手机都能看到&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
-    
-    
-      <category term="文件共享" scheme="https://aoenian.github.io/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/"/>
-    
-      <category term="小米电视4x" scheme="https://aoenian.github.io/tags/%E5%B0%8F%E7%B1%B3%E7%94%B5%E8%A7%864x/"/>
     
   </entry>
   
