@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-11-06T09:16:03.854Z</updated>
+  <updated>2019-11-06T09:19:20.463Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://aoenian.github.io/2019/11/06/python-codewars-kata2/"/>
     <id>https://aoenian.github.io/2019/11/06/python-codewars-kata2/</id>
     <published>2019-11-06T09:08:36.000Z</published>
-    <updated>2019-11-06T09:16:03.854Z</updated>
+    <updated>2019-11-06T09:19:20.463Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;这次跳到了7ku，看看高一级的题目。&lt;/p&gt;
+      &lt;p&gt;这次跳到了7kyu，看看高一级的题目。&lt;/p&gt;
 &lt;h2 id=&quot;AlphabeticalAddition&quot;&gt;&lt;a href=&quot;#AlphabeticalAddition&quot; class=&quot;headerlink&quot; title=&quot;AlphabeticalAddition&quot;&gt;&lt;/a&gt;AlphabeticalAddition&lt;/h2&gt;&lt;p&gt;这个是字母加法，里面涉及到的就是常用的两个字符和数字的转换方法，&lt;code&gt;ord()&lt;/code&gt; 和 &lt;code&gt;chr()&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;然后还有一个就是 &lt;code&gt;sum(ord(c)-96 for c in letters)&lt;/code&gt; 这个应该属于列表生成式。循环体简化到了一行，不过我个人觉得开始学习的时候看着比较不清楚。&lt;/p&gt;
     
@@ -34,7 +34,7 @@
       <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
     
     
-      <category term="7ku" scheme="https://aoenian.github.io/tags/7ku/"/>
+      <category term="7kyu" scheme="https://aoenian.github.io/tags/7kyu/"/>
     
   </entry>
   
