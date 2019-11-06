@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-10-28T13:44:07.676Z</updated>
+  <updated>2019-11-06T09:16:03.854Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Codewars网站刷题笔记2</title>
+    <link href="https://aoenian.github.io/2019/11/06/python-codewars-kata2/"/>
+    <id>https://aoenian.github.io/2019/11/06/python-codewars-kata2/</id>
+    <published>2019-11-06T09:08:36.000Z</published>
+    <updated>2019-11-06T09:16:03.854Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这次跳到了7ku，看看高一级的题目。&lt;/p&gt;
+&lt;h2 id=&quot;AlphabeticalAddition&quot;&gt;&lt;a href=&quot;#AlphabeticalAddition&quot; class=&quot;headerlink&quot; title=&quot;AlphabeticalAddition&quot;&gt;&lt;/a&gt;AlphabeticalAddition&lt;/h2&gt;&lt;p&gt;这个是字母加法，里面涉及到的就是常用的两个字符和数字的转换方法，&lt;code&gt;ord()&lt;/code&gt; 和 &lt;code&gt;chr()&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;然后还有一个就是 &lt;code&gt;sum(ord(c)-96 for c in letters)&lt;/code&gt; 这个应该属于列表生成式。循环体简化到了一行，不过我个人觉得开始学习的时候看着比较不清楚。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
+    
+    
+      <category term="7ku" scheme="https://aoenian.github.io/tags/7ku/"/>
+    
+  </entry>
   
   <entry>
     <title>Codewars网站刷题笔记1</title>
@@ -473,29 +495,6 @@
       <category term="virtual box" scheme="https://aoenian.github.io/tags/virtual-box/"/>
     
       <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树莓派Raspbian系统安装过程</title>
-    <link href="https://aoenian.github.io/2019/03/24/install-raspberrypi/"/>
-    <id>https://aoenian.github.io/2019/03/24/install-raspberrypi/</id>
-    <published>2019-03-23T16:00:00.000Z</published>
-    <updated>2019-03-27T09:04:53.467Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;周末了，发现树莓派的pi-hole出问题了，无法提供dns服务了，没有查原因，想着用很长时间了，这次正好重新装一次系统，把之前不用的功能和软件全部处理掉。&lt;/p&gt;
-&lt;p&gt;英文不错请查看官方的&lt;a href=&quot;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;安装指南&lt;/a&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Raspberry Pi" scheme="https://aoenian.github.io/categories/Raspberry-Pi/"/>
-    
-    
-      <category term="ssh" scheme="https://aoenian.github.io/tags/ssh/"/>
-    
-      <category term="stretch" scheme="https://aoenian.github.io/tags/stretch/"/>
     
   </entry>
   
