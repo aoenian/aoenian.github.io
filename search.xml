@@ -559,8 +559,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>ibus</tag>
         <tag>manjaro</tag>
+        <tag>ibus</tag>
       </tags>
   </entry>
   <entry>
@@ -628,8 +628,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>samba</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>
@@ -724,8 +724,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>switch</tag>
         <tag>VLAN</tag>
+        <tag>switch</tag>
       </tags>
   </entry>
   <entry>
