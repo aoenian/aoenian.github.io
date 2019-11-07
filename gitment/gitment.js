@@ -3420,9 +3420,9 @@ var Gitment = function () {
       _utils.http.post('https://github.com/login/oauth/access_token', {
       //_utils.http.post('https://bak.smalbox.club', {
       //_utils.http.post('https://cors.wenjunjiang.win', {
-        code: code,
-        client_id: client_id,
-        client_secret: client_secret
+      //  code: code,
+      //  client_id: client_id,
+      //  client_secret: client_secret
       }, '').then(function (data) {
         _this.accessToken = data.access_token;
         _this.update();
