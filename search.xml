@@ -559,8 +559,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>manjaro</tag>
         <tag>ibus</tag>
+        <tag>manjaro</tag>
       </tags>
   </entry>
   <entry>
@@ -628,8 +628,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>samba</tag>
         <tag>centos</tag>
+        <tag>samba</tag>
       </tags>
   </entry>
   <entry>
@@ -712,8 +712,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>三层交换机</tag>
         <tag>链路聚合</tag>
+        <tag>三层交换机</tag>
       </tags>
   </entry>
   <entry>
@@ -724,8 +724,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>VLAN</tag>
         <tag>switch</tag>
+        <tag>VLAN</tag>
       </tags>
   </entry>
   <entry>
