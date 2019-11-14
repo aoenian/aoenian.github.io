@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-11-06T09:19:20.463Z</updated>
+  <updated>2019-11-14T13:15:06.931Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows安装和共享打印机问题记录</title>
+    <link href="https://aoenian.github.io/2019/11/14/windows-printer/"/>
+    <id>https://aoenian.github.io/2019/11/14/windows-printer/</id>
+    <published>2019-11-14T02:25:16.000Z</published>
+    <updated>2019-11-14T13:15:06.931Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这几天有比赛项目，然后就需要打印项目要求，评分表之类的文件，结果就是需要对赛场的电脑和打印机进行连接。这中间才知道打印机和电脑连接也是个技术活，会遇到各种这样你可能想不到的问题。趁着有些问题还能回忆起来，把解决方法记录，避免以后遇到后再走弯路。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
+    
+    
+      <category term="没有反应" scheme="https://aoenian.github.io/tags/%E6%B2%A1%E6%9C%89%E5%8F%8D%E5%BA%94/"/>
+    
+      <category term="正在打印" scheme="https://aoenian.github.io/tags/%E6%AD%A3%E5%9C%A8%E6%89%93%E5%8D%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Codewars网站刷题笔记2</title>
@@ -468,33 +490,6 @@
       <category term="评论" scheme="https://aoenian.github.io/tags/%E8%AF%84%E8%AE%BA/"/>
     
       <category term="gitment" scheme="https://aoenian.github.io/tags/gitment/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日常使用中一些小问题汇总(一)</title>
-    <link href="https://aoenian.github.io/2019/04/03/problem-collection1/"/>
-    <id>https://aoenian.github.io/2019/04/03/problem-collection1/</id>
-    <published>2019-04-02T16:00:00.000Z</published>
-    <updated>2019-04-14T09:06:56.864Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;安装Eclipse&quot;&gt;&lt;a href=&quot;#安装Eclipse&quot; class=&quot;headerlink&quot; title=&quot;安装Eclipse&quot;&gt;&lt;/a&gt;安装Eclipse&lt;/h2&gt;&lt;p&gt;直接在Eclipse的 &lt;a href=&quot;http://www.eclipse.org/downloads/packages/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt; 下载&lt;strong&gt;Eclipse IDE for Java Developers&lt;/strong&gt;这个版本即可。&lt;/p&gt;
-&lt;p&gt;然后双击安装，启动后系统会提示安装 &lt;strong&gt;旧javaSE6运行环境才能打开&lt;/strong&gt; 点击 &lt;strong&gt;更多信息&lt;/strong&gt;，下载安装 &lt;strong&gt;Java for OS X 2017-001&lt;/strong&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Collection" scheme="https://aoenian.github.io/categories/Collection/"/>
-    
-    
-      <category term="you-get" scheme="https://aoenian.github.io/tags/you-get/"/>
-    
-      <category term="java" scheme="https://aoenian.github.io/tags/java/"/>
-    
-      <category term="virtual box" scheme="https://aoenian.github.io/tags/virtual-box/"/>
-    
-      <category term="vscode" scheme="https://aoenian.github.io/tags/vscode/"/>
     
   </entry>
   

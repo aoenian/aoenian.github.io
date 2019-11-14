@@ -15,10 +15,10 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -94,9 +94,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
@@ -161,12 +161,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="aoenian" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="aoenian" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/"/>
+  <link rel="canonical" href="https://aoenian.github.io/2018/12/24/vscode-markdown-to-pdf/">
 
 
 
@@ -271,7 +271,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -279,7 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
         
         
@@ -287,7 +287,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
   </li>
         
         
@@ -295,7 +295,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -305,7 +305,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -328,9 +328,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -442,7 +440,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -470,11 +468,10 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon"
-            >
+            <span class="post-meta-item-icon">
             <i class="fa fa-eye"></i>
              阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -507,14 +504,14 @@
 </li>
 <li><p>如果出现了第三步的错误提示，打开vscode的<strong>首选项</strong>-<strong>设置</strong>，然后在搜索框中搜索<code>markdown-pdf.executablePath</code>，点击右边的<strong>在 settings.json 中编辑</strong>。</p>
 <p> 在用户配置文件中写入如下配置：</p>
- <div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Mac下面Chrome的位置</span></span><br><span class="line"><span class="string">"markdown-pdf.executablePath"</span>: <span class="string">"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"</span>,</span><br><span class="line"><span class="comment">// Windows 请根据自己系统情况配置</span></span><br><span class="line"><span class="string">"markdown-pdf.executablePath"</span>: <span class="string">"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"</span></span><br></pre></td></tr></table></figure></div>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Mac下面Chrome的位置</span></span><br><span class="line"><span class="string">"markdown-pdf.executablePath"</span>: <span class="string">"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"</span>,</span><br><span class="line"><span class="comment">// Windows 请根据自己系统情况配置</span></span><br><span class="line"><span class="string">"markdown-pdf.executablePath"</span>: <span class="string">"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>保存并重启vscode。试试吧！！</p>
 </li>
 </ol>
 <h1 id="如何使用自定义css"><a href="#如何使用自定义css" class="headerlink" title="如何使用自定义css"></a>如何使用自定义css</h1><p>在mac下面导出的pdf文件个人感觉还是很不错的，不过在windows下面导出后汉字的字体大小不一，而且颜色也有深有浅，这样就需要我们使用自定义css。</p>
 <p>同样在<strong>setting.json</strong>里面加入如下配置</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JS"><figure class="iseeu highlight /js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 路径和css文件名以你的文件为准</span></span><br><span class="line"><span class="string">"markdown-pdf.styles"</span>: [<span class="string">"E:\\css\\markdowncss.css"</span>],</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 路径和css文件名以你的文件为准</span></span><br><span class="line"><span class="string">"markdown-pdf.styles"</span>: [<span class="string">"E:\\css\\markdowncss.css"</span>],</span><br></pre></td></tr></table></figure>
 <p>css文件可以去github上面或者网络找一下，选一个自己喜欢的。</p>
 <p>PS：这里推荐一个md文件语法检查插件<code>markdownlint</code>，还有就是打开vscode的<strong>查看</strong>-<strong>切换控制字符</strong>可以看到一些误输入的奇怪的符号。</p>
 <p>参考文章：</p>
@@ -657,9 +654,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
-                alt="aoenian" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="aoenian">
             
               <p class="site-author-name" itemprop="name">aoenian</p>
               <p class="site-description motion-element" itemprop="description">read code blog</p>
@@ -672,7 +667,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">81</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1016,7 +1011,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">143</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">145</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1121,7 +1120,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

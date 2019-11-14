@@ -15,10 +15,10 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -94,9 +94,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
@@ -161,12 +161,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="aoenian" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="aoenian" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="https://aoenian.github.io/2017/10/29/centos-samba/"/>
+  <link rel="canonical" href="https://aoenian.github.io/2017/10/29/centos-samba/">
 
 
 
@@ -271,7 +271,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -279,7 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
         
         
@@ -287,7 +287,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
   </li>
         
         
@@ -295,7 +295,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -305,7 +305,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -328,9 +328,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -442,7 +440,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -470,11 +468,10 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon"
-            >
+            <span class="post-meta-item-icon">
             <i class="fa fa-eye"></i>
              阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -504,37 +501,37 @@
 <ul>
 <li>查看CentOS的版本</li>
 </ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /proc/version</span></span><br><span class="line">Linux version 4.9.50-v7.1.el7 (mockbuild@armv7-03.dev.CentOS.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -a</span></span><br><span class="line">Linux CentOS-rpi3 4.9.50-v7.1.el7 <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017 armv7l armv7l armv7l GNU/Linux</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -r</span></span><br><span class="line">4.9.50-v7.1.el7</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /etc/redhat-release</span></span><br><span class="line">CentOS Linux release 7.4.1708 (Core)</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># getconf LONG_BIT</span></span><br><span class="line">32</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># file /bin/ls</span></span><br><span class="line">/bin/ls: ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), <span class="keyword">for</span> GNU/Linux 2.6.32, BuildID[sha1]=c591c4039d5eb3301eb8be1fa4ebaed8cd832240, stripped</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /proc/version</span></span><br><span class="line">Linux version 4.9.50-v7.1.el7 (mockbuild@armv7-03.dev.CentOS.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -a</span></span><br><span class="line">Linux CentOS-rpi3 4.9.50-v7.1.el7 <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017 armv7l armv7l armv7l GNU/Linux</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -r</span></span><br><span class="line">4.9.50-v7.1.el7</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /etc/redhat-release</span></span><br><span class="line">CentOS Linux release 7.4.1708 (Core)</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># getconf LONG_BIT</span></span><br><span class="line">32</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># file /bin/ls</span></span><br><span class="line">/bin/ls: ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), <span class="keyword">for</span> GNU/Linux 2.6.32, BuildID[sha1]=c591c4039d5eb3301eb8be1fa4ebaed8cd832240, stripped</span><br></pre></td></tr></table></figure>
 <h1 id="安装配置Samba"><a href="#安装配置Samba" class="headerlink" title="安装配置Samba"></a>安装配置Samba</h1><p>CentOS的共享比较麻烦具体下面介绍</p>
 <h2 id="安装Samba"><a href="#安装Samba" class="headerlink" title="安装Samba"></a>安装Samba</h2><p>先查看是否安装Samba</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep samba</span><br><span class="line">yum list installed | grep samba</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep samba</span><br><span class="line">yum list installed | grep samba</span><br></pre></td></tr></table></figure>
 <p>如果已经安装那么可以跳过，如果没有正确安装可以先删除再重新安装</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除samba</span></span><br><span class="line">yum remove samba*</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除samba</span></span><br><span class="line">yum remove samba*</span><br></pre></td></tr></table></figure>
 <p>接着，连上网络，安装samba</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install samba* -y</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install samba* -y</span><br></pre></td></tr></table></figure>
 <h2 id="配置一个完全权限的共享目录"><a href="#配置一个完全权限的共享目录" class="headerlink" title="配置一个完全权限的共享目录"></a>配置一个完全权限的共享目录</h2><h3 id="查看windows的工作组"><a href="#查看windows的工作组" class="headerlink" title="查看windows的工作组"></a>查看windows的工作组</h3><p>打开win的cmd窗口，快捷键 win+r 然后输入 cmd<br>回车即可，并在窗口输入以下命令</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net config workstation</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net config workstation</span><br></pre></td></tr></table></figure>
 <p>找到 <code>Workstation domain</code> 一行，值应该是 <code>WORKGROUP</code> 下面配置Samba要用到</p>
 <h3 id="配置Samba"><a href="#配置Samba" class="headerlink" title="配置Samba"></a>配置Samba</h3><ul>
 <li>创建共享目录</li>
 </ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /samba/anonymous</span><br><span class="line">chmod -R 0777 /samba/anonymous</span><br><span class="line">chown -R nobody:nobody /samba/anonymous</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /samba/anonymous</span><br><span class="line">chmod -R 0777 /samba/anonymous</span><br><span class="line">chown -R nobody:nobody /samba/anonymous</span><br></pre></td></tr></table></figure>
 <ul>
 <li>关掉防火墙和selinux</li>
 </ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service <span class="comment">#停止firewall</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service <span class="comment">#禁止firewall开机启动</span></span><br><span class="line"></span><br><span class="line">setenforce 0    <span class="comment"># 关闭selinux</span></span><br><span class="line">getenforce      <span class="comment"># 查看selinux的状态，应该是 Permissive</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 彻底禁用selinux 编辑配置文件</span></span><br><span class="line">vim /etc/sysconfig/selinux    </span><br><span class="line"><span class="comment"># 修改SELINUX</span></span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service <span class="comment">#停止firewall</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service <span class="comment">#禁止firewall开机启动</span></span><br><span class="line"></span><br><span class="line">setenforce 0    <span class="comment"># 关闭selinux</span></span><br><span class="line">getenforce      <span class="comment"># 查看selinux的状态，应该是 Permissive</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 彻底禁用selinux 编辑配置文件</span></span><br><span class="line">vim /etc/sysconfig/selinux    </span><br><span class="line"><span class="comment"># 修改SELINUX</span></span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
 <p><em>如果防火墙不关闭，查看共享会出现连接失败；如果selinux不关闭，则无法看到共享目录的内容</em></p>
 <p><em>当然为了安全期间，可以对Samba的端口放行，设置selinux分享Samba的目录，大家可以参考其他博文</em></p>
 <ul>
 <li>备份配置文件</li>
 </ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /etc/samba/smb.conf /etc/samba/smb.conf.bak</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /etc/samba/smb.conf /etc/samba/smb.conf.bak</span><br></pre></td></tr></table></figure>
 <ul>
 <li>修改配置文件</li>
 </ul>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/samba/smb.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以把之前的内容注释掉，加入如下内容</span></span><br><span class="line">[global]</span><br><span class="line">        workgroup = WORKGROUP    <span class="comment"># 跟win的工作组同名</span></span><br><span class="line">        server string = Samba Server Version %v    <span class="comment"># 服务器描述</span></span><br><span class="line">        netbios name = CentOS    <span class="comment"># 共享服务器在网络上显示的名字</span></span><br><span class="line">        security = user    <span class="comment"># 使用 SAMBA 服务器本身的密码数据库</span></span><br><span class="line">    <span class="comment"># 将所有Samba系统主机所不能正确识别的用户都映射成guest用户</span></span><br><span class="line">        map to guest = bad user    </span><br><span class="line">        dns proxy = no</span><br><span class="line">        <span class="built_in">log</span> file = /var/<span class="built_in">log</span>/samba/<span class="built_in">log</span>.%m    <span class="comment"># 日志文件位置</span></span><br><span class="line">        max <span class="built_in">log</span> size = 50    <span class="comment"># 日志大小</span></span><br><span class="line"></span><br><span class="line">[Anonymous]</span><br><span class="line">        comment = Anonymous File Server Share</span><br><span class="line">        path = /samba/anonymous</span><br><span class="line">        browsable = yes    <span class="comment"># 让所有的用户看到这个项目</span></span><br><span class="line">        writable = yes    <span class="comment"># 是否可以写入</span></span><br><span class="line">        guest ok = yes    <span class="comment"># 是否允许guest账户访问</span></span><br><span class="line">        <span class="built_in">read</span> only = no    <span class="comment"># 是否只读，与wirtable类似，谁在后面听谁的</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/samba/smb.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以把之前的内容注释掉，加入如下内容</span></span><br><span class="line">[global]</span><br><span class="line">        workgroup = WORKGROUP    <span class="comment"># 跟win的工作组同名</span></span><br><span class="line">        server string = Samba Server Version %v    <span class="comment"># 服务器描述</span></span><br><span class="line">        netbios name = CentOS    <span class="comment"># 共享服务器在网络上显示的名字</span></span><br><span class="line">        security = user    <span class="comment"># 使用 SAMBA 服务器本身的密码数据库</span></span><br><span class="line">    <span class="comment"># 将所有Samba系统主机所不能正确识别的用户都映射成guest用户</span></span><br><span class="line">        map to guest = bad user    </span><br><span class="line">        dns proxy = no</span><br><span class="line">        <span class="built_in">log</span> file = /var/<span class="built_in">log</span>/samba/<span class="built_in">log</span>.%m    <span class="comment"># 日志文件位置</span></span><br><span class="line">        max <span class="built_in">log</span> size = 50    <span class="comment"># 日志大小</span></span><br><span class="line"></span><br><span class="line">[Anonymous]</span><br><span class="line">        comment = Anonymous File Server Share</span><br><span class="line">        path = /samba/anonymous</span><br><span class="line">        browsable = yes    <span class="comment"># 让所有的用户看到这个项目</span></span><br><span class="line">        writable = yes    <span class="comment"># 是否可以写入</span></span><br><span class="line">        guest ok = yes    <span class="comment"># 是否允许guest账户访问</span></span><br><span class="line">        <span class="built_in">read</span> only = no    <span class="comment"># 是否只读，与wirtable类似，谁在后面听谁的</span></span><br></pre></td></tr></table></figure>
 <p><em>保存配置文件，并退出，到此一个完全共享的目录基本配置完毕</em></p>
-<h3 id="重启smaba"><a href="#重启smaba" class="headerlink" title="重启smaba"></a>重启smaba</h3><div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> smb.service    <span class="comment"># 加入开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nmb.service</span><br><span class="line">systemctl restart smb.service</span><br><span class="line">systemctl restart nmb.service</span><br></pre></td></tr></table></figure></div>
+<h3 id="重启smaba"><a href="#重启smaba" class="headerlink" title="重启smaba"></a>重启smaba</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> smb.service    <span class="comment"># 加入开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nmb.service</span><br><span class="line">systemctl restart smb.service</span><br><span class="line">systemctl restart nmb.service</span><br></pre></td></tr></table></figure>
 <p><em>配置完成，可在其他系统查看共享目录和文件</em></p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
 <li><a href="https://lintut.com/easy-samba-installation-on-rhel-centos-7/" target="_blank" rel="noopener">Easy Samba installation on RHEL/CentOS7</a></li>
@@ -674,9 +671,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
-                alt="aoenian" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="aoenian">
             
               <p class="site-author-name" itemprop="name">aoenian</p>
               <p class="site-description motion-element" itemprop="description">read code blog</p>
@@ -689,7 +684,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">81</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1033,7 +1028,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">143</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">145</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1138,7 +1137,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

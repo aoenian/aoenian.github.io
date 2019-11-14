@@ -15,10 +15,10 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -94,9 +94,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
@@ -161,12 +161,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="aoenian" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="aoenian" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="https://aoenian.github.io/2019/07/24/python-decorator1/"/>
+  <link rel="canonical" href="https://aoenian.github.io/2019/07/24/python-decorator1/">
 
 
 
@@ -271,7 +271,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -279,7 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
         
         
@@ -287,7 +287,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
   </li>
         
         
@@ -295,7 +295,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -305,7 +305,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -328,9 +328,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -442,7 +440,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -470,11 +468,10 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon"
-            >
+            <span class="post-meta-item-icon">
             <i class="fa fa-eye"></i>
              阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -509,27 +506,27 @@
 </ul>
 <h2 id="简单的函数装饰器"><a href="#简单的函数装饰器" class="headerlink" title="简单的函数装饰器"></a>简单的函数装饰器</h2><p>装饰器在Python中很强大，扩展函数功能而不改变函数的代码，同时能够多次复用。在查看完上面的资料后我个人还有几点没有弄清楚，后来慢慢有了自己的一些理解，记录如下。</p>
 <h3 id="函数是变量"><a href="#函数是变量" class="headerlink" title="函数是变量"></a>函数是变量</h3><p>一定要先理解在Python语言中，一切皆对象，函数也能当变量。那么赋值，作为另一个函数参数这些都不在话下。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PY"><figure class="iseeu highlight /py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span>  <span class="comment"># 最简单的函数</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)</span><br><span class="line"></span><br><span class="line">bar = foo   <span class="comment"># 这里注意赋值的时候是函数名字，不能加括号</span></span><br><span class="line">bar()       <span class="comment"># 这时调用bar(),结果与 foo()相同,类似又给foo函数起了一个别称</span></span><br><span class="line">bar.__name__    <span class="comment"># 输出 foo</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span>  <span class="comment"># 最简单的函数</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)</span><br><span class="line"></span><br><span class="line">bar = foo   <span class="comment"># 这里注意赋值的时候是函数名字，不能加括号</span></span><br><span class="line">bar()       <span class="comment"># 这时调用bar(),结果与 foo()相同,类似又给foo函数起了一个别称</span></span><br><span class="line">bar.__name__    <span class="comment"># 输出 foo</span></span><br></pre></td></tr></table></figure>
 <p>看完赋值，接着再看一个例子，函数作为另一个函数的参数</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PY"><figure class="iseeu highlight /py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># bar函数接收的参数是另一个函数名 当然func只是一个名字可以用其他名字替换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">(func)</span>:</span>  </span><br><span class="line">    print(<span class="string">'i am bar'</span>)</span><br><span class="line">    func()      <span class="comment"># 这里调用了传入的函数</span></span><br><span class="line"></span><br><span class="line">bar(foo)        <span class="comment"># 先打印出 i am bar, 然后调用 foo 再打印出 i am foo</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># bar函数接收的参数是另一个函数名 当然func只是一个名字可以用其他名字替换</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">(func)</span>:</span>  </span><br><span class="line">    print(<span class="string">'i am bar'</span>)</span><br><span class="line">    func()      <span class="comment"># 这里调用了传入的函数</span></span><br><span class="line"></span><br><span class="line">bar(foo)        <span class="comment"># 先打印出 i am bar, 然后调用 foo 再打印出 i am foo</span></span><br></pre></td></tr></table></figure>
 <p>上面的函数都很简单，没有返回值，而且函数内部也没有再次定义函数，再看一个函数内部定义函数，然后并返回的例子。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PY"><figure class="iseeu highlight /py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span>      <span class="comment"># 定义函数 foo</span></span><br><span class="line">        print(<span class="string">'i am foo'</span>)</span><br><span class="line">    <span class="keyword">return</span> foo      <span class="comment"># 返回函数名，注意是函数名并没有括号</span></span><br><span class="line"></span><br><span class="line">b = bar()       <span class="comment"># 用b接收bar的返回值</span></span><br><span class="line">print(b.__name__)       <span class="comment"># 输出 foo</span></span><br><span class="line">b()         <span class="comment"># 输出 i am foo</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bar</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span>      <span class="comment"># 定义函数 foo</span></span><br><span class="line">        print(<span class="string">'i am foo'</span>)</span><br><span class="line">    <span class="keyword">return</span> foo      <span class="comment"># 返回函数名，注意是函数名并没有括号</span></span><br><span class="line"></span><br><span class="line">b = bar()       <span class="comment"># 用b接收bar的返回值</span></span><br><span class="line">print(b.__name__)       <span class="comment"># 输出 foo</span></span><br><span class="line">b()         <span class="comment"># 输出 i am foo</span></span><br></pre></td></tr></table></figure>
 <p>上面的例子就是把函数作为返回值返回，这时候返回的函数就会赋值给b，当执行<code>b()</code>的时候即执行了<code>foo()</code>。</p>
 <h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>看到这里就可以谈谈装饰器了，装饰器的作用个人感觉就是在要执行的函数外面再加上一层函数来实现一些非核心的功能，这样能够避免破坏原函数的结构，同时还能实现增加功能的需求。</p>
 <p>以上面博客中常用的打印日志的代码为例：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PY"><figure class="iseeu highlight /py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="string">"""打印日志"""</span></span><br><span class="line">    print(<span class="string">'%s start'</span> % func.__name__)</span><br><span class="line">    func()</span><br><span class="line">    print(<span class="string">'%s end'</span> % func.__name__)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)</span><br><span class="line"></span><br><span class="line">log(foo)    <span class="comment"># 这样就可以在foo函数执行前后完成日志的输出</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="string">"""打印日志"""</span></span><br><span class="line">    print(<span class="string">'%s start'</span> % func.__name__)</span><br><span class="line">    func()</span><br><span class="line">    print(<span class="string">'%s end'</span> % func.__name__)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)</span><br><span class="line"></span><br><span class="line">log(foo)    <span class="comment"># 这样就可以在foo函数执行前后完成日志的输出</span></span><br></pre></td></tr></table></figure>
 <p>这样做是可以的，不过缺点上面的博客也提到了，这样做就等于调用了<code>log</code>函数，跟原来的函数<code>foo</code>没啥关系了。同时还有一点注意就是这里直接执行<code>log(foo)</code>即可得到结果，<code>log</code>函数<strong>没有返回值</strong>，所以也没有赋值给其他的变量。</p>
 <h3 id="装饰器的效果"><a href="#装饰器的效果" class="headerlink" title="装饰器的效果"></a>装饰器的效果</h3><p>装饰器的语法就不多说了，而装饰器的效果是装饰器接收真正的业务函数然后把返回的内容再次赋值给业务函数名，以此来增强业务函数的功能。了解了这个闪腰的操作你就不会纠结为啥装饰器要那么费劲再返回函数。上例子</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PY"><figure class="iseeu highlight /py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log1</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="string">"""打印日志，没有任何返回"""</span></span><br><span class="line">    print(<span class="string">'%s start'</span> % func.__name__)</span><br><span class="line">    func()</span><br><span class="line">    print(<span class="string">'%s end'</span> % func.__name__)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log2</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="string">"""打印日志，返回函数"""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'%s start'</span> % func.__name__)</span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">'%s end'</span> % func.__name__)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@log1           # foo = log1(foo)  直接输出日志语句</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span>      <span class="comment"># 不用调用foo()即可直接输出</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)       <span class="comment"># 显然这个结果不是我们想要的</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@log2           # foo = log2(foo) = wrapper</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)</span><br><span class="line"></span><br><span class="line">foo()           <span class="comment"># 调用foo() 即执行 wrapper() 这时才会输出日志</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log1</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="string">"""打印日志，没有任何返回"""</span></span><br><span class="line">    print(<span class="string">'%s start'</span> % func.__name__)</span><br><span class="line">    func()</span><br><span class="line">    print(<span class="string">'%s end'</span> % func.__name__)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log2</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="string">"""打印日志，返回函数"""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'%s start'</span> % func.__name__)</span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">'%s end'</span> % func.__name__)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@log1           # foo = log1(foo)  直接输出日志语句</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span>      <span class="comment"># 不用调用foo()即可直接输出</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)       <span class="comment"># 显然这个结果不是我们想要的</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@log2           # foo = log2(foo) = wrapper</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)</span><br><span class="line"></span><br><span class="line">foo()           <span class="comment"># 调用foo() 即执行 wrapper() 这时才会输出日志</span></span><br></pre></td></tr></table></figure>
 <h3 id="wrapper函数为什么返回func"><a href="#wrapper函数为什么返回func" class="headerlink" title="wrapper函数为什么返回func()"></a>wrapper函数为什么返回func()</h3><p>其实到这里基本概念就差不多了，但是我在查看教程的时候发现wrapper函数都是直接返回func()，这里一直不明白，直接调用就好了啊，为什么要返回呢。后面我测试了一些例子，发现高手还是高手。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PY"><figure class="iseeu highlight /py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="string">"""打印日志，返回函数"""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'%s start'</span> % func.__name__)</span><br><span class="line">        <span class="comment"># func()</span></span><br><span class="line">        <span class="keyword">return</span> func()</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)   <span class="comment"># 当没有返回值的时候 wrapper函数是否返回基本区别不大</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo2</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span>(<span class="string">'i am foo'</span>)  <span class="comment"># 当有返回值的时候 wrapper函数是否返回就有区别了</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果不用 return func() 则无法得到foo2的返回值，也就无法输出  i am foo</span></span><br><span class="line">print(foo2())   <span class="comment"># 如果wrapper中不使用 return func() 则输出 None</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="string">"""打印日志，返回函数"""</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrapper</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'%s start'</span> % func.__name__)</span><br><span class="line">        <span class="comment"># func()</span></span><br><span class="line">        <span class="keyword">return</span> func()</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'i am foo'</span>)   <span class="comment"># 当没有返回值的时候 wrapper函数是否返回基本区别不大</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo2</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span>(<span class="string">'i am foo'</span>)  <span class="comment"># 当有返回值的时候 wrapper函数是否返回就有区别了</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果不用 return func() 则无法得到foo2的返回值，也就无法输出  i am foo</span></span><br><span class="line">print(foo2())   <span class="comment"># 如果wrapper中不使用 return func() 则输出 None</span></span><br></pre></td></tr></table></figure>
 <p>当然如果再想的多点，为什么wrapper返回的是<code>func()</code>，不是<code>func</code>。而log返回的则是函数名<code>wrapper</code>。</p>
 <h3 id="如果没有wrapper函数会怎样"><a href="#如果没有wrapper函数会怎样" class="headerlink" title="如果没有wrapper函数会怎样"></a>如果没有wrapper函数会怎样</h3><p>这个问题我也没想到，在知乎的问答中看到的地址如下：<a href="https://www.zhihu.com/question/26930016/answer/99243411" target="_blank" rel="noopener">点我</a>，我把问题复现如下：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PY"><figure class="iseeu highlight /py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is log"</span>)</span><br><span class="line">    func()</span><br><span class="line">    <span class="keyword">return</span> func</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is foo function"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 请执行两次，你会惊奇的发现两次执行的结果不一样</span></span><br><span class="line">foo()</span><br><span class="line">print(<span class="string">'***'</span>)</span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">输出内容如下：</span></span><br><span class="line"><span class="string">this is log</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(func)</span>:</span></span><br><span class="line">    print(<span class="string">"this is log"</span>)</span><br><span class="line">    func()</span><br><span class="line">    <span class="keyword">return</span> func</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"this is foo function"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 请执行两次，你会惊奇的发现两次执行的结果不一样</span></span><br><span class="line">foo()</span><br><span class="line">print(<span class="string">'***'</span>)</span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">输出内容如下：</span></span><br><span class="line"><span class="string">this is log</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
 <p><strong>分析一下：</strong>其实如果你此时正在郁闷，说明你也被欺骗了，请在第一个<code>foo()</code>前增加一行<code>print(&#39;***&#39;)</code>，真相就会出现。因为在装饰器运行的时候执行如下命令<code>foo=log(foo)</code>这个时候就会输出前2行内容。然后<code>log(foo)</code>返回的<code>func</code>赋值给了<code>foo</code>，所以<code>foo</code>根本没变，执行后就输出一行内容<strong>this is foo function</strong>。</p>
 <p>其实上面的这个例子也解答了，为什么那些教程中的例子把函数的代码内容都放在<code>wrapper</code>函数中，而没有放在最外层的<code>log</code>中。</p>
 <h2 id="带参数的装饰器"><a href="#带参数的装饰器" class="headerlink" title="带参数的装饰器"></a>带参数的装饰器</h2><p>到这里，基本函数装饰器的最简单的使用应该理解差不多了，后面就是在以上基础上再增加功能，如被装饰的函数有参数怎么办，装饰器需要参数怎么办，多个装饰器如何工作。</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PY"><figure class="iseeu highlight /py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(level)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(func)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">warpper</span><span class="params">(*args, **kw)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> level &gt; <span class="number">3</span>:</span><br><span class="line">                print(<span class="string">'High'</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">'Low'</span>)</span><br><span class="line">            <span class="keyword">return</span> func(*args, **kw)</span><br><span class="line">        <span class="keyword">return</span> warpper</span><br><span class="line">    <span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"><span class="meta">@log(5)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(<span class="string">'%s is foolish'</span> % name)</span><br><span class="line"></span><br><span class="line">foo(<span class="string">'aoenian'</span>)</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">log</span><span class="params">(level)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decorator</span><span class="params">(func)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">warpper</span><span class="params">(*args, **kw)</span>:</span></span><br><span class="line">            <span class="keyword">if</span> level &gt; <span class="number">3</span>:</span><br><span class="line">                print(<span class="string">'High'</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                print(<span class="string">'Low'</span>)</span><br><span class="line">            <span class="keyword">return</span> func(*args, **kw)</span><br><span class="line">        <span class="keyword">return</span> warpper</span><br><span class="line">    <span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"><span class="meta">@log(5)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(name)</span>:</span></span><br><span class="line">    print(<span class="string">'%s is foolish'</span> % name)</span><br><span class="line"></span><br><span class="line">foo(<span class="string">'aoenian'</span>)</span><br></pre></td></tr></table></figure>
 <p>这里的装饰器的作用是<code>foo = log(5)(foo)</code>，则<code>foo = decorator(foo) = warpper</code>，这时再调用<code>foo(&#39;aoenian&#39;)</code>实则为<code>warpper(&#39;aoenian&#39;)</code>。</p>
 <p>这次先分析这么多，还有一些用法后续再补充，如果有更好的理解方法或思路，欢迎留言探讨。</p>
 
@@ -661,9 +658,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
-                alt="aoenian" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="aoenian">
             
               <p class="site-author-name" itemprop="name">aoenian</p>
               <p class="site-description motion-element" itemprop="description">read code blog</p>
@@ -676,7 +671,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">81</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1020,7 +1015,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">143</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">145</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1125,7 +1124,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 

@@ -15,10 +15,10 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-CN">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
@@ -32,8 +32,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -94,9 +94,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
@@ -161,12 +161,12 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="aoenian" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="aoenian" type="application/atom+xml">
 
 
 
 
-  <link rel="canonical" href="https://aoenian.github.io/2019/03/24/install-raspberrypi/"/>
+  <link rel="canonical" href="https://aoenian.github.io/2019/03/24/install-raspberrypi/">
 
 
 
@@ -271,7 +271,7 @@
           
           <li class="menu-item menu-item-home">
     <a href="/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
   </li>
         
         
@@ -279,7 +279,7 @@
           
           <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
         
         
@@ -287,7 +287,7 @@
           
           <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
   </li>
         
         
@@ -295,7 +295,7 @@
           
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
 
       
@@ -305,7 +305,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -328,9 +328,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -442,7 +440,7 @@
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -470,11 +468,10 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon"
-            >
+            <span class="post-meta-item-icon">
             <i class="fa fa-eye"></i>
              阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
             </span>
           
 
@@ -505,10 +502,10 @@
 <p>系统完成后注意，<strong>先不要插入树莓派启动，因为新版的系统默认没有开启ssh，系统烧录完成，请在系统中<code>boot</code>目录下新建一个名字为<code>ssh</code>的空文件（没有后缀）打开ssh。</strong></p>
 <h2 id="系统登录和基本配置"><a href="#系统登录和基本配置" class="headerlink" title="系统登录和基本配置"></a>系统登录和基本配置</h2><h3 id="系统登录"><a href="#系统登录" class="headerlink" title="系统登录"></a>系统登录</h3><p>在同一局域网的电脑上用ssh登录到树莓派系统，至于IP可以在路由器上查看。新系统的用户名为<code>pi</code> 密码为 <code>raspberry</code>。<a href="https://www.raspberrypi.org/documentation/faqs/#troubleshoot" target="_blank" rel="noopener">官方文档</a></p>
 <h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><p>登入系统后，执行如下命令</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动树莓派设置程序 也可用 sudo -i 切换为 root</span></span><br><span class="line">sudo raspi-config  </span><br><span class="line"><span class="meta">#</span><span class="bash"> 更改密码</span></span><br><span class="line">选择 change User Password</span><br><span class="line"><span class="meta">#</span><span class="bash"> 扩展系统空间</span></span><br><span class="line">选择 Advanced Options  Expand Filesystem</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动树莓派设置程序 也可用 sudo -i 切换为 root</span></span><br><span class="line">sudo raspi-config  </span><br><span class="line"><span class="meta">#</span><span class="bash"> 更改密码</span></span><br><span class="line">选择 change User Password</span><br><span class="line"><span class="meta">#</span><span class="bash"> 扩展系统空间</span></span><br><span class="line">选择 Advanced Options  Expand Filesystem</span><br></pre></td></tr></table></figure>
 <p>这里说一下固定IP的配置，在网络找了很多方法，没有成功，最后我用路由器给树莓派分配了固定IP.</p>
 <h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>在配置的时候会出现如下问题：</p>
-<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">perl: warning: Setting locale failed.</span><br><span class="line">perl: warning: Please check that your locale settings:</span><br><span class="line">    LANGUAGE = (unset),</span><br><span class="line">    LC_ALL = (unset),</span><br><span class="line">    LC_CTYPE = "zh_CN.UTF-8",</span><br><span class="line">    LANG = "en_GB.UTF-8"</span><br><span class="line">    are supported and installed on your system.</span><br><span class="line">perl: warning: Falling back to a fallback locale ("en_GB.UTF-8").</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">perl: warning: Setting locale failed.</span><br><span class="line">perl: warning: Please check that your locale settings:</span><br><span class="line">    LANGUAGE = (unset),</span><br><span class="line">    LC_ALL = (unset),</span><br><span class="line">    LC_CTYPE = "zh_CN.UTF-8",</span><br><span class="line">    LANG = "en_GB.UTF-8"</span><br><span class="line">    are supported and installed on your system.</span><br><span class="line">perl: warning: Falling back to a fallback locale ("en_GB.UTF-8").</span><br></pre></td></tr></table></figure>
 <p>解决方法如下：</p>
 <p>执行 <code>sudo raspi-config</code> 命令，然后选择 Localisation Options - change locale - 勾选 en_US.UTF-8  zh_CN.UTF-8 取消 en_GB.UTF-8 下一步 Default locale for the system environment 选择 en_US.UTF-8 确定</p>
 
@@ -642,9 +639,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/avatar.png"
-                alt="aoenian" />
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="aoenian">
             
               <p class="site-author-name" itemprop="name">aoenian</p>
               <p class="site-description motion-element" itemprop="description">read code blog</p>
@@ -657,7 +652,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">81</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1001,7 +996,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">143</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">145</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1106,7 +1105,7 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.9.0</div>
 
 
 
