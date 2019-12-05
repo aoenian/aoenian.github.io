@@ -28,6 +28,34 @@
       </tags>
   </entry>
   <entry>
+    <title>Codewars网站刷题笔记3</title>
+    <url>/2019/11/10/python-codewars-kata3/</url>
+    <content><![CDATA[<h2 id="Calculate-BMI"><a href="#Calculate-BMI" class="headerlink" title="Calculate BMI"></a>Calculate BMI</h2><p>题目很简单，这里面有意思的还是如何简化if-else语句，按照一般的套路我也想到了使用列表或者字典之类，但是呢如何处理还是没想到的。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">[<span class="string">'Underweight'</span>, <span class="string">'Normal'</span>, <span class="string">'Overweight'</span>, <span class="string">'Obese'</span>][(b &gt; <span class="number">30</span>) + (b &gt; <span class="number">25</span>) + (b &gt; <span class="number">18.5</span>)]</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="Sort-and-Star"><a href="#Sort-and-Star" class="headerlink" title="Sort and Star"></a>Sort and Star</h2><p>这个放在这里主要是因为自己对字符串方法还是不熟，这里记录一下</p>
+<ul>
+<li>list(str) 直接把字符串变为列表</li>
+<li>join 不仅能够连接列表也能连接字串</li>
+<li>min() 和 max() 不仅仅局限比较数字</li>
+</ul>
+<p>字符串的操作很多，还是要浏览文档有一个大概了解，<a href="https://docs.python.org/zh-cn/3/library/stdtypes.html?highlight=str#textseq" target="_blank" rel="noopener">点这里</a></p>
+<h2 id="Draw-stairs"><a href="#Draw-stairs" class="headerlink" title="Draw stairs"></a>Draw stairs</h2><p>题目解决容易，但是做得优雅就比较考验能力了，这里要习惯使用列表生成式或者生成器。他们的区别不大，主要就是外边的括号是[]还是()。</p>
+<p>最佳答案使用了生成器来处理<code>&#39;\n&#39;.join(&#39; &#39;*i+&#39;I&#39; for i in range(n))</code>。还有就是要习惯返回结果而不是总是用输出的思路来解决问题。</p>
+<h2 id="SetAlarm"><a href="#SetAlarm" class="headerlink" title="SetAlarm"></a>SetAlarm</h2><p>Python中可以直接使用<strong>and or not</strong>来连接处理逻辑问题。</p>
+<h2 id="My-head-is-at-the-wrong-end"><a href="#My-head-is-at-the-wrong-end" class="headerlink" title="My head is at the wrong end"></a>My head is at the wrong end</h2><p>把列表倒排的几种方法：<code>l.reverse() list(reversed(l)) l[::-1]</code></p>
+<h2 id="Multipleofindex"><a href="#Multipleofindex" class="headerlink" title="Multipleofindex"></a>Multipleofindex</h2><p>这个题目中使用了列表生成式，<code>[l[i] for i in range(1, len(l)) if l[i] % i == 0]</code> 虽然没有考虑列表中第一个元素如果是0的情况，不过列表生成式是简单好用。</p>
+<h2 id="Simplevalidationofausernamewithregex"><a href="#Simplevalidationofausernamewithregex" class="headerlink" title="Simplevalidationofausernamewithregex"></a>Simplevalidationofausernamewithregex</h2><p>这个涉及到了正则表达式，在编程的时候思路总是朝着比较直观的方法，没有养成效率和优雅的习惯，当然主要原因就是练得太少。</p>
+<p>附正则表达式的<a href="https://tool.oschina.net/uploads/apidocs/jquery/regexp.html" target="_blank" rel="noopener">全集</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>codewars</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Codewars网站刷题笔记2</title>
     <url>/2019/11/06/python-codewars-kata2/</url>
     <content><![CDATA[<p>这次跳到了7kyu，看看高一级的题目。</p>
@@ -2976,8 +3004,8 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>VLAN</tag>
         <tag>switch</tag>
+        <tag>VLAN</tag>
       </tags>
   </entry>
   <entry>
