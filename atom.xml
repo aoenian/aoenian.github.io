@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-11-14T13:15:06.931Z</updated>
+  <updated>2019-12-05T13:20:15.230Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中国电信商城的一次购物过程</title>
+    <link href="https://aoenian.github.io/2019/12/05/telecom-service-communication/"/>
+    <id>https://aoenian.github.io/2019/12/05/telecom-service-communication/</id>
+    <published>2019-12-05T09:37:27.000Z</published>
+    <updated>2019-12-05T13:20:15.230Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;因为电信新出了一款5元套餐，非常适合作为备用号码。所以就想申请一张，然后就经历了一次奇妙的电信商城购物体验（这里不是反话，过程还是蛮有意思的）。这里做一下记录。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂谈" scheme="https://aoenian.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="无忧卡" scheme="https://aoenian.github.io/tags/%E6%97%A0%E5%BF%A7%E5%8D%A1/"/>
+    
+      <category term="客服" scheme="https://aoenian.github.io/tags/%E5%AE%A2%E6%9C%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows安装和共享打印机问题记录</title>
@@ -460,31 +482,6 @@
       <category term="同步" scheme="https://aoenian.github.io/tags/%E5%90%8C%E6%AD%A5/"/>
     
       <category term="电脑" scheme="https://aoenian.github.io/tags/%E7%94%B5%E8%84%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows7+Github+Hexo搭建个人博客</title>
-    <link href="https://aoenian.github.io/2019/04/24/windows-hexo-blog/"/>
-    <id>https://aoenian.github.io/2019/04/24/windows-hexo-blog/</id>
-    <published>2019-04-23T16:00:00.000Z</published>
-    <updated>2019-04-24T08:49:23.689Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;github帐号一枚&lt;/p&gt;
-&lt;p&gt; 注册github，输入用户名，邮箱，密码即可注册。然后新建一个repo，命名为&lt;code&gt;username.github.io&lt;/code&gt;其中username替换为你的用户名。建议勾选&lt;strong&gt;Initialize this repository with a README&lt;/strong&gt;`。&lt;/p&gt;
-&lt;p&gt; 仓库建立完成后，即可访问 &lt;a href=&quot;https://username.github.io&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://username.github.io&lt;/a&gt; 能够看到一个白色页面，写着你的仓库名及仓库描述（&lt;em&gt;如果你建立仓库的时候写了的话&lt;/em&gt;）&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Hexo" scheme="https://aoenian.github.io/categories/Hexo/"/>
-    
-    
-      <category term="windows" scheme="https://aoenian.github.io/tags/windows/"/>
-    
-      <category term="git" scheme="https://aoenian.github.io/tags/git/"/>
     
   </entry>
   
