@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-12-05T13:20:15.230Z</updated>
+  <updated>2019-12-16T12:20:55.099Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows下命令行软件包管理工具Scoop避坑备忘录</title>
+    <link href="https://aoenian.github.io/2019/12/16/windows-scoop/"/>
+    <id>https://aoenian.github.io/2019/12/16/windows-scoop/</id>
+    <published>2019-12-16T08:58:24.000Z</published>
+    <updated>2019-12-16T12:20:55.099Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在配置计算机开发环境的时候，相应的软件管理其实一直都是一个很重要的需求。macOS上面有&lt;a href=&quot;https://brew.sh/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Homebrew&lt;/a&gt;，Linux方面就不用多说了apt、dnf等等，而Windows上面则一直都没有能够拿得出手的管理方法。不过今天介绍的这个工具的名字为&lt;a href=&quot;https://github.com/lukesampson/scoop&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Scoop&lt;/a&gt;官方的介绍是&lt;strong&gt;A command-line installer for Windows&lt;/strong&gt;，这个可能正是你想要的。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
+    
+    
+      <category term="soft" scheme="https://aoenian.github.io/tags/soft/"/>
+    
+      <category term="manage" scheme="https://aoenian.github.io/tags/manage/"/>
+    
+  </entry>
   
   <entry>
     <title>中国电信商城的一次购物过程</title>
@@ -456,32 +478,6 @@
       <category term="ftp" scheme="https://aoenian.github.io/tags/ftp/"/>
     
       <category term="Android" scheme="https://aoenian.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手机QQ邮箱日历同步问题</title>
-    <link href="https://aoenian.github.io/2019/04/30/qq-email-calendar-sync/"/>
-    <id>https://aoenian.github.io/2019/04/30/qq-email-calendar-sync/</id>
-    <published>2019-04-29T16:00:00.000Z</published>
-    <updated>2019-05-02T02:37:42.270Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;随着临时的工作越来越多，记忆空间的有限，考虑使用日历提醒来记录一些重要的事情。一个是避免忘记，另一个是能够在后面的时候查看日程找到处理事件的时间。&lt;/p&gt;
-&lt;p&gt;日历的选用经过了这样一个过程，首先是用的手机自带的日历，感觉不方便，同步比较麻烦。然后换用了tim，用了一段时间后发现新建日程的时间只能是将来，不能是过去，有时候把已经干完的事情做一个备忘就很麻烦了。&lt;/p&gt;
-&lt;p&gt;因为需求较低，只用过三种日历，系统自带、Tim日程、QQ邮箱日历。根据我的使用时的需求对比如下：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Android" scheme="https://aoenian.github.io/categories/Android/"/>
-    
-    
-      <category term="QQ邮箱" scheme="https://aoenian.github.io/tags/QQ%E9%82%AE%E7%AE%B1/"/>
-    
-      <category term="同步" scheme="https://aoenian.github.io/tags/%E5%90%8C%E6%AD%A5/"/>
-    
-      <category term="电脑" scheme="https://aoenian.github.io/tags/%E7%94%B5%E8%84%91/"/>
     
   </entry>
   
