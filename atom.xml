@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2019-12-16T12:20:55.099Z</updated>
+  <updated>2020-02-10T08:24:02.311Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一体机内存升级记录</title>
+    <link href="https://aoenian.github.io/2020/01/05/buy-ram/"/>
+    <id>https://aoenian.github.io/2020/01/05/buy-ram/</id>
+    <published>2020-01-05T08:22:19.000Z</published>
+    <updated>2020-02-10T08:24:02.311Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;家里的一体机用了四、五年了，本来买的时候没有买高配，现在随着使用时间越来越长，现在已经越来越接近极限了。每次使用的时候都有换掉的冲动，但是金钱让我冷静了许多。打开管理器看了看电脑运行过程中的资源占用，发现内存确实太小了，不过2G的内存确实已经干不了什么了。手机都8G起步，更何况电脑。&lt;/p&gt;
+&lt;h2 id=&quot;之前的想法&quot;&gt;&lt;a href=&quot;#之前的想法&quot; class=&quot;headerlink&quot; title=&quot;之前的想法&quot;&gt;&lt;/a&gt;之前的想法&lt;/h2&gt;&lt;p&gt;因为是一体机，本着不折腾的原则，再买一个，然后把这个当成实验用机。不过有一天在搜索一体机的时候发现网络上的拆机过程，发现很简单嘛。这时候事件的重心由购买变成升级。当天晚上就把一体机拆了，看了内存条的大小和型号，准备购买，然后就有了下面一连串的问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
+    
+    
+      <category term="颗粒" scheme="https://aoenian.github.io/tags/%E9%A2%97%E7%B2%92/"/>
+    
+      <category term="真假" scheme="https://aoenian.github.io/tags/%E7%9C%9F%E5%81%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019年的一些思考</title>
+    <link href="https://aoenian.github.io/2020/01/02/2019-end/"/>
+    <id>https://aoenian.github.io/2020/01/02/2019-end/</id>
+    <published>2020-01-02T14:01:15.000Z</published>
+    <updated>2020-02-10T08:23:05.124Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这段时间发现容易感动，情绪容易低沉，2019不能再返回，失去的时间不管你再怎么懊悔也无法再次得到。一到晚上总是有很多东西要写，很多情绪要释放，迷迷糊糊睡了一觉却什么都记不太清，有时候甚至怀疑自己是不是压力太大而记忆力下降。后来发现不是压力太大，而是自然的正常的出现。&lt;/p&gt;
+&lt;p&gt;可能在后续的一段时间会多写一些无聊的事情，而不是仅仅写一些电脑的问题的解决，计算机的问题可以放放，自己的问题的优先级还是要高点儿的。&lt;/p&gt;
+&lt;p&gt;文章拖了很久，不过这两天还是准备把文章写完，可能有些情绪和想法已经改变，但是记录依然还是有一定的意义。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂谈" scheme="https://aoenian.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="心理" scheme="https://aoenian.github.io/tags/%E5%BF%83%E7%90%86/"/>
+    
+      <category term="感悟" scheme="https://aoenian.github.io/tags/%E6%84%9F%E6%82%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows下命令行软件包管理工具Scoop避坑备忘录</title>
@@ -426,58 +473,6 @@
       <category term="Bad credentials" scheme="https://aoenian.github.io/tags/Bad-credentials/"/>
     
       <category term="vscode font" scheme="https://aoenian.github.io/tags/vscode-font/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Manjaro安装IBUS输入法</title>
-    <link href="https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/"/>
-    <id>https://aoenian.github.io/2019/05/15/manjaro-linux-ibus/</id>
-    <published>2019-05-14T16:00:00.000Z</published>
-    <updated>2019-05-26T08:25:00.990Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看&lt;a href=&quot;https://aoenian.github.io/2018/06/30/manjaro-linux-start-end/&quot;&gt;这里&lt;/a&gt;。中间居然还萌生了要试试LFS的想法（&lt;del&gt;太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生&lt;/del&gt;)。&lt;/p&gt;
-&lt;p&gt;不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（&lt;em&gt;如果能做到那是个很好的事&lt;/em&gt;）。&lt;/p&gt;
-&lt;p&gt;安装系统的事情简单的说一句，&lt;strong&gt;我用rufus做的系统无法引导，后来改用了win32disk可以了。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;基本环境&quot;&gt;&lt;a href=&quot;#基本环境&quot; class=&quot;headerlink&quot; title=&quot;基本环境&quot;&gt;&lt;/a&gt;基本环境&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mirrors.ustc.edu.cn/manjaro-cd/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;manjaro&lt;/a&gt; 选择的KDE桌面&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
-    
-    
-      <category term="ibus" scheme="https://aoenian.github.io/tags/ibus/"/>
-    
-      <category term="rime" scheme="https://aoenian.github.io/tags/rime/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>macOS通过FTP管理小米手机文件</title>
-    <link href="https://aoenian.github.io/2019/05/12/macOS-miui-ftp/"/>
-    <id>https://aoenian.github.io/2019/05/12/macOS-miui-ftp/</id>
-    <published>2019-05-11T16:00:00.000Z</published>
-    <updated>2019-05-12T08:56:19.379Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;手机和电脑之间的文件传输一直感觉比较麻烦，很多时候我用的是树莓派作为家庭的局域网的文件中转，然后用ES文件管理器。后来ES更新以后感觉不好用就没再安装。而前面把树莓派给重装了以后还没有配置共享。&lt;/p&gt;
-&lt;p&gt;今天需要处理手机里面的文件，突然想起小米手机自带的文件管理器有一个ftp功能。这次试了一下，感觉还不错，简单的管理都是可以满足的，也不用额外安装手机软件。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
-    
-    
-      <category term="miui" scheme="https://aoenian.github.io/tags/miui/"/>
-    
-      <category term="ftp" scheme="https://aoenian.github.io/tags/ftp/"/>
-    
-      <category term="Android" scheme="https://aoenian.github.io/tags/Android/"/>
     
   </entry>
   
