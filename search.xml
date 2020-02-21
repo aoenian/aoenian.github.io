@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>安卓手机与MAC自行组建局域网共享文件</title>
+    <url>/2020/02/21/android-mac-share-files/</url>
+    <content><![CDATA[<p>手机和电脑传输文件的方法很多，这次的方法是用安卓手机开热点然后与macbook组建局域网进行文件共享，无需外网。</p>
+<a id="more"></a>
+<h2 id="需要的材料"><a href="#需要的材料" class="headerlink" title="需要的材料"></a>需要的材料</h2><ul>
+<li>安卓手机一部（可以开无线热点）</li>
+<li>macbook（macOS系统）</li>
+<li>ES文件浏览器</li>
+</ul>
+<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><ol>
+<li>首先你的手机有个人热点功能，然后打开个人热点，macbook通过热点连接。</li>
+<li>手机安装ES文件浏览器。</li>
+<li>macOS设置：系统偏好设置-共享-勾选文件共享-在窗口右边添加共享的文件夹并调整用户权限</li>
+<li>手机打开ES文件浏览器，打开侧边栏找到 网络-局域网-扫描 即可看到mac电脑</li>
+<li>点击图标，ES访问macOS共享用户名需要输入guest，密码留空即可看到共享文件</li>
+</ol>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul>
+<li><p>电脑的文件无法复制</p>
+<p>  具体情况是共享可以看到目录和文件，但是无法复制到手机里面，主要问题就是目录和文件权限的问题。<strong>解决方法：</strong>目录和文件权限建议修改为正常即可，目录为755，文件为644</p>
+</li>
+<li><p>输入guest也无法进入</p>
+<p>  在共享设置中把你的共享目录的用户添加任何人，权限根据需要。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>LAN</tag>
+        <tag>热点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一体机内存升级记录</title>
     <url>/2020/01/05/buy-ram/</url>
     <content><![CDATA[<p>家里的一体机用了四、五年了，本来买的时候没有买高配，现在随着使用时间越来越长，现在已经越来越接近极限了。每次使用的时候都有换掉的冲动，但是金钱让我冷静了许多。打开管理器看了看电脑运行过程中的资源占用，发现内存确实太小了，不过2G的内存确实已经干不了什么了。手机都8G起步，更何况电脑。</p>
@@ -2782,8 +2816,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>centos</tag>
         <tag>samba</tag>
+        <tag>centos</tag>
       </tags>
   </entry>
   <entry>

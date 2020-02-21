@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-02-10T08:24:02.311Z</updated>
+  <updated>2020-02-21T08:49:51.424Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓手机与MAC自行组建局域网共享文件</title>
+    <link href="https://aoenian.github.io/2020/02/21/android-mac-share-files/"/>
+    <id>https://aoenian.github.io/2020/02/21/android-mac-share-files/</id>
+    <published>2020-02-21T07:45:02.000Z</published>
+    <updated>2020-02-21T08:49:51.424Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;手机和电脑传输文件的方法很多，这次的方法是用安卓手机开热点然后与macbook组建局域网进行文件共享，无需外网。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="macOS" scheme="https://aoenian.github.io/categories/macOS/"/>
+    
+    
+      <category term="LAN" scheme="https://aoenian.github.io/tags/LAN/"/>
+    
+      <category term="热点" scheme="https://aoenian.github.io/tags/%E7%83%AD%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>一体机内存升级记录</title>
@@ -444,35 +466,6 @@
       <category term="zsh" scheme="https://aoenian.github.io/tags/zsh/"/>
     
       <category term="percent sign" scheme="https://aoenian.github.io/tags/percent-sign/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日常使用问题汇总（二）</title>
-    <link href="https://aoenian.github.io/2019/06/25/problem-collection2/"/>
-    <id>https://aoenian.github.io/2019/06/25/problem-collection2/</id>
-    <published>2019-06-24T16:00:00.000Z</published>
-    <updated>2019-06-26T11:33:49.740Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;公共DNS服务器&quot;&gt;&lt;a href=&quot;#公共DNS服务器&quot; class=&quot;headerlink&quot; title=&quot;公共DNS服务器&quot;&gt;&lt;/a&gt;公共DNS服务器&lt;/h2&gt;&lt;p&gt;这个本来是个很正常的事情，几乎在上网的过程中应该是忽略不计的事，但是却让我花费了很多时间寻找。&lt;/p&gt;
-&lt;p&gt;情况大家都懂，就不多介绍了。这里说几个常见的问题（纯属个人观点，欢迎讨论）：&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Collection" scheme="https://aoenian.github.io/categories/Collection/"/>
-    
-    
-      <category term="gitment" scheme="https://aoenian.github.io/tags/gitment/"/>
-    
-      <category term="dns" scheme="https://aoenian.github.io/tags/dns/"/>
-    
-      <category term="pandoc" scheme="https://aoenian.github.io/tags/pandoc/"/>
-    
-      <category term="Bad credentials" scheme="https://aoenian.github.io/tags/Bad-credentials/"/>
-    
-      <category term="vscode font" scheme="https://aoenian.github.io/tags/vscode-font/"/>
     
   </entry>
   
