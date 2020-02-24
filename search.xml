@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>安卓手机与MAC自行组建局域网共享文件</title>
+    <title>macOS安装vmware fusion并导入虚拟机</title>
+    <url>/2020/02/22/macos-install-vmwarefusion/</url>
+    <content><![CDATA[<p>如果需要Windows环境做轻度使用，而且准备自行安装系统，那么可以考虑使用<a href="https://www.virtualbox.org" target="_blank" rel="noopener">VirtualBox</a>。免费开源，无需注册，一般office办公使用没啥问题。</p>
+<p>这里由于我需要导入的吾爱破解的虚拟机是vmware格式的，所以使用vmwarefusion。不过刚才突然想到，好像VirtualBox也是可以导入，等后面试试后再继续完善。</p>
+<a id="more"></a>
+<h2 id="材料"><a href="#材料" class="headerlink" title="材料"></a>材料</h2><ul>
+<li>吾爱破解的虚拟机，下载地址<a href="https://www.52pojie.cn/thread-661779-1-1.html" target="_blank" rel="noopener">虚拟机2.0</a></li>
+<li>虚拟机软件的下载可以在上面的网站，也可以去<a href="https://www.vmware.com/cn/products/fusion/fusion-evaluation.html" target="_blank" rel="noopener">官网</a></li>
+</ul>
+<h2 id="校验文件"><a href="#校验文件" class="headerlink" title="校验文件"></a>校验文件</h2><p>下载以后肯定要验证软件和系统的完整性，在mac下面比较方便，直接命令行即可，windows自行下载hash校验软件。</p>
+<ul>
+<li>vmwarefusion软件，在下实在找不到这个软件的官方hash值在哪里</li>
+<li>虚拟系统的hash值在上面的下载页面就有</li>
+</ul>
+<p>mac下检验命令：<code>openssl sha1 filepath(可以直接把文件拖到命令行中)</code> sha1可替换为sha256来计算sha256的值</p>
+<p>md5值校验：<code>md5 filepath</code></p>
+<h2 id="安装fusion"><a href="#安装fusion" class="headerlink" title="安装fusion"></a>安装fusion</h2><p>正常操作双击安装，但是这里面注意两个地方，很重要不然后面可能就会出现<strong>vm虚拟机打不开/dev/vmmon</strong>的问题。</p>
+<ol>
+<li>在安装的时候会提示你是否打开，选择打开并输入密码，然后记得去<strong>系统偏好设置-安全性与隐私-通用</strong>最下面会有一个提示vm软件的访问询问，点击允许。</li>
+<li>安装完成后打开虚拟机会出现另一个提示，提示需要辅助功能权限，同样在<strong>安全性与隐私-隐私</strong>里面，左边是辅助功能，右边会有VMware Fusion.app，在他的前面的方框中打勾。当然要先解锁。</li>
+</ol>
+<p>如果忘记了，然后后面出现问题无法启动，没关系，卸载后重新安装即可。<strong>激活码请自行搜索</strong></p>
+<h2 id="导入虚拟系统"><a href="#导入虚拟系统" class="headerlink" title="导入虚拟系统"></a>导入虚拟系统</h2><p>按照之前的思路应该能够直接导入虚拟机即可，但是点击导入<strong>现有虚拟机</strong>以后无法识别解压后的虚拟系统文件。</p>
+<p>在网络上搜索以后采用了另一种方法，点击创建自定义虚拟机-继续-选择相应的操作系统（论坛的系统就选择Windows XP Pro)-继续-<strong>使用现有虚拟硬盘</strong>（找到解压后的虚拟机文件里面的vmdk文件）-下面的选项选择<strong>从当前正在使用此磁盘的虚拟机中移除此磁盘</strong>，然后点击选择。到这里基本就完成了，至于剩下的一些虚拟机分配cpu和内存的设置可以点击虚拟机窗口上的<strong>扳手</strong>图标即可。</p>
+<p>制作原始快照：在fusion的菜单里面找到虚拟机-快照。设置<strong>共享文件夹</strong>，方便与主机进行文件传输。</p>
+<h2 id="安装vmwaretools"><a href="#安装vmwaretools" class="headerlink" title="安装vmwaretools"></a>安装vmwaretools</h2><p>原系统中已经安装了tools，因为我安装的fusion软件版本较新，又重新安装了一次，桌面图标、自动缩放等效果就很好了。</p>
+<p>安装tools需要打开已经导入的虚拟机，然后在菜单栏中找到虚拟机-安装vmwaretools，接着虚拟系统中会弹出安装光盘，直接双击exe文件安装即可。</p>
+<h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><ul>
+<li><a href="https://blog.csdn.net/u014028317/article/details/97311660" target="_blank" rel="noopener">VMWare Fusion 导入已有的虚拟机</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>vmware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无需路由器安卓手机与MAC组建局域网共享文件</title>
     <url>/2020/02/21/android-mac-share-files/</url>
-    <content><![CDATA[<p>手机和电脑传输文件的方法很多，这次的方法是用安卓手机开热点然后与macbook组建局域网进行文件共享，无需外网。</p>
+    <content><![CDATA[<p>手机和电脑传输文件的方法很多，这次的方法是用安卓手机开热点然后与macbook组建局域网进行文件共享，无需路由器和数据线。</p>
 <a id="more"></a>
 <h2 id="需要的材料"><a href="#需要的材料" class="headerlink" title="需要的材料"></a>需要的材料</h2><ul>
 <li>安卓手机一部（可以开无线热点）</li>
@@ -22,7 +61,7 @@
 <p>  具体情况是共享可以看到目录和文件，但是无法复制到手机里面，主要问题就是目录和文件权限的问题。<strong>解决方法：</strong>目录和文件权限建议修改为正常即可，目录为755，文件为644</p>
 </li>
 <li><p>输入guest也无法进入</p>
-<p>  在共享设置中把你的共享目录的用户添加任何人，权限根据需要。</p>
+<p>  在共享设置中把你的共享目录的用户添加任何人，权限根据需要更改。</p>
 </li>
 </ul>
 ]]></content>
@@ -2816,8 +2855,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>samba</tag>
         <tag>centos</tag>
+        <tag>samba</tag>
       </tags>
   </entry>
   <entry>
