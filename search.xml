@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MacBookAir外接显示器如何开盖并彻底关闭屏幕</title>
+    <url>/2020/03/17/mac-off-screen/</url>
+    <content><![CDATA[<p>由于mac的屏幕太小了，基本大家在使用的时候都会外接屏幕然后合盖进行工作。不过由于mac的散热在转轴处，如果合着温度比较高，影响散热。开着呢屏幕又一直亮着很浪费。下面说一下自己尝试的能用的方法。</p>
+<a id="more"></a>
+<h2 id="双屏使用"><a href="#双屏使用" class="headerlink" title="双屏使用"></a>双屏使用</h2><p>这个开始以为挺麻烦，谁知道设置一下就可以。具体的设置位置：<strong>System Preferences-Displays-Arrangement</strong> 在里面把<strong>Mirror Displays</strong>选项勾选掉即可。剩下的就是选择一下主屏位置以及菜单栏的位置，如果还是不会设置可以看这里：<a href="https://support.apple.com/zh-cn/HT202351" target="_blank" rel="noopener">https://support.apple.com/zh-cn/HT202351</a></p>
+<p>注意：<em>在屏幕打开的时候选项Arrangement才会出现</em></p>
+<h2 id="物理方式关闭屏幕"><a href="#物理方式关闭屏幕" class="headerlink" title="物理方式关闭屏幕"></a>物理方式关闭屏幕</h2><p>使用外接显示器，不再用笔记本自带的显示器，而且要把笔记本屏幕彻底关闭，同时打开笔记本。</p>
+<p>那么你需要一枚一块钱硬币，然后把它放在键盘左侧的Tab键和CapsLock键左侧位置就可以了。简单说就是找到你的键盘周围的磁铁所在位置，放一个能吸引的物体即可，告诉电脑盖子合上了。切记真正合盖的时候不要忘了拿走那个硬币，不要忘了，不要忘了。</p>
+]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+  </entry>
+  <entry>
     <title>macOS安装vmware fusion并导入虚拟机</title>
     <url>/2020/02/22/macos-install-vmwarefusion/</url>
     <content><![CDATA[<p>如果需要Windows环境做轻度使用，而且准备自行安装系统，那么可以考虑使用<a href="https://www.virtualbox.org" target="_blank" rel="noopener">VirtualBox</a>。免费开源，无需注册，一般office办公使用没啥问题。</p>
@@ -2582,8 +2596,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>ibus</tag>
         <tag>manjaro</tag>
+        <tag>ibus</tag>
       </tags>
   </entry>
   <entry>
@@ -3180,6 +3194,33 @@
       </tags>
   </entry>
   <entry>
+    <title>思科交换机配置3——多交换机VLAN划分</title>
+    <url>/2017/03/05/switch-config-3/</url>
+    <content><![CDATA[<p>配置好的思科模拟器文件地址：<a href="https://github.com/aoenian/cisco-pkt/" target="_blank" rel="noopener">cisco-pkt</a></p>
+<p>拓扑图:<br><img src="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/switch3.PNG" alt></p>
+<a id="more"></a>
+<h1 id="s1配置"><a href="#s1配置" class="headerlink" title="s1配置"></a>s1配置</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(config)<span class="meta">#vlan 10</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#vlan 20</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/1</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 10</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/2</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 20</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/24</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk     <span class="comment">// 把24端口模式设置为trunk来进行交换机之间的通信</span></span></span><br><span class="line"></span><br><span class="line">%LINEPROTO<span class="number">-5</span>-UPDOWN: Line protocol on Interface FastEthernet0/<span class="number">24</span>, changed state to down</span><br><span class="line"></span><br><span class="line">%LINEPROTO<span class="number">-5</span>-UPDOWN: Line protocol on Interface FastEthernet0/<span class="number">24</span>, changed state to up</span><br><span class="line"></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#exit</span></span><br><span class="line">Switch<span class="meta">#write</span></span><br><span class="line">Building configuration...</span><br><span class="line">[OK]</span><br></pre></td></tr></table></figure>
+<h1 id="s2的配置"><a href="#s2的配置" class="headerlink" title="s2的配置"></a>s2的配置</h1><p><strong>s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(config)<span class="meta">#hostname s2  <span class="comment">// 把交换机的名称改为s2</span></span></span><br><span class="line">s2(config)<span class="meta">#interface f0/1</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#vlan 10</span></span><br><span class="line">s2(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">s2(config-vlan)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#vlan 20</span></span><br><span class="line">s2(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">s2(config-vlan)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/1</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 10</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/2</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 20</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/24</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk</span></span><br></pre></td></tr></table></figure>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>pc1与pc3可以通信但与pc2无法通信</p>
+<p>pc2与pc4可以通信但与pc3无法通信</p>
+<p><strong>参考链接以及拓展阅读</strong></p>
+<ul>
+<li><p><a href="http://zhaoyuqiang.blog.51cto.com/6328846/1576016" target="_blank" rel="noopener">Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分</a></p>
+</li>
+<li><p><a href="https://learningnetwork.cisco.com/docs/DOC-9289" target="_blank" rel="noopener">跨交换机的Vlan配置与管理</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>switchs</tag>
+        <tag>VLAN</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>思科交换机配置2——单交换机VLAN划分</title>
     <url>/2017/03/05/switch-config-2/</url>
     <content><![CDATA[<h1 id="单交换机VLAN配置"><a href="#单交换机VLAN配置" class="headerlink" title="单交换机VLAN配置"></a>单交换机VLAN配置</h1><p>配置好的思科模拟器文件地址:<a href="https://github.com/aoenian/cisco-pkt/" target="_blank" rel="noopener">cisco-pkt</a></p>
@@ -3243,33 +3284,6 @@
       <tags>
         <tag>switch</tag>
         <tag>VLAN</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>思科交换机配置3——多交换机VLAN划分</title>
-    <url>/2017/03/05/switch-config-3/</url>
-    <content><![CDATA[<p>配置好的思科模拟器文件地址：<a href="https://github.com/aoenian/cisco-pkt/" target="_blank" rel="noopener">cisco-pkt</a></p>
-<p>拓扑图:<br><img src="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/switch3.PNG" alt></p>
-<a id="more"></a>
-<h1 id="s1配置"><a href="#s1配置" class="headerlink" title="s1配置"></a>s1配置</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(config)<span class="meta">#vlan 10</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#vlan 20</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/1</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 10</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/2</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 20</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/24</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk     <span class="comment">// 把24端口模式设置为trunk来进行交换机之间的通信</span></span></span><br><span class="line"></span><br><span class="line">%LINEPROTO<span class="number">-5</span>-UPDOWN: Line protocol on Interface FastEthernet0/<span class="number">24</span>, changed state to down</span><br><span class="line"></span><br><span class="line">%LINEPROTO<span class="number">-5</span>-UPDOWN: Line protocol on Interface FastEthernet0/<span class="number">24</span>, changed state to up</span><br><span class="line"></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#exit</span></span><br><span class="line">Switch<span class="meta">#write</span></span><br><span class="line">Building configuration...</span><br><span class="line">[OK]</span><br></pre></td></tr></table></figure>
-<h1 id="s2的配置"><a href="#s2的配置" class="headerlink" title="s2的配置"></a>s2的配置</h1><p><strong>s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(config)<span class="meta">#hostname s2  <span class="comment">// 把交换机的名称改为s2</span></span></span><br><span class="line">s2(config)<span class="meta">#interface f0/1</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#vlan 10</span></span><br><span class="line">s2(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">s2(config-vlan)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#vlan 20</span></span><br><span class="line">s2(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">s2(config-vlan)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/1</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 10</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/2</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 20</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/24</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk</span></span><br></pre></td></tr></table></figure>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>pc1与pc3可以通信但与pc2无法通信</p>
-<p>pc2与pc4可以通信但与pc3无法通信</p>
-<p><strong>参考链接以及拓展阅读</strong></p>
-<ul>
-<li><p><a href="http://zhaoyuqiang.blog.51cto.com/6328846/1576016" target="_blank" rel="noopener">Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分</a></p>
-</li>
-<li><p><a href="https://learningnetwork.cisco.com/docs/DOC-9289" target="_blank" rel="noopener">跨交换机的Vlan配置与管理</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>VLAN</tag>
-        <tag>switchs</tag>
       </tags>
   </entry>
   <entry>
