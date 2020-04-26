@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-03-20T04:03:07.856Z</updated>
+  <updated>2020-04-26T01:39:39.529Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>通配符[a-z]为什么会匹配大写字母</title>
+    <link href="https://aoenian.github.io/2020/04/25/wildcard-a-z/"/>
+    <id>https://aoenian.github.io/2020/04/25/wildcard-a-z/</id>
+    <published>2020-04-25T09:26:55.000Z</published>
+    <updated>2020-04-26T01:39:39.529Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在学习通配符和扩展符的时候发现了问题，[a-z]按照理论来说应该匹配所有的小写字母，但是在实际操作过程中不仅匹配小写而且同时匹配了大写的问题。&lt;/p&gt;
+&lt;h2 id=&quot;a-z-和-A-Z-的问题&quot;&gt;&lt;a href=&quot;#a-z-和-A-Z-的问题&quot; class=&quot;headerlink&quot; title=&quot;[a-z]和[A-Z]的问题&quot;&gt;&lt;/a&gt;[a-z]和[A-Z]的问题&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ touch a b c x y z A B C X Y Z&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A  B  C  X  Y  Z  a  b  c  x  y  z&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls [a-z]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A  B  C  X  Y  a  b  c  x  y  z&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ ls [A-Z]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;A  B  C  X  Y  Z  b  c  x  y  z&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
+    
+    
+      <category term="a-z" scheme="https://aoenian.github.io/tags/a-z/"/>
+    
+      <category term="A-Z" scheme="https://aoenian.github.io/tags/A-Z/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MacBookAir外接显示器如何开盖并彻底关闭屏幕</title>
     <link href="https://aoenian.github.io/2020/03/17/mac-off-screen/"/>
     <id>https://aoenian.github.io/2020/03/17/mac-off-screen/</id>
     <published>2020-03-17T12:14:53.000Z</published>
-    <updated>2020-03-20T04:03:07.856Z</updated>
+    <updated>2020-03-20T06:14:11.475Z</updated>
     
     <summary type="html">
     
@@ -438,28 +461,6 @@
       <category term="小米" scheme="https://aoenian.github.io/tags/%E5%B0%8F%E7%B1%B3/"/>
     
       <category term="mibox" scheme="https://aoenian.github.io/tags/mibox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows系统下MySQL忘记密码后如何重置</title>
-    <link href="https://aoenian.github.io/2019/07/15/windows-mysql-forget-password/"/>
-    <id>https://aoenian.github.io/2019/07/15/windows-mysql-forget-password/</id>
-    <published>2019-07-14T16:00:00.000Z</published>
-    <updated>2019-07-15T03:19:36.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这段时间试着用了一下MySQL，谁知道隔得时间长了忘记了密码，在网络搜索后发现可以通过命令重置密码。原文的部分操作并不是太详细，这里把自己的具体操作介绍如下，希望能帮到大家。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
-    
-    
-      <category term="password" scheme="https://aoenian.github.io/tags/password/"/>
-    
-      <category term="mysql" scheme="https://aoenian.github.io/tags/mysql/"/>
     
   </entry>
   
