@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-04-26T01:39:39.529Z</updated>
+  <updated>2020-04-26T13:03:26.351Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>常见思维导图软件对比-个人观点</title>
+    <link href="https://aoenian.github.io/2020/04/26/mind-map-comparion/"/>
+    <id>https://aoenian.github.io/2020/04/26/mind-map-comparion/</id>
+    <published>2020-04-26T09:09:40.000Z</published>
+    <updated>2020-04-26T13:03:26.351Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习Linux系统，感觉命令有点多，隔得时间长了总是容易忘掉，然后要重新查找太浪费时间，所以就准备这次把学习过的命令用思维导图记下来，后面复习和查找都会方便很多。然后就有了这篇博客。&lt;/p&gt;
+&lt;h2 id=&quot;测试的导图软件&quot;&gt;&lt;a href=&quot;#测试的导图软件&quot; class=&quot;headerlink&quot; title=&quot;测试的导图软件&quot;&gt;&lt;/a&gt;测试的导图软件&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;xmind&lt;/li&gt;
+&lt;li&gt;freemind&lt;/li&gt;
+&lt;li&gt;freeplane&lt;/li&gt;
+&lt;li&gt;mindmaster&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Tools" scheme="https://aoenian.github.io/categories/Tools/"/>
+    
+    
+      <category term="xmind" scheme="https://aoenian.github.io/tags/xmind/"/>
+    
+      <category term="freemind" scheme="https://aoenian.github.io/tags/freemind/"/>
+    
+  </entry>
   
   <entry>
     <title>通配符[a-z]为什么会匹配大写字母</title>
@@ -437,30 +465,6 @@
     
     
       <category term="装饰器" scheme="https://aoenian.github.io/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网件R6400V2固件升级导致小米盒子无法联网</title>
-    <link href="https://aoenian.github.io/2019/07/17/mibox-netgear-incompatible/"/>
-    <id>https://aoenian.github.io/2019/07/17/mibox-netgear-incompatible/</id>
-    <published>2019-07-16T16:00:00.000Z</published>
-    <updated>2019-07-18T03:27:52.932Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天进入路由器更改一些参数，发现路由器提醒有新的固件可以升级，固件版本是&lt;code&gt;1.0.4.78_10.0.55&lt;/code&gt;，想着新的固件应该能够让路由器更稳定运行就随手点击更新。然后悲剧就来了。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
-    
-    
-      <category term="netgear" scheme="https://aoenian.github.io/tags/netgear/"/>
-    
-      <category term="小米" scheme="https://aoenian.github.io/tags/%E5%B0%8F%E7%B1%B3/"/>
-    
-      <category term="mibox" scheme="https://aoenian.github.io/tags/mibox/"/>
     
   </entry>
   
