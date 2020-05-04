@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>linux命令中的一些冷操作1</title>
+    <url>/2020/05/03/linux-command-1/</url>
+    <content><![CDATA[<p>在学习linux的基本命令的过程中遇到了一些问题，有些是按照教程执行没有效果，有些是心血来潮猜测是否能够有其他的操作，这里把这些结果记录下来，避免遗忘后重复搜索，浪费时间。</p>
+<h2 id="合并多个文本"><a href="#合并多个文本" class="headerlink" title="合并多个文本"></a>合并多个文本</h2><p>这个比较简单的，使用<code>cat</code>命令即可完成，不过之前没有想到，这里还能够使用通配符，能够一次合并多个文件。</p>
+<p>举个例子： <code>cat file*.txt &gt; fileall.txt</code> 当然要先根据内容把文件重命名，做好排序。</p>
+<p>windows下分两种情况（系统是windows10）：<br><a id="more"></a></p>
+<ul>
+<li><p>cmd中命令使用都没问题</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用copy命令</span></span><br><span class="line">copy *.txt all.txt</span><br><span class="line">copy 1.txt + 2.txt + 3.txt all.txt</span><br><span class="line"><span class="comment"># 使用type命令</span></span><br><span class="line"><span class="built_in">type</span> *.txt &gt; all.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>powershell中则比较复杂</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># copy命令的问题</span></span><br><span class="line">copy *.txt all.txt    <span class="comment"># 只能复制最后文件的内容</span></span><br><span class="line">copy 1.txt + 2.txt + 3.txt all.txt    <span class="comment"># 路径问题命令出错</span></span><br><span class="line"><span class="comment"># type命令</span></span><br><span class="line"><span class="comment"># 这个命令会无限循环把all.txt中内容再次加入all.txt中</span></span><br><span class="line"><span class="built_in">type</span> *.txt &gt; all.txt</span><br><span class="line"><span class="comment"># 可以采用不同的后缀避免</span></span><br><span class="line"><span class="built_in">type</span> *.txt &gt; all    <span class="comment"># 这样就可以了</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="date命令无法修改日期"><a href="#date命令无法修改日期" class="headerlink" title="date命令无法修改日期"></a>date命令无法修改日期</h2><p>在练习date命令的时候，发现无法修改系统的日期（root也不行），但是教程上是可以的。搜索后发现应该是开启ntp的原因。可以通过下面的命令来处理。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 关闭ntp，0替换为false也可</span></span><br><span class="line">sudo timedatectl <span class="built_in">set</span>-ntp 0</span><br><span class="line"><span class="comment"># 直接用timedatectl命令修改或用date修改都可</span></span><br><span class="line">timedatectl <span class="built_in">set</span>-time <span class="string">"2020-05-01 18:18:08"</span></span><br><span class="line">timedatectl <span class="built_in">set</span>-timezone Erope/Paris</span><br><span class="line">timedatectl <span class="built_in">set</span>-local-rtc 0</span><br></pre></td></tr></table></figure>
+<h2 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h2><p>学习软链接命令的时候突然想起来的，看代码吧，不好说清楚</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ touch file</span><br><span class="line">$ ln -s file filesoft</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"hello"</span> &gt; filesoft   <span class="comment"># 链接没问题，内容直接写入file</span></span><br><span class="line">$ cat file</span><br><span class="line">hello</span><br><span class="line">$ mv file file1</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">"world"</span> &gt; filesoft   <span class="comment"># 链接失效，系统自动创建file并写入</span></span><br><span class="line">$ ls</span><br><span class="line">file  file1  filesoft</span><br><span class="line">$ cat file file1</span><br><span class="line">world</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
+<p><strong>结论：</strong>软链接失效后，如果链接的是文件则系统会自动重建，如果是目录则提示No such file or directory</p>
+<h2 id="dd命令硬盘测试"><a href="#dd命令硬盘测试" class="headerlink" title="dd命令硬盘测试"></a>dd命令硬盘测试</h2><p>网络上很多，这里记录一下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 测试写入速度</span></span><br><span class="line">time dd <span class="keyword">if</span>=/dev/zero of=/tmp/test1.img bs=128M count=8 oflag=dsync</span><br><span class="line"><span class="comment"># 读取速度</span></span><br><span class="line">time dd <span class="keyword">if</span>=/path/to/bigfile of=/dev/null bs=8k</span><br></pre></td></tr></table></figure>
+<p>这里注意dev目录下的四个特殊设备，内容摘自 <a href="https://blog.csdn.net/sinat_26058371/article/details/86754683" target="_blank" rel="noopener">Linux中的虚拟设备</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># /dev/null 空设备，一般称为黑洞，输入这里的数据直接丢弃</span></span><br><span class="line">find / -name <span class="string">"hello"</span> 2&gt; /dev/null</span><br><span class="line"><span class="comment">#将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端</span></span><br><span class="line">$ ./run.sh 1&gt;/dev/null 2&gt;&amp;1  </span><br><span class="line"><span class="comment"># /dev/zero 零设备，可以无限的提供空字符（0x00，ASCII代码NUL）</span></span><br><span class="line"><span class="comment"># 能够生成指定大小文件</span></span><br><span class="line">dd <span class="keyword">if</span>=/dev/zero of=/tmp/100Mfile bs=1M count=100</span><br><span class="line"><span class="comment"># /dev/urandom /dev/random</span></span><br><span class="line"><span class="comment"># 随机数设备，提供不间断的随机字节流</span></span><br><span class="line"><span class="comment"># /dev/random产生随机数据依赖系统中断,产生数据速度较慢，但随机性好</span></span><br><span class="line"><span class="comment"># /dev/urandom不依赖系统中断，数据产生速度快，但随机性较低</span></span><br><span class="line">cat /dev/random | od -x</span><br><span class="line">cat /dev/urandom | od -x | head -n 5</span><br><span class="line"><span class="comment"># 利用/dev/urandom设备产生一个128位的随机字符串</span></span><br><span class="line">str=$(cat /dev/urandom | od -x | tr -d <span class="string">' '</span> | head -n 1)</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;str:7&#125;</span></span><br><span class="line">17539187d2e8b8e26d49bec90465c14d</span><br></pre></td></tr></table></figure>
+<h2 id="paste命令如何使用多个分隔符"><a href="#paste命令如何使用多个分隔符" class="headerlink" title="paste命令如何使用多个分隔符"></a>paste命令如何使用多个分隔符</h2><p>paste命令在合并文件的时候使用多个分隔符，这个应该是无法直接实现，利用其他方法</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用sed命令替换</span></span><br><span class="line">paste -d <span class="string">'~'</span> file1 file2 | sed <span class="string">'s/~/,,/'</span></span><br><span class="line"><span class="comment"># 使用 /dev/null 作为承接 脑洞很大</span></span><br><span class="line">paste -d, file1 /dev/null file2</span><br></pre></td></tr></table></figure>
+<h2 id="find的exec和xargs"><a href="#find的exec和xargs" class="headerlink" title="find的exec和xargs"></a>find的exec和xargs</h2><p>find很强大，里面的exec选项能够让find更加如虎添翼，-exec 参数后跟command，为了保证shell解释正确使用 <code>\;</code> 结束命令。同时<code>{}</code>代表find查出来的结果，有时避免shell过滤也使用<code>&#39;{}&#39;</code>。</p>
+<p>xargs则常与find结合使用来避免-exec选项出现的参数溢出的问题。xargs能够捕获一个命令的输出，然后传递给另外一个命令，由于很多命令不支持使用管道来传递参数，即不支持从标准输出中读取数据，所以xargs很常用。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name <span class="string">'bash*'</span> -<span class="built_in">exec</span> mv &#123;&#125; /tmp \;</span><br><span class="line">find / -empty | xargs rm -rf</span><br><span class="line"><span class="comment"># 实现比较</span></span><br><span class="line"><span class="comment"># print选项把查找结果的文件名显示出来</span></span><br><span class="line">find ./ -<span class="built_in">type</span> f -name <span class="string">"*.sh"</span> -<span class="built_in">exec</span> grep <span class="string">"root"</span> &#123;&#125; \; -<span class="built_in">print</span></span><br><span class="line"><span class="comment"># xargs显示的信息比较全</span></span><br><span class="line">find ./ -<span class="built_in">type</span> f -name <span class="string">"*.sh"</span> | xargs grep <span class="string">"root"</span></span><br><span class="line"><span class="comment"># exec选项的安全模式，把exec替换为ok</span></span><br><span class="line">find ./ -name <span class="string">"*.log"</span> -ok rm &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+<p>参考资料：</p>
+<ul>
+<li><a href="https://www.cnblogs.com/fjping0606/p/5670661.html" target="_blank" rel="noopener">xargs rm -rf 与 -exec rm</a></li>
+<li><a href="https://www.cnblogs.com/peida/archive/2012/11/14/2769248.html" target="_blank" rel="noopener">find命令之exec</a></li>
+<li><a href="https://segmentfault.com/q/1010000000719166" target="_blank" rel="noopener">find命令的-exec选项为何不能用管道命令代替?</a></li>
+<li><a href="https://www.runoob.com/linux/linux-comm-xargs.html" target="_blank" rel="noopener">Linux xargs 命令</a></li>
+<li><a href="https://blog.csdn.net/fdipzone/article/details/44604591" target="_blank" rel="noopener">linux 使用rename命令批量重命名文件</a>  </li>
+<li><a href="https://blog.csdn.net/Alvin_Lam/article/details/79123882" target="_blank" rel="noopener">linux中合并多个文件内容到一个文件的例子</a></li>
+<li><a href="https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/" target="_blank" rel="noopener">Linux and Unix Test Disk I/O Performance With dd Command</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>date</tag>
+        <tag>paste</tag>
+        <tag>find</tag>
+        <tag>xargs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>常见思维导图软件对比-个人观点</title>
     <url>/2020/04/26/mind-map-comparion/</url>
     <content><![CDATA[<p>学习Linux系统，感觉命令有点多，隔得时间长了总是容易忘掉，然后要重新查找太浪费时间，所以就准备这次把学习过的命令用思维导图记下来，后面复习和查找都会方便很多。然后就有了这篇博客。</p>
@@ -32,7 +82,7 @@
       </tags>
   </entry>
   <entry>
-    <title>通配符[a-z]为什么会匹配大写字母</title>
+    <title>Shell中通配符[a-z]为什么会匹配大写字母</title>
     <url>/2020/04/25/wildcard-a-z/</url>
     <content><![CDATA[<p>在学习通配符和扩展符的时候发现了问题，[a-z]按照理论来说应该匹配所有的小写字母，但是在实际操作过程中不仅匹配小写而且同时匹配了大写的问题。</p>
 <h2 id="a-z-和-A-Z-的问题"><a href="#a-z-和-A-Z-的问题" class="headerlink" title="[a-z]和[A-Z]的问题"></a>[a-z]和[A-Z]的问题</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ touch a b c x y z A B C X Y Z</span><br><span class="line">$ ls</span><br><span class="line">A  B  C  X  Y  Z  a  b  c  x  y  z</span><br><span class="line">$ ls [a-z]</span><br><span class="line">A  B  C  X  Y  a  b  c  x  y  z</span><br><span class="line">$ ls [A-Z]</span><br><span class="line">A  B  C  X  Y  Z  b  c  x  y  z</span><br></pre></td></tr></table></figure>
@@ -79,7 +129,7 @@
 <p>那么你需要一枚一块钱硬币，然后把它放在键盘左侧的Tab键和CapsLock键左侧位置就可以了。简单说就是找到你的键盘周围的磁铁所在位置，放一个能吸引的物体即可，告诉电脑盖子合上了。切记真正合盖的时候不要忘了拿走那个硬币，不要忘了，不要忘了。</p>
 ]]></content>
       <categories>
-        <category>Mac</category>
+        <category>macOS</category>
       </categories>
   </entry>
   <entry>
@@ -1335,7 +1385,7 @@
 <p><strong>内容转载自：</strong><a href="zhangxinxu.com/study/201703/font-family-chinese-english.html">CSS font-family中文字体对应的英文名称一览表</a></p>
 ]]></content>
       <categories>
-        <category>Mac</category>
+        <category>macOS</category>
       </categories>
       <tags>
         <tag>font</tag>
@@ -1457,7 +1507,7 @@
   </entry>
   <entry>
     <title>macOS通过FTP管理小米手机文件</title>
-    <url>/2019/05/12/macOS-miui-ftp/</url>
+    <url>/2019/05/12/macos-miui-ftp/</url>
     <content><![CDATA[<p>手机和电脑之间的文件传输一直感觉比较麻烦，很多时候我用的是树莓派作为家庭的局域网的文件中转，然后用ES文件管理器。后来ES更新以后感觉不好用就没再安装。而前面把树莓派给重装了以后还没有配置共享。</p>
 <p>今天需要处理手机里面的文件，突然想起小米手机自带的文件管理器有一个ftp功能。这次试了一下，感觉还不错，简单的管理都是可以满足的，也不用额外安装手机软件。</p>
 <a id="more"></a>
@@ -1689,10 +1739,10 @@
         <category>Collection</category>
       </categories>
       <tags>
-        <tag>vscode</tag>
         <tag>you-get</tag>
         <tag>java</tag>
         <tag>virtual box</tag>
+        <tag>vscode</tag>
       </tags>
   </entry>
   <entry>
@@ -1943,9 +1993,9 @@
         <category>Editor</category>
       </categories>
       <tags>
+        <tag>vscode</tag>
         <tag>debug</tag>
         <tag>javascript</tag>
-        <tag>vscode</tag>
       </tags>
   </entry>
   <entry>
@@ -2937,8 +2987,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>samba</tag>
         <tag>centos</tag>
+        <tag>samba</tag>
       </tags>
   </entry>
   <entry>
@@ -3262,33 +3312,6 @@
       </tags>
   </entry>
   <entry>
-    <title>思科交换机配置3——多交换机VLAN划分</title>
-    <url>/2017/03/05/switch-config-3/</url>
-    <content><![CDATA[<p>配置好的思科模拟器文件地址：<a href="https://github.com/aoenian/cisco-pkt/" target="_blank" rel="noopener">cisco-pkt</a></p>
-<p>拓扑图:<br><img src="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/switch3.PNG" alt></p>
-<a id="more"></a>
-<h1 id="s1配置"><a href="#s1配置" class="headerlink" title="s1配置"></a>s1配置</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(config)<span class="meta">#vlan 10</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#vlan 20</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/1</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 10</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/2</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 20</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/24</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk     <span class="comment">// 把24端口模式设置为trunk来进行交换机之间的通信</span></span></span><br><span class="line"></span><br><span class="line">%LINEPROTO<span class="number">-5</span>-UPDOWN: Line protocol on Interface FastEthernet0/<span class="number">24</span>, changed state to down</span><br><span class="line"></span><br><span class="line">%LINEPROTO<span class="number">-5</span>-UPDOWN: Line protocol on Interface FastEthernet0/<span class="number">24</span>, changed state to up</span><br><span class="line"></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#exit</span></span><br><span class="line">Switch<span class="meta">#write</span></span><br><span class="line">Building configuration...</span><br><span class="line">[OK]</span><br></pre></td></tr></table></figure>
-<h1 id="s2的配置"><a href="#s2的配置" class="headerlink" title="s2的配置"></a>s2的配置</h1><p><strong>s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释</strong></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(config)<span class="meta">#hostname s2  <span class="comment">// 把交换机的名称改为s2</span></span></span><br><span class="line">s2(config)<span class="meta">#interface f0/1</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#vlan 10</span></span><br><span class="line">s2(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">s2(config-vlan)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#vlan 20</span></span><br><span class="line">s2(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">s2(config-vlan)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/1</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 10</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/2</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 20</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/24</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk</span></span><br></pre></td></tr></table></figure>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>pc1与pc3可以通信但与pc2无法通信</p>
-<p>pc2与pc4可以通信但与pc3无法通信</p>
-<p><strong>参考链接以及拓展阅读</strong></p>
-<ul>
-<li><p><a href="http://zhaoyuqiang.blog.51cto.com/6328846/1576016" target="_blank" rel="noopener">Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分</a></p>
-</li>
-<li><p><a href="https://learningnetwork.cisco.com/docs/DOC-9289" target="_blank" rel="noopener">跨交换机的Vlan配置与管理</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>switchs</tag>
-        <tag>VLAN</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>思科交换机配置2——单交换机VLAN划分</title>
     <url>/2017/03/05/switch-config-2/</url>
     <content><![CDATA[<h1 id="单交换机VLAN配置"><a href="#单交换机VLAN配置" class="headerlink" title="单交换机VLAN配置"></a>单交换机VLAN配置</h1><p>配置好的思科模拟器文件地址:<a href="https://github.com/aoenian/cisco-pkt/" target="_blank" rel="noopener">cisco-pkt</a></p>
@@ -3350,8 +3373,35 @@
         <category>Net</category>
       </categories>
       <tags>
-        <tag>VLAN</tag>
         <tag>switch</tag>
+        <tag>VLAN</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>思科交换机配置3——多交换机VLAN划分</title>
+    <url>/2017/03/05/switch-config-3/</url>
+    <content><![CDATA[<p>配置好的思科模拟器文件地址：<a href="https://github.com/aoenian/cisco-pkt/" target="_blank" rel="noopener">cisco-pkt</a></p>
+<p>拓扑图:<br><img src="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/switch3.PNG" alt></p>
+<a id="more"></a>
+<h1 id="s1配置"><a href="#s1配置" class="headerlink" title="s1配置"></a>s1配置</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(config)<span class="meta">#vlan 10</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#vlan 20</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">Switch(config-vlan)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/1</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 10</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/2</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 20</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#interface f0/24</span></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk     <span class="comment">// 把24端口模式设置为trunk来进行交换机之间的通信</span></span></span><br><span class="line"></span><br><span class="line">%LINEPROTO<span class="number">-5</span>-UPDOWN: Line protocol on Interface FastEthernet0/<span class="number">24</span>, changed state to down</span><br><span class="line"></span><br><span class="line">%LINEPROTO<span class="number">-5</span>-UPDOWN: Line protocol on Interface FastEthernet0/<span class="number">24</span>, changed state to up</span><br><span class="line"></span><br><span class="line">Switch(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">Switch(config)<span class="meta">#exit</span></span><br><span class="line">Switch<span class="meta">#write</span></span><br><span class="line">Building configuration...</span><br><span class="line">[OK]</span><br></pre></td></tr></table></figure>
+<h1 id="s2的配置"><a href="#s2的配置" class="headerlink" title="s2的配置"></a>s2的配置</h1><p><strong>s2的配置和s1的配置几乎完全一样，这里只列出配置过程，不再注释</strong></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(config)<span class="meta">#hostname s2  <span class="comment">// 把交换机的名称改为s2</span></span></span><br><span class="line">s2(config)<span class="meta">#interface f0/1</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#vlan 10</span></span><br><span class="line">s2(config-vlan)<span class="meta">#name v10</span></span><br><span class="line">s2(config-vlan)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#vlan 20</span></span><br><span class="line">s2(config-vlan)<span class="meta">#name v20</span></span><br><span class="line">s2(config-vlan)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/1</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 10</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/2</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode access </span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport access vlan 20</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">s2(config)<span class="meta">#interface f0/24</span></span><br><span class="line">s2(config-<span class="keyword">if</span>)<span class="meta">#switchport mode trunk</span></span><br></pre></td></tr></table></figure>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>pc1与pc3可以通信但与pc2无法通信</p>
+<p>pc2与pc4可以通信但与pc3无法通信</p>
+<p><strong>参考链接以及拓展阅读</strong></p>
+<ul>
+<li><p><a href="http://zhaoyuqiang.blog.51cto.com/6328846/1576016" target="_blank" rel="noopener">Cisco基础【交换机】两个实例配置让你掌握交换机VLAN的划分</a></p>
+</li>
+<li><p><a href="https://learningnetwork.cisco.com/docs/DOC-9289" target="_blank" rel="noopener">跨交换机的Vlan配置与管理</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>VLAN</tag>
+        <tag>switchs</tag>
       </tags>
   </entry>
   <entry>
