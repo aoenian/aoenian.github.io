@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-05-04T11:15:09.711Z</updated>
+  <updated>2020-05-10T04:07:16.469Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树莓派安装UbuntuServer并设置Samba共享</title>
+    <link href="https://aoenian.github.io/2020/05/08/rasp-ubuntuserver-samba/"/>
+    <id>https://aoenian.github.io/2020/05/08/rasp-ubuntuserver-samba/</id>
+    <published>2020-05-08T13:53:40.000Z</published>
+    <updated>2020-05-10T04:07:16.469Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用来用去还是感觉Ubuntu省心，很多配置没那么复杂，有时候也觉得自己挺可笑的，有时候连基本的应用都还没熟练，还去考虑哪个系统稳定，简直操心太多。&lt;/p&gt;
+&lt;p&gt;这篇文章记录树莓派安装Ubuntu Server并配置文件共享的过程。&lt;/p&gt;
+&lt;h2 id=&quot;ubuntu-Server安装&quot;&gt;&lt;a href=&quot;#ubuntu-Server安装&quot; class=&quot;headerlink&quot; title=&quot;ubuntu Server安装&quot;&gt;&lt;/a&gt;ubuntu Server安装&lt;/h2&gt;&lt;h3 id=&quot;软硬件准备&quot;&gt;&lt;a href=&quot;#软硬件准备&quot; class=&quot;headerlink&quot; title=&quot;软硬件准备&quot;&gt;&lt;/a&gt;软硬件准备&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;ubuntuserver镜像（我没安装图形界面的，个人觉得不需要）网址：&lt;a href=&quot;https://ubuntu.com/download/raspberry-pi&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://ubuntu.com/download/raspberry-pi&lt;/a&gt; 这里我用的是20.04 64位&lt;/li&gt;
+&lt;li&gt;Raspberry Pi 3B + Micro SD卡&lt;/li&gt;
+&lt;li&gt;烧录软件：balenaEtcher 这个挺好用网址 &lt;a href=&quot;https://www.balena.io/etcher/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.balena.io/etcher/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="Raspberry Pi" scheme="https://aoenian.github.io/categories/Raspberry-Pi/"/>
+    
+    
+      <category term="ubuntu" scheme="https://aoenian.github.io/tags/ubuntu/"/>
+    
+      <category term="密码共享" scheme="https://aoenian.github.io/tags/%E5%AF%86%E7%A0%81%E5%85%B1%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>linux命令中的一些冷操作1</title>
@@ -450,29 +478,6 @@
       <category term="pyenv" scheme="https://aoenian.github.io/tags/pyenv/"/>
     
       <category term="vim" scheme="https://aoenian.github.io/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记一次视频下载过程1</title>
-    <link href="https://aoenian.github.io/2019/08/31/download-the-m3u8-1/"/>
-    <id>https://aoenian.github.io/2019/08/31/download-the-m3u8-1/</id>
-    <published>2019-08-30T16:00:00.000Z</published>
-    <updated>2019-09-01T09:04:47.214Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在一个网站看视频的时候，感觉视频缓冲太慢，而且快进容易被卡死。然后就想把视频下载下来。还是和以前一样，通过开发者工具看了看视频传输的数据。原以为会找到一个mp4文件直接下载，谁知道全是一段一段的ts文件，这是什么时候出现的变态技术，我也是多长时间没有下载视频了。&lt;/p&gt;
-&lt;p&gt;更变态的是ts文件只有几兆大小，而且下载下来以后还无法观看，后面知道因为加密的原因。&lt;strong&gt;这里先说结论：我没有搞定ts的解密&lt;/strong&gt;。所以这篇文章可能没有你想看的。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
-    
-    
-      <category term="m3u8" scheme="https://aoenian.github.io/tags/m3u8/"/>
-    
-      <category term="requests" scheme="https://aoenian.github.io/tags/requests/"/>
     
   </entry>
   
