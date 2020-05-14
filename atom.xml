@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-05-10T04:07:16.469Z</updated>
+  <updated>2020-05-14T08:31:09.790Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>树莓派下载百度云盘文件</title>
+    <link href="https://aoenian.github.io/2020/05/10/rasp-baidupan/"/>
+    <id>https://aoenian.github.io/2020/05/10/rasp-baidupan/</id>
+    <published>2020-05-10T08:09:52.000Z</published>
+    <updated>2020-05-14T08:31:09.790Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;树莓派又闲置了一段时间，然后现在再次学习linux，这次不能一知半解，要学进去，把之前的一些盲点给补充起来。然后就装了ubuntuserver，用着挺不错。&lt;/p&gt;
+&lt;p&gt;然后前段时间pandownload的作者被抓了，原因大家都知道，不过因为百度依然是国内最受欢迎的云盘，不花钱也只能忍受这个速度，然而呢总是用电脑下载的话太费电了。就想起来使用树莓派，网络一搜果然已经有大神把轮子造好了，直接使用就ok。下面简单记录配置过程。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Raspberry Pi" scheme="https://aoenian.github.io/categories/Raspberry-Pi/"/>
+    
+    
+      <category term="pan" scheme="https://aoenian.github.io/tags/pan/"/>
+    
+      <category term="bypy" scheme="https://aoenian.github.io/tags/bypy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>树莓派安装UbuntuServer并设置Samba共享</title>
     <link href="https://aoenian.github.io/2020/05/08/rasp-ubuntuserver-samba/"/>
     <id>https://aoenian.github.io/2020/05/08/rasp-ubuntuserver-samba/</id>
     <published>2020-05-08T13:53:40.000Z</published>
-    <updated>2020-05-10T04:07:16.469Z</updated>
+    <updated>2020-05-12T08:27:47.573Z</updated>
     
     <summary type="html">
     
@@ -455,29 +478,6 @@
       <category term="Windows" scheme="https://aoenian.github.io/tags/Windows/"/>
     
       <category term="FTP" scheme="https://aoenian.github.io/tags/FTP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记一次视频下载过程2</title>
-    <link href="https://aoenian.github.io/2019/09/02/download-the-m3u8-2/"/>
-    <id>https://aoenian.github.io/2019/09/02/download-the-m3u8-2/</id>
-    <published>2019-09-01T16:00:00.000Z</published>
-    <updated>2019-09-08T10:41:58.277Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这篇文章基本跟视频下载没啥关系了，主要是一些环境的配置和编辑软件的使用。不想每个单写了，所以就写在一起，省点地方。&lt;/p&gt;
-&lt;h2 id=&quot;Vim自动生成连续数字列&quot;&gt;&lt;a href=&quot;#Vim自动生成连续数字列&quot; class=&quot;headerlink&quot; title=&quot;Vim自动生成连续数字列&quot;&gt;&lt;/a&gt;Vim自动生成连续数字列&lt;/h2&gt;&lt;p&gt;这个是生成视频名称的时候使用的，因为想生成如 001.ts 002.ts 003.ts … 之类，并且需要每一个视频名称占一行，其实就是制作下载地址的文件。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
-    
-    
-      <category term="pyenv" scheme="https://aoenian.github.io/tags/pyenv/"/>
-    
-      <category term="vim" scheme="https://aoenian.github.io/tags/vim/"/>
     
   </entry>
   
