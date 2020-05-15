@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-05-14T08:31:09.790Z</updated>
+  <updated>2020-05-15T11:43:38.662Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>天下没有不散的宴席</title>
+    <link href="https://aoenian.github.io/2020/05/15/10086/"/>
+    <id>https://aoenian.github.io/2020/05/15/10086/</id>
+    <published>2020-05-15T11:32:41.000Z</published>
+    <updated>2020-05-15T11:43:38.662Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;她上午的时候给我电话了，用的是一个我不知道的号码，本以为又是那种推销电话，可是鬼使神差的居然接了，看来缘分这个东西真的很奇妙。&lt;/p&gt;
+&lt;p&gt;接起来以后就直接拒绝，就这样，准备好了说辞。先客气的答了一声，然后对方熟悉的声音从听筒中传来，整个人突然就愣住了。本来准备好的拒绝的话语全都无法说出口，大脑短暂的空白后回忆像后浪般翻滚而来。那是我们以前美好的回忆，本以为时间能磨平一切，现在看来随着时间的流逝，只是让那些回忆变得更加清晰。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="杂谈" scheme="https://aoenian.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+      <category term="10086" scheme="https://aoenian.github.io/tags/10086/"/>
+    
+      <category term="10000" scheme="https://aoenian.github.io/tags/10000/"/>
+    
+  </entry>
   
   <entry>
     <title>树莓派下载百度云盘文件</title>
@@ -455,29 +478,6 @@
       <category term="change" scheme="https://aoenian.github.io/tags/change/"/>
     
       <category term="repositories" scheme="https://aoenian.github.io/tags/repositories/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows7安装FTP服务器</title>
-    <link href="https://aoenian.github.io/2019/09/12/windows7-install-ftp/"/>
-    <id>https://aoenian.github.io/2019/09/12/windows7-install-ftp/</id>
-    <published>2019-09-11T16:00:00.000Z</published>
-    <updated>2019-09-12T09:40:49.340Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录Windows7安装FTP服务器，只是简单的安装使用，复杂的功能没有涉及到。&lt;/p&gt;
-&lt;h2 id=&quot;安装FTP&quot;&gt;&lt;a href=&quot;#安装FTP&quot; class=&quot;headerlink&quot; title=&quot;安装FTP&quot;&gt;&lt;/a&gt;安装FTP&lt;/h2&gt;&lt;p&gt;控制面板-程序和功能-打开和关闭windows功能-Internet信息服务-勾选 FTP服务和FTP扩展性 安装组件。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
-    
-    
-      <category term="Windows" scheme="https://aoenian.github.io/tags/Windows/"/>
-    
-      <category term="FTP" scheme="https://aoenian.github.io/tags/FTP/"/>
     
   </entry>
   
