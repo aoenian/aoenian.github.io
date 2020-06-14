@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-05-15T11:43:38.662Z</updated>
+  <updated>2020-06-14T13:20:45.409Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络视频下载方法记录</title>
+    <link href="https://aoenian.github.io/2020/06/14/video-download/"/>
+    <id>https://aoenian.github.io/2020/06/14/video-download/</id>
+    <published>2020-06-14T07:56:35.000Z</published>
+    <updated>2020-06-14T13:20:45.409Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;现在基本不在网上看视频，主要因为电脑屏幕太小，同时也因为自己看的基本主流媒体都没有，属于非主流，主流上有的又不太感兴趣。不过有时在网上看到的好玩的视频想下载下来，却发现厂商保护视频地址的能力真的太强（有这技术没有想想如何用到改善用户体验上）。所以把这段时间用过的一些下载视频的方法记录一下，以备后用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Net" scheme="https://aoenian.github.io/categories/Net/"/>
+    
+    
+      <category term="m3u8" scheme="https://aoenian.github.io/tags/m3u8/"/>
+    
+      <category term="flv" scheme="https://aoenian.github.io/tags/flv/"/>
+    
+  </entry>
   
   <entry>
     <title>天下没有不散的宴席</title>
@@ -455,29 +477,6 @@
       <category term="hash" scheme="https://aoenian.github.io/tags/hash/"/>
     
       <category term="PE" scheme="https://aoenian.github.io/tags/PE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pip换源提升包下载速度</title>
-    <link href="https://aoenian.github.io/2019/09/26/python-pip-change-repositories/"/>
-    <id>https://aoenian.github.io/2019/09/26/python-pip-change-repositories/</id>
-    <published>2019-09-25T16:00:00.000Z</published>
-    <updated>2019-09-26T09:20:51.407Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;快到国庆节了看到公众号有一篇文章是使用python给自己的头像添加国旗。然后感觉挺厉害，可以用几行代码来把图片合成起来。在使用过程中遇到了一些问题，记录如下：&lt;/p&gt;
-&lt;h2 id=&quot;给头像添加国旗&quot;&gt;&lt;a href=&quot;#给头像添加国旗&quot; class=&quot;headerlink&quot; title=&quot;给头像添加国旗&quot;&gt;&lt;/a&gt;给头像添加国旗&lt;/h2&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
-    
-    
-      <category term="change" scheme="https://aoenian.github.io/tags/change/"/>
-    
-      <category term="repositories" scheme="https://aoenian.github.io/tags/repositories/"/>
     
   </entry>
   
