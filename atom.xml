@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-07-11T14:02:01.547Z</updated>
+  <updated>2020-07-12T08:16:22.990Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -21,13 +21,15 @@
     <link href="https://aoenian.github.io/2020/07/04/sanxiao/"/>
     <id>https://aoenian.github.io/2020/07/04/sanxiao/</id>
     <published>2020-07-04T02:16:19.000Z</published>
-    <updated>2020-07-11T14:02:01.547Z</updated>
+    <updated>2020-07-12T08:16:22.990Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;这篇文章是邀请 &lt;strong&gt;apecode&lt;/strong&gt; 撰写，目的很简单为了让有意愿报考三校生的同学对这个考试有一个系统的了解。&lt;/p&gt;
     
     </summary>
+    
+      <category term="杂谈" scheme="https://aoenian.github.io/categories/%E6%9D%82%E8%B0%88/"/>
     
     
       <category term="复习" scheme="https://aoenian.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
