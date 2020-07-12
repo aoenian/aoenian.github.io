@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-06-14T13:20:45.409Z</updated>
+  <updated>2020-07-11T14:02:01.547Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三校生报考指南</title>
+    <link href="https://aoenian.github.io/2020/07/04/sanxiao/"/>
+    <id>https://aoenian.github.io/2020/07/04/sanxiao/</id>
+    <published>2020-07-04T02:16:19.000Z</published>
+    <updated>2020-07-11T14:02:01.547Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这篇文章是邀请 &lt;strong&gt;apecode&lt;/strong&gt; 撰写，目的很简单为了让有意愿报考三校生的同学对这个考试有一个系统的了解。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="复习" scheme="https://aoenian.github.io/tags/%E5%A4%8D%E4%B9%A0/"/>
+    
+      <category term="报名" scheme="https://aoenian.github.io/tags/%E6%8A%A5%E5%90%8D/"/>
+    
+  </entry>
   
   <entry>
     <title>网络视频下载方法记录</title>
@@ -454,29 +474,6 @@
       <category term="snippets" scheme="https://aoenian.github.io/tags/snippets/"/>
     
       <category term="Variables" scheme="https://aoenian.github.io/tags/Variables/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装Windows操作系统工具汇总</title>
-    <link href="https://aoenian.github.io/2019/09/26/install-windows/"/>
-    <id>https://aoenian.github.io/2019/09/26/install-windows/</id>
-    <published>2019-09-25T16:00:00.000Z</published>
-    <updated>2019-09-26T05:29:03.377Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录自己安装操作系统过程中使用过的感觉还不错的软件。&lt;/p&gt;
-&lt;h2 id=&quot;PE推荐&quot;&gt;&lt;a href=&quot;#PE推荐&quot; class=&quot;headerlink&quot; title=&quot;PE推荐&quot;&gt;&lt;/a&gt;PE推荐&lt;/h2&gt;&lt;p&gt;现在安装操作系统一般都不用刻录光盘了，直接U盘安装所以PE软件是需要的。这里推荐两个比较好用的。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="https://aoenian.github.io/categories/Windows/"/>
-    
-    
-      <category term="hash" scheme="https://aoenian.github.io/tags/hash/"/>
-    
-      <category term="PE" scheme="https://aoenian.github.io/tags/PE/"/>
     
   </entry>
   
