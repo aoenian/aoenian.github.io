@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-07-12T12:28:27.503Z</updated>
+  <updated>2020-07-27T10:06:07.205Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>更新node后hexo填坑记录</title>
+    <link href="https://aoenian.github.io/2020/07/27/node-update-hexo-error/"/>
+    <id>https://aoenian.github.io/2020/07/27/node-update-hexo-error/</id>
+    <published>2020-07-27T09:59:01.000Z</published>
+    <updated>2020-07-27T10:06:07.205Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;起因是使用brew更新了系统的软件，然后问题就接二连三的出现了，这里记录一下填坑过程。&lt;/p&gt;
+&lt;h2 id=&quot;更换brew源&quot;&gt;&lt;a href=&quot;#更换brew源&quot; class=&quot;headerlink&quot; title=&quot;更换brew源&quot;&gt;&lt;/a&gt;更换brew源&lt;/h2&gt;&lt;p&gt;使用brew安装软件的时候总是一直卡在更新，原因大家都知道，所以就想着把源更换了。&lt;/p&gt;
+&lt;p&gt;用了中科大的源，地址如下 &lt;a href=&quot;https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;替换及重置Homebrew默认源&lt;/a&gt; &lt;a href=&quot;https://lug.ustc.edu.cn/wiki/mirrors/help/homebrew-bottles&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Homebrew Bottles源&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;不想跳转的可以看下面的摘录：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://aoenian.github.io/categories/Hexo/"/>
+    
+    
+      <category term="typeError" scheme="https://aoenian.github.io/tags/typeError/"/>
+    
+      <category term="proxychains" scheme="https://aoenian.github.io/tags/proxychains/"/>
+    
+  </entry>
   
   <entry>
     <title>三校生考试介绍</title>
@@ -454,28 +479,6 @@
       <category term="kata" scheme="https://aoenian.github.io/tags/kata/"/>
     
       <category term="skills" scheme="https://aoenian.github.io/tags/skills/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode增加Python语言用户代码片段</title>
-    <link href="https://aoenian.github.io/2019/10/14/vscode-python-snippets/"/>
-    <id>https://aoenian.github.io/2019/10/14/vscode-python-snippets/</id>
-    <published>2019-10-14T12:28:43.000Z</published>
-    <updated>2019-10-20T04:02:29.135Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这段时间练习Python编程，编写的时候每次都要写文件头有点麻烦，所以就编辑了一个自己使用的代码片段。方便插入文件编码、时间、作者之类的程序信息。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Editor" scheme="https://aoenian.github.io/categories/Editor/"/>
-    
-    
-      <category term="snippets" scheme="https://aoenian.github.io/tags/snippets/"/>
-    
-      <category term="Variables" scheme="https://aoenian.github.io/tags/Variables/"/>
     
   </entry>
   
