@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aoenian.github.io/"/>
-  <updated>2020-07-27T10:06:07.205Z</updated>
+  <updated>2020-09-12T08:58:02.206Z</updated>
   <id>https://aoenian.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓手机访问树莓派samba文件共享出错解决</title>
+    <link href="https://aoenian.github.io/2020/09/12/android-samba-error/"/>
+    <id>https://aoenian.github.io/2020/09/12/android-samba-error/</id>
+    <published>2020-09-12T08:52:16.000Z</published>
+    <updated>2020-09-12T08:58:02.206Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这段时间树莓派一直没有用，不过后来想想还是用起来，不然就浪费了，当然还是用做家庭的文件共享最好。&lt;/p&gt;
+&lt;h2 id=&quot;samba配置&quot;&gt;&lt;a href=&quot;#samba配置&quot; class=&quot;headerlink&quot; title=&quot;samba配置&quot;&gt;&lt;/a&gt;samba配置&lt;/h2&gt;&lt;p&gt;这个网上的配置很多，我在之前的博客中也记录过，这里我用的是&lt;a href=&quot;https://www.raspberrypi.org/downloads/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ubuntu server&lt;/a&gt;。因为用习惯了，方便。&lt;/p&gt;
+&lt;p&gt;配置过程就不多说了。看以看看这个 &lt;a href=&quot;https://aoenian.github.io/2020/05/08/rasp-ubuntuserver-samba/&quot;&gt;samba文件共享&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://aoenian.github.io/categories/Linux/"/>
+    
+    
+      <category term="samba" scheme="https://aoenian.github.io/tags/samba/"/>
+    
+      <category term="error" scheme="https://aoenian.github.io/tags/error/"/>
+    
+  </entry>
   
   <entry>
     <title>更新node后hexo填坑记录</title>
@@ -453,32 +477,6 @@
     
     
       <category term="7kyu" scheme="https://aoenian.github.io/tags/7kyu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Codewars网站刷题笔记1</title>
-    <link href="https://aoenian.github.io/2019/10/27/python-codewars-kata1/"/>
-    <id>https://aoenian.github.io/2019/10/27/python-codewars-kata1/</id>
-    <published>2019-10-27T12:18:53.000Z</published>
-    <updated>2019-10-28T13:44:07.676Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;很早就注册了&lt;a href=&quot;https://www.codewars.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;codewars&lt;/a&gt;网站，却一直没有刷题，主要原因是懒，一小部分原因是这个网站访问比较慢。现在准备重新练习python，其实python也是很早就学了，一直没有练习，然后基本就一直处于入门水平，知道简单的语法而已，这次要好好练一次。&lt;/p&gt;
-&lt;p&gt;以codewars网站上面的题目为基础进行练习，每周都会刷一些题目，然后把这周做题过程中获得的一些技巧和经验，记录在博客中。作为一个系列，归类在python中。这是第一篇。&lt;/p&gt;
-&lt;p&gt;网站题目的github地址：&lt;a href=&quot;https://github.com/aoenian/codewars-katas-python&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://github.com/aoenian/codewars-katas-python&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Python" scheme="https://aoenian.github.io/categories/Python/"/>
-    
-    
-      <category term="codewars" scheme="https://aoenian.github.io/tags/codewars/"/>
-    
-      <category term="kata" scheme="https://aoenian.github.io/tags/kata/"/>
-    
-      <category term="skills" scheme="https://aoenian.github.io/tags/skills/"/>
     
   </entry>
   
