@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>天下没有不散的宴席</title>
-    <url>/2020/05/15/10086/</url>
-    <content><![CDATA[<p>她上午的时候给我电话了，用的是一个我不知道的号码，本以为又是那种推销电话，可是鬼使神差的居然接了，看来缘分这个东西真的很奇妙。</p>
-<p>接起来以后就直接拒绝，就这样，准备好了说辞。先客气的答了一声，然后对方熟悉的声音从听筒中传来，整个人突然就愣住了。本来准备好的拒绝的话语全都无法说出口，大脑短暂的空白后回忆像后浪般翻滚而来。那是我们以前美好的回忆，本以为时间能磨平一切，现在看来随着时间的流逝，只是让那些回忆变得更加清晰。</p>
-<a id="more"></a>
-<p>记得初次见面的时候，正值傍晚，橘红色的阳光斜射入宽敞的大厅中，虽然路上一直赶时间，但到达的时候还是比较晚了，但是你温柔的态度，没有丝毫抱怨的微笑让我再一次坚定了自己的选择是无比正确的。通过短暂的交谈认识了彼此，同时也开启了我们长达5年的恩怨纠葛。这段时间中虽然联系不多，但每次重要的通知都不会错过，重要的节日经常会提醒我，同时还友好的提醒我直面自己的财务问题…</p>
-<p>“先生，你好” 一句熟悉的问候把我从回忆中拉回</p>
-<p>“你好”</p>
-<p>“我们后台收到了您发送的携号转网查询信息，请问您是有转网的需求吗？”</p>
-<p>“是的”</p>
-<p>“不好意思，能否请问一下您转网的意向是联通还是电信呢？”</p>
-<p>“电信”</p>
-<p>“那能否询问一下您转网的原因？”</p>
-<p>“号码只接收短信，换个便宜的套餐”</p>
-<p>“我们也有便宜的套餐，每个月只需要8元，没有其他费用，直接去营业厅就可以办理。”</p>
-<p>“那我考虑一下”</p>
-<p>“好的，不好意思打扰您了，祝您生活愉快！”</p>
-<p>挂了电话以后，我决定不再携号转网了，直接把这个号码注销掉，然后再去电信办一个新的。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>10086</tag>
-        <tag>10000</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>2019年的一些思考</title>
     <url>/2020/01/02/2019-end/</url>
     <content><![CDATA[<p>这段时间发现容易感动，情绪容易低沉，2019不能再返回，失去的时间不管你再怎么懊悔也无法再次得到。一到晚上总是有很多东西要写，很多情绪要释放，迷迷糊糊睡了一觉却什么都记不太清，有时候甚至怀疑自己是不是压力太大而记忆力下降。后来发现不是压力太大，而是自然的正常的出现。</p>
@@ -82,37 +54,31 @@
       </tags>
   </entry>
   <entry>
-    <title>无需路由器安卓手机与MAC组建局域网共享文件</title>
-    <url>/2020/02/21/android-mac-share-files/</url>
-    <content><![CDATA[<p>手机和电脑传输文件的方法很多，这次的方法是用安卓手机开热点然后与macbook组建局域网进行文件共享，无需路由器和数据线。</p>
+    <title>天下没有不散的宴席</title>
+    <url>/2020/05/15/10086/</url>
+    <content><![CDATA[<p>她上午的时候给我电话了，用的是一个我不知道的号码，本以为又是那种推销电话，可是鬼使神差的居然接了，看来缘分这个东西真的很奇妙。</p>
+<p>接起来以后就直接拒绝，就这样，准备好了说辞。先客气的答了一声，然后对方熟悉的声音从听筒中传来，整个人突然就愣住了。本来准备好的拒绝的话语全都无法说出口，大脑短暂的空白后回忆像后浪般翻滚而来。那是我们以前美好的回忆，本以为时间能磨平一切，现在看来随着时间的流逝，只是让那些回忆变得更加清晰。</p>
 <a id="more"></a>
-<h2 id="需要的材料"><a href="#需要的材料" class="headerlink" title="需要的材料"></a>需要的材料</h2><ul>
-<li>安卓手机一部（可以开无线热点）</li>
-<li>macbook（macOS系统）</li>
-<li>ES文件浏览器</li>
-</ul>
-<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><ol>
-<li>首先你的手机有个人热点功能，然后打开个人热点，macbook通过热点连接。</li>
-<li>手机安装ES文件浏览器。</li>
-<li>macOS设置：系统偏好设置-共享-勾选文件共享-在窗口右边添加共享的文件夹并调整用户权限</li>
-<li>手机打开ES文件浏览器，打开侧边栏找到 网络-局域网-扫描 即可看到mac电脑</li>
-<li>点击图标，ES访问macOS共享用户名需要输入guest，密码留空即可看到共享文件</li>
-</ol>
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul>
-<li><p>电脑的文件无法复制</p>
-<p>  具体情况是共享可以看到目录和文件，但是无法复制到手机里面，主要问题就是目录和文件权限的问题。<strong>解决方法：</strong>目录和文件权限建议修改为正常即可，目录为755，文件为644</p>
-</li>
-<li><p>输入guest也无法进入</p>
-<p>  在共享设置中把你的共享目录的用户添加任何人，权限根据需要更改。</p>
-</li>
-</ul>
+<p>记得初次见面的时候，正值傍晚，橘红色的阳光斜射入宽敞的大厅中，虽然路上一直赶时间，但到达的时候还是比较晚了，但是你温柔的态度，没有丝毫抱怨的微笑让我再一次坚定了自己的选择是无比正确的。通过短暂的交谈认识了彼此，同时也开启了我们长达5年的恩怨纠葛。这段时间中虽然联系不多，但每次重要的通知都不会错过，重要的节日经常会提醒我，同时还友好的提醒我直面自己的财务问题…</p>
+<p>“先生，你好” 一句熟悉的问候把我从回忆中拉回</p>
+<p>“你好”</p>
+<p>“我们后台收到了您发送的携号转网查询信息，请问您是有转网的需求吗？”</p>
+<p>“是的”</p>
+<p>“不好意思，能否请问一下您转网的意向是联通还是电信呢？”</p>
+<p>“电信”</p>
+<p>“那能否询问一下您转网的原因？”</p>
+<p>“号码只接收短信，换个便宜的套餐”</p>
+<p>“我们也有便宜的套餐，每个月只需要8元，没有其他费用，直接去营业厅就可以办理。”</p>
+<p>“那我考虑一下”</p>
+<p>“好的，不好意思打扰您了，祝您生活愉快！”</p>
+<p>挂了电话以后，我决定不再携号转网了，直接把这个号码注销掉，然后再去电信办一个新的。</p>
 ]]></content>
       <categories>
-        <category>macOS</category>
+        <category>杂谈</category>
       </categories>
       <tags>
-        <tag>LAN</tag>
-        <tag>热点</tag>
+        <tag>10086</tag>
+        <tag>10000</tag>
       </tags>
   </entry>
   <entry>
@@ -357,6 +323,100 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS7安装配置Samba</title>
+    <url>/2017/10/29/centos-samba/</url>
+    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><em>性子急的可以跳过，直接看后面的配置</em></p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>树莓派安装了CentOS7以后感觉还不错，正好大部分学习linux的资料都是CentOS为主，所以就准备长期使用，然后这两天用you-get下载了一些视频，然后想拷贝出来，这时候突然发现CentOS不能写入ntfs格式的U盘，哎，开源和微软之间总有那么一道肉隐肉现的鸿沟。</p>
+<p>那么需求来了，让CentOS读取ntfs，搜索一番，发现很简单就是安装一个ntfs-3g的软件的事情，不过就这么个问题废老大劲了。</p>
+<p><strong>2018-06-05更新：32位安装ntfs-3g可<a href="https://www.tuxera.com/community/open-source-ntfs-3g/" target="_blank" rel="noopener">官网</a>下载源码直接编译安装，64位的可以直接安装<a href="https://fedoraproject.org/wiki/EPEL" target="_blank" rel="noopener">EPEL</a>然后再安装相应的软件</strong></p>
+<a id="more"></a>
+<p>当时查看系统的位数，找到的一些系统信息查看的方法，总结记录如下。</p>
+<ul>
+<li>查看CentOS的版本</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /proc/version</span></span><br><span class="line">Linux version 4.9.50-v7.1.el7 (mockbuild@armv7-03.dev.CentOS.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -a</span></span><br><span class="line">Linux CentOS-rpi3 4.9.50-v7.1.el7 <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017 armv7l armv7l armv7l GNU/Linux</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -r</span></span><br><span class="line">4.9.50-v7.1.el7</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /etc/redhat-release</span></span><br><span class="line">CentOS Linux release 7.4.1708 (Core)</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># getconf LONG_BIT</span></span><br><span class="line">32</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># file /bin/ls</span></span><br><span class="line">/bin/ls: ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), <span class="keyword">for</span> GNU/Linux 2.6.32, BuildID[sha1]=c591c4039d5eb3301eb8be1fa4ebaed8cd832240, stripped</span><br></pre></td></tr></table></figure>
+<h1 id="安装配置Samba"><a href="#安装配置Samba" class="headerlink" title="安装配置Samba"></a>安装配置Samba</h1><p>CentOS的共享比较麻烦具体下面介绍</p>
+<h2 id="安装Samba"><a href="#安装Samba" class="headerlink" title="安装Samba"></a>安装Samba</h2><p>先查看是否安装Samba</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep samba</span><br><span class="line">yum list installed | grep samba</span><br></pre></td></tr></table></figure>
+<p>如果已经安装那么可以跳过，如果没有正确安装可以先删除再重新安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除samba</span></span><br><span class="line">yum remove samba*</span><br></pre></td></tr></table></figure>
+<p>接着，连上网络，安装samba</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install samba* -y</span><br></pre></td></tr></table></figure>
+<h2 id="配置一个完全权限的共享目录"><a href="#配置一个完全权限的共享目录" class="headerlink" title="配置一个完全权限的共享目录"></a>配置一个完全权限的共享目录</h2><h3 id="查看windows的工作组"><a href="#查看windows的工作组" class="headerlink" title="查看windows的工作组"></a>查看windows的工作组</h3><p>打开win的cmd窗口，快捷键 win+r 然后输入 cmd<br>回车即可，并在窗口输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">net config workstation</span><br></pre></td></tr></table></figure>
+<p>找到 <code>Workstation domain</code> 一行，值应该是 <code>WORKGROUP</code> 下面配置Samba要用到</p>
+<h3 id="配置Samba"><a href="#配置Samba" class="headerlink" title="配置Samba"></a>配置Samba</h3><ul>
+<li>创建共享目录</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /samba/anonymous</span><br><span class="line">chmod -R 0777 /samba/anonymous</span><br><span class="line">chown -R nobody:nobody /samba/anonymous</span><br></pre></td></tr></table></figure>
+<ul>
+<li>关掉防火墙和selinux</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld.service <span class="comment">#停止firewall</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service <span class="comment">#禁止firewall开机启动</span></span><br><span class="line"></span><br><span class="line">setenforce 0    <span class="comment"># 关闭selinux</span></span><br><span class="line">getenforce      <span class="comment"># 查看selinux的状态，应该是 Permissive</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 彻底禁用selinux 编辑配置文件</span></span><br><span class="line">vim /etc/sysconfig/selinux    </span><br><span class="line"><span class="comment"># 修改SELINUX</span></span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
+<p><em>如果防火墙不关闭，查看共享会出现连接失败；如果selinux不关闭，则无法看到共享目录的内容</em></p>
+<p><em>当然为了安全期间，可以对Samba的端口放行，设置selinux分享Samba的目录，大家可以参考其他博文</em></p>
+<ul>
+<li>备份配置文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp /etc/samba/smb.conf /etc/samba/smb.conf.bak</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改配置文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/samba/smb.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以把之前的内容注释掉，加入如下内容</span></span><br><span class="line">[global]</span><br><span class="line">        workgroup = WORKGROUP    <span class="comment"># 跟win的工作组同名</span></span><br><span class="line">        server string = Samba Server Version %v    <span class="comment"># 服务器描述</span></span><br><span class="line">        netbios name = CentOS    <span class="comment"># 共享服务器在网络上显示的名字</span></span><br><span class="line">        security = user    <span class="comment"># 使用 SAMBA 服务器本身的密码数据库</span></span><br><span class="line">    <span class="comment"># 将所有Samba系统主机所不能正确识别的用户都映射成guest用户</span></span><br><span class="line">        map to guest = bad user    </span><br><span class="line">        dns proxy = no</span><br><span class="line">        <span class="built_in">log</span> file = /var/<span class="built_in">log</span>/samba/<span class="built_in">log</span>.%m    <span class="comment"># 日志文件位置</span></span><br><span class="line">        max <span class="built_in">log</span> size = 50    <span class="comment"># 日志大小</span></span><br><span class="line"></span><br><span class="line">[Anonymous]</span><br><span class="line">        comment = Anonymous File Server Share</span><br><span class="line">        path = /samba/anonymous</span><br><span class="line">        browsable = yes    <span class="comment"># 让所有的用户看到这个项目</span></span><br><span class="line">        writable = yes    <span class="comment"># 是否可以写入</span></span><br><span class="line">        guest ok = yes    <span class="comment"># 是否允许guest账户访问</span></span><br><span class="line">        <span class="built_in">read</span> only = no    <span class="comment"># 是否只读，与wirtable类似，谁在后面听谁的</span></span><br></pre></td></tr></table></figure>
+<p><em>保存配置文件，并退出，到此一个完全共享的目录基本配置完毕</em></p>
+<h3 id="重启smaba"><a href="#重启smaba" class="headerlink" title="重启smaba"></a>重启smaba</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> smb.service    <span class="comment"># 加入开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nmb.service</span><br><span class="line">systemctl restart smb.service</span><br><span class="line">systemctl restart nmb.service</span><br></pre></td></tr></table></figure>
+<p><em>配置完成，可在其他系统查看共享目录和文件</em></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a href="https://lintut.com/easy-samba-installation-on-rhel-centos-7/" target="_blank" rel="noopener">Easy Samba installation on RHEL/CentOS7</a></li>
+<li><a href="https://www.unixmen.com/install-configure-samba-server-centos-7/" target="_blank" rel="noopener">Install And Configure Samba Server In CentOS7</a></li>
+<li><a href="http://billtym.blog.51cto.com/1745172/569551" target="_blank" rel="noopener">Samba常用配置及GUEST访问</a></li>
+<li><a href="https://wiki.centos.org/zh/HowTos/SetUpSamba" target="_blank" rel="noopener">设置 SAMBA</a></li>
+<li><a href="http://cn.linux.vbird.org/linux_server/0370samba_2.php" target="_blank" rel="noopener">鸟哥文件服务器</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>samba</tag>
+        <tag>centos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>无需路由器安卓手机与MAC组建局域网共享文件</title>
+    <url>/2020/02/21/android-mac-share-files/</url>
+    <content><![CDATA[<p>手机和电脑传输文件的方法很多，这次的方法是用安卓手机开热点然后与macbook组建局域网进行文件共享，无需路由器和数据线。</p>
+<a id="more"></a>
+<h2 id="需要的材料"><a href="#需要的材料" class="headerlink" title="需要的材料"></a>需要的材料</h2><ul>
+<li>安卓手机一部（可以开无线热点）</li>
+<li>macbook（macOS系统）</li>
+<li>ES文件浏览器</li>
+</ul>
+<h2 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h2><ol>
+<li>首先你的手机有个人热点功能，然后打开个人热点，macbook通过热点连接。</li>
+<li>手机安装ES文件浏览器。</li>
+<li>macOS设置：系统偏好设置-共享-勾选文件共享-在窗口右边添加共享的文件夹并调整用户权限</li>
+<li>手机打开ES文件浏览器，打开侧边栏找到 网络-局域网-扫描 即可看到mac电脑</li>
+<li>点击图标，ES访问macOS共享用户名需要输入guest，密码留空即可看到共享文件</li>
+</ol>
+<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><ul>
+<li><p>电脑的文件无法复制</p>
+<p>  具体情况是共享可以看到目录和文件，但是无法复制到手机里面，主要问题就是目录和文件权限的问题。<strong>解决方法：</strong>目录和文件权限建议修改为正常即可，目录为755，文件为644</p>
+</li>
+<li><p>输入guest也无法进入</p>
+<p>  在共享设置中把你的共享目录的用户添加任何人，权限根据需要更改。</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>LAN</tag>
+        <tag>热点</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一体机内存升级记录</title>
     <url>/2020/01/05/buy-ram/</url>
     <content><![CDATA[<p>家里的一体机用了四、五年了，本来买的时候没有买高配，现在随着使用时间越来越长，现在已经越来越接近极限了。每次使用的时候都有换掉的冲动，但是金钱让我冷静了许多。打开管理器看了看电脑运行过程中的资源占用，发现内存确实太小了，不过2G的内存确实已经干不了什么了。手机都8G起步，更何况电脑。</p>
@@ -423,63 +483,57 @@
       </tags>
   </entry>
   <entry>
-    <title>CentOS7安装配置Samba</title>
-    <url>/2017/10/29/centos-samba/</url>
-    <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><em>性子急的可以跳过，直接看后面的配置</em></p>
-<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>树莓派安装了CentOS7以后感觉还不错，正好大部分学习linux的资料都是CentOS为主，所以就准备长期使用，然后这两天用you-get下载了一些视频，然后想拷贝出来，这时候突然发现CentOS不能写入ntfs格式的U盘，哎，开源和微软之间总有那么一道肉隐肉现的鸿沟。</p>
-<p>那么需求来了，让CentOS读取ntfs，搜索一番，发现很简单就是安装一个ntfs-3g的软件的事情，不过就这么个问题废老大劲了。</p>
-<p><strong>2018-06-05更新：32位安装ntfs-3g可<a href="https://www.tuxera.com/community/open-source-ntfs-3g/" target="_blank" rel="noopener">官网</a>下载源码直接编译安装，64位的可以直接安装<a href="https://fedoraproject.org/wiki/EPEL" target="_blank" rel="noopener">EPEL</a>然后再安装相应的软件</strong></p>
+    <title>解决Ubuntu Server周期任务不执行问题</title>
+    <url>/2020/09/13/crontab-error/</url>
+    <content><![CDATA[<p>想在树莓派中设定一个定时关机的命令，这样就不用每天晚上ssh进入关机了。不过晚上检查效果的时候发现没有执行。</p>
+<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>这次就知道日志的重要性了，但是ubuntu默认没有打开crontab的日志记录，所以我们首先要做的是打开cron日志记录功能。</p>
 <a id="more"></a>
-<p>当时查看系统的位数，找到的一些系统信息查看的方法，总结记录如下。</p>
+<h2 id="开启cron日志"><a href="#开启cron日志" class="headerlink" title="开启cron日志"></a>开启cron日志</h2><p>找到cron的日志配置文件，位置为 <code>/etc/rsyslog.d/50-default.conf</code> 使用编辑器编辑。</p>
+<p>把配置文件中的 <code>cron.*             /var/log/cron.log</code> 这一行代码注释掉，也就是让系统开启cron日志记录。</p>
+<p>然后使用命令 <code>sudo service rsyslog restart</code>  重启系统日志</p>
+<p>这时候就可以在 <code>/var/log/cron.log</code> 文件中查看周期命令的执行情况了。</p>
+<h2 id="出错原因"><a href="#出错原因" class="headerlink" title="出错原因"></a>出错原因</h2><p>查看日志后知道出错的原因，这里建议一定使用命令的<strong>绝对路径</strong>，这样才能正确执行，如果需要每分钟都执行，那么直接使用五个*号即可。</p>
+<p>修改完成后即可重启cron服务，<code>service cron restart</code></p>
+<p>参考资料：</p>
 <ul>
-<li>查看CentOS的版本</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /proc/version</span></span><br><span class="line">Linux version 4.9.50-v7.1.el7 (mockbuild@armv7-03.dev.CentOS.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -a</span></span><br><span class="line">Linux CentOS-rpi3 4.9.50-v7.1.el7 <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017 armv7l armv7l armv7l GNU/Linux</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -r</span></span><br><span class="line">4.9.50-v7.1.el7</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /etc/redhat-release</span></span><br><span class="line">CentOS Linux release 7.4.1708 (Core)</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># getconf LONG_BIT</span></span><br><span class="line">32</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># file /bin/ls</span></span><br><span class="line">/bin/ls: ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), <span class="keyword">for</span> GNU/Linux 2.6.32, BuildID[sha1]=c591c4039d5eb3301eb8be1fa4ebaed8cd832240, stripped</span><br></pre></td></tr></table></figure>
-<h1 id="安装配置Samba"><a href="#安装配置Samba" class="headerlink" title="安装配置Samba"></a>安装配置Samba</h1><p>CentOS的共享比较麻烦具体下面介绍</p>
-<h2 id="安装Samba"><a href="#安装Samba" class="headerlink" title="安装Samba"></a>安装Samba</h2><p>先查看是否安装Samba</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep samba</span><br><span class="line">yum list installed | grep samba</span><br></pre></td></tr></table></figure>
-<p>如果已经安装那么可以跳过，如果没有正确安装可以先删除再重新安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 删除samba</span></span><br><span class="line">yum remove samba*</span><br></pre></td></tr></table></figure>
-<p>接着，连上网络，安装samba</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install samba* -y</span><br></pre></td></tr></table></figure>
-<h2 id="配置一个完全权限的共享目录"><a href="#配置一个完全权限的共享目录" class="headerlink" title="配置一个完全权限的共享目录"></a>配置一个完全权限的共享目录</h2><h3 id="查看windows的工作组"><a href="#查看windows的工作组" class="headerlink" title="查看windows的工作组"></a>查看windows的工作组</h3><p>打开win的cmd窗口，快捷键 win+r 然后输入 cmd<br>回车即可，并在窗口输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">net config workstation</span><br></pre></td></tr></table></figure>
-<p>找到 <code>Workstation domain</code> 一行，值应该是 <code>WORKGROUP</code> 下面配置Samba要用到</p>
-<h3 id="配置Samba"><a href="#配置Samba" class="headerlink" title="配置Samba"></a>配置Samba</h3><ul>
-<li>创建共享目录</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir -p /samba/anonymous</span><br><span class="line">chmod -R 0777 /samba/anonymous</span><br><span class="line">chown -R nobody:nobody /samba/anonymous</span><br></pre></td></tr></table></figure>
-<ul>
-<li>关掉防火墙和selinux</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld.service <span class="comment">#停止firewall</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service <span class="comment">#禁止firewall开机启动</span></span><br><span class="line"></span><br><span class="line">setenforce 0    <span class="comment"># 关闭selinux</span></span><br><span class="line">getenforce      <span class="comment"># 查看selinux的状态，应该是 Permissive</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 彻底禁用selinux 编辑配置文件</span></span><br><span class="line">vim /etc/sysconfig/selinux    </span><br><span class="line"><span class="comment"># 修改SELINUX</span></span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
-<p><em>如果防火墙不关闭，查看共享会出现连接失败；如果selinux不关闭，则无法看到共享目录的内容</em></p>
-<p><em>当然为了安全期间，可以对Samba的端口放行，设置selinux分享Samba的目录，大家可以参考其他博文</em></p>
-<ul>
-<li>备份配置文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp /etc/samba/smb.conf /etc/samba/smb.conf.bak</span><br></pre></td></tr></table></figure>
-<ul>
-<li>修改配置文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/samba/smb.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以把之前的内容注释掉，加入如下内容</span></span><br><span class="line">[global]</span><br><span class="line">        workgroup = WORKGROUP    <span class="comment"># 跟win的工作组同名</span></span><br><span class="line">        server string = Samba Server Version %v    <span class="comment"># 服务器描述</span></span><br><span class="line">        netbios name = CentOS    <span class="comment"># 共享服务器在网络上显示的名字</span></span><br><span class="line">        security = user    <span class="comment"># 使用 SAMBA 服务器本身的密码数据库</span></span><br><span class="line">    <span class="comment"># 将所有Samba系统主机所不能正确识别的用户都映射成guest用户</span></span><br><span class="line">        map to guest = bad user    </span><br><span class="line">        dns proxy = no</span><br><span class="line">        <span class="built_in">log</span> file = /var/<span class="built_in">log</span>/samba/<span class="built_in">log</span>.%m    <span class="comment"># 日志文件位置</span></span><br><span class="line">        max <span class="built_in">log</span> size = 50    <span class="comment"># 日志大小</span></span><br><span class="line"></span><br><span class="line">[Anonymous]</span><br><span class="line">        comment = Anonymous File Server Share</span><br><span class="line">        path = /samba/anonymous</span><br><span class="line">        browsable = yes    <span class="comment"># 让所有的用户看到这个项目</span></span><br><span class="line">        writable = yes    <span class="comment"># 是否可以写入</span></span><br><span class="line">        guest ok = yes    <span class="comment"># 是否允许guest账户访问</span></span><br><span class="line">        <span class="built_in">read</span> only = no    <span class="comment"># 是否只读，与wirtable类似，谁在后面听谁的</span></span><br></pre></td></tr></table></figure>
-<p><em>保存配置文件，并退出，到此一个完全共享的目录基本配置完毕</em></p>
-<h3 id="重启smaba"><a href="#重启smaba" class="headerlink" title="重启smaba"></a>重启smaba</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> smb.service    <span class="comment"># 加入开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nmb.service</span><br><span class="line">systemctl restart smb.service</span><br><span class="line">systemctl restart nmb.service</span><br></pre></td></tr></table></figure>
-<p><em>配置完成，可在其他系统查看共享目录和文件</em></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a href="https://lintut.com/easy-samba-installation-on-rhel-centos-7/" target="_blank" rel="noopener">Easy Samba installation on RHEL/CentOS7</a></li>
-<li><a href="https://www.unixmen.com/install-configure-samba-server-centos-7/" target="_blank" rel="noopener">Install And Configure Samba Server In CentOS7</a></li>
-<li><a href="http://billtym.blog.51cto.com/1745172/569551" target="_blank" rel="noopener">Samba常用配置及GUEST访问</a></li>
-<li><a href="https://wiki.centos.org/zh/HowTos/SetUpSamba" target="_blank" rel="noopener">设置 SAMBA</a></li>
-<li><a href="http://cn.linux.vbird.org/linux_server/0370samba_2.php" target="_blank" rel="noopener">鸟哥文件服务器</a></li>
+<li><p><a href="https://segmentfault.com/q/1010000002516428" target="_blank" rel="noopener">如何用crontab每隔1分钟执行一个命令行脚本</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/panyox/article/details/79157046" target="_blank" rel="noopener">ubuntu打开crontab日志及不执行常见原因</a></p>
+</li>
 </ul>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>samba</tag>
-        <tag>centos</tag>
+        <tag>cron</tag>
+        <tag>not work</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Mac系统Chrome Helper进程占用100%CPU</title>
+    <url>/2018/06/27/chrome-helper-high-cpu/</url>
+    <content><![CDATA[<p>前段时间在用Mac的时候突然风扇狂转，一会温度就起来了。觉得很奇怪没有看视频，玩游戏，就是浏览网页，找到系统监视器查看，发现 <code>Google Chrome Helper</code> 的CPU占用率达到120%，谷歌以后找到解决方法。</p>
+<p>解决方法如下：</p>
+<p><a href="https://apple.stackexchange.com/questions/272000/how-to-make-google-chrome-helper-not-use-as-much-cpu" target="_blank" rel="noopener">原文地址</a></p>
+<blockquote>
+<p>Invoke ⋮ Chrome Menu → More Tools → Task Manager to see what exactly consumes CPU. Because the helper is a black box from the OS’ side of view. I personally found a mining extension that way.</p>
+</blockquote>
+<p><em>一般是插件的问题，不过我遇到有一次居然是百度贴吧网页出现100%占用，找到占用资源的插件网页关掉即可。</em></p>
+<a id="more"></a>
+<p><strong>网络还有一种方法已经过时，我刚开始就是按照那种方法，把我的chrome改成英文的也没找到设置的地方，这里也写出来避免走弯路。</strong></p>
+<blockquote>
+<p>Chrome menu → “Preferences” → “Show advanced settings…” → “Privacy” → “Content Settings” → “Plug-ins” → “Click to play.”</p>
+</blockquote>
+<p><a href="https://www.wired.com/2014/10/google-chrome-helper/" target="_blank" rel="noopener">原文地址</a></p>
+<p>我当时查看的时候居然忘记看文章时间是 <code>2014</code> 年。</p>
+]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>Chrome Helper</tag>
       </tags>
   </entry>
   <entry>
@@ -547,32 +601,6 @@
         <tag>Windows</tag>
         <tag>chrome developer</tag>
         <tag>disable</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决Mac系统Chrome Helper进程占用100%CPU</title>
-    <url>/2018/06/27/chrome-helper-high-cpu/</url>
-    <content><![CDATA[<p>前段时间在用Mac的时候突然风扇狂转，一会温度就起来了。觉得很奇怪没有看视频，玩游戏，就是浏览网页，找到系统监视器查看，发现 <code>Google Chrome Helper</code> 的CPU占用率达到120%，谷歌以后找到解决方法。</p>
-<p>解决方法如下：</p>
-<p><a href="https://apple.stackexchange.com/questions/272000/how-to-make-google-chrome-helper-not-use-as-much-cpu" target="_blank" rel="noopener">原文地址</a></p>
-<blockquote>
-<p>Invoke ⋮ Chrome Menu → More Tools → Task Manager to see what exactly consumes CPU. Because the helper is a black box from the OS’ side of view. I personally found a mining extension that way.</p>
-</blockquote>
-<p><em>一般是插件的问题，不过我遇到有一次居然是百度贴吧网页出现100%占用，找到占用资源的插件网页关掉即可。</em></p>
-<a id="more"></a>
-<p><strong>网络还有一种方法已经过时，我刚开始就是按照那种方法，把我的chrome改成英文的也没找到设置的地方，这里也写出来避免走弯路。</strong></p>
-<blockquote>
-<p>Chrome menu → “Preferences” → “Show advanced settings…” → “Privacy” → “Content Settings” → “Plug-ins” → “Click to play.”</p>
-</blockquote>
-<p><a href="https://www.wired.com/2014/10/google-chrome-helper/" target="_blank" rel="noopener">原文地址</a></p>
-<p>我当时查看的时候居然忘记看文章时间是 <code>2014</code> 年。</p>
-]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
-        <tag>Chrome Helper</tag>
       </tags>
   </entry>
   <entry>
@@ -661,69 +689,6 @@
       </tags>
   </entry>
   <entry>
-    <title>禁止Vim换行自动添加注释符号</title>
-    <url>/2016/10/08/disable-vim-auto-comment/</url>
-    <content><![CDATA[<p>在用vim编写程序的时候换行后总会自动添加注释符号，所以就上网搜索如何去掉vim中换行后自动添加的注释符号。</p>
-<p>找了很多终于有个靠谱的，地址为：<a href="http://stackoverflow.com/a/23326474" target="_blank" rel="noopener">http://stackoverflow.com/a/23326474</a> </p>
-<p><em>总觉得自己遇到的问题都特别奇葩。</em></p>
-<p>具体操作方法就是在vimrc文件中加入如下命令即可</p>
-<a id="more"></a>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="keyword">augroup</span> Format-Options</span><br><span class="line">    autocmd!</span><br><span class="line">    <span class="keyword">autocmd</span> BufEnter * <span class="keyword">setlocal</span> formatoptions-=<span class="keyword">c</span> formatoptions-=r formatoptions-=<span class="keyword">o</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">" This can be done as well instead of the previous line, for setting formatoptions as you choose:</span></span><br><span class="line">    <span class="keyword">autocmd</span> BufEnter * <span class="keyword">setlocal</span> formatoptions=crqn2l1j</span><br><span class="line"><span class="keyword">augroup</span> END</span><br></pre></td></tr></table></figure>
-<p>网络很多直接设置的方法在我这里都没有用，我的vim版本是7.4，而且我两台电脑上都不起作用。有时候找个靠谱的方法太难了。</p>
-]]></content>
-      <categories>
-        <category>Editor</category>
-      </categories>
-      <tags>
-        <tag>Vim</tag>
-        <tag>comment</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记一次视频下载过程1</title>
-    <url>/2019/08/31/download-the-m3u8-1/</url>
-    <content><![CDATA[<p>在一个网站看视频的时候，感觉视频缓冲太慢，而且快进容易被卡死。然后就想把视频下载下来。还是和以前一样，通过开发者工具看了看视频传输的数据。原以为会找到一个mp4文件直接下载，谁知道全是一段一段的ts文件，这是什么时候出现的变态技术，我也是多长时间没有下载视频了。</p>
-<p>更变态的是ts文件只有几兆大小，而且下载下来以后还无法观看，后面知道因为加密的原因。<strong>这里先说结论：我没有搞定ts的解密</strong>。所以这篇文章可能没有你想看的。</p>
-<a id="more"></a>
-<p>这里记录在下载视频过程中遇到的一些问题。</p>
-<h2 id="python获得网址状态"><a href="#python获得网址状态" class="headerlink" title="python获得网址状态"></a>python获得网址状态</h2><p>需求是为了查看网址是否能够访问。方法摘自 <a href="https://stackoverflow.com/a/13641613" target="_blank" rel="noopener">https://stackoverflow.com/a/13641613</a></p>
-<p>具体如下：</p>
-<ol>
-<li><p>首先你要安装 <code>requests</code> 包，当然后面要用的。</p>
-</li>
-<li><p>代码实现如下</p>
- <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    r = requests.head(<span class="string">"https://stackoverflow.com"</span>)</span><br><span class="line">    print(r.status_code)</span><br><span class="line">    <span class="comment"># prints the int of the status code. Find more at httpstatusrappers.com :)</span></span><br><span class="line"><span class="keyword">except</span> requests.ConnectionError:</span><br><span class="line">    print(<span class="string">"failed to connect"</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>其他具体的用法可查看 <a href="https://2.python-requests.org//en/latest/" target="_blank" rel="noopener">requests library</a></p>
-<h2 id="python捕获所有的异常"><a href="#python捕获所有的异常" class="headerlink" title="python捕获所有的异常"></a>python捕获所有的异常</h2><p>具体查看 <a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/c14/p07_catching_all_exceptions.html" target="_blank" rel="noopener">捕获所有异常</a></p>
-<p>代码如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下面的代码会捕获除了 SystemExit 、 KeyboardInterrupt 和 GeneratorExit 之外的所有异常</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   ...</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">   ...</span><br><span class="line">   log(<span class="string">'Reason:'</span>, e)       <span class="comment"># Important!</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果你还想捕获这三个异常，将 Exception 改成 BaseException 即可。</span></span><br></pre></td></tr></table></figure>
-<h2 id="命令行下载"><a href="#命令行下载" class="headerlink" title="命令行下载"></a>命令行下载</h2><p>因为视频被切分几千段，然后我下载的时候用的是树莓派，所以要使用命令行下载。刚开始用的<code>wget</code>，后来感觉<code>aria2c</code>也是挺不错的，当然链接都是https的。</p>
-<ul>
-<li><p>wget下载</p>
-<p>  wget使用命令 <code>wget -i url.txt</code> 来下载多个链接。开始我就是使用这种方式，但是下载速度很慢，只能一个一个下载，不能同时进行多个。</p>
-<p>  然后在网络上寻找一次下载多个的方法，具体的问答可以查看 <a href="https://stackoverflow.com/a/25064491" target="_blank" rel="noopener">Parallel downloading</a></p>
-<p>  这里我只记录一个比较简单的方法：<code>cat urls.txt | xargs -n 1 -P 5 wget</code> 或者 <code>cat urls.txt | parallel -j 5 wget</code> 这里面的选项 <code>-P</code> 和 <code>-j</code> 后面的5是你想同时进行几个任务。</p>
-</li>
-<li><p>aria2c</p>
-<p>  这个就比较简单了，先安装 <code>sudo apt install aria2c</code> 然后使用 <code>aria2c -i url.txt</code>即可。</p>
-<p>  具体可参考 <a href="sudo apt install aria2c">aria2c library</a></p>
-</li>
-</ul>
-<h2 id="部署博客时出现xcrun-error"><a href="#部署博客时出现xcrun-error" class="headerlink" title="部署博客时出现xcrun: error"></a>部署博客时出现xcrun: error</h2><p>今天这篇博客的时候出现了<code>xcrun: error: missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</code>的错误，搜索以后发现是更新系统引起的。这个错误在执行<code>git --version</code>也会出现。</p>
-<p>解决方法：命令行执行 <code>xcode-select --install</code> 然后重新安装xcode command line。</p>
-<p>参考博客：<a href="https://www.jianshu.com/p/50b6771eb853" target="_blank" rel="noopener">解决MacOS升级后出现xcrun: error: invalid active developer path, missing xcrun的问题</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>m3u8</tag>
-        <tag>requests</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记一次视频下载过程2</title>
     <url>/2019/09/02/download-the-m3u8-2/</url>
     <content><![CDATA[<p>这篇文章基本跟视频下载没啥关系了，主要是一些环境的配置和编辑软件的使用。不想每个单写了，所以就写在一起，省点地方。</p>
@@ -778,24 +743,47 @@
       </tags>
   </entry>
   <entry>
-    <title>如何避免Emacs破坏文件的硬链接</title>
-    <url>/2017/04/19/emacs-broken-hard-link/</url>
-    <content><![CDATA[<p>使用了markdown以后感觉不错，能够全心放在写作内容上面，不过用了一段时间以后开始发愁编辑器的问题，在网络搜索的过程中进入了org-mode的坑，配上emacs，用着很爽，也不会发愁注册啦，版权之类的问题。所以就开始使用org-mode进行文字记录。</p>
-<p>问题的出现是在写博客的过程中，在blog目录下写完一篇文章后我会把文件硬链接到post目录下，这样呢如果文章预览解析有问题需要更改，那么留在blog目录下的文章也会随之改变，保证两边的文章是一样的。</p>
+    <title>记一次视频下载过程1</title>
+    <url>/2019/08/31/download-the-m3u8-1/</url>
+    <content><![CDATA[<p>在一个网站看视频的时候，感觉视频缓冲太慢，而且快进容易被卡死。然后就想把视频下载下来。还是和以前一样，通过开发者工具看了看视频传输的数据。原以为会找到一个mp4文件直接下载，谁知道全是一段一段的ts文件，这是什么时候出现的变态技术，我也是多长时间没有下载视频了。</p>
+<p>更变态的是ts文件只有几兆大小，而且下载下来以后还无法观看，后面知道因为加密的原因。<strong>这里先说结论：我没有搞定ts的解密</strong>。所以这篇文章可能没有你想看的。</p>
 <a id="more"></a>
-<p>原来用vim的时候一直样做，改成emacs也没多想，但是发现问题了，建立文件硬链接以后都正常，但是用emacs打开其中一个文件更改保存后，发现两个文件的<br><code>inode</code> 不同了，感觉就像emacs自动创建了一个副本。</p>
-<p>解决的方法就是在你的配置文件里面加入如下配置：</p>
-<p><code>(setq backup-by-copying t)</code></p>
-<p>如果你只想在链接的时候用这个配置，请使用下面的代码：</p>
-<p><code>(setq backup-by-copying-when-linked t)</code></p>
-<p>具体的详细介绍可查看 <a href="https://emacs.stackexchange.com/questions/4237/how-to-prevent-emacs-from-breaking-hard-links/4240#4240" target="_blank" rel="noopener">How to prevent Emacs from breaking hard links?</a></p>
+<p>这里记录在下载视频过程中遇到的一些问题。</p>
+<h2 id="python获得网址状态"><a href="#python获得网址状态" class="headerlink" title="python获得网址状态"></a>python获得网址状态</h2><p>需求是为了查看网址是否能够访问。方法摘自 <a href="https://stackoverflow.com/a/13641613" target="_blank" rel="noopener">https://stackoverflow.com/a/13641613</a></p>
+<p>具体如下：</p>
+<ol>
+<li><p>首先你要安装 <code>requests</code> 包，当然后面要用的。</p>
+</li>
+<li><p>代码实现如下</p>
+ <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    r = requests.head(<span class="string">"https://stackoverflow.com"</span>)</span><br><span class="line">    print(r.status_code)</span><br><span class="line">    <span class="comment"># prints the int of the status code. Find more at httpstatusrappers.com :)</span></span><br><span class="line"><span class="keyword">except</span> requests.ConnectionError:</span><br><span class="line">    print(<span class="string">"failed to connect"</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>其他具体的用法可查看 <a href="https://2.python-requests.org//en/latest/" target="_blank" rel="noopener">requests library</a></p>
+<h2 id="python捕获所有的异常"><a href="#python捕获所有的异常" class="headerlink" title="python捕获所有的异常"></a>python捕获所有的异常</h2><p>具体查看 <a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/c14/p07_catching_all_exceptions.html" target="_blank" rel="noopener">捕获所有异常</a></p>
+<p>代码如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下面的代码会捕获除了 SystemExit 、 KeyboardInterrupt 和 GeneratorExit 之外的所有异常</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">   ...</span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">   ...</span><br><span class="line">   log(<span class="string">'Reason:'</span>, e)       <span class="comment"># Important!</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果你还想捕获这三个异常，将 Exception 改成 BaseException 即可。</span></span><br></pre></td></tr></table></figure>
+<h2 id="命令行下载"><a href="#命令行下载" class="headerlink" title="命令行下载"></a>命令行下载</h2><p>因为视频被切分几千段，然后我下载的时候用的是树莓派，所以要使用命令行下载。刚开始用的<code>wget</code>，后来感觉<code>aria2c</code>也是挺不错的，当然链接都是https的。</p>
+<ul>
+<li><p>wget下载</p>
+<p>  wget使用命令 <code>wget -i url.txt</code> 来下载多个链接。开始我就是使用这种方式，但是下载速度很慢，只能一个一个下载，不能同时进行多个。</p>
+<p>  然后在网络上寻找一次下载多个的方法，具体的问答可以查看 <a href="https://stackoverflow.com/a/25064491" target="_blank" rel="noopener">Parallel downloading</a></p>
+<p>  这里我只记录一个比较简单的方法：<code>cat urls.txt | xargs -n 1 -P 5 wget</code> 或者 <code>cat urls.txt | parallel -j 5 wget</code> 这里面的选项 <code>-P</code> 和 <code>-j</code> 后面的5是你想同时进行几个任务。</p>
+</li>
+<li><p>aria2c</p>
+<p>  这个就比较简单了，先安装 <code>sudo apt install aria2c</code> 然后使用 <code>aria2c -i url.txt</code>即可。</p>
+<p>  具体可参考 <a href="sudo apt install aria2c">aria2c library</a></p>
+</li>
+</ul>
+<h2 id="部署博客时出现xcrun-error"><a href="#部署博客时出现xcrun-error" class="headerlink" title="部署博客时出现xcrun: error"></a>部署博客时出现xcrun: error</h2><p>今天这篇博客的时候出现了<code>xcrun: error: missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</code>的错误，搜索以后发现是更新系统引起的。这个错误在执行<code>git --version</code>也会出现。</p>
+<p>解决方法：命令行执行 <code>xcode-select --install</code> 然后重新安装xcode command line。</p>
+<p>参考博客：<a href="https://www.jianshu.com/p/50b6771eb853" target="_blank" rel="noopener">解决MacOS升级后出现xcrun: error: invalid active developer path, missing xcrun的问题</a></p>
 ]]></content>
       <categories>
-        <category>Editor</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>Emacs</tag>
-        <tag>hard link</tag>
+        <tag>m3u8</tag>
+        <tag>requests</tag>
       </tags>
   </entry>
   <entry>
@@ -1350,6 +1338,27 @@
       </tags>
   </entry>
   <entry>
+    <title>如何避免Emacs破坏文件的硬链接</title>
+    <url>/2017/04/19/emacs-broken-hard-link/</url>
+    <content><![CDATA[<p>使用了markdown以后感觉不错，能够全心放在写作内容上面，不过用了一段时间以后开始发愁编辑器的问题，在网络搜索的过程中进入了org-mode的坑，配上emacs，用着很爽，也不会发愁注册啦，版权之类的问题。所以就开始使用org-mode进行文字记录。</p>
+<p>问题的出现是在写博客的过程中，在blog目录下写完一篇文章后我会把文件硬链接到post目录下，这样呢如果文章预览解析有问题需要更改，那么留在blog目录下的文章也会随之改变，保证两边的文章是一样的。</p>
+<a id="more"></a>
+<p>原来用vim的时候一直样做，改成emacs也没多想，但是发现问题了，建立文件硬链接以后都正常，但是用emacs打开其中一个文件更改保存后，发现两个文件的<br><code>inode</code> 不同了，感觉就像emacs自动创建了一个副本。</p>
+<p>解决的方法就是在你的配置文件里面加入如下配置：</p>
+<p><code>(setq backup-by-copying t)</code></p>
+<p>如果你只想在链接的时候用这个配置，请使用下面的代码：</p>
+<p><code>(setq backup-by-copying-when-linked t)</code></p>
+<p>具体的详细介绍可查看 <a href="https://emacs.stackexchange.com/questions/4237/how-to-prevent-emacs-from-breaking-hard-links/4240#4240" target="_blank" rel="noopener">How to prevent Emacs from breaking hard links?</a></p>
+]]></content>
+      <categories>
+        <category>Editor</category>
+      </categories>
+      <tags>
+        <tag>Emacs</tag>
+        <tag>hard link</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Fedora28配置记录1——基本配置</title>
     <url>/2018/07/07/fedora28-config-1/</url>
     <content><![CDATA[<p>从使用manjaro以后感觉对中文的支持不是太好以后，就想换一个发行版，然后想到了fedora。</p>
@@ -1420,6 +1429,73 @@
       </tags>
   </entry>
   <entry>
+    <title>禁止Vim换行自动添加注释符号</title>
+    <url>/2016/10/08/disable-vim-auto-comment/</url>
+    <content><![CDATA[<p>在用vim编写程序的时候换行后总会自动添加注释符号，所以就上网搜索如何去掉vim中换行后自动添加的注释符号。</p>
+<p>找了很多终于有个靠谱的，地址为：<a href="http://stackoverflow.com/a/23326474" target="_blank" rel="noopener">http://stackoverflow.com/a/23326474</a> </p>
+<p><em>总觉得自己遇到的问题都特别奇葩。</em></p>
+<p>具体操作方法就是在vimrc文件中加入如下命令即可</p>
+<a id="more"></a>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line"><span class="keyword">augroup</span> Format-Options</span><br><span class="line">    autocmd!</span><br><span class="line">    <span class="keyword">autocmd</span> BufEnter * <span class="keyword">setlocal</span> formatoptions-=<span class="keyword">c</span> formatoptions-=r formatoptions-=<span class="keyword">o</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">" This can be done as well instead of the previous line, for setting formatoptions as you choose:</span></span><br><span class="line">    <span class="keyword">autocmd</span> BufEnter * <span class="keyword">setlocal</span> formatoptions=crqn2l1j</span><br><span class="line"><span class="keyword">augroup</span> END</span><br></pre></td></tr></table></figure>
+<p>网络很多直接设置的方法在我这里都没有用，我的vim版本是7.4，而且我两台电脑上都不起作用。有时候找个靠谱的方法太难了。</p>
+]]></content>
+      <categories>
+        <category>Editor</category>
+      </categories>
+      <tags>
+        <tag>Vim</tag>
+        <tag>comment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Fedora28去掉Chrome/Opera浏览器的默认密钥环</title>
+    <url>/2018/07/18/fedora28-erase-default-keyring/</url>
+    <content><![CDATA[<p><strong>安装浏览器的时候弹出的设置默认密钥，建议大家不要设置，不过既然你看到这篇文章估计已经晚了。</strong></p>
+<p>那么解决方法如下：</p>
+<p>打开终端 执行命令 <code>seahorse</code> 在弹出的窗口中右键点击默认密钥环，然后选择更改密码，输入之前设置的密码，新密码置空，确认即可。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>fedora</tag>
+        <tag>keyring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>macOS下git忽略.DS_Store文件</title>
+    <url>/2018/12/19/git-ignore-config/</url>
+    <content><![CDATA[<p>平时用git不是太多，一般就是保存一下配置文件和博文，所以有时候在提交的时候就把一些macOS的隐藏文件删除以后再跟踪提交。不过随着使用频率增加了一点点（主要是强迫自己每周写一些内容，不知能否坚持），然后觉得每次这样做就太浪费人力了。</p>
+<p>然后就在项目中写了个<code>.gitignore</code>文件，不过这个文件管理的范围太小，只能管本层目录，子目录下面的就无能为力，而且每个项目都要有一个（之前不知道还有全部忽略这种玩意-_-!)，然后在网络上找到添加全局忽略的方法，具体操作如下：</p>
+<a id="more"></a>
+<ol>
+<li><p>在你的<code>home</code>目录下面建立<code>.gitignore_global</code>文件，内容如下：</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># .gitignore_global</span></span><br><span class="line"></span><br><span class="line">.DS_Store</span><br><span class="line">.DS_Store?</span><br><span class="line">*.swp</span><br><span class="line">._*</span><br><span class="line">.Spotlight-V100</span><br><span class="line">.Trashes</span><br></pre></td></tr></table></figure>
+<p> <em>如果大家需要忽略更多的文件，可以直接写入即可。</em></p>
+</li>
+<li><p>然后在你的<code>home</code>目录下的<code>.gitconfig</code>文件中引入上面的<code>.igtignore_global</code>文件。</p>
+<p> <strong>注意：</strong> 如果目录下面找不到<code>.gitconfig</code>配置文件，可能你还没有配置git，可以执行如下命令</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span>    <span class="comment"># xxx 是你的用户名</span></span><br><span class="line">git config --global user.email <span class="string">"xxx@xx"</span>  <span class="comment"># xxx@xx 是你的邮箱地址</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>.gitconfig</code>里面加入内容如下：</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[user]</span><br><span class="line">    name = aoenian</span><br><span class="line">    email = aoenian@zoho.com.cn</span><br><span class="line">[core]</span><br><span class="line">    excludesfile = /Users/aoenian/.gitignore_global</span><br></pre></td></tr></table></figure>
+<p> <em>里面的home目录的名字要替换成你自己的</em></p>
+</li>
+</ol>
+<p>参考博客：</p>
+<ul>
+<li><a href="https://www.jianshu.com/p/9386124cb5b5" target="_blank" rel="noopener">https://www.jianshu.com/p/9386124cb5b5</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>macOS</category>
+      </categories>
+      <tags>
+        <tag>.DS_Store</tag>
+        <tag>gitignore</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Fedora28配置记录2——系统美化</title>
     <url>/2018/07/14/fedora28-config-2/</url>
     <content><![CDATA[<p>接上篇，搞定输入法然后想把系统整得好看一点。</p>
@@ -1486,21 +1562,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Fedora28去掉Chrome/Opera浏览器的默认密钥环</title>
-    <url>/2018/07/18/fedora28-erase-default-keyring/</url>
-    <content><![CDATA[<p><strong>安装浏览器的时候弹出的设置默认密钥，建议大家不要设置，不过既然你看到这篇文章估计已经晚了。</strong></p>
-<p>那么解决方法如下：</p>
-<p>打开终端 执行命令 <code>seahorse</code> 在弹出的窗口中右键点击默认密钥环，然后选择更改密码，输入之前设置的密码，新密码置空，确认即可。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>fedora</tag>
-        <tag>keyring</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>FFmpeg剪切连接音视频</title>
     <url>/2018/05/26/ffmpeg-concat-video/</url>
     <content><![CDATA[<p>这几天需要处理一下视频，开始以为就是简单的剪切和连接，没想到耗费了很多时间，现在把使用过的方法总结出来，以后就不用重复寻找。</p>
@@ -1552,39 +1613,6 @@
       </categories>
       <tags>
         <tag>concat video</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>macOS下git忽略.DS_Store文件</title>
-    <url>/2018/12/19/git-ignore-config/</url>
-    <content><![CDATA[<p>平时用git不是太多，一般就是保存一下配置文件和博文，所以有时候在提交的时候就把一些macOS的隐藏文件删除以后再跟踪提交。不过随着使用频率增加了一点点（主要是强迫自己每周写一些内容，不知能否坚持），然后觉得每次这样做就太浪费人力了。</p>
-<p>然后就在项目中写了个<code>.gitignore</code>文件，不过这个文件管理的范围太小，只能管本层目录，子目录下面的就无能为力，而且每个项目都要有一个（之前不知道还有全部忽略这种玩意-_-!)，然后在网络上找到添加全局忽略的方法，具体操作如下：</p>
-<a id="more"></a>
-<ol>
-<li><p>在你的<code>home</code>目录下面建立<code>.gitignore_global</code>文件，内容如下：</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># .gitignore_global</span></span><br><span class="line"></span><br><span class="line">.DS_Store</span><br><span class="line">.DS_Store?</span><br><span class="line">*.swp</span><br><span class="line">._*</span><br><span class="line">.Spotlight-V100</span><br><span class="line">.Trashes</span><br></pre></td></tr></table></figure>
-<p> <em>如果大家需要忽略更多的文件，可以直接写入即可。</em></p>
-</li>
-<li><p>然后在你的<code>home</code>目录下的<code>.gitconfig</code>文件中引入上面的<code>.igtignore_global</code>文件。</p>
-<p> <strong>注意：</strong> 如果目录下面找不到<code>.gitconfig</code>配置文件，可能你还没有配置git，可以执行如下命令</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxx"</span>    <span class="comment"># xxx 是你的用户名</span></span><br><span class="line">git config --global user.email <span class="string">"xxx@xx"</span>  <span class="comment"># xxx@xx 是你的邮箱地址</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在<code>.gitconfig</code>里面加入内容如下：</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[user]</span><br><span class="line">    name = aoenian</span><br><span class="line">    email = aoenian@zoho.com.cn</span><br><span class="line">[core]</span><br><span class="line">    excludesfile = /Users/aoenian/.gitignore_global</span><br></pre></td></tr></table></figure>
-<p> <em>里面的home目录的名字要替换成你自己的</em></p>
-</li>
-</ol>
-<p>参考博客：</p>
-<ul>
-<li><a href="https://www.jianshu.com/p/9386124cb5b5" target="_blank" rel="noopener">https://www.jianshu.com/p/9386124cb5b5</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>macOS</category>
-      </categories>
-      <tags>
-        <tag>.DS_Store</tag>
-        <tag>gitignore</tag>
       </tags>
   </entry>
   <entry>
@@ -1746,47 +1774,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo和Pages博客阅读文章出现404页面</title>
-    <url>/2016/08/08/hexo-404-error/</url>
-    <content><![CDATA[<p>这几天在看博客的时候突然发现自己的文章在首页显示，但是点击标题或者继续阅读以后直接出现404页面，第一反应就是被防火墙干扰了，然后赶紧试试代理，发现还是这样，这时候发现问题没那么简单了。</p>
-<p>然后用hexo s 测试本地的访问情况，却发现是没有问题的。不过重新部署以后依然404.</p>
-<a id="more"></a>
-<p>回忆出现问题前的改动：<em>只有一个地方，我把post目录里面文章的文件名改动了(大家千万别学我)</em>，但是删除缓存以后，使用hexo s 命令以后发现没有问题。这时候才部署到github，不过在pages中显示还是有问题。</p>
-<h2 id="尝试过的解决方法"><a href="#尝试过的解决方法" class="headerlink" title="尝试过的解决方法"></a>尝试过的解决方法</h2><ul>
-<li>改回原来的名字，失败</li>
-<li>删除<code>&lt;!-- more --&gt;</code>，首页成功显示，点击文章标题访问失败</li>
-<li>新建一个测试页面成功，排除了hexo本身的问题，看来需要用命令重建文章</li>
-<li>用 new 命令重建同名文章，然后把内容复制过去。同样失败。</li>
-</ul>
-<h2 id="最后的大招"><a href="#最后的大招" class="headerlink" title="最后的大招"></a>最后的大招</h2><p>后来想想既然不行，那就全部重新来一遍，把所有的文章全部移出去，删除缓存，重新生成（这时候已经没有文章了），重新部署。部署的时候看到提示删除了所有的文章的网页。我估计这时候就把所有之前出错的网页和链接全部删除了。</p>
-<p><strong>然后重新使用命令新建文章，再把内容复制过来，部署测试，OK！！</strong></p>
-<p>update:2016-8-14</p>
-<p><em>经测试，直接把md文件放入_post目录内也是可以识别并正常部署到githubPages，所以之前的处理可以把所有的文章全部移出，然后重新生成静态文件后部署，这时候会把之前的一些失效链接删掉，然后把文章移进post目录，生成、部署即可。（理论推测）</em></p>
-]]></content>
-      <categories>
-        <category>Net</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>404</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>惠普Pavilion笔记本安装Windows7</title>
-    <url>/2018/08/05/hp-pavilion-install-win7/</url>
-    <content><![CDATA[<p><strong>注意：惠普的Pavilion系列的CPU可能Win7不支持，触摸屏Win7也不支持，还有就是笔记本的功能按键可能也不行，如果Win7不是必需，建议安装Win10系统。</strong></p>
-<p>如果一定需要安装Win7则需要更改BIOS，不然系统安装完成重启依然无法进入Win7系统。</p>
-<p>操作方法： 开机按F10进入BIOS-系统设置-启动选项-安全启动模式  把安全启动模式禁用。</p>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Win7</tag>
-        <tag>pavilion</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>树莓派安装ffmpeg（主要用于you-get下载视频的合并）</title>
     <url>/2016/12/01/install-ffmpeg-on-rasp/</url>
     <content><![CDATA[<p>买了树莓派本来准备用来下BT，可谁知道国内除了迅雷，其他的下载软件的速度实在没办法看，所以平时下载大部分用you-get，还是挺好用的。</p>
@@ -1815,37 +1802,18 @@
       </tags>
   </entry>
   <entry>
-    <title>用U盘安装macOS High Sierra</title>
-    <url>/2019/03/16/install-macos/</url>
-    <content><![CDATA[<p>手边有一台10年的macbookpro，配置还行，不过由于安装了windows系统，驱动可能有问题，一直没有声音，触摸板也很奇怪，然后准备重新装回macOS。</p>
-<h1 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h1><h2 id="联网自动安装"><a href="#联网自动安装" class="headerlink" title="联网自动安装"></a>联网自动安装</h2><p>这个是最先想到的方法，因为现在用的mba就是这样重装的，只要连上网络，干会儿其他的事情，等会回来崭新的系统就在迎接你了，不得不说苹果公司在软硬件的结合方面真的很厉害。让人越用越懒，用了以后基本就没再手动装过系统了。</p>
-<p><strong>但是重点来了</strong>，由于笔记本的年龄太大了，直接开机<code>Command+R</code>找到重新安装macOS，谁知道自动恢复的系统是<code>OS X Mountain Lion</code>，直接提示<strong>已经下架</strong>，网络上找了解决的方法，说是中国区下架了，把appleID更改为国外即可，<em>经测试更改为美国依然无法自动安装。</em></p>
-<a id="more"></a>
-<p>这条路堵死了。这里是官方的文档：<a href="https://support.apple.com/zh-cn/HT201314" target="_blank" rel="noopener">关于 macOS 恢复功能</a></p>
-<h2 id="手动U盘安装"><a href="#手动U盘安装" class="headerlink" title="手动U盘安装"></a>手动U盘安装</h2><p>参考官方文档：<a href="https://support.apple.com/zh-cn/HT201372" target="_blank" rel="noopener">如何创建可引导的 macOS 安装器</a></p>
-<p>这里需要注意，制作启动U盘需要另外一个可以启动的mac电脑。</p>
-<p>具体操作如下：</p>
-<ol>
-<li><p>下载macOS，其实就是在appstore里面下载相应的操作系统，建议使用新的系统。<a href="https://itunes.apple.com/cn/app/macos-mojave/id1398502828?mt=12" target="_blank" rel="noopener">macOS Mojave</a> 和 <a href="https://itunes.apple.com/cn/app/macos-high-sierra/id1246284741?ls=1&amp;mt=12" target="_blank" rel="noopener">macOS High Sierra</a> 下载完成后会出现在系统的应用程序里面类似 <code>Install macOS Mojave</code>，这个就是安装器，如果安装器自动打开，退出即可无须安装。</p>
-</li>
-<li><p>插上U盘（数据自行备份，等会制作的时候就没了），找到<strong>磁盘管理</strong>程序，打开以后找到U盘，点击抹去，格式选择<strong>Mac OS 扩展格式</strong>，并把U盘驱动器的卷宗名称设定为<code>MyVolume</code>。</p>
-</li>
-<li><p>打开<strong>终端</strong>，然后根据你下载的系统，执行如下命令：</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Mojave:</span></span><br><span class="line">sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</span><br><span class="line"></span><br><span class="line"><span class="comment"># High Sierra:</span></span><br><span class="line">sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sierra</span></span><br><span class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume --applicationpath /Applications/Install\ macOS\ Sierra.app</span><br></pre></td></tr></table></figure>
-<p> 回车后输入管理员密码，然后再次回车，输入<code>Y</code>确认制作启动盘，然后就是等待完成。</p>
-</li>
-<li><p>把制作好的U盘插入待安装的mac上，然后重启电脑，立即按着<code>Option</code>进入启动磁盘选择的界面，选择你的U盘安装器，然后回车启动。</p>
-</li>
-<li><p>这时会进入macOS恢复模式，直接选择<strong>安装macOS</strong>即可安装系统。这里建议先不用连接互联网，直接安装即可。</p>
-</li>
-</ol>
+    <title>惠普Pavilion笔记本安装Windows7</title>
+    <url>/2018/08/05/hp-pavilion-install-win7/</url>
+    <content><![CDATA[<p><strong>注意：惠普的Pavilion系列的CPU可能Win7不支持，触摸屏Win7也不支持，还有就是笔记本的功能按键可能也不行，如果Win7不是必需，建议安装Win10系统。</strong></p>
+<p>如果一定需要安装Win7则需要更改BIOS，不然系统安装完成重启依然无法进入Win7系统。</p>
+<p>操作方法： 开机按F10进入BIOS-系统设置-启动选项-安全启动模式  把安全启动模式禁用。</p>
 ]]></content>
       <categories>
-        <category>macOS</category>
+        <category>Windows</category>
       </categories>
       <tags>
-        <tag>Sierra</tag>
-        <tag>install</tag>
+        <tag>Win7</tag>
+        <tag>pavilion</tag>
       </tags>
   </entry>
   <entry>
@@ -1914,37 +1882,37 @@
       </tags>
   </entry>
   <entry>
-    <title>安装Windows操作系统工具汇总</title>
-    <url>/2019/09/26/install-windows/</url>
-    <content><![CDATA[<p>记录自己安装操作系统过程中使用过的感觉还不错的软件。</p>
-<h2 id="PE推荐"><a href="#PE推荐" class="headerlink" title="PE推荐"></a>PE推荐</h2><p>现在安装操作系统一般都不用刻录光盘了，直接U盘安装所以PE软件是需要的。这里推荐两个比较好用的。</p>
+    <title>用U盘安装macOS High Sierra</title>
+    <url>/2019/03/16/install-macos/</url>
+    <content><![CDATA[<p>手边有一台10年的macbookpro，配置还行，不过由于安装了windows系统，驱动可能有问题，一直没有声音，触摸板也很奇怪，然后准备重新装回macOS。</p>
+<h1 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h1><h2 id="联网自动安装"><a href="#联网自动安装" class="headerlink" title="联网自动安装"></a>联网自动安装</h2><p>这个是最先想到的方法，因为现在用的mba就是这样重装的，只要连上网络，干会儿其他的事情，等会回来崭新的系统就在迎接你了，不得不说苹果公司在软硬件的结合方面真的很厉害。让人越用越懒，用了以后基本就没再手动装过系统了。</p>
+<p><strong>但是重点来了</strong>，由于笔记本的年龄太大了，直接开机<code>Command+R</code>找到重新安装macOS，谁知道自动恢复的系统是<code>OS X Mountain Lion</code>，直接提示<strong>已经下架</strong>，网络上找了解决的方法，说是中国区下架了，把appleID更改为国外即可，<em>经测试更改为美国依然无法自动安装。</em></p>
 <a id="more"></a>
-<ul>
-<li><p><a href="https://www.itsk.com/thread-401184-1-1.html" target="_blank" rel="noopener">优启通</a> 推荐这个，安装Windows很快，如果出现<strong>使用其他标明64位的安装光盘</strong>，请看<a href="https://aoenian.github.io/2019/02/13/install-win10/">这里</a></p>
+<p>这条路堵死了。这里是官方的文档：<a href="https://support.apple.com/zh-cn/HT201314" target="_blank" rel="noopener">关于 macOS 恢复功能</a></p>
+<h2 id="手动U盘安装"><a href="#手动U盘安装" class="headerlink" title="手动U盘安装"></a>手动U盘安装</h2><p>参考官方文档：<a href="https://support.apple.com/zh-cn/HT201372" target="_blank" rel="noopener">如何创建可引导的 macOS 安装器</a></p>
+<p>这里需要注意，制作启动U盘需要另外一个可以启动的mac电脑。</p>
+<p>具体操作如下：</p>
+<ol>
+<li><p>下载macOS，其实就是在appstore里面下载相应的操作系统，建议使用新的系统。<a href="https://itunes.apple.com/cn/app/macos-mojave/id1398502828?mt=12" target="_blank" rel="noopener">macOS Mojave</a> 和 <a href="https://itunes.apple.com/cn/app/macos-high-sierra/id1246284741?ls=1&amp;mt=12" target="_blank" rel="noopener">macOS High Sierra</a> 下载完成后会出现在系统的应用程序里面类似 <code>Install macOS Mojave</code>，这个就是安装器，如果安装器自动打开，退出即可无须安装。</p>
 </li>
-<li><p><a href="http://www.wepe.com.cn/" target="_blank" rel="noopener">微PE</a> 用这个PE安装的时候有时也会出现<strong>使用其他标明64位的安装光盘</strong>。不过在这个PE里面没找到解决的方法。</p>
+<li><p>插上U盘（数据自行备份，等会制作的时候就没了），找到<strong>磁盘管理</strong>程序，打开以后找到U盘，点击抹去，格式选择<strong>Mac OS 扩展格式</strong>，并把U盘驱动器的卷宗名称设定为<code>MyVolume</code>。</p>
 </li>
-</ul>
-<h2 id="系统下载"><a href="#系统下载" class="headerlink" title="系统下载"></a>系统下载</h2><ul>
-<li><p>Windows系统的下载地址只推荐 <a href="http://msdn.itellyou.cn/" target="_blank" rel="noopener">I Tell You</a></p>
+<li><p>打开<strong>终端</strong>，然后根据你下载的系统，执行如下命令：</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Mojave:</span></span><br><span class="line">sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</span><br><span class="line"></span><br><span class="line"><span class="comment"># High Sierra:</span></span><br><span class="line">sudo /Applications/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</span><br><span class="line"></span><br><span class="line"><span class="comment"># Sierra</span></span><br><span class="line">sudo /Applications/Install\ macOS\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume --applicationpath /Applications/Install\ macOS\ Sierra.app</span><br></pre></td></tr></table></figure>
+<p> 回车后输入管理员密码，然后再次回车，输入<code>Y</code>确认制作启动盘，然后就是等待完成。</p>
 </li>
-<li><p>Linux 请去官方网站下载</p>
+<li><p>把制作好的U盘插入待安装的mac上，然后重启电脑，立即按着<code>Option</code>进入启动磁盘选择的界面，选择你的U盘安装器，然后回车启动。</p>
 </li>
-</ul>
-<h2 id="校验软件"><a href="#校验软件" class="headerlink" title="校验软件"></a>校验软件</h2><ul>
-<li><a href="http://www.den4b.com/products/hasher" target="_blank" rel="noopener">Hasher</a></li>
-</ul>
-<h2 id="Linux系统U盘写入软件"><a href="#Linux系统U盘写入软件" class="headerlink" title="Linux系统U盘写入软件"></a>Linux系统U盘写入软件</h2><p>建议使用官方推荐的写入软件，下面这个很多版本都推荐，可以尝试。</p>
-<ul>
-<li><a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">balenaEtcher</a></li>
-</ul>
+<li><p>这时会进入macOS恢复模式，直接选择<strong>安装macOS</strong>即可安装系统。这里建议先不用连接互联网，直接安装即可。</p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>Windows</category>
+        <category>macOS</category>
       </categories>
       <tags>
-        <tag>hash</tag>
-        <tag>PE</tag>
+        <tag>install</tag>
+        <tag>Sierra</tag>
       </tags>
   </entry>
   <entry>
@@ -1980,6 +1948,40 @@
       <tags>
         <tag>replaceall</tag>
         <tag>正则</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装Windows操作系统工具汇总</title>
+    <url>/2019/09/26/install-windows/</url>
+    <content><![CDATA[<p>记录自己安装操作系统过程中使用过的感觉还不错的软件。</p>
+<h2 id="PE推荐"><a href="#PE推荐" class="headerlink" title="PE推荐"></a>PE推荐</h2><p>现在安装操作系统一般都不用刻录光盘了，直接U盘安装所以PE软件是需要的。这里推荐两个比较好用的。</p>
+<a id="more"></a>
+<ul>
+<li><p><a href="https://www.itsk.com/thread-401184-1-1.html" target="_blank" rel="noopener">优启通</a> 推荐这个，安装Windows很快，如果出现<strong>使用其他标明64位的安装光盘</strong>，请看<a href="https://aoenian.github.io/2019/02/13/install-win10/">这里</a></p>
+</li>
+<li><p><a href="http://www.wepe.com.cn/" target="_blank" rel="noopener">微PE</a> 用这个PE安装的时候有时也会出现<strong>使用其他标明64位的安装光盘</strong>。不过在这个PE里面没找到解决的方法。</p>
+</li>
+</ul>
+<h2 id="系统下载"><a href="#系统下载" class="headerlink" title="系统下载"></a>系统下载</h2><ul>
+<li><p>Windows系统的下载地址只推荐 <a href="http://msdn.itellyou.cn/" target="_blank" rel="noopener">I Tell You</a></p>
+</li>
+<li><p>Linux 请去官方网站下载</p>
+</li>
+</ul>
+<h2 id="校验软件"><a href="#校验软件" class="headerlink" title="校验软件"></a>校验软件</h2><ul>
+<li><a href="http://www.den4b.com/products/hasher" target="_blank" rel="noopener">Hasher</a></li>
+</ul>
+<h2 id="Linux系统U盘写入软件"><a href="#Linux系统U盘写入软件" class="headerlink" title="Linux系统U盘写入软件"></a>Linux系统U盘写入软件</h2><p>建议使用官方推荐的写入软件，下面这个很多版本都推荐，可以尝试。</p>
+<ul>
+<li><a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">balenaEtcher</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>hash</tag>
+        <tag>PE</tag>
       </tags>
   </entry>
   <entry>
@@ -2073,8 +2075,8 @@
         <category>macOS</category>
       </categories>
       <tags>
-        <tag>file search</tag>
         <tag>not work</tag>
+        <tag>file search</tag>
       </tags>
   </entry>
   <entry>
@@ -2199,37 +2201,41 @@
       </tags>
   </entry>
   <entry>
-    <title>Manjaro安装IBUS输入法</title>
-    <url>/2019/05/15/manjaro-linux-ibus/</url>
-    <content><![CDATA[<p>经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看<a href="https://aoenian.github.io/2018/06/30/manjaro-linux-start-end/">这里</a>。中间居然还萌生了要试试LFS的想法（<del>太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生</del>)。</p>
-<p>不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（<em>如果能做到那是个很好的事</em>）。</p>
-<p>安装系统的事情简单的说一句，<strong>我用rufus做的系统无法引导，后来改用了win32disk可以了。</strong></p>
-<h2 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h2><ul>
-<li><a href="https://mirrors.ustc.edu.cn/manjaro-cd/" target="_blank" rel="noopener">manjaro</a> 选择的KDE桌面</li>
-</ul>
-<a id="more"></a>
-<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 更换源</span></span><br><span class="line">sudo pacman-mirrors -i -c China -m rank</span><br><span class="line">sudo pacman -Syy        <span class="comment"># 换源后更新缓存</span></span><br><span class="line">sudo pacman -Syyu       <span class="comment"># 更新系统</span></span><br></pre></td></tr></table></figure>
-<h3 id="安装配置ibus-rime"><a href="#安装配置ibus-rime" class="headerlink" title="安装配置ibus-rime"></a>安装配置ibus-rime</h3><p>由于还不熟练这个系统的命令，这里就用软件安装啦，见谅见谅</p>
-<ol>
-<li>打开 Octopi 安装 ibus-rime ibus-pinyin ibus-qt</li>
-<li><p>在你的 home 目录下的 <strong>.xprofile</strong> 文件中增加如下代码（没有请创建）</p>
- <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=ibus</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=ibus</span><br><span class="line">ibus-daemon -x -d</span><br></pre></td></tr></table></figure>
+    <title>小米电视4x与Windows10局域网文件共享</title>
+    <url>/2019/02/16/mi4x-win10-shar/</url>
+    <content><![CDATA[<p>过年买了小米电视4x，之前用过小米盒子，感觉小米的电视系统个人还是比较习惯。然后在使用过程中整体还不错，不过有一个问题搞得很头疼，就是局域网共享的问题。</p>
+<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><ol>
+<li><p>家里的电脑和电视都在一个局域网中</p>
 </li>
-<li><p>注销系统（建议重启）应该就搞定了</p>
+<li><p>电脑是Windows10系统，电脑下载的电影在一个目录中</p>
 </li>
-<li>如果依然无法使用则需要执行 <code>qtconfig-qt4</code> 在 <strong>Interface</strong> -&gt; <strong>Default Input Method</strong>，把默认的输入法引擎由 <strong>xim</strong> 更改为 <strong>ibus</strong>。</li>
+<li><p>问题来了，把目录共享了以后，电视却死活看不到共享目录，当然直接在电视里面添加共享电脑的IP地址也是无法获得共享，但是奇怪的是同局域网的其他电脑和手机都能看到</p>
+</li>
 </ol>
-<p>参考博文：</p>
+<a id="more"></a>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>按照网络上搜索的方案，试了很多一直到最后才解决，不过不清楚是最后那个起作用还是全部在一起的作用。所以我把尝试过的方法倒着写出来。<strong>如果有作用就直接跳过后面的操作。</strong></p>
+<ol>
+<li><p>准备工作：目录先共享，这个操作就不多说了。</p>
+</li>
+<li><p>打开【控制面板】中的【程序】找到【启用和关闭windows功能】，再依次找【SMB 1.0 /CIFS 服务器】，勾选，点击【确定】，<strong>我就是执行完这一步以后在电视里面看到电脑的共享目录的</strong>。</p>
+</li>
+<li><p>这一步可以查看<a href="http://www.miui.com/thread-20213815-1-1.html" target="_blank" rel="noopener">这里</a>，主要的操作就是启用Guest帐户，更改本地安全策略等。<br> <img src="https://attach.bbs.miui.com/forum/201812/15/145240xsyxssi19l4cissm.png.thumb.jpg" alt="tutor"></p>
+</li>
+</ol>
+<p>参考文章：</p>
 <ul>
-<li><a href="https://blog.csdn.net/Tangcuyuha/article/details/80297905" target="_blank" rel="noopener">Arch 安装中文输入法</a></li>
+<li><p><a href="http://bbs.xiaomi.cn/t-12879374" target="_blank" rel="noopener">小米盒子分享电脑文件 ：”无法访问共享设备，请检查共享设置“</a></p>
+</li>
+<li><p><a href="http://www.miui.com/thread-20213815-1-1.html" target="_blank" rel="noopener">教你小米电视4如何才能访问WIN10电脑共享的文件夹</a></p>
+</li>
 </ul>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Windows</category>
       </categories>
       <tags>
-        <tag>ibus</tag>
-        <tag>rime</tag>
+        <tag>文件共享</tag>
+        <tag>小米电视4x</tag>
       </tags>
   </entry>
   <entry>
@@ -2289,46 +2295,42 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>ibus</tag>
         <tag>manjaro</tag>
+        <tag>ibus</tag>
       </tags>
   </entry>
   <entry>
-    <title>小米电视4x与Windows10局域网文件共享</title>
-    <url>/2019/02/16/mi4x-win10-shar/</url>
-    <content><![CDATA[<p>过年买了小米电视4x，之前用过小米盒子，感觉小米的电视系统个人还是比较习惯。然后在使用过程中整体还不错，不过有一个问题搞得很头疼，就是局域网共享的问题。</p>
-<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><ol>
-<li><p>家里的电脑和电视都在一个局域网中</p>
-</li>
-<li><p>电脑是Windows10系统，电脑下载的电影在一个目录中</p>
-</li>
-<li><p>问题来了，把目录共享了以后，电视却死活看不到共享目录，当然直接在电视里面添加共享电脑的IP地址也是无法获得共享，但是奇怪的是同局域网的其他电脑和手机都能看到</p>
-</li>
-</ol>
+    <title>Manjaro安装IBUS输入法</title>
+    <url>/2019/05/15/manjaro-linux-ibus/</url>
+    <content><![CDATA[<p>经过一段时间的无聊装机，我又把Linux系统换回Manjaro来了，就是个这么没有原则的人，原因请看<a href="https://aoenian.github.io/2018/06/30/manjaro-linux-start-end/">这里</a>。中间居然还萌生了要试试LFS的想法（<del>太疯狂了，幸亏及时拉回来，避免了一场惨剧的发生</del>)。</p>
+<p>不过现在呢，既然换回Manjaro了，就准备慢慢的把常用的软件和配置过程记录下来，便于以后操作当然也希望刚接触这个系统的人少走一些弯路（<em>如果能做到那是个很好的事</em>）。</p>
+<p>安装系统的事情简单的说一句，<strong>我用rufus做的系统无法引导，后来改用了win32disk可以了。</strong></p>
+<h2 id="基本环境"><a href="#基本环境" class="headerlink" title="基本环境"></a>基本环境</h2><ul>
+<li><a href="https://mirrors.ustc.edu.cn/manjaro-cd/" target="_blank" rel="noopener">manjaro</a> 选择的KDE桌面</li>
+</ul>
 <a id="more"></a>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>按照网络上搜索的方案，试了很多一直到最后才解决，不过不清楚是最后那个起作用还是全部在一起的作用。所以我把尝试过的方法倒着写出来。<strong>如果有作用就直接跳过后面的操作。</strong></p>
+<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="更新系统"><a href="#更新系统" class="headerlink" title="更新系统"></a>更新系统</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 更换源</span></span><br><span class="line">sudo pacman-mirrors -i -c China -m rank</span><br><span class="line">sudo pacman -Syy        <span class="comment"># 换源后更新缓存</span></span><br><span class="line">sudo pacman -Syyu       <span class="comment"># 更新系统</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装配置ibus-rime"><a href="#安装配置ibus-rime" class="headerlink" title="安装配置ibus-rime"></a>安装配置ibus-rime</h3><p>由于还不熟练这个系统的命令，这里就用软件安装啦，见谅见谅</p>
 <ol>
-<li><p>准备工作：目录先共享，这个操作就不多说了。</p>
+<li>打开 Octopi 安装 ibus-rime ibus-pinyin ibus-qt</li>
+<li><p>在你的 home 目录下的 <strong>.xprofile</strong> 文件中增加如下代码（没有请创建）</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> GTK_IM_MODULE=ibus</span><br><span class="line"><span class="built_in">export</span> XMODIFIERS=@im=ibus</span><br><span class="line"><span class="built_in">export</span> QT_IM_MODULE=ibus</span><br><span class="line">ibus-daemon -x -d</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>打开【控制面板】中的【程序】找到【启用和关闭windows功能】，再依次找【SMB 1.0 /CIFS 服务器】，勾选，点击【确定】，<strong>我就是执行完这一步以后在电视里面看到电脑的共享目录的</strong>。</p>
+<li><p>注销系统（建议重启）应该就搞定了</p>
 </li>
-<li><p>这一步可以查看<a href="http://www.miui.com/thread-20213815-1-1.html" target="_blank" rel="noopener">这里</a>，主要的操作就是启用Guest帐户，更改本地安全策略等。<br> <img src="https://attach.bbs.miui.com/forum/201812/15/145240xsyxssi19l4cissm.png.thumb.jpg" alt="tutor"></p>
-</li>
+<li>如果依然无法使用则需要执行 <code>qtconfig-qt4</code> 在 <strong>Interface</strong> -&gt; <strong>Default Input Method</strong>，把默认的输入法引擎由 <strong>xim</strong> 更改为 <strong>ibus</strong>。</li>
 </ol>
-<p>参考文章：</p>
+<p>参考博文：</p>
 <ul>
-<li><p><a href="http://bbs.xiaomi.cn/t-12879374" target="_blank" rel="noopener">小米盒子分享电脑文件 ：”无法访问共享设备，请检查共享设置“</a></p>
-</li>
-<li><p><a href="http://www.miui.com/thread-20213815-1-1.html" target="_blank" rel="noopener">教你小米电视4如何才能访问WIN10电脑共享的文件夹</a></p>
-</li>
+<li><a href="https://blog.csdn.net/Tangcuyuha/article/details/80297905" target="_blank" rel="noopener">Arch 安装中文输入法</a></li>
 </ul>
 ]]></content>
       <categories>
-        <category>Windows</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>文件共享</tag>
-        <tag>小米电视4x</tag>
+        <tag>ibus</tag>
+        <tag>rime</tag>
       </tags>
   </entry>
   <entry>
@@ -2363,37 +2365,6 @@
         <tag>netgear</tag>
         <tag>小米</tag>
         <tag>mibox</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常见思维导图软件对比-个人观点</title>
-    <url>/2020/04/26/mind-map-comparion/</url>
-    <content><![CDATA[<p>学习Linux系统，感觉命令有点多，隔得时间长了总是容易忘掉，然后要重新查找太浪费时间，所以就准备这次把学习过的命令用思维导图记下来，后面复习和查找都会方便很多。然后就有了这篇博客。</p>
-<h2 id="测试的导图软件"><a href="#测试的导图软件" class="headerlink" title="测试的导图软件"></a>测试的导图软件</h2><ul>
-<li>xmind</li>
-<li>freemind</li>
-<li>freeplane</li>
-<li>mindmaster</li>
-</ul>
-<a id="more"></a>
-<h2 id="选择结果和原因"><a href="#选择结果和原因" class="headerlink" title="选择结果和原因"></a>选择结果和原因</h2><p>这里声明一点，没有详细对比，只是自己想要的几个功能，没有最好的符合自己需要的就是最好的。</p>
-<p>最后选择了<strong>xmind8</strong>，下载地址：<a href="https://www.xmind.cn/xmind8-pro/" target="_blank" rel="noopener">https://www.xmind.cn/xmind8-pro/</a></p>
-<p>原因介绍：</p>
-<p>我在意的几个软件的一些缺点：</p>
-<ul>
-<li>xmind无法输出pdf格式（不过后来感觉这个功能可以舍弃）</li>
-<li>freemind没有总结括号（把多个节点括起来的那种），还有就是节点无法直接输入中文（拼音的第一个字母会作为英文输入），插入图片无法保存在导图中</li>
-<li>freeplane导出pdf软件无响应，节点无法直接输入中文这个类似freemind，插入图片无法保存在导图中</li>
-<li>mindmaster的mac版本快捷键好像不能用，直接pass了</li>
-</ul>
-<p>其实最后花了时间选择以后感觉，把导图的内容做好是最重要的，其他的都是后面再考虑的，很多时候浪费时间只是为了找而找，但是忘了找这个工具的目的。</p>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>xmind</tag>
-        <tag>freemind</tag>
       </tags>
   </entry>
   <entry>
@@ -2456,32 +2427,34 @@
       </tags>
   </entry>
   <entry>
-    <title>Next主题样式配置2-代码块显示程序语言名字</title>
-    <url>/2018/08/09/next-theme-customized-2/</url>
-    <content><![CDATA[<p>一直想在代码块上面显示这个代码块使用的程序语言的名字，但是没有找到好的方法，这两天在搜索的时候发现了一个高手的<a href="https://w3ctrain.com/2017/12/11/hexo-code-block/" target="_blank" rel="noopener">博客</a>里面介绍了这个方法，就借鉴了过来。</p>
-<p>因为自己的水平有限，后端基本啥也不会，所以原理就不多说了（其实看不懂），这里把步骤、代码以及一些小的修改记录如下。</p>
-<a id="more"></a>
-<p>首先在 <code>next/scripts</code> 目录下面新建一个javascript文件命名为 <code>codeblock.js</code> 文件，代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> attributes = [</span><br><span class="line">  <span class="string">'autocomplete="off"'</span>,</span><br><span class="line">  <span class="string">'autocorrect="off"'</span>,</span><br><span class="line">  <span class="string">'autocapitalize="off"'</span>,</span><br><span class="line">  <span class="string">'spellcheck="false"'</span>,</span><br><span class="line">  <span class="string">'contenteditable="true"'</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> attributesStr = attributes.join(<span class="string">' '</span>)</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="regexp">/&lt;figure class="highlight ([a-zA-Z]+)"&gt;.*?&lt;\/figure&gt;/</span>.test(data.content)) &#123;</span><br><span class="line">    data.content = data.content.replace(<span class="regexp">/&lt;figure class="highlight ([a-zA-Z]+)"&gt;.*?&lt;\/figure&gt;/</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> language = <span class="built_in">RegExp</span>.$<span class="number">1</span> || <span class="string">'plain'</span></span><br><span class="line">      <span class="keyword">var</span> lastMatch = <span class="built_in">RegExp</span>.lastMatch</span><br><span class="line">      lastMatch = lastMatch.replace(<span class="regexp">/&lt;figure class="highlight /</span>, <span class="string">'&lt;figure class="iseeu highlight /'</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="string">'&lt;div class="highlight-wrap"'</span> + attributesStr + <span class="string">'data-rel="'</span> + language.toUpperCase() + <span class="string">'"&gt;'</span> + lastMatch + <span class="string">'&lt;/div&gt;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>然后找到 <code>next</code> 主题下面的 <code>highlight.styl</code> 文件，具体位置在   <code>next/source/css/_common/components/highlight/highlight.styl</code></p>
-<p>在文件的最下面添加如下代码：</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.highlight-wrap</span>[data-rel] &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">10px</span> <span class="number">30px</span> <span class="number">0px</span> rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.4</span>);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">35px</span> <span class="number">0</span>;</span><br><span class="line">  ::-webkit-scrollbar &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ::-webkit-scrollbar-track &#123;</span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>); </span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ::-webkit-scrollbar-thumb &#123;</span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>); </span><br><span class="line">  &#125;</span><br><span class="line">  &amp;::before &#123;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">content</span>: attr(data-rel);</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#21252b</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">'Source Sans Pro'</span>, sans-serif;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;::after &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">" "</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fc625d</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">13px</span>;</span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">20px</span> <span class="number">0px</span> <span class="number">#fdbc40</span>, <span class="number">40px</span> <span class="number">0px</span> <span class="number">#35cd4b</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">20px</span> <span class="number">0px</span> <span class="number">#fdbc40</span>, <span class="number">40px</span> <span class="number">0px</span> <span class="number">#35cd4b</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>保存收工，这样基本就完成了。重新启动hexo博客你的代码块的上方应该就会出现代码中的语言名称。</p>
-<p>一个小问题的解决，我这边出现了，如果大家也出现可以参考一下，在完成js文件配置以后我发现我的代码块上方有一部分代码被盖住了，下面呢出现了一部分白条，感觉整个代码块上移了一样。</p>
-<p>通过开发者工具查看以后，调整了代码块的 <code>margin</code> 搞定了。修改的内容也在 <code>highlight.styl</code> 文件中，代码如下：</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="variable">$code</span>-block &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">34px</span> <span class="number">0px</span> <span class="number">0px</span> <span class="number">0px</span>;  <span class="comment">// 把margin-top调整为34px就可以了</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">font-size</span> <span class="variable">$code</span>-font-size;</span><br><span class="line">  <span class="attribute">color</span>: <span class="variable">$highlight</span>-foreground;</span><br><span class="line">  <span class="attribute">background</span>: <span class="variable">$highlight</span>-background;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="variable">$line</span>-height-code-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>今天在写其他博文的时候发现代码有个bug，无法正确显示 <code>JSON</code> 文件，现在还未找到解决方法。</strong></p>
-<p><strong>参考博文</strong></p>
-<ul>
-<li><a href="https://w3ctrain.com/2017/12/11/hexo-code-block/" target="_blank" rel="noopener">自定义 Hexo博客代码块</a>(博客中简单的介绍了一下原理，大家可以看看)</li>
+    <title>常见思维导图软件对比-个人观点</title>
+    <url>/2020/04/26/mind-map-comparion/</url>
+    <content><![CDATA[<p>学习Linux系统，感觉命令有点多，隔得时间长了总是容易忘掉，然后要重新查找太浪费时间，所以就准备这次把学习过的命令用思维导图记下来，后面复习和查找都会方便很多。然后就有了这篇博客。</p>
+<h2 id="测试的导图软件"><a href="#测试的导图软件" class="headerlink" title="测试的导图软件"></a>测试的导图软件</h2><ul>
+<li>xmind</li>
+<li>freemind</li>
+<li>freeplane</li>
+<li>mindmaster</li>
 </ul>
+<a id="more"></a>
+<h2 id="选择结果和原因"><a href="#选择结果和原因" class="headerlink" title="选择结果和原因"></a>选择结果和原因</h2><p>这里声明一点，没有详细对比，只是自己想要的几个功能，没有最好的符合自己需要的就是最好的。</p>
+<p>最后选择了<strong>xmind8</strong>，下载地址：<a href="https://www.xmind.cn/xmind8-pro/" target="_blank" rel="noopener">https://www.xmind.cn/xmind8-pro/</a></p>
+<p>原因介绍：</p>
+<p>我在意的几个软件的一些缺点：</p>
+<ul>
+<li>xmind无法输出pdf格式（不过后来感觉这个功能可以舍弃）</li>
+<li>freemind没有总结括号（把多个节点括起来的那种），还有就是节点无法直接输入中文（拼音的第一个字母会作为英文输入），插入图片无法保存在导图中</li>
+<li>freeplane导出pdf软件无响应，节点无法直接输入中文这个类似freemind，插入图片无法保存在导图中</li>
+<li>mindmaster的mac版本快捷键好像不能用，直接pass了</li>
+</ul>
+<p>其实最后花了时间选择以后感觉，把导图的内容做好是最重要的，其他的都是后面再考虑的，很多时候浪费时间只是为了找而找，但是忘了找这个工具的目的。</p>
 ]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>Tools</category>
       </categories>
       <tags>
-        <tag>next</tag>
-        <tag>code block</tag>
+        <tag>xmind</tag>
+        <tag>freemind</tag>
       </tags>
   </entry>
   <entry>
@@ -2529,6 +2502,35 @@
         <tag>next</tag>
         <tag>评论</tag>
         <tag>gitment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Next主题样式配置2-代码块显示程序语言名字</title>
+    <url>/2018/08/09/next-theme-customized-2/</url>
+    <content><![CDATA[<p>一直想在代码块上面显示这个代码块使用的程序语言的名字，但是没有找到好的方法，这两天在搜索的时候发现了一个高手的<a href="https://w3ctrain.com/2017/12/11/hexo-code-block/" target="_blank" rel="noopener">博客</a>里面介绍了这个方法，就借鉴了过来。</p>
+<p>因为自己的水平有限，后端基本啥也不会，所以原理就不多说了（其实看不懂），这里把步骤、代码以及一些小的修改记录如下。</p>
+<a id="more"></a>
+<p>首先在 <code>next/scripts</code> 目录下面新建一个javascript文件命名为 <code>codeblock.js</code> 文件，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> attributes = [</span><br><span class="line">  <span class="string">'autocomplete="off"'</span>,</span><br><span class="line">  <span class="string">'autocorrect="off"'</span>,</span><br><span class="line">  <span class="string">'autocapitalize="off"'</span>,</span><br><span class="line">  <span class="string">'spellcheck="false"'</span>,</span><br><span class="line">  <span class="string">'contenteditable="true"'</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> attributesStr = attributes.join(<span class="string">' '</span>)</span><br><span class="line"></span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (<span class="regexp">/&lt;figure class="highlight ([a-zA-Z]+)"&gt;.*?&lt;\/figure&gt;/</span>.test(data.content)) &#123;</span><br><span class="line">    data.content = data.content.replace(<span class="regexp">/&lt;figure class="highlight ([a-zA-Z]+)"&gt;.*?&lt;\/figure&gt;/</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> language = <span class="built_in">RegExp</span>.$<span class="number">1</span> || <span class="string">'plain'</span></span><br><span class="line">      <span class="keyword">var</span> lastMatch = <span class="built_in">RegExp</span>.lastMatch</span><br><span class="line">      lastMatch = lastMatch.replace(<span class="regexp">/&lt;figure class="highlight /</span>, <span class="string">'&lt;figure class="iseeu highlight /'</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="string">'&lt;div class="highlight-wrap"'</span> + attributesStr + <span class="string">'data-rel="'</span> + language.toUpperCase() + <span class="string">'"&gt;'</span> + lastMatch + <span class="string">'&lt;/div&gt;'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>然后找到 <code>next</code> 主题下面的 <code>highlight.styl</code> 文件，具体位置在   <code>next/source/css/_common/components/highlight/highlight.styl</code></p>
+<p>在文件的最下面添加如下代码：</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.highlight-wrap</span>[data-rel] &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">10px</span> <span class="number">30px</span> <span class="number">0px</span> rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.4</span>);</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">35px</span> <span class="number">0</span>;</span><br><span class="line">  ::-webkit-scrollbar &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ::-webkit-scrollbar-track &#123;</span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.3</span>); </span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ::-webkit-scrollbar-thumb &#123;</span><br><span class="line">      <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">6px</span> rgba(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>); </span><br><span class="line">  &#125;</span><br><span class="line">  &amp;::before &#123;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">content</span>: attr(data-rel);</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">38px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#21252b</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">'Source Sans Pro'</span>, sans-serif;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">text-indent</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">  &#125;</span><br><span class="line">  &amp;::after &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">" "</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    -webkit-<span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fc625d</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">13px</span>;</span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">20px</span> <span class="number">0px</span> <span class="number">#fdbc40</span>, <span class="number">40px</span> <span class="number">0px</span> <span class="number">#35cd4b</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">20px</span> <span class="number">0px</span> <span class="number">#fdbc40</span>, <span class="number">40px</span> <span class="number">0px</span> <span class="number">#35cd4b</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">3</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>保存收工，这样基本就完成了。重新启动hexo博客你的代码块的上方应该就会出现代码中的语言名称。</p>
+<p>一个小问题的解决，我这边出现了，如果大家也出现可以参考一下，在完成js文件配置以后我发现我的代码块上方有一部分代码被盖住了，下面呢出现了一部分白条，感觉整个代码块上移了一样。</p>
+<p>通过开发者工具查看以后，调整了代码块的 <code>margin</code> 搞定了。修改的内容也在 <code>highlight.styl</code> 文件中，代码如下：</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="variable">$code</span>-block &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: auto;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">34px</span> <span class="number">0px</span> <span class="number">0px</span> <span class="number">0px</span>;  <span class="comment">// 把margin-top调整为34px就可以了</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">font-size</span> <span class="variable">$code</span>-font-size;</span><br><span class="line">  <span class="attribute">color</span>: <span class="variable">$highlight</span>-foreground;</span><br><span class="line">  <span class="attribute">background</span>: <span class="variable">$highlight</span>-background;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="variable">$line</span>-height-code-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>今天在写其他博文的时候发现代码有个bug，无法正确显示 <code>JSON</code> 文件，现在还未找到解决方法。</strong></p>
+<p><strong>参考博文</strong></p>
+<ul>
+<li><a href="https://w3ctrain.com/2017/12/11/hexo-code-block/" target="_blank" rel="noopener">自定义 Hexo博客代码块</a>(博客中简单的介绍了一下原理，大家可以看看)</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>next</tag>
+        <tag>code block</tag>
       </tags>
   </entry>
   <entry>
@@ -2604,36 +2606,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Emacs配置-Org导出HTML代码高亮显示</title>
-    <url>/2018/10/04/org-export-html-highlight/</url>
-    <content><![CDATA[<p>前端时间一直用Emacs编辑Org模式的文档，然后导出html文件用浏览器导出为pdf。但是发现导出的html文件没有代码高亮，搜索了一下，发现方法比较简单，安装 <code>htmlize.el</code> 包然后在配置文件启用即可。</p>
-<a id="more"></a>
-<p>具体操作如下：</p>
-<p>第一种方案：</p>
-<ul>
-<li><p>去htmlize.el的 <a href="https://github.com/hniksic/emacs-htmlize" target="_blank" rel="noopener">github地址</a> 下载 htmlize.el文件放在你的 <code>~/.emacs.d</code> 中。也可以直接执行如下命令直接下载。<br><code>wget https://raw.githubusercontent.com/hniksic/emacs-htmlize/master/htmlize.el</code></p>
-</li>
-<li><p>然后在配置文件中加入 <code>(require &#39;htmlize)</code> 启用插件。</p>
-</li>
-</ul>
-<p>第二种方案：（直接安装，但我没有试过）</p>
-<ul>
-<li><p>打开Emacs然后输入 <code>M-x package-refresh-contents</code> 刷新包信息</p>
-</li>
-<li><p>然后输入 <code>M-x package-list</code> 列出可安装的所有包，然后用 <code>C-s</code> 查找一下 <code>htmlize.el</code> 点击安装即可。</p>
-</li>
-</ul>
-<p>第二种方案需要配置包管理，我使用的子龙山人的配置，具体教程在 <a href="http://book.emacs-china.org/#orgheadline2" target="_blank" rel="noopener">Master Emacs in 21 Days</a> 也可以使用我的配置文件，位置在 <a href="https://github.com/aoenian/myconfigfiles" target="_blank" rel="noopener">myconfigfiles</a></p>
-]]></content>
-      <categories>
-        <category>Editor</category>
-      </categories>
-      <tags>
-        <tag>Org</tag>
-        <tag>highlight</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>日常使用中一些小问题汇总(一)</title>
     <url>/2019/04/03/problem-collection1/</url>
     <content><![CDATA[<h2 id="安装Eclipse"><a href="#安装Eclipse" class="headerlink" title="安装Eclipse"></a>安装Eclipse</h2><p>直接在Eclipse的 <a href="http://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener">官网</a> 下载<strong>Eclipse IDE for Java Developers</strong>这个版本即可。</p>
@@ -2674,6 +2646,36 @@
         <tag>java</tag>
         <tag>virtual box</tag>
         <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Emacs配置-Org导出HTML代码高亮显示</title>
+    <url>/2018/10/04/org-export-html-highlight/</url>
+    <content><![CDATA[<p>前端时间一直用Emacs编辑Org模式的文档，然后导出html文件用浏览器导出为pdf。但是发现导出的html文件没有代码高亮，搜索了一下，发现方法比较简单，安装 <code>htmlize.el</code> 包然后在配置文件启用即可。</p>
+<a id="more"></a>
+<p>具体操作如下：</p>
+<p>第一种方案：</p>
+<ul>
+<li><p>去htmlize.el的 <a href="https://github.com/hniksic/emacs-htmlize" target="_blank" rel="noopener">github地址</a> 下载 htmlize.el文件放在你的 <code>~/.emacs.d</code> 中。也可以直接执行如下命令直接下载。<br><code>wget https://raw.githubusercontent.com/hniksic/emacs-htmlize/master/htmlize.el</code></p>
+</li>
+<li><p>然后在配置文件中加入 <code>(require &#39;htmlize)</code> 启用插件。</p>
+</li>
+</ul>
+<p>第二种方案：（直接安装，但我没有试过）</p>
+<ul>
+<li><p>打开Emacs然后输入 <code>M-x package-refresh-contents</code> 刷新包信息</p>
+</li>
+<li><p>然后输入 <code>M-x package-list</code> 列出可安装的所有包，然后用 <code>C-s</code> 查找一下 <code>htmlize.el</code> 点击安装即可。</p>
+</li>
+</ul>
+<p>第二种方案需要配置包管理，我使用的子龙山人的配置，具体教程在 <a href="http://book.emacs-china.org/#orgheadline2" target="_blank" rel="noopener">Master Emacs in 21 Days</a> 也可以使用我的配置文件，位置在 <a href="https://github.com/aoenian/myconfigfiles" target="_blank" rel="noopener">myconfigfiles</a></p>
+]]></content>
+      <categories>
+        <category>Editor</category>
+      </categories>
+      <tags>
+        <tag>Org</tag>
+        <tag>highlight</tag>
       </tags>
   </entry>
   <entry>
@@ -2832,6 +2834,99 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo和Pages博客阅读文章出现404页面</title>
+    <url>/2016/08/08/hexo-404-error/</url>
+    <content><![CDATA[<p>这几天在看博客的时候突然发现自己的文章在首页显示，但是点击标题或者继续阅读以后直接出现404页面，第一反应就是被防火墙干扰了，然后赶紧试试代理，发现还是这样，这时候发现问题没那么简单了。</p>
+<p>然后用hexo s 测试本地的访问情况，却发现是没有问题的。不过重新部署以后依然404.</p>
+<a id="more"></a>
+<p>回忆出现问题前的改动：<em>只有一个地方，我把post目录里面文章的文件名改动了(大家千万别学我)</em>，但是删除缓存以后，使用hexo s 命令以后发现没有问题。这时候才部署到github，不过在pages中显示还是有问题。</p>
+<h2 id="尝试过的解决方法"><a href="#尝试过的解决方法" class="headerlink" title="尝试过的解决方法"></a>尝试过的解决方法</h2><ul>
+<li>改回原来的名字，失败</li>
+<li>删除<code>&lt;!-- more --&gt;</code>，首页成功显示，点击文章标题访问失败</li>
+<li>新建一个测试页面成功，排除了hexo本身的问题，看来需要用命令重建文章</li>
+<li>用 new 命令重建同名文章，然后把内容复制过去。同样失败。</li>
+</ul>
+<h2 id="最后的大招"><a href="#最后的大招" class="headerlink" title="最后的大招"></a>最后的大招</h2><p>后来想想既然不行，那就全部重新来一遍，把所有的文章全部移出去，删除缓存，重新生成（这时候已经没有文章了），重新部署。部署的时候看到提示删除了所有的文章的网页。我估计这时候就把所有之前出错的网页和链接全部删除了。</p>
+<p><strong>然后重新使用命令新建文章，再把内容复制过来，部署测试，OK！！</strong></p>
+<p>update:2016-8-14</p>
+<p><em>经测试，直接把md文件放入_post目录内也是可以识别并正常部署到githubPages，所以之前的处理可以把所有的文章全部移出，然后重新生成静态文件后部署，这时候会把之前的一些失效链接删掉，然后把文章移进post目录，生成、部署即可。（理论推测）</em></p>
+]]></content>
+      <categories>
+        <category>Net</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>404</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pip换源提升包下载速度</title>
+    <url>/2019/09/26/python-pip-change-repositories/</url>
+    <content><![CDATA[<p>快到国庆节了看到公众号有一篇文章是使用python给自己的头像添加国旗。然后感觉挺厉害，可以用几行代码来把图片合成起来。在使用过程中遇到了一些问题，记录如下：</p>
+<h2 id="给头像添加国旗"><a href="#给头像添加国旗" class="headerlink" title="给头像添加国旗"></a>给头像添加国旗</h2><a id="more"></a>
+<p>具体的文章链接在参考文章中，文中代码摘录如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf8 -*-</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="comment"># 读取头像和国旗图案</span></span><br><span class="line">img_head = cv2.imread(<span class="string">'head.jpg'</span>)</span><br><span class="line">img_flag = cv2.imread(<span class="string">'flag.png'</span>)</span><br><span class="line"><span class="comment"># 获取头像和国旗图案宽度</span></span><br><span class="line">w_head, h_head = img_head.shape[:<span class="number">2</span>]</span><br><span class="line">w_flag, h_flag = img_flag.shape[:<span class="number">2</span>]</span><br><span class="line"><span class="comment"># 计算图案缩放比例</span></span><br><span class="line">scale = w_head / w_flag / <span class="number">4</span></span><br><span class="line"><span class="comment"># 缩放图案</span></span><br><span class="line">img_flag = cv2.resize(img_flag, (<span class="number">0</span>, <span class="number">0</span>), fx=scale, fy=scale)</span><br><span class="line"><span class="comment"># 获取缩放后新宽度</span></span><br><span class="line">w_flag, h_flag = img_flag.shape[:<span class="number">2</span>]</span><br><span class="line"><span class="comment"># 按3个通道合并图片</span></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>):</span><br><span class="line">    img_head[w_head - w_flag:, h_head - h_flag:, c] = img_flag[:, :, c]</span><br><span class="line"><span class="comment"># 保存最终结果</span></span><br><span class="line">cv2.imwrite(<span class="string">'new_head.jpg'</span>, img_head)</span><br></pre></td></tr></table></figure>
+<p>因为这里用了<strong>python-opencv</strong>库来处理图像，所以我们需要先安装。</p>
+<h2 id="替换pip源"><a href="#替换pip源" class="headerlink" title="替换pip源"></a>替换pip源</h2><p>之前一直没有想过pip可以换源，然后安装第三方库的时候需要执行好几次才能成功，而且速度非常慢。这次的速度更慢，实在忍受不了所以就搜索了一下解决方法，没想到就更Linux的软件源一样换成国内的就可以了。</p>
+<p>看来下次遇到这种情况应该先想到换源的方法。</p>
+<p>具体操作很简单，执行如下代码即可：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># windows在CMD中，Linux Mac在终端执行，这个换的是阿里的源</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://mirrors.aliyun.com/pypi/simple/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新pip命令</span></span><br><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
+<h2 id="安装python-opencv库"><a href="#安装python-opencv库" class="headerlink" title="安装python-opencv库"></a>安装python-opencv库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用的是python3</span></span><br><span class="line">pip3 install numpy</span><br><span class="line">pip3 install opencv-python</span><br></pre></td></tr></table></figure>
+<p>参考文章：</p>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/9OSmAsQWZsTu8nBfCkMLDA" target="_blank" rel="noopener">别再@官方啦，普天同庆加国旗，10行代码搞定</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/46975553" target="_blank" rel="noopener">pip下载python库太慢怎么办？</a></li>
+<li><a href="https://blog.csdn.net/qq_25005909/article/details/78554469" target="_blank" rel="noopener">python3之opencv安装</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>change</tag>
+        <tag>repositories</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派下载百度云盘文件</title>
+    <url>/2020/05/10/rasp-baidupan/</url>
+    <content><![CDATA[<p>树莓派又闲置了一段时间，然后现在再次学习linux，这次不能一知半解，要学进去，把之前的一些盲点给补充起来。然后就装了ubuntuserver，用着挺不错。</p>
+<p>然后前段时间pandownload的作者被抓了，原因大家都知道，不过因为百度依然是国内最受欢迎的云盘，不花钱也只能忍受这个速度，然而呢总是用电脑下载的话太费电了。就想起来使用树莓派，网络一搜果然已经有大神把轮子造好了，直接使用就ok。下面简单记录配置过程。</p>
+<a id="more"></a>
+<h2 id="项目选择"><a href="#项目选择" class="headerlink" title="项目选择"></a>项目选择</h2><p>在搜索中发现了两个项目，项目地址和使用测试如下</p>
+<ul>
+<li><a href="https://github.com/liuzhuoling2011/baidupcs-web" target="_blank" rel="noopener">https://github.com/liuzhuoling2011/baidupcs-web</a> 这个是web界面好操作，别看学linux，我也不想麻烦，鼠标点点就行也懒得整别的。<strong>不过致命的问题是无法登录，这个好像作者一直没有解决，咱们能力有限，只能另寻他法</strong></li>
+<li><a href="https://github.com/houtianze/bypy" target="_blank" rel="noopener">https://github.com/houtianze/bypy</a> 使用命令行界面，基于python编写，功能全面，就他了。（看来命令行还是比较好处理，个人观点）</li>
+</ul>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
+<li><p>设置utf8，按照官方给出的链接，我设置了en_US.utf-8 不过系统依然还是显示 C.utf-8，后面证实不影响使用，感觉应该是 UTF-8 即可</p>
+</li>
+<li><p>安装pip3, 执行如下命令<code>sudo apt install python3-pip</code></p>
+</li>
+<li><p>安装bypy，执行如下命令<code>sudo pip3 install bypy</code> 这里如果用普通用户权限安装，完成后找不到命令。</p>
+</li>
+</ul>
+<p>整个配置过程没有出现问题，直接无脑执行命令安装即可，什么时候能够像这种高手一样开发出这么厉害的程序。</p>
+<h2 id="网盘配置"><a href="#网盘配置" class="headerlink" title="网盘配置"></a>网盘配置</h2><ul>
+<li><p>绑定网盘。</p>
+<p>  执行命令<code>bypy info</code>，根据提示访问给出的网页，然后输入网页中出现的百度授权码回车即可。</p>
+</li>
+<li><p>把需要下载的文件放在 我的应用数据-bypy中即可下载</p>
+</li>
+<li><p>常用命令</p>
+  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bypy <span class="built_in">help</span> &lt;<span class="built_in">command</span>&gt;     <span class="comment"># 帮助</span></span><br><span class="line">bypy list               <span class="comment"># 列出文件列表</span></span><br><span class="line">bypy syncup   或   bypy upload          <span class="comment"># 上传到云盘</span></span><br><span class="line">bypy syncdown  或  bypy downdir /       <span class="comment">#  下载到本地</span></span><br><span class="line">bypy compare        <span class="comment"># 比较当前目录和云盘</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Raspberry Pi</category>
+      </categories>
+      <tags>
+        <tag>pan</tag>
+        <tag>bypy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python装饰器（一）</title>
     <url>/2019/07/24/python-decorator1/</url>
     <content><![CDATA[<p>这段时间学习Python，之前已经学习过基本的语法，现在准备重新拾起来，看的教程是github上面的<a href="https://github.com/jackfrued/Python-100-Days" target="_blank" rel="noopener">Python - 100天从新手到大师</a>。进度相对一般的教程比较快，虽然没有那么详细，但是能够快速了解整体的框架。</p>
@@ -2880,110 +2975,6 @@
       </tags>
   </entry>
   <entry>
-    <title>pip换源提升包下载速度</title>
-    <url>/2019/09/26/python-pip-change-repositories/</url>
-    <content><![CDATA[<p>快到国庆节了看到公众号有一篇文章是使用python给自己的头像添加国旗。然后感觉挺厉害，可以用几行代码来把图片合成起来。在使用过程中遇到了一些问题，记录如下：</p>
-<h2 id="给头像添加国旗"><a href="#给头像添加国旗" class="headerlink" title="给头像添加国旗"></a>给头像添加国旗</h2><a id="more"></a>
-<p>具体的文章链接在参考文章中，文中代码摘录如下：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf8 -*-</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="comment"># 读取头像和国旗图案</span></span><br><span class="line">img_head = cv2.imread(<span class="string">'head.jpg'</span>)</span><br><span class="line">img_flag = cv2.imread(<span class="string">'flag.png'</span>)</span><br><span class="line"><span class="comment"># 获取头像和国旗图案宽度</span></span><br><span class="line">w_head, h_head = img_head.shape[:<span class="number">2</span>]</span><br><span class="line">w_flag, h_flag = img_flag.shape[:<span class="number">2</span>]</span><br><span class="line"><span class="comment"># 计算图案缩放比例</span></span><br><span class="line">scale = w_head / w_flag / <span class="number">4</span></span><br><span class="line"><span class="comment"># 缩放图案</span></span><br><span class="line">img_flag = cv2.resize(img_flag, (<span class="number">0</span>, <span class="number">0</span>), fx=scale, fy=scale)</span><br><span class="line"><span class="comment"># 获取缩放后新宽度</span></span><br><span class="line">w_flag, h_flag = img_flag.shape[:<span class="number">2</span>]</span><br><span class="line"><span class="comment"># 按3个通道合并图片</span></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>):</span><br><span class="line">    img_head[w_head - w_flag:, h_head - h_flag:, c] = img_flag[:, :, c]</span><br><span class="line"><span class="comment"># 保存最终结果</span></span><br><span class="line">cv2.imwrite(<span class="string">'new_head.jpg'</span>, img_head)</span><br></pre></td></tr></table></figure>
-<p>因为这里用了<strong>python-opencv</strong>库来处理图像，所以我们需要先安装。</p>
-<h2 id="替换pip源"><a href="#替换pip源" class="headerlink" title="替换pip源"></a>替换pip源</h2><p>之前一直没有想过pip可以换源，然后安装第三方库的时候需要执行好几次才能成功，而且速度非常慢。这次的速度更慢，实在忍受不了所以就搜索了一下解决方法，没想到就更Linux的软件源一样换成国内的就可以了。</p>
-<p>看来下次遇到这种情况应该先想到换源的方法。</p>
-<p>具体操作很简单，执行如下代码即可：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># windows在CMD中，Linux Mac在终端执行，这个换的是阿里的源</span></span><br><span class="line">pip config <span class="built_in">set</span> global.index-url https://mirrors.aliyun.com/pypi/simple/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新pip命令</span></span><br><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure>
-<h2 id="安装python-opencv库"><a href="#安装python-opencv库" class="headerlink" title="安装python-opencv库"></a>安装python-opencv库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用的是python3</span></span><br><span class="line">pip3 install numpy</span><br><span class="line">pip3 install opencv-python</span><br></pre></td></tr></table></figure>
-<p>参考文章：</p>
-<ul>
-<li><a href="https://mp.weixin.qq.com/s/9OSmAsQWZsTu8nBfCkMLDA" target="_blank" rel="noopener">别再@官方啦，普天同庆加国旗，10行代码搞定</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/46975553" target="_blank" rel="noopener">pip下载python库太慢怎么办？</a></li>
-<li><a href="https://blog.csdn.net/qq_25005909/article/details/78554469" target="_blank" rel="noopener">python3之opencv安装</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>change</tag>
-        <tag>repositories</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>zsh执行python脚本输出的内容最后多了一个%</title>
-    <url>/2019/06/30/python-zsh-percent-prompt/</url>
-    <content><![CDATA[<h2 id="zsh执行python脚本出现"><a href="#zsh执行python脚本出现" class="headerlink" title="zsh执行python脚本出现 %"></a>zsh执行python脚本出现 %</h2><p>准备重新拾起python，不仅仅因为他简单优雅，更是因为他能够随手处理很多繁杂的事情，而且也是第一个自己特别喜欢的语言。但是因为种种原因，自己错过他的时间太久了。</p>
-<p>重新学习、练习编程的时候出现了一个问题，在一次终端执行python脚本的时候输出文本的最后多了一个<code>%</code>，而且<strong>终端还着重显示了</strong>。</p>
-<a id="more"></a>
-<p>感觉很奇怪，程序的输出并没有这个<code>%</code>，然后我使用了<code>ipython</code>，在里面用<code>run</code>命令执行，发现%并没有出现，看来是终端的问题，在网络上搜索后得到如下结论，简单说就是如果你输出的文本最后没有换行符，那么zsh会在后面加一个反色显示的<code>%</code>，如果你是root用户则会看到<code>#</code>。具体的官方英文解释如下：</p>
-<blockquote>
-<p>When a partial line is preserved, by default you will see an inverse+bold character at the end of the partial line: a ‘%’ for a normal user or a ‘#’ for root. If set, the shell parameter PROMPT_EOL_MARK can be used to customize how the end of partial lines are shown.</p>
-</blockquote>
-<p>解决方法：也不能说是解决方法，这也不是问题，如果不想看到，那就在输出的文本最后加个换行符，或者用ipython。</p>
-<p>这里多说一点，在编写python脚本的时候，由于经常在Windows和macOS之间切换，所以换行符有点不一样，这里可以使用vscode来更改换行符，右下角直接切换即可。</p>
-<h2 id="mac查看文件换行符"><a href="#mac查看文件换行符" class="headerlink" title="mac查看文件换行符"></a>mac查看文件换行符</h2><p>如果想在windows下查看文件的换行符，可推荐notepad++。mac下面没有好用的软件，vim好像也无法很好的显示。经过搜索，mac下查看换行符的方法如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件名可根据需要进行替换</span></span><br><span class="line">od -c filename.csv</span><br><span class="line"><span class="comment"># CR as \r and LF as \n.</span></span><br></pre></td></tr></table></figure>
-<p>参考：</p>
-<ul>
-<li><p><a href="https://stackoverflow.com/questions/36270945/percent-sign-at-the-end-of-the-output-of-python-script" target="_blank" rel="noopener">Why is a percent sign at the end of the output of the python script?</a></p>
-</li>
-<li><p><a href="https://unix.stackexchange.com/questions/167582/why-zsh-ends-a-line-with-a-highlighted-percent-symbol" target="_blank" rel="noopener">Why ZSH ends a line with a highlighted percent symbol?</a></p>
-</li>
-<li><p><a href="http://zsh.sourceforge.net/Doc/Release/Options.html#Prompting" target="_blank" rel="noopener">Prompting</a></p>
-</li>
-<li><p><a href="https://www.palaniraja.com/2011/06/how-to-view-windows-line-ending-characters-on-mac-osx/" target="_blank" rel="noopener">How to view (Windows) line ending characters on Mac OSX</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>zsh</tag>
-        <tag>percent sign</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>手机QQ邮箱日历同步问题</title>
-    <url>/2019/04/30/qq-email-calendar-sync/</url>
-    <content><![CDATA[<p>随着临时的工作越来越多，记忆空间的有限，考虑使用日历提醒来记录一些重要的事情。一个是避免忘记，另一个是能够在后面的时候查看日程找到处理事件的时间。</p>
-<p>日历的选用经过了这样一个过程，首先是用的手机自带的日历，感觉不方便，同步比较麻烦。然后换用了tim，用了一段时间后发现新建日程的时间只能是将来，不能是过去，有时候把已经干完的事情做一个备忘就很麻烦了。</p>
-<p>因为需求较低，只用过三种日历，系统自带、Tim日程、QQ邮箱日历。根据我的使用时的需求对比如下：</p>
-<a id="more"></a>
-<table>
-<thead>
-<tr>
-<th>日历</th>
-<th>主要问题</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>系统自带</td>
-<td>更换手机同步不方便</td>
-</tr>
-<tr>
-<td>Tim日程</td>
-<td>无法同步，日程时间只能设定为将来</td>
-</tr>
-<tr>
-<td>QQ邮箱日历</td>
-<td>能够满足基本需求（当时以为能够随帐号同步）</td>
-</tr>
-</tbody>
-</table>
-<p>最后呢使用了QQ邮箱客户端的日历，基本符合自己的要求，不过当时天真的以为日历记录会随着帐号同步。可是换手机的时候才发现完全不是那么回事。<strong>手机客户端和网页客户端无法同步。当然客户端之间也无法同步。</strong></p>
-<p>经过一番折腾，连exchange服务都用上了，还给QQ邮箱客户端提了建议，不过回复让我截图之类，就没有再回复，考虑其他的解决方案。<strong>没想到最后解决的方法很简单</strong>，更改一下设置就可以了。</p>
-<p>打开安卓QQ邮箱的客户端，右上角的三个点-设置-应用-日历-开启日历同步-默认日历-更改为QQ日历（<em>默认是选择系统日历，之前不能同步的问题就在这里</em>）</p>
-]]></content>
-      <categories>
-        <category>Android</category>
-      </categories>
-      <tags>
-        <tag>QQ邮箱</tag>
-        <tag>同步</tag>
-        <tag>电脑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>树莓派永久禁用无线网卡</title>
     <url>/2017/02/16/rasp-disable-wireless-card/</url>
     <content><![CDATA[<p>之前树莓派一直用的无线网卡，不过更新系统，安装软件，传输文件都实在太慢了，所以我找了一根网线把树莓派连在路由器上面。这样感觉好多了还是有线稳定啊。因为基本不再用无线，所以就准备把无线网卡禁用掉。</p>
@@ -3012,45 +3003,6 @@
       <tags>
         <tag>wireless card</tag>
         <tag>vnc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>树莓派下载百度云盘文件</title>
-    <url>/2020/05/10/rasp-baidupan/</url>
-    <content><![CDATA[<p>树莓派又闲置了一段时间，然后现在再次学习linux，这次不能一知半解，要学进去，把之前的一些盲点给补充起来。然后就装了ubuntuserver，用着挺不错。</p>
-<p>然后前段时间pandownload的作者被抓了，原因大家都知道，不过因为百度依然是国内最受欢迎的云盘，不花钱也只能忍受这个速度，然而呢总是用电脑下载的话太费电了。就想起来使用树莓派，网络一搜果然已经有大神把轮子造好了，直接使用就ok。下面简单记录配置过程。</p>
-<a id="more"></a>
-<h2 id="项目选择"><a href="#项目选择" class="headerlink" title="项目选择"></a>项目选择</h2><p>在搜索中发现了两个项目，项目地址和使用测试如下</p>
-<ul>
-<li><a href="https://github.com/liuzhuoling2011/baidupcs-web" target="_blank" rel="noopener">https://github.com/liuzhuoling2011/baidupcs-web</a> 这个是web界面好操作，别看学linux，我也不想麻烦，鼠标点点就行也懒得整别的。<strong>不过致命的问题是无法登录，这个好像作者一直没有解决，咱们能力有限，只能另寻他法</strong></li>
-<li><a href="https://github.com/houtianze/bypy" target="_blank" rel="noopener">https://github.com/houtianze/bypy</a> 使用命令行界面，基于python编写，功能全面，就他了。（看来命令行还是比较好处理，个人观点）</li>
-</ul>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><ul>
-<li><p>设置utf8，按照官方给出的链接，我设置了en_US.utf-8 不过系统依然还是显示 C.utf-8，后面证实不影响使用，感觉应该是 UTF-8 即可</p>
-</li>
-<li><p>安装pip3, 执行如下命令<code>sudo apt install python3-pip</code></p>
-</li>
-<li><p>安装bypy，执行如下命令<code>sudo pip3 install bypy</code> 这里如果用普通用户权限安装，完成后找不到命令。</p>
-</li>
-</ul>
-<p>整个配置过程没有出现问题，直接无脑执行命令安装即可，什么时候能够像这种高手一样开发出这么厉害的程序。</p>
-<h2 id="网盘配置"><a href="#网盘配置" class="headerlink" title="网盘配置"></a>网盘配置</h2><ul>
-<li><p>绑定网盘。</p>
-<p>  执行命令<code>bypy info</code>，根据提示访问给出的网页，然后输入网页中出现的百度授权码回车即可。</p>
-</li>
-<li><p>把需要下载的文件放在 我的应用数据-bypy中即可下载</p>
-</li>
-<li><p>常用命令</p>
-  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bypy <span class="built_in">help</span> &lt;<span class="built_in">command</span>&gt;     <span class="comment"># 帮助</span></span><br><span class="line">bypy list               <span class="comment"># 列出文件列表</span></span><br><span class="line">bypy syncup   或   bypy upload          <span class="comment"># 上传到云盘</span></span><br><span class="line">bypy syncdown  或  bypy downdir /       <span class="comment">#  下载到本地</span></span><br><span class="line">bypy compare        <span class="comment"># 比较当前目录和云盘</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Raspberry Pi</category>
-      </categories>
-      <tags>
-        <tag>pan</tag>
-        <tag>bypy</tag>
       </tags>
   </entry>
   <entry>
@@ -3132,6 +3084,40 @@
       </tags>
   </entry>
   <entry>
+    <title>zsh执行python脚本输出的内容最后多了一个%</title>
+    <url>/2019/06/30/python-zsh-percent-prompt/</url>
+    <content><![CDATA[<h2 id="zsh执行python脚本出现"><a href="#zsh执行python脚本出现" class="headerlink" title="zsh执行python脚本出现 %"></a>zsh执行python脚本出现 %</h2><p>准备重新拾起python，不仅仅因为他简单优雅，更是因为他能够随手处理很多繁杂的事情，而且也是第一个自己特别喜欢的语言。但是因为种种原因，自己错过他的时间太久了。</p>
+<p>重新学习、练习编程的时候出现了一个问题，在一次终端执行python脚本的时候输出文本的最后多了一个<code>%</code>，而且<strong>终端还着重显示了</strong>。</p>
+<a id="more"></a>
+<p>感觉很奇怪，程序的输出并没有这个<code>%</code>，然后我使用了<code>ipython</code>，在里面用<code>run</code>命令执行，发现%并没有出现，看来是终端的问题，在网络上搜索后得到如下结论，简单说就是如果你输出的文本最后没有换行符，那么zsh会在后面加一个反色显示的<code>%</code>，如果你是root用户则会看到<code>#</code>。具体的官方英文解释如下：</p>
+<blockquote>
+<p>When a partial line is preserved, by default you will see an inverse+bold character at the end of the partial line: a ‘%’ for a normal user or a ‘#’ for root. If set, the shell parameter PROMPT_EOL_MARK can be used to customize how the end of partial lines are shown.</p>
+</blockquote>
+<p>解决方法：也不能说是解决方法，这也不是问题，如果不想看到，那就在输出的文本最后加个换行符，或者用ipython。</p>
+<p>这里多说一点，在编写python脚本的时候，由于经常在Windows和macOS之间切换，所以换行符有点不一样，这里可以使用vscode来更改换行符，右下角直接切换即可。</p>
+<h2 id="mac查看文件换行符"><a href="#mac查看文件换行符" class="headerlink" title="mac查看文件换行符"></a>mac查看文件换行符</h2><p>如果想在windows下查看文件的换行符，可推荐notepad++。mac下面没有好用的软件，vim好像也无法很好的显示。经过搜索，mac下查看换行符的方法如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 文件名可根据需要进行替换</span></span><br><span class="line">od -c filename.csv</span><br><span class="line"><span class="comment"># CR as \r and LF as \n.</span></span><br></pre></td></tr></table></figure>
+<p>参考：</p>
+<ul>
+<li><p><a href="https://stackoverflow.com/questions/36270945/percent-sign-at-the-end-of-the-output-of-python-script" target="_blank" rel="noopener">Why is a percent sign at the end of the output of the python script?</a></p>
+</li>
+<li><p><a href="https://unix.stackexchange.com/questions/167582/why-zsh-ends-a-line-with-a-highlighted-percent-symbol" target="_blank" rel="noopener">Why ZSH ends a line with a highlighted percent symbol?</a></p>
+</li>
+<li><p><a href="http://zsh.sourceforge.net/Doc/Release/Options.html#Prompting" target="_blank" rel="noopener">Prompting</a></p>
+</li>
+<li><p><a href="https://www.palaniraja.com/2011/06/how-to-view-windows-line-ending-characters-on-mac-osx/" target="_blank" rel="noopener">How to view (Windows) line ending characters on Mac OSX</a></p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>zsh</tag>
+        <tag>percent sign</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SSH登录树莓派出现login warning</title>
     <url>/2016/10/14/rasp-ssh-error/</url>
     <content><![CDATA[<p>写这个博文的时候已经离我遇到这个问题时间比较长了，我记得遇到这个问题的原因是我之前在笔记本上面使用SSH连接过树莓派，然后由于一些原因，我把树莓派重装了一次，接着再次用SSH登录的时候就出现问题了。</p>
@@ -3149,6 +3135,67 @@
       </categories>
       <tags>
         <tag>login warning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>手机QQ邮箱日历同步问题</title>
+    <url>/2019/04/30/qq-email-calendar-sync/</url>
+    <content><![CDATA[<p>随着临时的工作越来越多，记忆空间的有限，考虑使用日历提醒来记录一些重要的事情。一个是避免忘记，另一个是能够在后面的时候查看日程找到处理事件的时间。</p>
+<p>日历的选用经过了这样一个过程，首先是用的手机自带的日历，感觉不方便，同步比较麻烦。然后换用了tim，用了一段时间后发现新建日程的时间只能是将来，不能是过去，有时候把已经干完的事情做一个备忘就很麻烦了。</p>
+<p>因为需求较低，只用过三种日历，系统自带、Tim日程、QQ邮箱日历。根据我的使用时的需求对比如下：</p>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>日历</th>
+<th>主要问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>系统自带</td>
+<td>更换手机同步不方便</td>
+</tr>
+<tr>
+<td>Tim日程</td>
+<td>无法同步，日程时间只能设定为将来</td>
+</tr>
+<tr>
+<td>QQ邮箱日历</td>
+<td>能够满足基本需求（当时以为能够随帐号同步）</td>
+</tr>
+</tbody>
+</table>
+<p>最后呢使用了QQ邮箱客户端的日历，基本符合自己的要求，不过当时天真的以为日历记录会随着帐号同步。可是换手机的时候才发现完全不是那么回事。<strong>手机客户端和网页客户端无法同步。当然客户端之间也无法同步。</strong></p>
+<p>经过一番折腾，连exchange服务都用上了，还给QQ邮箱客户端提了建议，不过回复让我截图之类，就没有再回复，考虑其他的解决方案。<strong>没想到最后解决的方法很简单</strong>，更改一下设置就可以了。</p>
+<p>打开安卓QQ邮箱的客户端，右上角的三个点-设置-应用-日历-开启日历同步-默认日历-更改为QQ日历（<em>默认是选择系统日历，之前不能同步的问题就在这里</em>）</p>
+]]></content>
+      <categories>
+        <category>Android</category>
+      </categories>
+      <tags>
+        <tag>QQ邮箱</tag>
+        <tag>同步</tag>
+        <tag>电脑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>查看树莓派版本</title>
+    <url>/2018/05/20/rasp-versions/</url>
+    <content><![CDATA[<p>安装软件的时候想查看树莓派系统是32位还是64位就出现了以下的操作</p>
+<p>具体命令及作用如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">getconf LONG_BIT        <span class="comment"># 查看系统位数</span></span><br><span class="line">uname -a            <span class="comment"># kernel 版本</span></span><br><span class="line">/opt/vc/bin/vcgencmd  version   <span class="comment"># firmware版本</span></span><br><span class="line">strings /boot/start.elf  |  grep VC_BUILD_ID    <span class="comment"># firmware版本</span></span><br><span class="line">cat /proc/version       <span class="comment"># kernel</span></span><br><span class="line">cat /etc/os-release     <span class="comment"># OS版本资讯</span></span><br><span class="line">cat /etc/issue          <span class="comment"># Linux distro 版本</span></span><br><span class="line">cat /etc/debian_version     <span class="comment"># Debian版本编号</span></span><br></pre></td></tr></table></figure>
+<p><em>虽然树莓派3b的硬件支持64位的系统，但是官方的系统还是32位的，主要应该是为了兼容之前的硬件</em></p>
+<p><strong>参考</strong></p>
+<ul>
+<li><a href="https://www.raspberrypi.com.tw/10400/check-what-raspbian-version-you-are-running-on-the-raspberry-pi/" target="_blank" rel="noopener">如何看 Raspbian的版本資訊？</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Raspberry Pi</category>
+      </categories>
+      <tags>
+        <tag>versions</tag>
       </tags>
   </entry>
   <entry>
@@ -3240,22 +3287,50 @@
       </tags>
   </entry>
   <entry>
-    <title>查看树莓派版本</title>
-    <url>/2018/05/20/rasp-versions/</url>
-    <content><![CDATA[<p>安装软件的时候想查看树莓派系统是32位还是64位就出现了以下的操作</p>
-<p>具体命令及作用如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">getconf LONG_BIT        <span class="comment"># 查看系统位数</span></span><br><span class="line">uname -a            <span class="comment"># kernel 版本</span></span><br><span class="line">/opt/vc/bin/vcgencmd  version   <span class="comment"># firmware版本</span></span><br><span class="line">strings /boot/start.elf  |  grep VC_BUILD_ID    <span class="comment"># firmware版本</span></span><br><span class="line">cat /proc/version       <span class="comment"># kernel</span></span><br><span class="line">cat /etc/os-release     <span class="comment"># OS版本资讯</span></span><br><span class="line">cat /etc/issue          <span class="comment"># Linux distro 版本</span></span><br><span class="line">cat /etc/debian_version     <span class="comment"># Debian版本编号</span></span><br></pre></td></tr></table></figure>
-<p><em>虽然树莓派3b的硬件支持64位的系统，但是官方的系统还是32位的，主要应该是为了兼容之前的硬件</em></p>
-<p><strong>参考</strong></p>
-<ul>
-<li><a href="https://www.raspberrypi.com.tw/10400/check-what-raspbian-version-you-are-running-on-the-raspberry-pi/" target="_blank" rel="noopener">如何看 Raspbian的版本資訊？</a></li>
+    <title>思科路由器配置2——单臂路由</title>
+    <url>/2017/04/17/router-config-2/</url>
+    <content><![CDATA[<p><a href="http://baike.baidu.com/item/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1" target="_blank" rel="noopener">单臂路由</a>:是指在路由器的一个接口上通过配置子接口（或“逻辑接口”，并不存在真正物理接口）的方式，实现原来相互隔离的不同VLAN（虚拟局域网）之间的互联互通。</p>
+<p><a href="https://github.com/aoenian/cisco-pkt" target="_blank" rel="noopener">配置好的pkt文件</a></p>
+<a id="more"></a>
+<p>拓扑图：<br><img src="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/router2.png" alt=""></p>
+<h1 id="交换机S0配置"><a href="#交换机S0配置" class="headerlink" title="交换机S0配置"></a>交换机S0配置</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(<span class="built_in">config</span>)<span class="meta">#hostname S0</span></span><br><span class="line">S0(<span class="built_in">config</span>)<span class="meta">#exit</span></span><br><span class="line">S0<span class="meta">#vlan database        <span class="comment">// 进入vlan数据库模式</span></span></span><br><span class="line">S0(vlan)<span class="meta">#vlan 10 name v10   <span class="comment">// 创建vlan10并命名为v10</span></span></span><br><span class="line">VLAN <span class="number">10</span> modified:</span><br><span class="line">    Name: v10</span><br><span class="line">S0(vlan)<span class="meta">#vlan 20 n v20      <span class="comment">// 创建vlan20</span></span></span><br><span class="line">VLAN <span class="number">20</span> added:</span><br><span class="line">    Name: v20</span><br><span class="line">S0(<span class="built_in">config</span>)<span class="meta">#interface r f0/1-10  <span class="comment">// 把端口1-10划分给vlan10</span></span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#swi mode acc    <span class="comment">// 更改端口模式为 access</span></span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#swi access vlan 10  <span class="comment">// 端口加入vlan10</span></span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#exit</span></span><br><span class="line">S0(<span class="built_in">config</span>)<span class="meta">#interface r f0/11-20</span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#swi mode acc</span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#swi acc vlan 20</span></span><br><span class="line"></span><br><span class="line">S0(<span class="built_in">config</span>)<span class="meta">#inter f0/24      <span class="comment">// 设置与路由器R0连接的端口24</span></span></span><br><span class="line"><span class="comment">// 这里由于交换机只支持802.1q协议，所以没有设置协议，只设置模式</span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>)<span class="meta">#swi mode trunk </span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>)<span class="meta">#swi trunk allowed vlan all    <span class="comment">// 允许所有vlan通过</span></span></span><br></pre></td></tr></table></figure>
+<h1 id="PC的设置"><a href="#PC的设置" class="headerlink" title="PC的设置"></a>PC的设置</h1><table>
+<thead>
+<tr>
+<th>PC</th>
+<th>vlan</th>
+<th>IP</th>
+<th>gateway</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC0</td>
+<td>10</td>
+<td>192.168.1.11/24</td>
+<td>192.168.1.254/24</td>
+</tr>
+<tr>
+<td>PC1</td>
+<td>20</td>
+<td>192.168.2.11/24</td>
+<td>192.168.2.254/24</td>
+</tr>
+</tbody>
+</table>
+<h1 id="路由器R0的配置"><a href="#路由器R0的配置" class="headerlink" title="路由器R0的配置"></a>路由器R0的配置</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Router&gt;enable</span><br><span class="line">Router<span class="meta">#conf</span></span><br><span class="line">Configuring from terminal, memory, <span class="keyword">or</span> network [terminal]? </span><br><span class="line">Enter configuration commands, one per <span class="built_in">line</span>.  End with CNTL/Z.</span><br><span class="line">Router(<span class="built_in">config</span>)<span class="meta">#hostname R0</span></span><br><span class="line">R0(<span class="built_in">config</span>)<span class="meta">#inter f0/0   <span class="comment">// 进入路由器和交换机相连的端口</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-<span class="keyword">if</span>)<span class="meta">#no shutdown   <span class="comment">// 启用端口</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">R0(<span class="built_in">config</span>)<span class="meta">#inter f0/0.1     <span class="comment">// 进入逻辑子接口0.1</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#encapsulation dot1Q 10     <span class="comment">// 设置协议封装并建立与vlan10的关联</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#ip add 192.168.1.254 255.255.255.0 <span class="comment">// 设置ip地址（也就是网关地址）</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#exit</span></span><br><span class="line">R0(<span class="built_in">config</span>)<span class="meta">#inter f0/0.2</span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#encapsulation dot1Q 20</span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#ip add 192.168.2.254 255.255.255.0</span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#exit</span></span><br><span class="line">R0(<span class="built_in">config</span>)<span class="meta">#exit</span></span><br><span class="line">R0<span class="meta">#write memory     <span class="comment">// 写入配置</span></span></span><br><span class="line">Building configuration...</span><br><span class="line">[OK]</span><br></pre></td></tr></table></figure>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>PC0与PC1之间能够互相ping通。</p>
+<h1 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h1><ul>
+<li><a href="http://blog.csdn.net/junmuzi/article/details/49912217" target="_blank" rel="noopener">Cisco单臂路由配置，图文实例详解</a></li>
+<li><a href="http://baike.baidu.com/item/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1" target="_blank" rel="noopener">单臂路由</a></li>
 </ul>
 ]]></content>
       <categories>
-        <category>Raspberry Pi</category>
+        <category>Net</category>
       </categories>
       <tags>
-        <tag>versions</tag>
+        <tag>router</tag>
+        <tag>one-armed</tag>
       </tags>
   </entry>
   <entry>
@@ -3315,50 +3390,24 @@
       </tags>
   </entry>
   <entry>
-    <title>思科路由器配置2——单臂路由</title>
-    <url>/2017/04/17/router-config-2/</url>
-    <content><![CDATA[<p><a href="http://baike.baidu.com/item/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1" target="_blank" rel="noopener">单臂路由</a>:是指在路由器的一个接口上通过配置子接口（或“逻辑接口”，并不存在真正物理接口）的方式，实现原来相互隔离的不同VLAN（虚拟局域网）之间的互联互通。</p>
-<p><a href="https://github.com/aoenian/cisco-pkt" target="_blank" rel="noopener">配置好的pkt文件</a></p>
+    <title>鼠须管更新0.10.0部署出错解决</title>
+    <url>/2019/01/24/squirrel-update-error/</url>
+    <content><![CDATA[<p>今天刚打开电脑然后Rime输入法更新提示弹出来了，真的很惊喜，一直以为这个输入法不会更新了。<em>不过前几个月Windows上的已经更新了，想来macOS上更新也就不奇怪了。Linux上面可能就没这么好运了。</em></p>
+<p>点击更新以后，保险期间重启了电脑，然后重新部署，谁知道居然出错了，但是却不影响输入，对了可能是因为我用的<strong>小鹤双拼</strong>。</p>
+<p>首先找到出错信息的位置，提示出错信息在<code>$TMPDIR</code>中。在终端中输入<code>env</code>命令查看<code>$TMPDIR</code>的具体位置。通过终端进入相应的目录后，可以执行<code>open .</code>命令在当前目录打开<strong>Finder</strong>查看。</p>
 <a id="more"></a>
-<p>拓扑图：<br><img src="https://raw.githubusercontent.com/aoenian/postbackup/master/topupic/router2.png" alt=""></p>
-<h1 id="交换机S0配置"><a href="#交换机S0配置" class="headerlink" title="交换机S0配置"></a>交换机S0配置</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Switch(<span class="built_in">config</span>)<span class="meta">#hostname S0</span></span><br><span class="line">S0(<span class="built_in">config</span>)<span class="meta">#exit</span></span><br><span class="line">S0<span class="meta">#vlan database        <span class="comment">// 进入vlan数据库模式</span></span></span><br><span class="line">S0(vlan)<span class="meta">#vlan 10 name v10   <span class="comment">// 创建vlan10并命名为v10</span></span></span><br><span class="line">VLAN <span class="number">10</span> modified:</span><br><span class="line">    Name: v10</span><br><span class="line">S0(vlan)<span class="meta">#vlan 20 n v20      <span class="comment">// 创建vlan20</span></span></span><br><span class="line">VLAN <span class="number">20</span> added:</span><br><span class="line">    Name: v20</span><br><span class="line">S0(<span class="built_in">config</span>)<span class="meta">#interface r f0/1-10  <span class="comment">// 把端口1-10划分给vlan10</span></span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#swi mode acc    <span class="comment">// 更改端口模式为 access</span></span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#swi access vlan 10  <span class="comment">// 端口加入vlan10</span></span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#exit</span></span><br><span class="line">S0(<span class="built_in">config</span>)<span class="meta">#interface r f0/11-20</span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#swi mode acc</span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>-range)<span class="meta">#swi acc vlan 20</span></span><br><span class="line"></span><br><span class="line">S0(<span class="built_in">config</span>)<span class="meta">#inter f0/24      <span class="comment">// 设置与路由器R0连接的端口24</span></span></span><br><span class="line"><span class="comment">// 这里由于交换机只支持802.1q协议，所以没有设置协议，只设置模式</span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>)<span class="meta">#swi mode trunk </span></span><br><span class="line">S0(<span class="built_in">config</span>-<span class="keyword">if</span>)<span class="meta">#swi trunk allowed vlan all    <span class="comment">// 允许所有vlan通过</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="PC的设置"><a href="#PC的设置" class="headerlink" title="PC的设置"></a>PC的设置</h1><table>
-<thead>
-<tr>
-<th>PC</th>
-<th>vlan</th>
-<th>IP</th>
-<th>gateway</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PC0</td>
-<td>10</td>
-<td>192.168.1.11/24</td>
-<td>192.168.1.254/24</td>
-</tr>
-<tr>
-<td>PC1</td>
-<td>20</td>
-<td>192.168.2.11/24</td>
-<td>192.168.2.254/24</td>
-</tr>
-</tbody>
-</table>
-<h1 id="路由器R0的配置"><a href="#路由器R0的配置" class="headerlink" title="路由器R0的配置"></a>路由器R0的配置</h1><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">Router&gt;enable</span><br><span class="line">Router<span class="meta">#conf</span></span><br><span class="line">Configuring from terminal, memory, <span class="keyword">or</span> network [terminal]? </span><br><span class="line">Enter configuration commands, one per <span class="built_in">line</span>.  End with CNTL/Z.</span><br><span class="line">Router(<span class="built_in">config</span>)<span class="meta">#hostname R0</span></span><br><span class="line">R0(<span class="built_in">config</span>)<span class="meta">#inter f0/0   <span class="comment">// 进入路由器和交换机相连的端口</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-<span class="keyword">if</span>)<span class="meta">#no shutdown   <span class="comment">// 启用端口</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-<span class="keyword">if</span>)<span class="meta">#exit</span></span><br><span class="line">R0(<span class="built_in">config</span>)<span class="meta">#inter f0/0.1     <span class="comment">// 进入逻辑子接口0.1</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#encapsulation dot1Q 10     <span class="comment">// 设置协议封装并建立与vlan10的关联</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#ip add 192.168.1.254 255.255.255.0 <span class="comment">// 设置ip地址（也就是网关地址）</span></span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#exit</span></span><br><span class="line">R0(<span class="built_in">config</span>)<span class="meta">#inter f0/0.2</span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#encapsulation dot1Q 20</span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#ip add 192.168.2.254 255.255.255.0</span></span><br><span class="line">R0(<span class="built_in">config</span>-subif)<span class="meta">#exit</span></span><br><span class="line">R0(<span class="built_in">config</span>)<span class="meta">#exit</span></span><br><span class="line">R0<span class="meta">#write memory     <span class="comment">// 写入配置</span></span></span><br><span class="line">Building configuration...</span><br><span class="line">[OK]</span><br></pre></td></tr></table></figure>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p>PC0与PC1之间能够互相ping通。</p>
-<h1 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h1><ul>
-<li><a href="http://blog.csdn.net/junmuzi/article/details/49912217" target="_blank" rel="noopener">Cisco单臂路由配置，图文实例详解</a></li>
-<li><a href="http://baike.baidu.com/item/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1" target="_blank" rel="noopener">单臂路由</a></li>
-</ul>
+<p>查看<code>rime.squirrel.ERROR</code>里面的出错信息发现如下提示：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 意思就是提示好多输入方案需要的文件不存在</span></span><br><span class="line">"stroke.reverse.bin</span><br><span class="line">luna_pinyin_simp.prism.bin</span><br><span class="line">luna_pinyin_tw.prism.bin</span><br><span class="line">...</span><br><span class="line">"</span><br><span class="line">No such file or di rectory</span><br></pre></td></tr></table></figure>
+<p>解决方法在<a href="https://github.com/rime/squirrel/issues/279" target="_blank" rel="noopener">这里</a>主要是因为新版精简了安装包，如果需要预设输入方案或其他输入方案请执行以下命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装预设输入方案</span></span><br><span class="line">curl -fsSL https://git.io/rime-install | bash -s -- :preset</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装双拼方案</span></span><br><span class="line">curl -fsSL https://git.io/rime-install | bash -s -- :preset double-pinyin</span><br></pre></td></tr></table></figure>
+<p>其他的输入方案可参考<a href="https://github.com/rime/plum" target="_blank" rel="noopener">plum</a>。</p>
 ]]></content>
       <categories>
-        <category>Net</category>
+        <category>macOS</category>
       </categories>
       <tags>
-        <tag>router</tag>
-        <tag>one-armed</tag>
+        <tag>error</tag>
+        <tag>Rime</tag>
       </tags>
   </entry>
   <entry>
@@ -3522,24 +3571,26 @@
       </tags>
   </entry>
   <entry>
-    <title>鼠须管更新0.10.0部署出错解决</title>
-    <url>/2019/01/24/squirrel-update-error/</url>
-    <content><![CDATA[<p>今天刚打开电脑然后Rime输入法更新提示弹出来了，真的很惊喜，一直以为这个输入法不会更新了。<em>不过前几个月Windows上的已经更新了，想来macOS上更新也就不奇怪了。Linux上面可能就没这么好运了。</em></p>
-<p>点击更新以后，保险期间重启了电脑，然后重新部署，谁知道居然出错了，但是却不影响输入，对了可能是因为我用的<strong>小鹤双拼</strong>。</p>
-<p>首先找到出错信息的位置，提示出错信息在<code>$TMPDIR</code>中。在终端中输入<code>env</code>命令查看<code>$TMPDIR</code>的具体位置。通过终端进入相应的目录后，可以执行<code>open .</code>命令在当前目录打开<strong>Finder</strong>查看。</p>
+    <title>文件特殊权限SUID测试</title>
+    <url>/2017/11/02/suid-test/</url>
+    <content><![CDATA[<h1 id="测试方法1（失败）"><a href="#测试方法1（失败）" class="headerlink" title="测试方法1（失败）"></a>测试方法1（失败）</h1><p>思路:使用shell脚本，然后把脚本编译为二进制，赋予 suid<br>权限，用不同的用户执行这样就能比较是否执行的时候用户是文件的所属用户</p>
+<h2 id="安装shc编译shell脚本"><a href="#安装shc编译shell脚本" class="headerlink" title="安装shc编译shell脚本"></a>安装shc编译shell脚本</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@centos-rpi3 shc]<span class="comment"># yum install automake</span></span><br><span class="line">[root@centos-rpi3 tmp]<span class="comment"># git clone https://github.com/neurobin/shc.git</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># cd shc</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># mkdir m4</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># ./autogen.sh</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># ./configure</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># make</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># make install</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>查看<code>rime.squirrel.ERROR</code>里面的出错信息发现如下提示：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 意思就是提示好多输入方案需要的文件不存在</span></span><br><span class="line">"stroke.reverse.bin</span><br><span class="line">luna_pinyin_simp.prism.bin</span><br><span class="line">luna_pinyin_tw.prism.bin</span><br><span class="line">...</span><br><span class="line">"</span><br><span class="line">No such file or di rectory</span><br></pre></td></tr></table></figure>
-<p>解决方法在<a href="https://github.com/rime/squirrel/issues/279" target="_blank" rel="noopener">这里</a>主要是因为新版精简了安装包，如果需要预设输入方案或其他输入方案请执行以下命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装预设输入方案</span></span><br><span class="line">curl -fsSL https://git.io/rime-install | bash -s -- :preset</span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装双拼方案</span></span><br><span class="line">curl -fsSL https://git.io/rime-install | bash -s -- :preset double-pinyin</span><br></pre></td></tr></table></figure>
-<p>其他的输入方案可参考<a href="https://github.com/rime/plum" target="_blank" rel="noopener">plum</a>。</p>
+<h2 id="测试环境配置"><a href="#测试环境配置" class="headerlink" title="测试环境配置"></a>测试环境配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[aoenian@centos-rpi3 tmp]$ vim rmfile.sh</span><br><span class="line"><span class="comment"># rmfile.sh </span></span><br><span class="line"><span class="comment"># #!/bin/bash</span></span><br><span class="line"><span class="comment"># rm -i /home/aoenian/file.txt</span></span><br><span class="line"></span><br><span class="line">[aoenian@centos-rpi3 tmp]$ shc -f rmfile.sh -o rmfile</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ su <span class="built_in">test</span></span><br><span class="line">[<span class="built_in">test</span>@centos-rpi3 tmp]$ ./rmfile</span><br><span class="line">[<span class="built_in">test</span>@centos-rpi3 tmp]$ <span class="built_in">exit</span></span><br><span class="line">[aoenian@centos-rpi3 tmp]$ chmod 4755 rmfile</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ su <span class="built_in">test</span></span><br><span class="line">[<span class="built_in">test</span>@centos-rpi3 tmp]$ ./rmfile</span><br></pre></td></tr></table></figure>
+<p>结果都是失败，都会显示没有权限，这个和设想的就不一样了，然后查看了命令运行时候进程的用户，发现依然是<br>test 用户在运行 rm 命令</p>
+<p><em>个人理解：可能执行rmfile程序的时候是aoenian用户，但是rmfile程序调用rm命令的时候就变回来了</em></p>
+<h1 id="测试方法2（成功）"><a href="#测试方法2（成功）" class="headerlink" title="测试方法2（成功）"></a>测试方法2（成功）</h1><p>思路：不使用系统命令，使用C语言编写二进制文件</p>
+<p>rmfile.c文件的内容如下：</p>
+<p><em>会出现警告，不影响使用</em></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> filename[<span class="number">80</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The file to delete: "</span>);</span><br><span class="line">    gets(filename);</span><br><span class="line">    <span class="keyword">if</span>( <span class="built_in">remove</span>(filename) == <span class="number">0</span> )</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Removed %s."</span>, filename);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        perror(<span class="string">"remove"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[aoenian@centos-rpi3 tmp]$ gcc -Wall rmfile.c -o rmfile</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ touch test.txt</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ chmod 4755 rmfile</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ su <span class="built_in">test</span></span><br><span class="line">[<span class="built_in">test</span>@centos-rpi3 tmp]$ ./rmfile</span><br><span class="line">The file to delete: test.txt</span><br><span class="line">Removed test.txt.</span><br></pre></td></tr></table></figure>
+<p>测试成功，还是挺有意思的。</p>
 ]]></content>
       <categories>
-        <category>macOS</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>error</tag>
-        <tag>Rime</tag>
+        <tag>SUID</tag>
       </tags>
   </entry>
   <entry>
@@ -3595,29 +3646,6 @@
       <tags>
         <tag>password</tag>
         <tag>switch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文件特殊权限SUID测试</title>
-    <url>/2017/11/02/suid-test/</url>
-    <content><![CDATA[<h1 id="测试方法1（失败）"><a href="#测试方法1（失败）" class="headerlink" title="测试方法1（失败）"></a>测试方法1（失败）</h1><p>思路:使用shell脚本，然后把脚本编译为二进制，赋予 suid<br>权限，用不同的用户执行这样就能比较是否执行的时候用户是文件的所属用户</p>
-<h2 id="安装shc编译shell脚本"><a href="#安装shc编译shell脚本" class="headerlink" title="安装shc编译shell脚本"></a>安装shc编译shell脚本</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@centos-rpi3 shc]<span class="comment"># yum install automake</span></span><br><span class="line">[root@centos-rpi3 tmp]<span class="comment"># git clone https://github.com/neurobin/shc.git</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># cd shc</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># mkdir m4</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># ./autogen.sh</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># ./configure</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># make</span></span><br><span class="line">[root@centos-rpi3 shc]<span class="comment"># make install</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h2 id="测试环境配置"><a href="#测试环境配置" class="headerlink" title="测试环境配置"></a>测试环境配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[aoenian@centos-rpi3 tmp]$ vim rmfile.sh</span><br><span class="line"><span class="comment"># rmfile.sh </span></span><br><span class="line"><span class="comment"># #!/bin/bash</span></span><br><span class="line"><span class="comment"># rm -i /home/aoenian/file.txt</span></span><br><span class="line"></span><br><span class="line">[aoenian@centos-rpi3 tmp]$ shc -f rmfile.sh -o rmfile</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ su <span class="built_in">test</span></span><br><span class="line">[<span class="built_in">test</span>@centos-rpi3 tmp]$ ./rmfile</span><br><span class="line">[<span class="built_in">test</span>@centos-rpi3 tmp]$ <span class="built_in">exit</span></span><br><span class="line">[aoenian@centos-rpi3 tmp]$ chmod 4755 rmfile</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ su <span class="built_in">test</span></span><br><span class="line">[<span class="built_in">test</span>@centos-rpi3 tmp]$ ./rmfile</span><br></pre></td></tr></table></figure>
-<p>结果都是失败，都会显示没有权限，这个和设想的就不一样了，然后查看了命令运行时候进程的用户，发现依然是<br>test 用户在运行 rm 命令</p>
-<p><em>个人理解：可能执行rmfile程序的时候是aoenian用户，但是rmfile程序调用rm命令的时候就变回来了</em></p>
-<h1 id="测试方法2（成功）"><a href="#测试方法2（成功）" class="headerlink" title="测试方法2（成功）"></a>测试方法2（成功）</h1><p>思路：不使用系统命令，使用C语言编写二进制文件</p>
-<p>rmfile.c文件的内容如下：</p>
-<p><em>会出现警告，不影响使用</em></p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> filename[<span class="number">80</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"The file to delete: "</span>);</span><br><span class="line">    gets(filename);</span><br><span class="line">    <span class="keyword">if</span>( <span class="built_in">remove</span>(filename) == <span class="number">0</span> )</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Removed %s."</span>, filename);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        perror(<span class="string">"remove"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[aoenian@centos-rpi3 tmp]$ gcc -Wall rmfile.c -o rmfile</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ touch test.txt</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ chmod 4755 rmfile</span><br><span class="line">[aoenian@centos-rpi3 tmp]$ su <span class="built_in">test</span></span><br><span class="line">[<span class="built_in">test</span>@centos-rpi3 tmp]$ ./rmfile</span><br><span class="line">The file to delete: test.txt</span><br><span class="line">Removed test.txt.</span><br></pre></td></tr></table></figure>
-<p>测试成功，还是挺有意思的。</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>SUID</tag>
       </tags>
   </entry>
   <entry>
@@ -3845,36 +3873,6 @@
       </tags>
   </entry>
   <entry>
-    <title>中国电信商城的一次购物过程</title>
-    <url>/2019/12/05/telecom-service-communication/</url>
-    <content><![CDATA[<p>因为电信新出了一款5元套餐，非常适合作为备用号码。所以就想申请一张，然后就经历了一次奇妙的电信商城购物体验（这里不是反话，过程还是蛮有意思的）。这里做一下记录。</p>
-<a id="more"></a>
-<h2 id="商城购买电话卡"><a href="#商城购买电话卡" class="headerlink" title="商城购买电话卡"></a>商城购买电话卡</h2><p>商场首页就有套餐的介绍，然后点击进入就是购卡界面，很流畅。还可以自己选号码，这点挺人性化的，而且有些号码还不错。这里有个小插曲，其实在商城购买之前我去电信营业厅问过了。毕竟营业厅办卡很快当时就能拿到。</p>
-<p>不过同样的套餐，营业厅办理国内呼叫0.15元/分钟，而商城上面显示的为0.1元/分钟，多出来的是手续费吗？问了工作人员为什么费用不一样，回答很霸气：“你可以去网上办理。”无懈可击，非常正确。这里不得不说移动的客服应该是这三家中最靠谱的。</p>
-<p>然后回商城购买了电话卡，接着呢过了一天想看看卡到哪里了，然后事情就变得有意思了，一看订单被关闭了，原因简单没有付款。哎呀，我是那种不付钱的人吗，支付宝的订单都成功了，钱都转走了，你告诉我没收到，这还得了。找客服之路。。。开启。</p>
-<h2 id="网上营业厅客服"><a href="#网上营业厅客服" class="headerlink" title="网上营业厅客服"></a>网上营业厅客服</h2><p>第一个反应就是网上营业厅，这里要提一下电信的网上营业厅客服，更改套餐之类可以找他们，比线下的靠谱，有些互联网套餐线下基本都找各种理由不给你办，但是网厅基本就ok。扯远了，网厅客服就在网页的最下面，点那个<strong>在线客服</strong>就可以了，但是呢得到的回复是，他们看不到商城的订单需要联系商城的客服。哦，分工还很明确，找商城客服，走起。</p>
-<h2 id="商城客服"><a href="#商城客服" class="headerlink" title="商城客服"></a>商城客服</h2><p>商城客服还是比较好找的，任何一个商品界面右边就有一个在线客服的图标，用的是企业qq，可以匿名也可以使用你的qq登录聊天，qq号码是<strong>4008099189</strong>，这里有两个建议，一个是用手机qq加好友聊天，因为需要排队，用手机qq可以及时看到他的回复；二是最好下午，经过我的试验，他们的大概上班时间在<strong>11点左右</strong>。联系以后回复我不好意思你的这个订单是集团业务，需要联系集团进行处理。</p>
-<h2 id="集团客服"><a href="#集团客服" class="headerlink" title="集团客服"></a>集团客服</h2><p>集团客服的电话是<strong>4008167189</strong>，开启我的电话沟通之旅，到这里总算找到了一个能够处理问题的。</p>
-<p>后续情况是这样：</p>
-<ul>
-<li><p>第一个客服查询后告诉我他们那边没有收到，然后需要找技术人员进行核对，让我提供支付截图，说短信给我邮箱地址，让我把截图发过去，但是挂了电话以后就没有以后了。</p>
-</li>
-<li><p>再次联系客服后让我提供了支付宝的交易单号进行查询，然后告诉我支付成功会给我退款。因为这时我已经再次下单了（第一个客服告诉我即使关闭的订单付款成功也不能发货）</p>
-</li>
-<li><p>过了一天吧好像，给我打电话说失效的那个订单准备发货，什么操作感觉电话说明问题取消订单，随后退款到帐。</p>
-</li>
-</ul>
-<p>卡用着不错，但是感觉客服有点乱。</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>无忧卡</tag>
-        <tag>客服</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>网络视频下载方法记录</title>
     <url>/2020/06/14/video-download/</url>
     <content><![CDATA[<p>现在基本不在网上看视频，主要因为电脑屏幕太小，同时也因为自己看的基本主流媒体都没有，属于非主流，主流上有的又不太感兴趣。不过有时在网上看到的好玩的视频想下载下来，却发现厂商保护视频地址的能力真的太强（有这技术没有想想如何用到改善用户体验上）。所以把这段时间用过的一些下载视频的方法记录一下，以备后用。</p>
@@ -3920,6 +3918,36 @@
       <tags>
         <tag>Vim</tag>
         <tag>clipboard</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>中国电信商城的一次购物过程</title>
+    <url>/2019/12/05/telecom-service-communication/</url>
+    <content><![CDATA[<p>因为电信新出了一款5元套餐，非常适合作为备用号码。所以就想申请一张，然后就经历了一次奇妙的电信商城购物体验（这里不是反话，过程还是蛮有意思的）。这里做一下记录。</p>
+<a id="more"></a>
+<h2 id="商城购买电话卡"><a href="#商城购买电话卡" class="headerlink" title="商城购买电话卡"></a>商城购买电话卡</h2><p>商场首页就有套餐的介绍，然后点击进入就是购卡界面，很流畅。还可以自己选号码，这点挺人性化的，而且有些号码还不错。这里有个小插曲，其实在商城购买之前我去电信营业厅问过了。毕竟营业厅办卡很快当时就能拿到。</p>
+<p>不过同样的套餐，营业厅办理国内呼叫0.15元/分钟，而商城上面显示的为0.1元/分钟，多出来的是手续费吗？问了工作人员为什么费用不一样，回答很霸气：“你可以去网上办理。”无懈可击，非常正确。这里不得不说移动的客服应该是这三家中最靠谱的。</p>
+<p>然后回商城购买了电话卡，接着呢过了一天想看看卡到哪里了，然后事情就变得有意思了，一看订单被关闭了，原因简单没有付款。哎呀，我是那种不付钱的人吗，支付宝的订单都成功了，钱都转走了，你告诉我没收到，这还得了。找客服之路。。。开启。</p>
+<h2 id="网上营业厅客服"><a href="#网上营业厅客服" class="headerlink" title="网上营业厅客服"></a>网上营业厅客服</h2><p>第一个反应就是网上营业厅，这里要提一下电信的网上营业厅客服，更改套餐之类可以找他们，比线下的靠谱，有些互联网套餐线下基本都找各种理由不给你办，但是网厅基本就ok。扯远了，网厅客服就在网页的最下面，点那个<strong>在线客服</strong>就可以了，但是呢得到的回复是，他们看不到商城的订单需要联系商城的客服。哦，分工还很明确，找商城客服，走起。</p>
+<h2 id="商城客服"><a href="#商城客服" class="headerlink" title="商城客服"></a>商城客服</h2><p>商城客服还是比较好找的，任何一个商品界面右边就有一个在线客服的图标，用的是企业qq，可以匿名也可以使用你的qq登录聊天，qq号码是<strong>4008099189</strong>，这里有两个建议，一个是用手机qq加好友聊天，因为需要排队，用手机qq可以及时看到他的回复；二是最好下午，经过我的试验，他们的大概上班时间在<strong>11点左右</strong>。联系以后回复我不好意思你的这个订单是集团业务，需要联系集团进行处理。</p>
+<h2 id="集团客服"><a href="#集团客服" class="headerlink" title="集团客服"></a>集团客服</h2><p>集团客服的电话是<strong>4008167189</strong>，开启我的电话沟通之旅，到这里总算找到了一个能够处理问题的。</p>
+<p>后续情况是这样：</p>
+<ul>
+<li><p>第一个客服查询后告诉我他们那边没有收到，然后需要找技术人员进行核对，让我提供支付截图，说短信给我邮箱地址，让我把截图发过去，但是挂了电话以后就没有以后了。</p>
+</li>
+<li><p>再次联系客服后让我提供了支付宝的交易单号进行查询，然后告诉我支付成功会给我退款。因为这时我已经再次下单了（第一个客服告诉我即使关闭的订单付款成功也不能发货）</p>
+</li>
+<li><p>过了一天吧好像，给我打电话说失效的那个订单准备发货，什么操作感觉电话说明问题取消订单，随后退款到帐。</p>
+</li>
+</ul>
+<p>卡用着不错，但是感觉客服有点乱。</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>无忧卡</tag>
+        <tag>客服</tag>
       </tags>
   </entry>
   <entry>
@@ -4033,6 +4061,23 @@
       </tags>
   </entry>
   <entry>
+    <title>vscode配置js编程环境</title>
+    <url>/2019/01/19/vscode-debug-js/</url>
+    <content><![CDATA[<p>新版的vscode（1.30以上版本）不用配置即可调试js代码，不过建议安装插件<code>Code Runner</code>方便代码执行。然后编辑的时候如果习惯<strong>Tab</strong>跳出右括号，那你不能错过插件<code>Tab out</code>。</p>
+<a id="more"></a>
+<p>本来准备去年12月底写这个博客，那时候vscode在调试js文件的时候还需要<code>launch.json</code>这个配置文件。后来耽搁了一段时间，一直没有完成。而当我更新了新版本的vscode以后发现根本不需要任何配置就可以调试js文件了，不得不佩服软件的更新速度。当然这篇博文就没有再写下去的必要了。</p>
+<p>最后，如果你还在用着老版本而且不想更新那么可以参考<a href="https://segmentfault.com/q/1010000013515365/a-1020000013871509" target="_blank" rel="noopener">vscode如何F5运行调试多个js文件</a></p>
+]]></content>
+      <categories>
+        <category>Editor</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
+        <tag>debug</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>VirtualBox虚拟系统使用共享文件夹和摄像头</title>
     <url>/2019/01/08/virtualbox-install-extpack/</url>
     <content><![CDATA[<p>macOS用着挺好，不过Windows依然离不了，所以虚拟机还得用。为啥不用双系统？切换太麻烦。而且浪费空间，本来硬盘就不大。</p>
@@ -4079,23 +4124,6 @@
       <tags>
         <tag>虚拟机</tag>
         <tag>增强功能</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vscode配置js编程环境</title>
-    <url>/2019/01/19/vscode-debug-js/</url>
-    <content><![CDATA[<p>新版的vscode（1.30以上版本）不用配置即可调试js代码，不过建议安装插件<code>Code Runner</code>方便代码执行。然后编辑的时候如果习惯<strong>Tab</strong>跳出右括号，那你不能错过插件<code>Tab out</code>。</p>
-<a id="more"></a>
-<p>本来准备去年12月底写这个博客，那时候vscode在调试js文件的时候还需要<code>launch.json</code>这个配置文件。后来耽搁了一段时间，一直没有完成。而当我更新了新版本的vscode以后发现根本不需要任何配置就可以调试js文件了，不得不佩服软件的更新速度。当然这篇博文就没有再写下去的必要了。</p>
-<p>最后，如果你还在用着老版本而且不想更新那么可以参考<a href="https://segmentfault.com/q/1010000013515365/a-1020000013871509" target="_blank" rel="noopener">vscode如何F5运行调试多个js文件</a></p>
-]]></content>
-      <categories>
-        <category>Editor</category>
-      </categories>
-      <tags>
-        <tag>vscode</tag>
-        <tag>debug</tag>
-        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -4165,32 +4193,6 @@
       <tags>
         <tag>snippets</tag>
         <tag>Variables</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VSCode建立用户代码片段</title>
-    <url>/2018/08/13/vscode-user-snippet/</url>
-    <content><![CDATA[<p>编辑器尝试过很多，感觉没有特别适合的，当然我并不是深度用户，所以不做过多的评论。遇到VSCode以后感觉还是蛮不错，从一个普通用户的角度来说。</p>
-<p>现在主要用的编辑器是两个 <code>Emacs</code> 和 <code>VSCode</code> ，前者用来写org文件，后者编辑修改一些小程序和配置文件。</p>
-<p>遇到这个问题是因为在编写简单的 <code>HTML</code> 文件时使用VSCode自带的补全有些内容暂时不需要，所以想自己写一个类似 <code>emmet</code> 官方的自动补全，试了一下操作很方便，这里做个记录备份。</p>
-<a id="more"></a>
-<p>在code中如果编辑html文件，直接输入 <code>html:5</code><br>则可以自动补全页面的基本标签，具体如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>不过里面的 <code>lang</code> 默认是 <code>en</code> ，而且做个简单的页面也不需要那么多 <code>meta</code> 数据，当然放在那里影响也不大，看个人需要。</p>
-<p>既然不用软件自带的，那么咱们就创建一个自己用的代码片段。找到 <code>文件-首选项-用户代码片段</code> 在弹出的输入框中输入 <code>html</code> 回车，会打开一个 <code>html.json</code> 的文件，在这里面编辑就可以了。</p>
-<p><strong>注意：代码需要在两个大括号之间，不能超出。</strong> 下面是我自己的代码片段，供大家参考。</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"Simple html5 head": &#123;</span><br><span class="line">    "prefix": "myhtml",   </span><br><span class="line">    "body": [             </span><br><span class="line">        "&lt;!DOCTYPE html&gt;",</span><br><span class="line">        "&lt;html lang=\"$&#123;1:en&#125;\"&gt;",</span><br><span class="line">        "&lt;head&gt;",</span><br><span class="line">        "    &lt;meta charset=\"UTF-8\" /&gt;",</span><br><span class="line">        "    &lt;title&gt;$&#123;2:Document&#125;&lt;/title&gt;",</span><br><span class="line">        "&lt;/head&gt;",</span><br><span class="line">        "&lt;body&gt;",</span><br><span class="line">        "    $3",</span><br><span class="line">        "&lt;/body&gt;",</span><br><span class="line">        "&lt;/html&gt;",</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>具体的解释文档在相应语言的 <code>json</code> 文件中，这里简单做个介绍。</p>
-<blockquote>
-<p>第一行是你的这个代码片段的描述。<br>第二行很重要，是你的这个代码片段的激活口令。<br>第三行一直到最后body结束，是你需要插入的代码。<br>其中如果你插入的代码不需要换行，或者你使用换行符 <code>\n</code> 换行，则不需要 <code>[]</code> 符号把内容括起来。直接一个双引号把内容包住即可，当然内容里面的双引号需要转义。<br><code>$num</code> 则为 <code>tab</code> 键跳转位置， <code>${num:string}</code> 则是默认用 <code>string</code> 占位。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Editor</category>
-      </categories>
-      <tags>
-        <tag>vscode</tag>
-        <tag>snippet</tag>
       </tags>
   </entry>
   <entry>
@@ -4289,6 +4291,20 @@
       </tags>
   </entry>
   <entry>
+    <title>如何复制Windows命令行中的文本</title>
+    <url>/2016/08/08/windows-cmd-copy/</url>
+    <content><![CDATA[<p>有时候需要在复制Windows的命令行中的一些内容，这个时候我们平时使用的CTRL+C命令就不适合了，因为在命令行里面的作用是直接中断。</p>
+<p><strong>一个简单的复制方法就是首先用鼠标选中需要复制的文本，然后按Enter按键（也就是回车）即可。</strong></p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>cmd</tag>
+        <tag>copy</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Shell中通配符[a-z]为什么会匹配大写字母</title>
     <url>/2020/04/25/wildcard-a-z/</url>
     <content><![CDATA[<p>在学习通配符和扩展符的时候发现了问题，[a-z]按照理论来说应该匹配所有的小写字母，但是在实际操作过程中不仅匹配小写而且同时匹配了大写的问题。</p>
@@ -4326,17 +4342,72 @@
       </tags>
   </entry>
   <entry>
-    <title>如何复制Windows命令行中的文本</title>
-    <url>/2016/08/08/windows-cmd-copy/</url>
-    <content><![CDATA[<p>有时候需要在复制Windows的命令行中的一些内容，这个时候我们平时使用的CTRL+C命令就不适合了，因为在命令行里面的作用是直接中断。</p>
-<p><strong>一个简单的复制方法就是首先用鼠标选中需要复制的文本，然后按Enter按键（也就是回车）即可。</strong></p>
+    <title>VSCode建立用户代码片段</title>
+    <url>/2018/08/13/vscode-user-snippet/</url>
+    <content><![CDATA[<p>编辑器尝试过很多，感觉没有特别适合的，当然我并不是深度用户，所以不做过多的评论。遇到VSCode以后感觉还是蛮不错，从一个普通用户的角度来说。</p>
+<p>现在主要用的编辑器是两个 <code>Emacs</code> 和 <code>VSCode</code> ，前者用来写org文件，后者编辑修改一些小程序和配置文件。</p>
+<p>遇到这个问题是因为在编写简单的 <code>HTML</code> 文件时使用VSCode自带的补全有些内容暂时不需要，所以想自己写一个类似 <code>emmet</code> 官方的自动补全，试了一下操作很方便，这里做个记录备份。</p>
+<a id="more"></a>
+<p>在code中如果编辑html文件，直接输入 <code>html:5</code><br>则可以自动补全页面的基本标签，具体如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>不过里面的 <code>lang</code> 默认是 <code>en</code> ，而且做个简单的页面也不需要那么多 <code>meta</code> 数据，当然放在那里影响也不大，看个人需要。</p>
+<p>既然不用软件自带的，那么咱们就创建一个自己用的代码片段。找到 <code>文件-首选项-用户代码片段</code> 在弹出的输入框中输入 <code>html</code> 回车，会打开一个 <code>html.json</code> 的文件，在这里面编辑就可以了。</p>
+<p><strong>注意：代码需要在两个大括号之间，不能超出。</strong> 下面是我自己的代码片段，供大家参考。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"Simple html5 head": &#123;</span><br><span class="line">    "prefix": "myhtml",   </span><br><span class="line">    "body": [             </span><br><span class="line">        "&lt;!DOCTYPE html&gt;",</span><br><span class="line">        "&lt;html lang=\"$&#123;1:en&#125;\"&gt;",</span><br><span class="line">        "&lt;head&gt;",</span><br><span class="line">        "    &lt;meta charset=\"UTF-8\" /&gt;",</span><br><span class="line">        "    &lt;title&gt;$&#123;2:Document&#125;&lt;/title&gt;",</span><br><span class="line">        "&lt;/head&gt;",</span><br><span class="line">        "&lt;body&gt;",</span><br><span class="line">        "    $3",</span><br><span class="line">        "&lt;/body&gt;",</span><br><span class="line">        "&lt;/html&gt;",</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>具体的解释文档在相应语言的 <code>json</code> 文件中，这里简单做个介绍。</p>
+<blockquote>
+<p>第一行是你的这个代码片段的描述。<br>第二行很重要，是你的这个代码片段的激活口令。<br>第三行一直到最后body结束，是你需要插入的代码。<br>其中如果你插入的代码不需要换行，或者你使用换行符 <code>\n</code> 换行，则不需要 <code>[]</code> 符号把内容括起来。直接一个双引号把内容包住即可，当然内容里面的双引号需要转义。<br><code>$num</code> 则为 <code>tab</code> 键跳转位置， <code>${num:string}</code> 则是默认用 <code>string</code> 占位。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Editor</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
+        <tag>snippet</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows系统下MySQL忘记密码后如何重置</title>
+    <url>/2019/07/15/windows-mysql-forget-password/</url>
+    <content><![CDATA[<p>这段时间试着用了一下MySQL，谁知道隔得时间长了忘记了密码，在网络搜索后发现可以通过命令重置密码。原文的部分操作并不是太详细，这里把自己的具体操作介绍如下，希望能帮到大家。</p>
+<a id="more"></a>
+<h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><p>环境是Windows7，MySQL的版本是5.5.</p>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ol>
+<li><p>关闭正在运行的MySQL。</p>
+<p> 具体操作是 ：ctrl+alt+delete—&gt;任务管理器—&gt;结束mysql.exe。</p>
+</li>
+<li><p>cmd命令打开DOS窗口，转到mysql\bin目录。</p>
+<p> 具体操作是 ：cd C:\Program Files\MySQL\MySQL Server 5.5\bin(默认安装目录，自定义目录类同)。</p>
+</li>
+<li><p>输入<code>mysqld -nt --skip-grant-tables</code>（注意mysqld与-nt之间有一空格）</p>
+</li>
+<li><p>再开一个DOS窗口（因为刚才那个DOS窗口已经不能动了），转到mysql\bin目录（操作同步骤2）。</p>
+</li>
+<li><p>输入mysql回车，如果成功，将出现MySQL提示符 &gt; 。如果不成功，可能是mysql.exe没关，关闭MySQL以后，再次重复第5步骤</p>
+</li>
+<li><p>连接权限数据库&gt;<code>use mysql;</code> (&gt;是本来就有的提示符,别忘了最后的分号)</p>
+</li>
+<li><p>改密码：&gt; <code>update user set password=password(&quot;123456&quot;) where user=&quot;root&quot;;</code> (别忘了最后的分号，这里把密码改为123456)</p>
+<p> 刷新权限（必须的步骤）&gt;<code>flush privileges;</code></p>
+</li>
+<li><p>退出 &gt; <code>\q</code></p>
+</li>
+</ol>
+<p>参考博文：</p>
+<ul>
+<li><p><a href="https://blog.csdn.net/cn_lyg/article/details/74157432" target="_blank" rel="noopener">MySQL账号密码忘记解决方法</a></p>
+</li>
+<li><p><a href="https://www.cnblogs.com/wangbaobao/p/7087032.html" target="_blank" rel="noopener">Mysql5.7.18.1修改用户密码报错ERROR 1054 (42S22): Unknown Column ‘Password’ In ‘Field List’解决办法</a></p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>Windows</category>
       </categories>
       <tags>
-        <tag>cmd</tag>
-        <tag>copy</tag>
+        <tag>password</tag>
+        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
@@ -4389,49 +4460,6 @@
       <tags>
         <tag>windows</tag>
         <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows系统下MySQL忘记密码后如何重置</title>
-    <url>/2019/07/15/windows-mysql-forget-password/</url>
-    <content><![CDATA[<p>这段时间试着用了一下MySQL，谁知道隔得时间长了忘记了密码，在网络搜索后发现可以通过命令重置密码。原文的部分操作并不是太详细，这里把自己的具体操作介绍如下，希望能帮到大家。</p>
-<a id="more"></a>
-<h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><p>环境是Windows7，MySQL的版本是5.5.</p>
-<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><ol>
-<li><p>关闭正在运行的MySQL。</p>
-<p> 具体操作是 ：ctrl+alt+delete—&gt;任务管理器—&gt;结束mysql.exe。</p>
-</li>
-<li><p>cmd命令打开DOS窗口，转到mysql\bin目录。</p>
-<p> 具体操作是 ：cd C:\Program Files\MySQL\MySQL Server 5.5\bin(默认安装目录，自定义目录类同)。</p>
-</li>
-<li><p>输入<code>mysqld -nt --skip-grant-tables</code>（注意mysqld与-nt之间有一空格）</p>
-</li>
-<li><p>再开一个DOS窗口（因为刚才那个DOS窗口已经不能动了），转到mysql\bin目录（操作同步骤2）。</p>
-</li>
-<li><p>输入mysql回车，如果成功，将出现MySQL提示符 &gt; 。如果不成功，可能是mysql.exe没关，关闭MySQL以后，再次重复第5步骤</p>
-</li>
-<li><p>连接权限数据库&gt;<code>use mysql;</code> (&gt;是本来就有的提示符,别忘了最后的分号)</p>
-</li>
-<li><p>改密码：&gt; <code>update user set password=password(&quot;123456&quot;) where user=&quot;root&quot;;</code> (别忘了最后的分号，这里把密码改为123456)</p>
-<p> 刷新权限（必须的步骤）&gt;<code>flush privileges;</code></p>
-</li>
-<li><p>退出 &gt; <code>\q</code></p>
-</li>
-</ol>
-<p>参考博文：</p>
-<ul>
-<li><p><a href="https://blog.csdn.net/cn_lyg/article/details/74157432" target="_blank" rel="noopener">MySQL账号密码忘记解决方法</a></p>
-</li>
-<li><p><a href="https://www.cnblogs.com/wangbaobao/p/7087032.html" target="_blank" rel="noopener">Mysql5.7.18.1修改用户密码报错ERROR 1054 (42S22): Unknown Column ‘Password’ In ‘Field List’解决办法</a></p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>password</tag>
-        <tag>mysql</tag>
       </tags>
   </entry>
   <entry>
