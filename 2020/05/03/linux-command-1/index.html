@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>linux命令中的一些冷操作1 - H&Z</title>
+
+  
+    <meta name="description" content="在学习linux的基本命令的过程中遇到了一些问题，有些是按照教程执行没有效果，有些是心血来潮猜测是否能够有其他的操作，这里把这些结果记录下来，避免遗忘后重复搜索，浪费时间。 合并多个文本这个比较简单的，使用cat命令即可完成，不过之前没有想到，这里还能够使用通配符，能够一次合并多个文件。 举个例子： cat file*.txt &gt; fileall.txt 当然要先根据内容把文件重命名，做好排">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux命令中的一些冷操作1">
+<meta property="og:url" content="http://example.com/2020/05/03/linux-command-1/index.html">
+<meta property="og:site_name" content="H&amp;Z">
+<meta property="og:description" content="在学习linux的基本命令的过程中遇到了一些问题，有些是按照教程执行没有效果，有些是心血来潮猜测是否能够有其他的操作，这里把这些结果记录下来，避免遗忘后重复搜索，浪费时间。 合并多个文本这个比较简单的，使用cat命令即可完成，不过之前没有想到，这里还能够使用通配符，能够一次合并多个文件。 举个例子： cat file*.txt &gt; fileall.txt 当然要先根据内容把文件重命名，做好排">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-05-03T21:01:32.000Z">
+<meta property="article:modified_time" content="2023-01-08T13:47:52.960Z">
+<meta property="article:author" content="aoenian">
+<meta property="article:tag" content="date">
+<meta property="article:tag" content="paste">
+<meta property="article:tag" content="find">
+<meta property="article:tag" content="xargs">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s1.ax1x.com/2023/01/01/pSC4f78.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">H&Z</div><div class="sub normal cap">珍爱生命</div><div class="sub hover cap" style="opacity:0"> 敬畏自然</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博文</a><a class="nav-item" href="/wiki/">笔记</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">linux命令中的一些冷操作1</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E5%A4%9A%E4%B8%AA%E6%96%87%E6%9C%AC"><span class="toc-text">合并多个文本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#date%E5%91%BD%E4%BB%A4%E6%97%A0%E6%B3%95%E4%BF%AE%E6%94%B9%E6%97%A5%E6%9C%9F"><span class="toc-text">date命令无法修改日期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AF%E9%93%BE%E6%8E%A5"><span class="toc-text">软链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dd%E5%91%BD%E4%BB%A4%E7%A1%AC%E7%9B%98%E6%B5%8B%E8%AF%95"><span class="toc-text">dd命令硬盘测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#paste%E5%91%BD%E4%BB%A4%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AA%E5%88%86%E9%9A%94%E7%AC%A6"><span class="toc-text">paste命令如何使用多个分隔符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#find%E7%9A%84exec%E5%92%8Cxargs"><span class="toc-text">find的exec和xargs</span></a></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/aoenian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:aoenian@zoho.com.cn" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Linux/">Linux</a></div><div id="post-meta">发布于&nbsp;<time datetime="2020-05-03T21:01:32.000Z">2020-05-03</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>linux命令中的一些冷操作1</span></h1>
+<p>在学习linux的基本命令的过程中遇到了一些问题，有些是按照教程执行没有效果，有些是心血来潮猜测是否能够有其他的操作，这里把这些结果记录下来，避免遗忘后重复搜索，浪费时间。</p>
+<h2 id="合并多个文本"><a href="#合并多个文本" class="headerlink" title="合并多个文本"></a>合并多个文本</h2><p>这个比较简单的，使用<code>cat</code>命令即可完成，不过之前没有想到，这里还能够使用通配符，能够一次合并多个文件。</p>
+<p>举个例子： <code>cat file*.txt &gt; fileall.txt</code> 当然要先根据内容把文件重命名，做好排序。</p>
+<p>windows下分两种情况（系统是windows10）：</p>
+<span id="more"></span>
+<ul>
+<li><p>cmd中命令使用都没问题</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用copy命令</span></span><br><span class="line">copy *.txt all.txt</span><br><span class="line">copy 1.txt + 2.txt + 3.txt all.txt</span><br><span class="line"><span class="comment"># 使用type命令</span></span><br><span class="line"><span class="built_in">type</span> *.txt &gt; all.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>powershell中则比较复杂</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># copy命令的问题</span></span><br><span class="line">copy *.txt all.txt    <span class="comment"># 只能复制最后文件的内容</span></span><br><span class="line">copy 1.txt + 2.txt + 3.txt all.txt    <span class="comment"># 路径问题命令出错</span></span><br><span class="line"><span class="comment"># type命令</span></span><br><span class="line"><span class="comment"># 这个命令会无限循环把all.txt中内容再次加入all.txt中</span></span><br><span class="line"><span class="built_in">type</span> *.txt &gt; all.txt</span><br><span class="line"><span class="comment"># 可以采用不同的后缀避免</span></span><br><span class="line"><span class="built_in">type</span> *.txt &gt; all    <span class="comment"># 这样就可以了</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="date命令无法修改日期"><a href="#date命令无法修改日期" class="headerlink" title="date命令无法修改日期"></a>date命令无法修改日期</h2><p>在练习date命令的时候，发现无法修改系统的日期（root也不行），但是教程上是可以的。搜索后发现应该是开启ntp的原因。可以通过下面的命令来处理。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 关闭ntp，0替换为false也可</span></span><br><span class="line">sudo timedatectl set-ntp 0</span><br><span class="line"><span class="comment"># 直接用timedatectl命令修改或用date修改都可</span></span><br><span class="line">timedatectl set-time <span class="string">&quot;2020-05-01 18:18:08&quot;</span></span><br><span class="line">timedatectl set-timezone Erope/Paris</span><br><span class="line">timedatectl set-local-rtc 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="软链接"><a href="#软链接" class="headerlink" title="软链接"></a>软链接</h2><p>学习软链接命令的时候突然想起来的，看代码吧，不好说清楚</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> file</span><br><span class="line">$ <span class="built_in">ln</span> -s file filesoft</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;hello&quot;</span> &gt; filesoft   <span class="comment"># 链接没问题，内容直接写入file</span></span><br><span class="line">$ <span class="built_in">cat</span> file</span><br><span class="line">hello</span><br><span class="line">$ <span class="built_in">mv</span> file file1</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;world&quot;</span> &gt; filesoft   <span class="comment"># 链接失效，系统自动创建file并写入</span></span><br><span class="line">$ <span class="built_in">ls</span></span><br><span class="line">file  file1  filesoft</span><br><span class="line">$ <span class="built_in">cat</span> file file1</span><br><span class="line">world</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
+
+<p><strong>结论：</strong>软链接失效后，如果链接的是文件则系统会自动重建，如果是目录则提示No such file or directory</p>
+<h2 id="dd命令硬盘测试"><a href="#dd命令硬盘测试" class="headerlink" title="dd命令硬盘测试"></a>dd命令硬盘测试</h2><p>网络上很多，这里记录一下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 测试写入速度</span></span><br><span class="line">time <span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero of=/tmp/test1.img bs=128M count=8 oflag=dsync</span><br><span class="line"><span class="comment"># 读取速度</span></span><br><span class="line">time <span class="built_in">dd</span> <span class="keyword">if</span>=/path/to/bigfile of=/dev/null bs=8k</span><br></pre></td></tr></table></figure>
+
+<p>这里注意dev目录下的四个特殊设备，内容摘自 <a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_26058371/article/details/86754683">Linux中的虚拟设备</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /dev/null 空设备，一般称为黑洞，输入这里的数据直接丢弃</span></span><br><span class="line">find / -name <span class="string">&quot;hello&quot;</span> 2&gt; /dev/null</span><br><span class="line"><span class="comment">#将标准输出和错误输出重定向到/dev/null，运行这个脚本不会输出任何信息到终端</span></span><br><span class="line">$ ./run.sh 1&gt;/dev/null 2&gt;&amp;1  </span><br><span class="line"><span class="comment"># /dev/zero 零设备，可以无限的提供空字符（0x00，ASCII代码NUL）</span></span><br><span class="line"><span class="comment"># 能够生成指定大小文件</span></span><br><span class="line"><span class="built_in">dd</span> <span class="keyword">if</span>=/dev/zero of=/tmp/100Mfile bs=1M count=100</span><br><span class="line"><span class="comment"># /dev/urandom /dev/random</span></span><br><span class="line"><span class="comment"># 随机数设备，提供不间断的随机字节流</span></span><br><span class="line"><span class="comment"># /dev/random产生随机数据依赖系统中断,产生数据速度较慢，但随机性好</span></span><br><span class="line"><span class="comment"># /dev/urandom不依赖系统中断，数据产生速度快，但随机性较低</span></span><br><span class="line"><span class="built_in">cat</span> /dev/random | <span class="built_in">od</span> -x</span><br><span class="line"><span class="built_in">cat</span> /dev/urandom | <span class="built_in">od</span> -x | <span class="built_in">head</span> -n 5</span><br><span class="line"><span class="comment"># 利用/dev/urandom设备产生一个128位的随机字符串</span></span><br><span class="line">str=$(<span class="built_in">cat</span> /dev/urandom | <span class="built_in">od</span> -x | <span class="built_in">tr</span> -d <span class="string">&#x27; &#x27;</span> | <span class="built_in">head</span> -n 1)</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;str:7&#125;</span></span><br><span class="line">17539187d2e8b8e26d49bec90465c14d</span><br></pre></td></tr></table></figure>
+
+<h2 id="paste命令如何使用多个分隔符"><a href="#paste命令如何使用多个分隔符" class="headerlink" title="paste命令如何使用多个分隔符"></a>paste命令如何使用多个分隔符</h2><p>paste命令在合并文件的时候使用多个分隔符，这个应该是无法直接实现，利用其他方法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用sed命令替换</span></span><br><span class="line"><span class="built_in">paste</span> -d <span class="string">&#x27;~&#x27;</span> file1 file2 | sed <span class="string">&#x27;s/~/,,/&#x27;</span></span><br><span class="line"><span class="comment"># 使用 /dev/null 作为承接 脑洞很大</span></span><br><span class="line"><span class="built_in">paste</span> -d, file1 /dev/null file2</span><br></pre></td></tr></table></figure>
+
+<h2 id="find的exec和xargs"><a href="#find的exec和xargs" class="headerlink" title="find的exec和xargs"></a>find的exec和xargs</h2><p>find很强大，里面的exec选项能够让find更加如虎添翼，-exec 参数后跟command，为了保证shell解释正确使用 <code>\;</code> 结束命令。同时<code>&#123;&#125;</code>代表find查出来的结果，有时避免shell过滤也使用<code>&#39;&#123;&#125;&#39;</code>。</p>
+<p>xargs则常与find结合使用来避免-exec选项出现的参数溢出的问题。xargs能够捕获一个命令的输出，然后传递给另外一个命令，由于很多命令不支持使用管道来传递参数，即不支持从标准输出中读取数据，所以xargs很常用。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">find / -name <span class="string">&#x27;bash*&#x27;</span> -<span class="built_in">exec</span> <span class="built_in">mv</span> &#123;&#125; /tmp \;</span><br><span class="line">find / -empty | xargs <span class="built_in">rm</span> -rf</span><br><span class="line"><span class="comment"># 实现比较</span></span><br><span class="line"><span class="comment"># print选项把查找结果的文件名显示出来</span></span><br><span class="line">find ./ -<span class="built_in">type</span> f -name <span class="string">&quot;*.sh&quot;</span> -<span class="built_in">exec</span> grep <span class="string">&quot;root&quot;</span> &#123;&#125; \; -<span class="built_in">print</span></span><br><span class="line"><span class="comment"># xargs显示的信息比较全</span></span><br><span class="line">find ./ -<span class="built_in">type</span> f -name <span class="string">&quot;*.sh&quot;</span> | xargs grep <span class="string">&quot;root&quot;</span></span><br><span class="line"><span class="comment"># exec选项的安全模式，把exec替换为ok</span></span><br><span class="line">find ./ -name <span class="string">&quot;*.log&quot;</span> -ok <span class="built_in">rm</span> &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/fjping0606/p/5670661.html">xargs rm -rf 与 -exec rm</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/peida/archive/2012/11/14/2769248.html">find命令之exec</a></li>
+<li><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000000719166">find命令的-exec选项为何不能用管道命令代替?</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/linux/linux-comm-xargs.html">Linux xargs 命令</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/fdipzone/article/details/44604591">linux 使用rename命令批量重命名文件</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/Alvin_Lam/article/details/79123882">linux中合并多个文件内容到一个文件的例子</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cyberciti.biz/faq/howto-linux-unix-test-disk-performance-with-dd-command/">Linux and Unix Test Disk I&#x2F;O Performance With dd Command</a></li>
+</ul>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2020/05/08/rasp-ubuntuserver-samba/">树莓派安装UbuntuServer并设置Samba共享</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2020/04/26/mind-map-comparion/">常见思维导图软件对比-个人观点</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@aoenian</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

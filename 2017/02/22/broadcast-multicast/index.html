@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>IP地址相关以及广播和组播的区别 - H&Z</title>
+
+  
+    <meta name="description" content="关于IP地址的一些问题IP地址的分类   类型 前缀位 首字节值 网络数 主机数 私有地址范围    A 0 0-127 27-2 224-2 10.0.0.0-10.255.255.255   B 10 128-191 214 216-2 172.16.0.0-172.31.255.255   C 110 192-223 221 28-2 192.168.0.0-192.168.255.255">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IP地址相关以及广播和组播的区别">
+<meta property="og:url" content="http://example.com/2017/02/22/broadcast-multicast/index.html">
+<meta property="og:site_name" content="H&amp;Z">
+<meta property="og:description" content="关于IP地址的一些问题IP地址的分类   类型 前缀位 首字节值 网络数 主机数 私有地址范围    A 0 0-127 27-2 224-2 10.0.0.0-10.255.255.255   B 10 128-191 214 216-2 172.16.0.0-172.31.255.255   C 110 192-223 221 28-2 192.168.0.0-192.168.255.255">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-02-22T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-08T13:47:52.956Z">
+<meta property="article:author" content="aoenian">
+<meta property="article:tag" content="broadcast">
+<meta property="article:tag" content="multicast">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s1.ax1x.com/2023/01/01/pSC4f78.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">H&Z</div><div class="sub normal cap">珍爱生命</div><div class="sub hover cap" style="opacity:0"> 敬畏自然</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博文</a><a class="nav-item" href="/wiki/">笔记</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">IP地址相关以及广播和组播的区别</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#IP%E5%9C%B0%E5%9D%80%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">IP地址的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E7%94%A8%E9%80%94%E7%9A%84%E5%9C%B0%E5%9D%80"><span class="toc-text">特殊用途的地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E7%89%B9%E6%AE%8A%E7%9A%84IP%E5%9C%B0%E5%9D%80%E8%A1%A8"><span class="toc-text">一些特殊的IP地址表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E6%92%AD%E5%92%8C%E7%BB%84%E6%92%AD"><span class="toc-text">广播和组播</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%B9%BF%E6%92%AD"><span class="toc-text">网络广播</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E6%92%AD%EF%BC%88%E5%A4%9A%E6%92%AD%EF%BC%89"><span class="toc-text">组播（多播）</span></a></li></ol></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/aoenian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:aoenian@zoho.com.cn" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Net/">Net</a></div><div id="post-meta">发布于&nbsp;<time datetime="2017-02-22T00:00:00.000Z">2017-02-22</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>IP地址相关以及广播和组播的区别</span></h1>
+<h1 id="关于IP地址的一些问题"><a href="#关于IP地址的一些问题" class="headerlink" title="关于IP地址的一些问题"></a>关于IP地址的一些问题</h1><h2 id="IP地址的分类"><a href="#IP地址的分类" class="headerlink" title="IP地址的分类"></a>IP地址的分类</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>前缀位</th>
+<th>首字节值</th>
+<th>网络数</th>
+<th>主机数</th>
+<th>私有地址范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>0</td>
+<td>0-127</td>
+<td>2<sup>7</sup>-2</td>
+<td>2<sup>24</sup>-2</td>
+<td>10.0.0.0-10.255.255.255</td>
+</tr>
+<tr>
+<td>B</td>
+<td>10</td>
+<td>128-191</td>
+<td>2<sup>14</sup></td>
+<td>2<sup>16</sup>-2</td>
+<td>172.16.0.0-172.31.255.255</td>
+</tr>
+<tr>
+<td>C</td>
+<td>110</td>
+<td>192-223</td>
+<td>2<sup>21</sup></td>
+<td>2<sup>8</sup>-2</td>
+<td>192.168.0.0-192.168.255.255</td>
+</tr>
+<tr>
+<td>D</td>
+<td>1110</td>
+<td>224-239</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>E</td>
+<td>1111</td>
+<td>240-255</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+<td>&#x2F;</td>
+</tr>
+</tbody></table>
+<p><strong>备注：</strong><br>A类网络中网络数减去2，原因为0和127开头的地址作为保留地址块，具体会在后面介绍。主机数减2是由于计算时需要除去全’0’和全’1’，原因下面介绍）</p>
+<span id="more"></span>
+
+<h2 id="特殊用途的地址"><a href="#特殊用途的地址" class="headerlink" title="特殊用途的地址"></a>特殊用途的地址</h2><table>
+<thead>
+<tr>
+<th>CIDR地址块</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0.0.0.0&#x2F;8</td>
+<td>本网络（仅作为源地址时合法）</td>
+</tr>
+<tr>
+<td>10.0.0.0&#x2F;8</td>
+<td>专用网络</td>
+</tr>
+<tr>
+<td>100.64.0.0&#x2F;10</td>
+<td>地址共享</td>
+</tr>
+<tr>
+<td>127.0.0.0&#x2F;8</td>
+<td>环回</td>
+</tr>
+<tr>
+<td>169.254.0.0&#x2F;16</td>
+<td>本地链路</td>
+</tr>
+<tr>
+<td>172.16.0.0&#x2F;12</td>
+<td>专用网络</td>
+</tr>
+<tr>
+<td>192.0.0.0&#x2F;24</td>
+<td>保留（IANA）</td>
+</tr>
+<tr>
+<td>192.0.2.0&#x2F;24</td>
+<td>TEST-NET-1，文档和示例</td>
+</tr>
+<tr>
+<td>192.88.99.0&#x2F;24</td>
+<td>6to4中继</td>
+</tr>
+<tr>
+<td>192.168.0.0&#x2F;16</td>
+<td>专用网络</td>
+</tr>
+<tr>
+<td>198.18.0.0&#x2F;15</td>
+<td>网络基准测试</td>
+</tr>
+<tr>
+<td>198.51.100.0&#x2F;24</td>
+<td>TEST-NET-2，文档和示例</td>
+</tr>
+<tr>
+<td>203.0.113.0&#x2F;24</td>
+<td>TEST-NET-3，文档和示例</td>
+</tr>
+<tr>
+<td>224.0.0.0&#x2F;4</td>
+<td>多播（之前的D类网络）</td>
+</tr>
+<tr>
+<td>240.0.0.0&#x2F;4</td>
+<td>保留（之前的E类网络）</td>
+</tr>
+<tr>
+<td>255.255.255.255</td>
+<td>广播</td>
+</tr>
+</tbody></table>
+<h2 id="一些特殊的IP地址表"><a href="#一些特殊的IP地址表" class="headerlink" title="一些特殊的IP地址表"></a>一些特殊的IP地址表</h2><table>
+<thead>
+<tr>
+<th>网络地址</th>
+<th>主机地址</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Any</td>
+<td>全”0”</td>
+<td>网络地址，代表一个网段</td>
+</tr>
+<tr>
+<td>Any</td>
+<td>全”1”</td>
+<td>定向广播地址（特定网段的所有节点）</td>
+</tr>
+<tr>
+<td>全”1”即 255.255.255.255</td>
+<td>&#x2F;</td>
+<td>本地网络广播地址（本网络所有节点）</td>
+</tr>
+<tr>
+<td>全”0”即 0.0.0.0</td>
+<td>&#x2F;</td>
+<td>本网主机地址，通常为默认路由器</td>
+</tr>
+<tr>
+<td>127</td>
+<td>Any</td>
+<td>回送地址</td>
+</tr>
+</tbody></table>
+<h2 id="广播和组播"><a href="#广播和组播" class="headerlink" title="广播和组播"></a>广播和组播</h2><p>在网络上搜索了很多资料，大多解释的并不清楚，而且很多都是互相转载，之间没有差别。不过看到有一篇文章解释的还比较详细。具体摘录如下，参考链接也会在下面列出来。</p>
+<h3 id="网络广播"><a href="#网络广播" class="headerlink" title="网络广播"></a>网络广播</h3><p>一般分为四种形式：受限的广播（特殊的广播）、指向全网的广播、指向子网的广播、指向所有子网的广播，其实后面三种也称为定向广播。</p>
+<ul>
+<li>受限的广播</li>
+</ul>
+<p>受限的广播地址是255.255.255.255，只发送到本地网络的所有主机，路由器默认不转发目的地址为受限的广播地址的数据报，路由器将此类广播隔离到子网。如ARP请求，就使用的这种地址进行广播。</p>
+<ul>
+<li>指向全网的广播</li>
+</ul>
+<p>指向全网的广播地址是主机号为全1的地址。如A类网络的广播地址为netid.255.255.255，其中netid为A类网络的网络号。路由器默认都会转发此类指向网络的广播。</p>
+<ul>
+<li>指向子网的广播</li>
+</ul>
+<p>指的是主机号为全1并且有特定子网号的地址。当然必须知道子网掩码才能判断。</p>
+<p>例子：一个B类地址：130.57.0.0，缺省的子网掩码为<br>255.255.0.0，现在对这个B类网址划分子网，如：130.57.1.0&#x2F;24,<br>130.57.2.0&#x2F;24, 这时候如果路由器收到发往 130.57.1.255&#x2F;24<br>的数据报，那么这个地址就指向 130.57.1.0&#x2F;24<br>这个子网的广播地址，这个子网内的所有的机器就能收到。如果是<br>130.57.1.255&#x2F;16 ，那这个地址就不是指向子网的广播地址。</p>
+<ul>
+<li>指向所有子网的广播</li>
+</ul>
+<p>指向所有子网的广播地址类似于指向单个子网的广播地址。但不同的是指向所有子网的广播地址的子网号及主机号都为全1并且也需要通过子网掩码来判断。我们同样以130.57.0.0这个网络地址为例，如果目的子网掩码为255.255.255.0，那么IP地址130.57.255.255是一个指向所有子网的广播地址。当然，如果网络没有划分子网，这就是一个指向全网的广播。</p>
+<h3 id="组播（多播）"><a href="#组播（多播）" class="headerlink" title="组播（多播）"></a>组播（多播）</h3><p>广播是单台设备向网络中所有主机发送数据，而组播是向指定的一组主机发送主机。IP网络的多播一般通过多播IP地址来实现。多播IP地址就是D类IP地址，即224.0.0.0至239.255.255.255之间的IP地址。Windows<br>2000中的DHCP管理器支持多播IP地址的自动分配。</p>
+<p><strong>参考链接：</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%88%86%E7%B1%BB%E7%BD%91%E7%BB%9C">分类网络</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%97%A0%E7%B1%BB%E5%88%AB%E5%9F%9F%E9%97%B4%E8%B7%AF%E7%94%B1">无类别域间路由</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_44e5d6d10100ehmz.html">广播地址和组（多）播地址</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.csdn.net/wangerge/article/details/3931491">单播、多播（组播）和广播的区别</a></li>
+<li><a target="_blank" rel="noopener" href="http://lbzxy.blog.51cto.com/497155/124322">广播地址详谈！</a></li>
+<li><a target="_blank" rel="noopener" href="http://alligator.blog.51cto.com/36993/910681">理解单播、组播和广播</a></li>
+</ul>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2017/03/04/switch-config-1/">思科交换机配置1——密码设置</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2017/02/18/ss-in-terminal/">MacOS/RPI 终端使用ss代理</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@aoenian</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

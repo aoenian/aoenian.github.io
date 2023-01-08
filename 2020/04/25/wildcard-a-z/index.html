@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Shell中通配符[a-z]为什么会匹配大写字母 - H&Z</title>
+
+  
+    <meta name="description" content="在学习通配符和扩展符的时候发现了问题，[a-z]按照理论来说应该匹配所有的小写字母，但是在实际操作过程中不仅匹配小写而且同时匹配了大写的问题。 [a-z]和[A-Z]的问题1234567$ touch a b c x y z A B C X Y Z$ lsA  B  C  X  Y  Z  a  b  c  x  y  z$ ls [a-z]A  B  C  X  Y  a  b  c  x  y">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shell中通配符[a-z]为什么会匹配大写字母">
+<meta property="og:url" content="http://example.com/2020/04/25/wildcard-a-z/index.html">
+<meta property="og:site_name" content="H&amp;Z">
+<meta property="og:description" content="在学习通配符和扩展符的时候发现了问题，[a-z]按照理论来说应该匹配所有的小写字母，但是在实际操作过程中不仅匹配小写而且同时匹配了大写的问题。 [a-z]和[A-Z]的问题1234567$ touch a b c x y z A B C X Y Z$ lsA  B  C  X  Y  Z  a  b  c  x  y  z$ ls [a-z]A  B  C  X  Y  a  b  c  x  y">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-25T17:26:55.000Z">
+<meta property="article:modified_time" content="2023-01-08T13:47:52.960Z">
+<meta property="article:author" content="aoenian">
+<meta property="article:tag" content="a-z">
+<meta property="article:tag" content="A-Z">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s1.ax1x.com/2023/01/01/pSC4f78.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">H&Z</div><div class="sub normal cap">珍爱生命</div><div class="sub hover cap" style="opacity:0"> 敬畏自然</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博文</a><a class="nav-item" href="/wiki/">笔记</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Shell中通配符[a-z]为什么会匹配大写字母</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#a-z-%E5%92%8C-A-Z-%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">[a-z]和[A-Z]的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">问题解决方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8POSIX%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-text">使用POSIX字符集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9LC-ALL%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC"><span class="toc-text">修改LC_ALL变量的值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E8%A7%A3%E9%87%8A%E5%8E%9F%E5%9B%A0"><span class="toc-text">简单解释原因</span></a></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/aoenian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:aoenian@zoho.com.cn" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Linux/">Linux</a></div><div id="post-meta">发布于&nbsp;<time datetime="2020-04-25T17:26:55.000Z">2020-04-25</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>Shell中通配符[a-z]为什么会匹配大写字母</span></h1>
+<p>在学习通配符和扩展符的时候发现了问题，[a-z]按照理论来说应该匹配所有的小写字母，但是在实际操作过程中不仅匹配小写而且同时匹配了大写的问题。</p>
+<h2 id="a-z-和-A-Z-的问题"><a href="#a-z-和-A-Z-的问题" class="headerlink" title="[a-z]和[A-Z]的问题"></a>[a-z]和[A-Z]的问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">touch</span> a b c x y z A B C X Y Z</span><br><span class="line">$ <span class="built_in">ls</span></span><br><span class="line">A  B  C  X  Y  Z  a  b  c  x  y  z</span><br><span class="line">$ <span class="built_in">ls</span> [a-z]</span><br><span class="line">A  B  C  X  Y  a  b  c  x  y  z</span><br><span class="line">$ <span class="built_in">ls</span> [A-Z]</span><br><span class="line">A  B  C  X  Y  Z  b  c  x  y  z</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>从上面的例子可以看出，本来应该只显示小写子母命名的文件或者大写字母命名的文件，但是结果和想像出现了差别。</p>
+<p>咱们先说如何解决这个问题。</p>
+<h2 id="问题解决方法"><a href="#问题解决方法" class="headerlink" title="问题解决方法"></a>问题解决方法</h2><h3 id="使用POSIX字符集"><a href="#使用POSIX字符集" class="headerlink" title="使用POSIX字符集"></a>使用POSIX字符集</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[:alnum:]：匹配字面和数字字符。等同于A~Z,a~z,<span class="number">0</span>~<span class="number">9</span></span><br><span class="line">[:alpha:]：匹配字母字符。等同于A~Z，a~z</span><br><span class="line">[:blank:]：匹配空格或制表符</span><br><span class="line">[:cntrl:]：匹配控制字符</span><br><span class="line">[:digit:]：匹配十进制数字。等同于<span class="number">0</span>~<span class="number">9</span></span><br><span class="line">[:graph:]：匹配ASCII码值范围<span class="number">33</span>~<span class="number">126</span>的字符。与[:print:]相似，但不包括空格字符</span><br><span class="line">[:print:]：与[:graph:]相同，但多了空格字符</span><br><span class="line">[:lower:]：匹配小写字母，等同于a~z</span><br><span class="line">[:upper:]：匹配大写字母，等同于A~Z</span><br><span class="line">[:space:]：匹配空白字符（空格和制表符）</span><br><span class="line">[:xdigit:]：匹配十六进制数字。等同于<span class="number">0</span>~<span class="number">9</span>，A~F，a~f</span><br></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这里注意 [:lower:] 相当于 a-z 外边还要加上 [] 来进行任意字符匹配</span></span><br><span class="line">$ <span class="built_in">ls</span> [[:lower:]]</span><br><span class="line">a  b  c  x  y  z</span><br><span class="line">$ <span class="built_in">ls</span> [[:upper:]]</span><br><span class="line">A  B  C  X  Y  Z</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改LC-ALL变量的值"><a href="#修改LC-ALL变量的值" class="headerlink" title="修改LC_ALL变量的值"></a>修改LC_ALL变量的值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 建议使用第一种方法</span></span><br><span class="line">$ LC_ALL=C    <span class="comment"># 设置LC_ALL变量为C 或 使用 LANG=C也可以</span></span><br><span class="line">$ <span class="built_in">ls</span> [a-z]</span><br><span class="line">a  b  c  x  y  z</span><br><span class="line">$ <span class="built_in">ls</span> [A-Z]</span><br><span class="line">A  B  C  X  Y  Z</span><br><span class="line">$ <span class="built_in">unset</span> LC_ALL    <span class="comment"># 释放变量，取消改变</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="简单解释原因"><a href="#简单解释原因" class="headerlink" title="简单解释原因"></a>简单解释原因</h2><p>系统通过一些环境变量设置本地偏好，通过命令<code>locale</code>可以查看设置摘要。因为语系不同导致编码的顺序不同。</p>
+<p>LANG&#x3D;C：ABC…Zabc…z</p>
+<p>zh_CN和en_US：aAbBcC…xXyYzZ</p>
+<p>所以会出现开头的问题，由于能够设置的环境变量很多，LC_ALL是覆盖所有其他本地化设置的环境变量（在某些情况下除外$LANGUAGE）。所以一些脚本为了避免用户本地配置的干扰，通常在开头设置<code>LC_ALL=C</code>。</p>
+<blockquote>
+<p>在C语言环境中，字符是单个字节，字符集是ASCII（不是必需的，但实际上将在我们大多数人都会使用的系统中使用），排序顺序基于字节值，该语言通常是美国英语（尽管对于应用程序消息（与月份或日期名称或系统库中的消息相反），它由应用程序作者自行决定），并且未定义货币符号之类的东西。</p>
+</blockquote>
+<p>参考资料</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiluhua/p/5688627.html">POSIX字符类</a></li>
+<li><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_81b27a5a0101gkqf.html">export LC_ALL&#x3D;C的含义</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/z4213489/article/details/7937894">Linux中LANG,LC_ALL,local详解</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1ec75d18464d">Linux中[]方括号匹配问题[A-Z]会匹配小写a-z</a></li>
+<li><a target="_blank" rel="noopener" href="https://qastack.cn/unix/227070/why-does-a-z-match-lowercase-letters-in-bash">为什么[AZ]匹配bash中的小写字母？</a></li>
+<li><a target="_blank" rel="noopener" href="https://qastack.cn/unix/87745/what-does-lc-all-c-do">“ LC_ALL &#x3D; C”是做什么的？</a></li>
+</ul>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2020/04/26/mind-map-comparion/">常见思维导图软件对比-个人观点</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2020/03/17/mac-off-screen/">MacBookAir外接显示器如何开盖并彻底关闭屏幕</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@aoenian</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

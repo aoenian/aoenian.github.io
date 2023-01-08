@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Python装饰器（一） - H&Z</title>
+
+  
+    <meta name="description" content="这段时间学习Python，之前已经学习过基本的语法，现在准备重新拾起来，看的教程是github上面的Python - 100天从新手到大师。进度相对一般的教程比较快，虽然没有那么详细，但是能够快速了解整体的框架。 第九天的教程里面讲到了装饰器，这个之前了解过，但是一直似懂非懂，加上之前用的比较少，也是看过就算了。这次又出现了，不能再糊弄过去，要认真理解透彻。这里把个人的理解过程记录下来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python装饰器（一）">
+<meta property="og:url" content="http://example.com/2019/07/24/python-decorator1/index.html">
+<meta property="og:site_name" content="H&amp;Z">
+<meta property="og:description" content="这段时间学习Python，之前已经学习过基本的语法，现在准备重新拾起来，看的教程是github上面的Python - 100天从新手到大师。进度相对一般的教程比较快，虽然没有那么详细，但是能够快速了解整体的框架。 第九天的教程里面讲到了装饰器，这个之前了解过，但是一直似懂非懂，加上之前用的比较少，也是看过就算了。这次又出现了，不能再糊弄过去，要认真理解透彻。这里把个人的理解过程记录下来。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-24T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-08T13:47:52.960Z">
+<meta property="article:author" content="aoenian">
+<meta property="article:tag" content="装饰器">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s1.ax1x.com/2023/01/01/pSC4f78.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">H&Z</div><div class="sub normal cap">珍爱生命</div><div class="sub hover cap" style="opacity:0"> 敬畏自然</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博文</a><a class="nav-item" href="/wiki/">笔记</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Python装饰器（一）</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E5%8D%9A%E5%AE%A2"><span class="toc-text">参考博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E5%87%BD%E6%95%B0%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-text">简单的函数装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%98%AF%E5%8F%98%E9%87%8F"><span class="toc-text">函数是变量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-text">装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E7%9A%84%E6%95%88%E6%9E%9C"><span class="toc-text">装饰器的效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wrapper%E5%87%BD%E6%95%B0%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%94%E5%9B%9Efunc"><span class="toc-text">wrapper函数为什么返回func()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E6%B2%A1%E6%9C%89wrapper%E5%87%BD%E6%95%B0%E4%BC%9A%E6%80%8E%E6%A0%B7"><span class="toc-text">如果没有wrapper函数会怎样</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%A6%E5%8F%82%E6%95%B0%E7%9A%84%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-text">带参数的装饰器</span></a></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/aoenian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:aoenian@zoho.com.cn" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Python/">Python</a></div><div id="post-meta">发布于&nbsp;<time datetime="2019-07-24T00:00:00.000Z">2019-07-24</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>Python装饰器（一）</span></h1>
+<p>这段时间学习Python，之前已经学习过基本的语法，现在准备重新拾起来，看的教程是github上面的<a target="_blank" rel="noopener" href="https://github.com/jackfrued/Python-100-Days">Python - 100天从新手到大师</a>。进度相对一般的教程比较快，虽然没有那么详细，但是能够快速了解整体的框架。</p>
+<p>第九天的教程里面讲到了装饰器，这个之前了解过，但是一直似懂非懂，加上之前用的比较少，也是看过就算了。这次又出现了，不能再糊弄过去，要认真理解透彻。这里把个人的理解过程记录下来。</p>
+<span id="more"></span>
+
+<h2 id="参考博客"><a href="#参考博客" class="headerlink" title="参考博客"></a>参考博客</h2><p>这里先放出来我查看过的资料,如果你看过以后懂了，那么恭喜，下面我写的内容就不用看了。</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://foofish.net/understand-decorator.html">Python装饰器为什么难理解？</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://foofish.net/python-decorator.html">理解 Python 装饰器看这一篇就够了</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/1016959663602400/1017451662295584">装饰器</a></p>
+</li>
+</ul>
+<h2 id="简单的函数装饰器"><a href="#简单的函数装饰器" class="headerlink" title="简单的函数装饰器"></a>简单的函数装饰器</h2><p>装饰器在Python中很强大，扩展函数功能而不改变函数的代码，同时能够多次复用。在查看完上面的资料后我个人还有几点没有弄清楚，后来慢慢有了自己的一些理解，记录如下。</p>
+<h3 id="函数是变量"><a href="#函数是变量" class="headerlink" title="函数是变量"></a>函数是变量</h3><p>一定要先理解在Python语言中，一切皆对象，函数也能当变量。那么赋值，作为另一个函数参数这些都不在话下。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">foo</span>():  <span class="comment"># 最简单的函数</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;i am foo&#x27;</span>)</span><br><span class="line"></span><br><span class="line">bar = foo   <span class="comment"># 这里注意赋值的时候是函数名字，不能加括号</span></span><br><span class="line">bar()       <span class="comment"># 这时调用bar(),结果与 foo()相同,类似又给foo函数起了一个别称</span></span><br><span class="line">bar.__name__    <span class="comment"># 输出 foo</span></span><br></pre></td></tr></table></figure>
+
+<p>看完赋值，接着再看一个例子，函数作为另一个函数的参数</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">foo</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;i am foo&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># bar函数接收的参数是另一个函数名 当然func只是一个名字可以用其他名字替换</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bar</span>(<span class="params">func</span>):  </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;i am bar&#x27;</span>)</span><br><span class="line">    func()      <span class="comment"># 这里调用了传入的函数</span></span><br><span class="line"></span><br><span class="line">bar(foo)        <span class="comment"># 先打印出 i am bar, 然后调用 foo 再打印出 i am foo</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的函数都很简单，没有返回值，而且函数内部也没有再次定义函数，再看一个函数内部定义函数，然后并返回的例子。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">bar</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">foo</span>():      <span class="comment"># 定义函数 foo</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;i am foo&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> foo      <span class="comment"># 返回函数名，注意是函数名并没有括号</span></span><br><span class="line"></span><br><span class="line">b = bar()       <span class="comment"># 用b接收bar的返回值</span></span><br><span class="line"><span class="built_in">print</span>(b.__name__)       <span class="comment"># 输出 foo</span></span><br><span class="line">b()         <span class="comment"># 输出 i am foo</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的例子就是把函数作为返回值返回，这时候返回的函数就会赋值给b，当执行<code>b()</code>的时候即执行了<code>foo()</code>。</p>
+<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>看到这里就可以谈谈装饰器了，装饰器的作用个人感觉就是在要执行的函数外面再加上一层函数来实现一些非核心的功能，这样能够避免破坏原函数的结构，同时还能实现增加功能的需求。</p>
+<p>以上面博客中常用的打印日志的代码为例：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;打印日志&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;%s start&#x27;</span> % func.__name__)</span><br><span class="line">    func()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;%s end&#x27;</span> % func.__name__)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">foo</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;i am foo&#x27;</span>)</span><br><span class="line"></span><br><span class="line">log(foo)    <span class="comment"># 这样就可以在foo函数执行前后完成日志的输出</span></span><br></pre></td></tr></table></figure>
+
+<p>这样做是可以的，不过缺点上面的博客也提到了，这样做就等于调用了<code>log</code>函数，跟原来的函数<code>foo</code>没啥关系了。同时还有一点注意就是这里直接执行<code>log(foo)</code>即可得到结果，<code>log</code>函数<strong>没有返回值</strong>，所以也没有赋值给其他的变量。</p>
+<h3 id="装饰器的效果"><a href="#装饰器的效果" class="headerlink" title="装饰器的效果"></a>装饰器的效果</h3><p>装饰器的语法就不多说了，而装饰器的效果是装饰器接收真正的业务函数然后把返回的内容再次赋值给业务函数名，以此来增强业务函数的功能。了解了这个闪腰的操作你就不会纠结为啥装饰器要那么费劲再返回函数。上例子</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">log1</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;打印日志，没有任何返回&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;%s start&#x27;</span> % func.__name__)</span><br><span class="line">    func()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;%s end&#x27;</span> % func.__name__)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">log2</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;打印日志，返回函数&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;%s start&#x27;</span> % func.__name__)</span><br><span class="line">        func()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;%s end&#x27;</span> % func.__name__)</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@log1           </span><span class="comment"># foo = log1(foo)  直接输出日志语句</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">foo</span>():      <span class="comment"># 不用调用foo()即可直接输出</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;i am foo&#x27;</span>)       <span class="comment"># 显然这个结果不是我们想要的</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@log2           </span><span class="comment"># foo = log2(foo) = wrapper</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">foo</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;i am foo&#x27;</span>)</span><br><span class="line"></span><br><span class="line">foo()           <span class="comment"># 调用foo() 即执行 wrapper() 这时才会输出日志</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="wrapper函数为什么返回func"><a href="#wrapper函数为什么返回func" class="headerlink" title="wrapper函数为什么返回func()"></a>wrapper函数为什么返回func()</h3><p>其实到这里基本概念就差不多了，但是我在查看教程的时候发现wrapper函数都是直接返回func()，这里一直不明白，直接调用就好了啊，为什么要返回呢。后面我测试了一些例子，发现高手还是高手。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;打印日志，返回函数&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;%s start&#x27;</span> % func.__name__)</span><br><span class="line">        <span class="comment"># func()</span></span><br><span class="line">        <span class="keyword">return</span> func()</span><br><span class="line">    <span class="keyword">return</span> wrapper</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">foo</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;i am foo&#x27;</span>)   <span class="comment"># 当没有返回值的时候 wrapper函数是否返回基本区别不大</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">foo2</span>():</span><br><span class="line">    <span class="keyword">return</span>(<span class="string">&#x27;i am foo&#x27;</span>)  <span class="comment"># 当有返回值的时候 wrapper函数是否返回就有区别了</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果不用 return func() 则无法得到foo2的返回值，也就无法输出  i am foo</span></span><br><span class="line"><span class="built_in">print</span>(foo2())   <span class="comment"># 如果wrapper中不使用 return func() 则输出 None</span></span><br></pre></td></tr></table></figure>
+
+<p>当然如果再想的多点，为什么wrapper返回的是<code>func()</code>，不是<code>func</code>。而log返回的则是函数名<code>wrapper</code>。</p>
+<h3 id="如果没有wrapper函数会怎样"><a href="#如果没有wrapper函数会怎样" class="headerlink" title="如果没有wrapper函数会怎样"></a>如果没有wrapper函数会怎样</h3><p>这个问题我也没想到，在知乎的问答中看到的地址如下：<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/26930016/answer/99243411">点我</a>，我把问题复现如下：</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">func</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;this is log&quot;</span>)</span><br><span class="line">    func()</span><br><span class="line">    <span class="keyword">return</span> func</span><br><span class="line"></span><br><span class="line"><span class="meta">@log</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">foo</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;this is foo function&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 请执行两次，你会惊奇的发现两次执行的结果不一样</span></span><br><span class="line">foo()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;***&#x27;</span>)</span><br><span class="line">foo()</span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">输出内容如下：</span></span><br><span class="line"><span class="string">this is log</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">this is foo function</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>分析一下：</strong>其实如果你此时正在郁闷，说明你也被欺骗了，请在第一个<code>foo()</code>前增加一行<code>print(&#39;***&#39;)</code>，真相就会出现。因为在装饰器运行的时候执行如下命令<code>foo=log(foo)</code>这个时候就会输出前2行内容。然后<code>log(foo)</code>返回的<code>func</code>赋值给了<code>foo</code>，所以<code>foo</code>根本没变，执行后就输出一行内容<strong>this is foo function</strong>。</p>
+<p>其实上面的这个例子也解答了，为什么那些教程中的例子把函数的代码内容都放在<code>wrapper</code>函数中，而没有放在最外层的<code>log</code>中。</p>
+<h2 id="带参数的装饰器"><a href="#带参数的装饰器" class="headerlink" title="带参数的装饰器"></a>带参数的装饰器</h2><p>到这里，基本函数装饰器的最简单的使用应该理解差不多了，后面就是在以上基础上再增加功能，如被装饰的函数有参数怎么办，装饰器需要参数怎么办，多个装饰器如何工作。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">log</span>(<span class="params">level</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">decorator</span>(<span class="params">func</span>):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">warpper</span>(<span class="params">*args, **kw</span>):</span><br><span class="line">            <span class="keyword">if</span> level &gt; <span class="number">3</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;High&#x27;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&#x27;Low&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span> func(*args, **kw)</span><br><span class="line">        <span class="keyword">return</span> warpper</span><br><span class="line">    <span class="keyword">return</span> decorator</span><br><span class="line"></span><br><span class="line"><span class="meta">@log(<span class="params"><span class="number">5</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">foo</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;%s is foolish&#x27;</span> % name)</span><br><span class="line"></span><br><span class="line">foo(<span class="string">&#x27;aoenian&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这里的装饰器的作用是<code>foo = log(5)(foo)</code>，则<code>foo = decorator(foo) = warpper</code>，这时再调用<code>foo(&#39;aoenian&#39;)</code>实则为<code>warpper(&#39;aoenian&#39;)</code>。</p>
+<p>这次先分析这么多，还有一些用法后续再补充，如果有更好的理解方法或思路，欢迎留言探讨。</p>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2019/08/31/download-the-m3u8-1/">记一次视频下载过程1</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2019/07/17/mibox-netgear-incompatible/">网件R6400V2固件升级导致小米盒子无法联网</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@aoenian</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

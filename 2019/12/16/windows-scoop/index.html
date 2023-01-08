@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Windows下命令行软件包管理工具Scoop避坑备忘录 - H&Z</title>
+
+  
+    <meta name="description" content="在配置计算机开发环境的时候，相应的软件管理其实一直都是一个很重要的需求。macOS上面有Homebrew，Linux方面就不用多说了apt、dnf等等，而Windows上面则一直都没有能够拿得出手的管理方法。不过今天介绍的这个工具的名字为Scoop官方的介绍是A command-line installer for Windows，这个可能正是你想要的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows下命令行软件包管理工具Scoop避坑备忘录">
+<meta property="og:url" content="http://example.com/2019/12/16/windows-scoop/index.html">
+<meta property="og:site_name" content="H&amp;Z">
+<meta property="og:description" content="在配置计算机开发环境的时候，相应的软件管理其实一直都是一个很重要的需求。macOS上面有Homebrew，Linux方面就不用多说了apt、dnf等等，而Windows上面则一直都没有能够拿得出手的管理方法。不过今天介绍的这个工具的名字为Scoop官方的介绍是A command-line installer for Windows，这个可能正是你想要的。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-16T16:58:24.000Z">
+<meta property="article:modified_time" content="2023-01-08T13:47:52.960Z">
+<meta property="article:author" content="aoenian">
+<meta property="article:tag" content="soft">
+<meta property="article:tag" content="manage">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s1.ax1x.com/2023/01/01/pSC4f78.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">H&Z</div><div class="sub normal cap">珍爱生命</div><div class="sub hover cap" style="opacity:0"> 敬畏自然</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博文</a><a class="nav-item" href="/wiki/">笔记</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Windows下命令行软件包管理工具Scoop避坑备忘录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E4%BB%8B%E7%BB%8D"><span class="toc-text">一些介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%89%8D%E5%87%86%E5%A4%87"><span class="toc-text">安装前准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A3%E5%BC%8F%E5%AE%89%E8%A3%85"><span class="toc-text">正式安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-text">安装应用软件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A2%9E%E5%8A%A0%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93"><span class="toc-text">增加软件仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E4%BD%93%E4%BC%9A"><span class="toc-text">个人体会</span></a></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/aoenian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:aoenian@zoho.com.cn" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Windows/">Windows</a></div><div id="post-meta">发布于&nbsp;<time datetime="2019-12-16T16:58:24.000Z">2019-12-16</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>Windows下命令行软件包管理工具Scoop避坑备忘录</span></h1>
+<p>在配置计算机开发环境的时候，相应的软件管理其实一直都是一个很重要的需求。macOS上面有<a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>，Linux方面就不用多说了apt、dnf等等，而Windows上面则一直都没有能够拿得出手的管理方法。不过今天介绍的这个工具的名字为<a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop">Scoop</a>官方的介绍是<strong>A command-line installer for Windows</strong>，这个可能正是你想要的。</p>
+<span id="more"></span>
+
+<h2 id="一些介绍"><a href="#一些介绍" class="headerlink" title="一些介绍"></a>一些介绍</h2><p><strong>痛苦的回忆：</strong>依稀还记得学习java的时候，找到官方网站-下载jdk-安装jdk-配置环境变量一直是一个噩梦，多少渴望知识的幼小心灵直接在此受到暴击一蹶不振。虽然现在越来越方便了，但是整个配置流程也几乎没有太大的改观。在国内的网络环境如果想安全的配置好环境，依然需要不断的重复官网下载，安装配置的过程。（当然，官网打不开，下载速度慢等等就不多说了，都是泪）</p>
+<p>回到正题，今天介绍的Scoop正是为了让你解脱而出现的，项目建立的比较早了，但是自己到现在才知道（朋友介绍的，嘿嘿），惭愧惭愧。废话有点多，这个Scoop主要的特点（摘录自官网，反正就是很给力，主要我也看不懂，还有一个类似功能的叫做<a target="_blank" rel="noopener" href="https://chocolatey.org/docs">Chocolatey</a>）：</p>
+<ul>
+<li>Permission popup windows</li>
+<li>GUI wizard-style installers</li>
+<li>Path pollution from installing lots of programs</li>
+<li>Unexpected side-effects from installing and uninstalling programs</li>
+<li>The need to find and install dependencies</li>
+<li>The need to perform extra setup steps to get a working program</li>
+</ul>
+<h2 id="安装前准备"><a href="#安装前准备" class="headerlink" title="安装前准备"></a>安装前准备</h2><p>摘录自<a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop/wiki/Quick-Start">官网文档</a></p>
+<ul>
+<li>Windows 7 SP1+ &#x2F; Windows Server 2008+</li>
+<li>PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later)</li>
+<li>PowerShell must be enabled for your user account e.g. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</li>
+</ul>
+<p>我这里给个个人建议：<strong>安装Windows10并更新到最新的补丁即可。</strong> 如果你想安装新版本的.net，可以参考<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/dotnet/framework/install/on-windows-10">windows10 如何安装 .net</a>。</p>
+<p>如果你不想换系统，那么需要查看你的powershell和.net是否符合。方法如下：</p>
+<ul>
+<li><p>启动powershell，执行命令<code>$PSVersionTable</code>返回的内容中 psversion 为powershell版本<br>clrversion 为.net版本 （这个我感觉不是太清楚）。还可以使用命令<code>$psversiontable.psversion.major</code>来查看，返回值要&gt;&#x3D;5.0</p>
+</li>
+<li><p>查看系统安装的所有的.net版本，执行命令</p>
+  <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看所有版本</span></span><br><span class="line"><span class="built_in">dir</span> <span class="string">&#x27;HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP&#x27;</span> | sort-object name -Descending | select-object -ExpandProperty PSChildName</span><br><span class="line"></span><br><span class="line"><span class="comment"># 另一种方法</span></span><br><span class="line">(Get-ItemProperty <span class="string">&quot;HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full&quot;</span>).Release</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>.net的版本信息有点乱，具体可以参照官网的解释，摘录如下：</p>
+<blockquote>
+<p>每个新版本的 .NET Framework 都会保留早期版本中的功能并会添加新功能。 可在同一台计算机上同时加载多个版本的 .NET Framework，这意味着可安装 .NET Framework 而无需卸载以前的版本。 通常，你不应卸载以前版本的 .NET Framework，因为你使用的应用程序可能依赖于特定版本，如果删除该版本，可能会中断。<br>.NET Framework 版本和 CLR 版本之间存在差异：<br>.NET Framework 版本基于构成 .Net Framework 类库的一组程序集。 例如，.NET Framework 版本包括 4.5、4.6.1 和 4.7.2。<br>CLR 版本基于 .NET Framework 应用程序执行的运行时。 单个 CLR 版本通常可支持多个 .NET Framework 版本。 例如，CLR 版本 4.0.30319.xxxxx 支持 .NET Framework 版本 4 到 4.5.2（其中 xxxxx 小于 42000），而 CLR 版本 4.0.30319.42000 支持从 .NET Framework 4.6 开始的 .NET Framework 版本。</p>
+</blockquote>
+<h2 id="正式安装"><a href="#正式安装" class="headerlink" title="正式安装"></a>正式安装</h2><p>最权威的文档是官方的<a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop/wiki/Quick-Start">quick start</a></p>
+<p>执行如下命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这条命令一定要执行，会返回很多选项，请选择 A (全是)，这是坑1，不然下面就会不断出错</span></span><br><span class="line">Set-ExecutionPolicy RemoteSigned -scope CurrentUser</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装命令，如果上面选择全是，还有你的网络不是太差的话应该就没问题了</span></span><br><span class="line">Invoke-Expression (New-Object System.Net.WebClient).DownloadString(<span class="string">&#x27;https://get.scoop.sh&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>如果上面的安装命令还是一直出错，出错提示为<strong>使用“1”个参数调用“DownloadString”时发生异常:“无法连接到远程服务器”</strong>，那么恭喜你，你的网络真的够垃圾。可以试试下面的这个处理方法，因为地址<a target="_blank" rel="noopener" href="https://get.scoop.sh/">https://get.scoop.sh</a>的真实地址是<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/lukesampson/scoop/master/bin/install.ps1">https://raw.githubusercontent.com/lukesampson/scoop/master/bin/install.ps1</a>，这里用真实的地址替换原来的地址，即安装命令修改如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Invoke-Expression (New-Object System.Net.WebClient).DownloadString(<span class="string">&#x27;https://raw.githubusercontent.com/lukesampson/scoop/master/bin/install.ps1&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装应用软件"><a href="#安装应用软件" class="headerlink" title="安装应用软件"></a>安装应用软件</h2><p>上面完成后你就可以安装一些很常用的软件了，比如7z git aria2 vim等，使用方法：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">scoop install aria2 7zip git python</span><br><span class="line"><span class="comment"># 卸载</span></span><br><span class="line">scoop uninstall aria2</span><br><span class="line"><span class="comment"># 列出安装软件以及状态</span></span><br><span class="line">scoop list</span><br><span class="line"><span class="comment"># 查找软件</span></span><br><span class="line">scoop search python</span><br><span class="line"><span class="comment"># 帮助</span></span><br><span class="line">scoop <span class="built_in">help</span> &lt;<span class="built_in">command</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这里的坑是：1.<strong>建议你挂个梯子，不然下载软件的过程会让你生不如死</strong>, 2.<strong>软件安装失败再次安装的时候需要先卸载再重装</strong> 3. <strong>7z如果无法识别压缩包，那么找到7z的启动程序右键管理员启动，然后关联所有的压缩文件即可。</strong></p>
+<p>这里面遇到一个问题比较特殊，我安装了aria2以后scoop自动调用，但是aria2下载速度特慢，然后我根据提示禁用了aria2但是依然调用，后面把aria2卸载以后速度快多了。</p>
+<h2 id="增加软件仓库"><a href="#增加软件仓库" class="headerlink" title="增加软件仓库"></a>增加软件仓库</h2><p>官方的很少，而且连chrome、firefox都没有，所以需要增加一些额外的仓库来满足我们的需要，这里注意<strong>安装额外仓库需要先安装git</strong>。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加extras bucket，其他仓库直接更换 extras 为仓库名即可</span></span><br><span class="line">scoop bucket add extras</span><br></pre></td></tr></table></figure>
+
+<h2 id="个人体会"><a href="#个人体会" class="headerlink" title="个人体会"></a>个人体会</h2><p>最后写一些自己使用过程中的体会（windows10 64位）</p>
+<ul>
+<li>安装过程全自动</li>
+<li>软件安装位置默认为你的用户目录下面的scoop目录</li>
+<li>由于众所周知的原因，下载软件是真的慢，而且几乎不可能一次成功</li>
+<li>还是建议使用代理进行操作不然体验还不如去官网下载安装</li>
+<li>软件安装完成后如果有图形界面，则会在启动程序-scoop目录下面添加快捷方式（也可能没有）</li>
+</ul>
+<p>总结一下就是，<strong>建议使用，管理方便，配置不乱</strong>。</p>
+<p>参考资料：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop">Scoop</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop-extras/tree/master/bucket">extras里面的软件包</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/lukesampson/scoop/blob/master/buckets.json">buckets</a></li>
+</ul>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2020/01/02/2019-end/">2019年的一些思考</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2019/12/05/telecom-service-communication/">中国电信商城的一次购物过程</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@aoenian</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

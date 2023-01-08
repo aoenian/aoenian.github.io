@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Hexo博客Stellar主题配置 - H&Z</title>
+
+  
+    <meta name="description" content="选择博客主题看了看自己的博客已经两年没更新了，最后一篇博文的时间是2020年9月，已经差不多两年多了，这两年多有大事，喜事，哈哈开心的事，这个后面慢慢说。 准备重启博客，主题选择困难症开始，原来的那个Next主题想换换，然后奈何自己能力有限，自己写不出来，不过在翻官方的主题时候发现了Stellar主题，相当不错，迫不及待要尝试一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客Stellar主题配置">
+<meta property="og:url" content="http://example.com/2022/11/20/20221120-Hexo%E5%8D%9A%E5%AE%A2Stellar%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:site_name" content="H&amp;Z">
+<meta property="og:description" content="选择博客主题看了看自己的博客已经两年没更新了，最后一篇博文的时间是2020年9月，已经差不多两年多了，这两年多有大事，喜事，哈哈开心的事，这个后面慢慢说。 准备重启博客，主题选择困难症开始，原来的那个Next主题想换换，然后奈何自己能力有限，自己写不出来，不过在翻官方的主题时候发现了Stellar主题，相当不错，迫不及待要尝试一下。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-11-20T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-08T13:47:52.956Z">
+<meta property="article:author" content="aoenian">
+<meta property="article:tag" content="stellar">
+<meta property="article:tag" content="blog">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s1.ax1x.com/2023/01/01/pSC4f78.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">H&Z</div><div class="sub normal cap">珍爱生命</div><div class="sub hover cap" style="opacity:0"> 敬畏自然</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博文</a><a class="nav-item" href="/wiki/">笔记</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Hexo博客Stellar主题配置</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98"><span class="toc-text">选择博客主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="toc-text">主题的基本配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE"><span class="toc-text">站点配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE"><span class="toc-text">主题配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Open-Graph-%E5%A4%B4%E9%83%A8%E6%A0%87%E7%AD%BE%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="toc-text">Open Graph 头部标签自定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E9%85%8D%E7%BD%AE"><span class="toc-text">文章配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E5%88%86%E7%B1%BB"><span class="toc-text">文章分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E6%A0%87%E7%AD%BE"><span class="toc-text">文章标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%AC%E7%AB%8B%E9%A1%B5%E9%9D%A2"><span class="toc-text">独立页面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E9%85%8D%E7%BD%AE"><span class="toc-text">侧边栏配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%84%E4%BB%B6%E9%85%8D%E7%BD%AE"><span class="toc-text">组件配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%A1%A3%E7%B3%BB%E7%BB%9F"><span class="toc-text">文档系统</span></a></li></ol></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/aoenian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:aoenian@zoho.com.cn" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Hexo/">Hexo</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-11-20T00:00:00.000Z">2022-11-20</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>Hexo博客Stellar主题配置</span></h1>
+<h2 id="选择博客主题"><a href="#选择博客主题" class="headerlink" title="选择博客主题"></a>选择博客主题</h2><p>看了看自己的博客已经两年没更新了，最后一篇博文的时间是2020年9月，已经差不多两年多了，这两年多有大事，喜事，哈哈开心的事，这个后面慢慢说。</p>
+<p>准备重启博客，主题选择困难症开始，原来的那个Next主题想换换，然后奈何自己能力有限，自己写不出来，不过在翻官方的主题时候发现了Stellar主题，相当不错，迫不及待要尝试一下。</p>
+<span id="more"></span>
+
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>主题的网站：<a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/#start">https://xaoxuu.com/wiki/stellar/#start</a> ，肯定选用最新版，新特性要用起来，作者给出的方法是在博客目录下添加主题子模块，不过我这边因为博客目录不是git目录没有成功，我是直接用的克隆的方法。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> themes				<span class="comment"># 进入主题目录</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/xaoxuu/hexo-theme-stellar.git stellar			<span class="comment"># 把主题克隆下来</span></span><br><span class="line"><span class="comment"># 修改博客目录下_config.yml中主题为 stellar</span></span><br><span class="line">theme: stellar</span><br></pre></td></tr></table></figure>
+
+<h2 id="主题的基本配置"><a href="#主题的基本配置" class="headerlink" title="主题的基本配置"></a>主题的基本配置</h2><p>这个主题的复杂程度和可定制性超出了我的预想，大部分主题都是简单更改一些文字和图片即可搞定，但是这个主题具有post、wiki两种大类型，同时还能够定制组件。</p>
+<p>因为之前没有相应的经验，根据文档摸索了很久，下面是自己的一些摸索和理解，记录备忘。</p>
+<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>配置文档地址：<a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/theme-settings/">https://xaoxuu.com/wiki/stellar/theme-settings/</a></p>
+<p>这个比较简单，主要是站点的标题、副标题、logo、博客的简介、语言支持等（参照官方文档即可操作）配置文件是blog根目录下的 <code>_config.yml</code> 文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">您的网站名称</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="string">您的头像链接</span>    <span class="comment"># 配置如果文件中没有自行添加</span></span><br><span class="line"><span class="attr">favicon:</span> <span class="string">您的网站icon</span></span><br><span class="line"><span class="comment"># 多语言</span></span><br><span class="line"><span class="attr">language:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">zh-CN</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">en</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">zh-TW</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>在blog的根目录下创建一个主题配置文件 <code>_config.stellar.yml</code>，跟hexo站点配置文件 <code>_config.yml</code> 在同一个层级下。</p>
+<h3 id="Open-Graph-头部标签自定义"><a href="#Open-Graph-头部标签自定义" class="headerlink" title="Open Graph 头部标签自定义"></a>Open Graph 头部标签自定义</h3><p>在分享时能够让你的博客链接显示更好看，建议打开</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 _config.stellar.yml 文件中</span></span><br><span class="line"><span class="attr">open_graph:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">twitter_id:</span> <span class="comment"># for open_graph meta</span></span><br></pre></td></tr></table></figure>
+<h2 id="文章配置"><a href="#文章配置" class="headerlink" title="文章配置"></a>文章配置</h2><h3 id="文章分类"><a href="#文章分类" class="headerlink" title="文章分类"></a>文章分类</h3><p>我个人一般习惯每篇文章就一个分类，不过主题支持一篇文章多个分类，不过不建议这样操作。原因如下：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 我新建了两篇文章</span><br><span class="line"># 第一篇的分类</span><br><span class="line">---</span><br><span class="line">categories: [设计开发, ios] </span><br><span class="line">---</span><br><span class="line"># 第二篇的分类</span><br><span class="line">---</span><br><span class="line">categories: ios</span><br><span class="line">---</span><br><span class="line"># 注意当你查看分类时会发现有两个ios分类，并不是一个</span><br><span class="line"># 点击ios分类并不会出现两篇文章</span><br></pre></td></tr></table></figure>
+<h3 id="文章标签"><a href="#文章标签" class="headerlink" title="文章标签"></a>文章标签</h3><p> 标签两种设置方法都可以，看自己的习惯了<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">tags: [iOS, 心率]</span><br><span class="line">---</span><br><span class="line"># 标签重复没有问题</span><br><span class="line">---</span><br><span class="line">tags: </span><br><span class="line">  - iOS</span><br><span class="line">  - 心率</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>参考资料之前一般都习惯放在最后面，不过在stellar主题中，参考资料需要放在frontmatter中，但是显示在文章的最后，格式很漂亮。（当然也可以放在最后用普通的markdown标记）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">references:</span><br><span class="line">  - title: &#x27;心跳之旅—💗—iOS用手机摄像头检测心率(PPG)&#x27;</span><br><span class="line">    url: https://punmy.cn/2016/07/28/15231176397746.html</span><br><span class="line">  - title: &#x27;PPG光电容积脉搏波描记法技术概况&#x27;</span><br><span class="line">    url: https://www.jianshu.com/p/695c131abfa5</span><br><span class="line">  ...</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>不过后来想想也是符合习惯的，当准备写文章的时候，基本参考资料也就定了，可以直接写上。</p>
+<h3 id="独立页面"><a href="#独立页面" class="headerlink" title="独立页面"></a>独立页面</h3><p>这个你可以用命令 <code>hexo new page about</code> 这种方式来新建关于页面，然后配置侧边栏以后就能看到。也可以直接source目录中新建，这里注意一般使用index.md来作为栏目的首页。</p>
+<h2 id="侧边栏配置"><a href="#侧边栏配置" class="headerlink" title="侧边栏配置"></a>侧边栏配置</h2><p>很多博客配置完上面的内容基本就差不多了，但是这个主题才刚刚开始，更刺激的还在后面。</p>
+<p>侧边栏的配置，主要就是组件的配置，作者开发了很多小组件，然后不同的页面使用者可以按需配置。</p>
+<h3 id="组件配置"><a href="#组件配置" class="headerlink" title="组件配置"></a>组件配置</h3><p>想启用的组件需要单独写一个配置文件，位置在 <code>source/_data/widgets.yml</code> 在这个文件中配置组件，然后才能在博客的页面中使用。</p>
+<h3 id="文档系统"><a href="#文档系统" class="headerlink" title="文档系统"></a>文档系统</h3><p>重要的是文档系统，这里面才能够让你的博客能够有多个项目和页面，刚开始我一直郁闷的就是这个地方。</p>
+<p>文档系统主要是wiki，在博客的  <code>source</code> 目录下新建一个wiki目录，然后把所有的项目放在里面，每个项目单独一个目录，然后在目录里面进行内容编写，因为每个项目不可能只有一个md文件，所以需要在 <code>_data</code> 目录下新建一个项目配置文件 <code>projects.yml</code> 这样就能够对每个项目进行具体的配置。</p>
+<p>后面的配置就不写了，因为这个主题的配置内容较多，还是建议直接看官方文档，写的非常详细，这里就不再多说了。</p>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2023/01/07/20230107%20%E7%94%B5%E8%84%91%E8%93%9D%E7%89%99%E6%97%A0%E6%B3%95%E5%8F%91%E7%8E%B0%E9%94%AE%E7%9B%98/">Windows10台式机无法发现蓝牙键盘</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2022/11/19/20221119-Joplin%E7%AC%94%E8%AE%B0%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/">Joplin笔记使用备忘</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@aoenian</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

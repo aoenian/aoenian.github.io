@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>日常使用问题汇总（二） - H&Z</title>
+
+  
+    <meta name="description" content="公共DNS服务器这个本来是个很正常的事情，几乎在上网的过程中应该是忽略不计的事，但是却让我花费了很多时间寻找。 情况大家都懂，就不多介绍了。这里说几个常见的问题（纯属个人观点，欢迎讨论）：    如果你对DNS服务器有了解并且想更换dns配置，不建议选择114（_个人经历过劫持，不知道现在是否还有_），但我有时候会临时使用。好记而且速度还不错。 有特殊功能的DNS肯定见光死，建议不要费力寻找，有条">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日常使用问题汇总（二）">
+<meta property="og:url" content="http://example.com/2019/06/25/problem-collection2/index.html">
+<meta property="og:site_name" content="H&amp;Z">
+<meta property="og:description" content="公共DNS服务器这个本来是个很正常的事情，几乎在上网的过程中应该是忽略不计的事，但是却让我花费了很多时间寻找。 情况大家都懂，就不多介绍了。这里说几个常见的问题（纯属个人观点，欢迎讨论）：    如果你对DNS服务器有了解并且想更换dns配置，不建议选择114（_个人经历过劫持，不知道现在是否还有_），但我有时候会临时使用。好记而且速度还不错。 有特殊功能的DNS肯定见光死，建议不要费力寻找，有条">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-25T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-08T13:47:52.960Z">
+<meta property="article:author" content="aoenian">
+<meta property="article:tag" content="gitment">
+<meta property="article:tag" content="dns">
+<meta property="article:tag" content="pandoc">
+<meta property="article:tag" content="Bad credentials">
+<meta property="article:tag" content="vscode font">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s1.ax1x.com/2023/01/01/pSC4f78.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">H&Z</div><div class="sub normal cap">珍爱生命</div><div class="sub hover cap" style="opacity:0"> 敬畏自然</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博文</a><a class="nav-item" href="/wiki/">笔记</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">日常使用问题汇总（二）</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AC%E5%85%B1DNS%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">公共DNS服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gitment-%E5%87%BA%E7%8E%B0-Error-Bad-credentials"><span class="toc-text">gitment 出现 Error: Bad credentials</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vscode%E6%9B%B4%E6%94%B9%E7%BC%96%E7%A8%8B%E5%AD%97%E4%BD%93%E4%B8%8D%E8%B5%B7%E4%BD%9C%E7%94%A8"><span class="toc-text">vscode更改编程字体不起作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#macOS%E4%BD%BF%E7%94%A8pandoc%E5%91%BD%E4%BB%A4%E5%87%BA%E7%8E%B0pdflatex-not-found%E9%94%99%E8%AF%AF"><span class="toc-text">macOS使用pandoc命令出现pdflatex not found错误</span></a></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/aoenian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:aoenian@zoho.com.cn" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Collection/">Collection</a></div><div id="post-meta">发布于&nbsp;<time datetime="2019-06-25T00:00:00.000Z">2019-06-25</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>日常使用问题汇总（二）</span></h1>
+<h2 id="公共DNS服务器"><a href="#公共DNS服务器" class="headerlink" title="公共DNS服务器"></a>公共DNS服务器</h2><p>这个本来是个很正常的事情，几乎在上网的过程中应该是忽略不计的事，但是却让我花费了很多时间寻找。</p>
+<p>情况大家都懂，就不多介绍了。这里说几个常见的问题（纯属个人观点，欢迎讨论）：</p>
+<!---more-->
+
+<ol>
+<li>如果你对DNS服务器有了解并且想更换dns配置，不建议选择114（_个人经历过劫持，不知道现在是否还有_），但我有时候会临时使用。好记而且速度还不错。</li>
+<li>有特殊功能的DNS肯定见光死，建议不要费力寻找，有条件可以自己搭建。</li>
+<li>测试DNS速度建议使用<code>dig</code>命令，有时<code>ping</code>命令并不准确，更有的DNS服务器会拒绝ping。</li>
+<li>国外的速度非常慢，建议能不用就不用。国内的几个大的公司凑合找一个用吧。</li>
+<li>如果没有特殊需求，不想折腾，运营商默认就很快了（_如果运营商没有给你下套_），少折腾留点时间干点别的，别太较真，容易内伤。</li>
+<li><a target="_blank" rel="noopener" href="https://www.iplaysoft.com/public-dns.html">公共dns服务器</a> 收集</li>
+</ol>
+<h2 id="gitment-出现-Error-Bad-credentials"><a href="#gitment-出现-Error-Bad-credentials" class="headerlink" title="gitment 出现 Error: Bad credentials"></a>gitment 出现 Error: Bad credentials</h2><p>这个好解决，使用你的账户登入然后再登出即可搞定。具体的issues在<a target="_blank" rel="noopener" href="https://github.com/imsun/gitment/issues/145">这里</a>。</p>
+<h2 id="vscode更改编程字体不起作用"><a href="#vscode更改编程字体不起作用" class="headerlink" title="vscode更改编程字体不起作用"></a>vscode更改编程字体不起作用</h2><p>这几天想把vscode的英文字体更改一下，更适合编程，但是首选项-设置里面的用户设置更改了字体后，不起作用，很郁闷。</p>
+<p>刚开始以为字体问题，更换其他的依然无效，但是总觉得这种大bug应该不会一直留到现在吧，google了一下，在官方的issues中找到了原因，具体可查看<a target="_blank" rel="noopener" href="https://github.com/Microsoft/vscode/issues/50407">Can’t set editor font</a>，<strong>主要的原因是工作区的配置优先级比较高，所以工作区的字体配置覆盖了用户的配置</strong>，所以把工作区的字体修改为你想要的就可以看到效果了。</p>
+<p>修改的方法有两种，一种直接首选项-设置-工作区即可；另一种直接修改配置文件，具体的位置在工作区中的<code>.vscode</code>目录下面的settings.json文件。</p>
+<p>如果想改变<strong>中文字体</strong>，直接在英文字体后面加上中文字体即可生效。我的配置如下，我使用的中文字体是华文仿宋，可供参考。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;editor.fontFamily&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Hack, STFangsong, Monaco, monospace&quot;</span><span class="punctuation">,</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="macOS使用pandoc命令出现pdflatex-not-found错误"><a href="#macOS使用pandoc命令出现pdflatex-not-found错误" class="headerlink" title="macOS使用pandoc命令出现pdflatex not found错误"></a>macOS使用pandoc命令出现pdflatex not found错误</h2><p>本来想测试pandoc命令把markdown文件导出成pdf的质量如何，但是执行命令后出现<code>pdflatex not found</code>错误，在网络搜索后找到如下解决方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不用安装pdflatex，需要安装mactex</span></span><br><span class="line">$ brew cask install mactex</span><br><span class="line"><span class="comment"># 重启终端后可查看</span></span><br><span class="line">$ <span class="built_in">which</span> pdflatex</span><br></pre></td></tr></table></figure>
+
+<p>参考博文：</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000004168301">Visual Studio Code 设置中文字体</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/55062528">VSCode–setting</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/44ef95b2c86f">CSS font-family 各字体一览表</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://superuser.com/questions/1038612/where-do-i-get-the-pdflatex-program-for-mac">where-do-i-get-the-pdflatex-program-for-mac</a></p>
+</li>
+</ul>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2019/06/30/python-zsh-percent-prompt/">zsh执行python脚本输出的内容最后多了一个%</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2019/05/15/manjaro-linux-ibus/">Manjaro安装IBUS输入法</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@aoenian</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

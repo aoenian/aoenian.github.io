@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>CentOS7安装配置Samba - H&Z</title>
+
+  
+    <meta name="description" content="前言性子急的可以跳过，直接看后面的配置 需求树莓派安装了CentOS7以后感觉还不错，正好大部分学习linux的资料都是CentOS为主，所以就准备长期使用，然后这两天用you-get下载了一些视频，然后想拷贝出来，这时候突然发现CentOS不能写入ntfs格式的U盘，哎，开源和微软之间总有那么一道肉隐肉现的鸿沟。 那么需求来了，让CentOS读取ntfs，搜索一番，发现很简单就是安装一个ntfs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS7安装配置Samba">
+<meta property="og:url" content="http://example.com/2017/10/29/centos-samba/index.html">
+<meta property="og:site_name" content="H&amp;Z">
+<meta property="og:description" content="前言性子急的可以跳过，直接看后面的配置 需求树莓派安装了CentOS7以后感觉还不错，正好大部分学习linux的资料都是CentOS为主，所以就准备长期使用，然后这两天用you-get下载了一些视频，然后想拷贝出来，这时候突然发现CentOS不能写入ntfs格式的U盘，哎，开源和微软之间总有那么一道肉隐肉现的鸿沟。 那么需求来了，让CentOS读取ntfs，搜索一番，发现很简单就是安装一个ntfs">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-10-29T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-08T13:47:52.956Z">
+<meta property="article:author" content="aoenian">
+<meta property="article:tag" content="CentOS">
+<meta property="article:tag" content="Samba">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://s1.ax1x.com/2023/01/01/pSC4f78.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">H&Z</div><div class="sub normal cap">珍爱生命</div><div class="sub hover cap" style="opacity:0"> 敬畏自然</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">博文</a><a class="nav-item" href="/wiki/">笔记</a><a class="nav-item" href="/about/">关于</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">CentOS7安装配置Samba</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-text">需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85Samba"><span class="toc-text">安装Samba</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E5%AE%8C%E5%85%A8%E6%9D%83%E9%99%90%E7%9A%84%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95"><span class="toc-text">配置一个完全权限的共享目录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8Bwindows%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%BB%84"><span class="toc-text">查看windows的工作组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AESamba"><span class="toc-text">配置Samba</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E5%90%AFsmaba"><span class="toc-text">重启smaba</span></a></li></ol></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/aoenian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/08a41b181ce68.svg"/></a><a class="social" href="mailto:aoenian@zoho.com.cn" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Linux/">Linux</a></div><div id="post-meta">发布于&nbsp;<time datetime="2017-10-29T00:00:00.000Z">2017-10-29</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>CentOS7安装配置Samba</span></h1>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><em>性子急的可以跳过，直接看后面的配置</em></p>
+<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>树莓派安装了CentOS7以后感觉还不错，正好大部分学习linux的资料都是CentOS为主，所以就准备长期使用，然后这两天用you-get下载了一些视频，然后想拷贝出来，这时候突然发现CentOS不能写入ntfs格式的U盘，哎，开源和微软之间总有那么一道肉隐肉现的鸿沟。</p>
+<p>那么需求来了，让CentOS读取ntfs，搜索一番，发现很简单就是安装一个ntfs-3g的软件的事情，不过就这么个问题废老大劲了。</p>
+<p><strong>2018-06-05更新：32位安装ntfs-3g可<a target="_blank" rel="noopener" href="https://www.tuxera.com/community/open-source-ntfs-3g/">官网</a>下载源码直接编译安装，64位的可以直接安装<a target="_blank" rel="noopener" href="https://fedoraproject.org/wiki/EPEL">EPEL</a>然后再安装相应的软件</strong></p>
+<span id="more"></span>
+
+<p>当时查看系统的位数，找到的一些系统信息查看的方法，总结记录如下。</p>
+<ul>
+<li>查看CentOS的版本</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /proc/version</span></span><br><span class="line">Linux version 4.9.50-v7.1.el7 (mockbuild@armv7-03.dev.CentOS.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -a</span></span><br><span class="line">Linux CentOS-rpi3 4.9.50-v7.1.el7 <span class="comment">#1 SMP Thu Sep 14 08:17:16 UTC 2017 armv7l armv7l armv7l GNU/Linux</span></span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># uname -r</span></span><br><span class="line">4.9.50-v7.1.el7</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># cat /etc/redhat-release</span></span><br><span class="line">CentOS Linux release 7.4.1708 (Core)</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># getconf LONG_BIT</span></span><br><span class="line">32</span><br><span class="line"></span><br><span class="line">[root@CentOS-rpi3 aoenian]<span class="comment"># file /bin/ls</span></span><br><span class="line">/bin/ls: ELF 32-bit LSB executable, ARM, version 1 (SYSV), dynamically linked (uses shared libs), <span class="keyword">for</span> GNU/Linux 2.6.32, BuildID[sha1]=c591c4039d5eb3301eb8be1fa4ebaed8cd832240, stripped</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="安装配置Samba"><a href="#安装配置Samba" class="headerlink" title="安装配置Samba"></a>安装配置Samba</h1><p>CentOS的共享比较麻烦具体下面介绍</p>
+<h2 id="安装Samba"><a href="#安装Samba" class="headerlink" title="安装Samba"></a>安装Samba</h2><p>先查看是否安装Samba</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep samba</span><br><span class="line">yum list installed | grep samba</span><br></pre></td></tr></table></figure>
+
+<p>如果已经安装那么可以跳过，如果没有正确安装可以先删除再重新安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除samba</span></span><br><span class="line">yum remove samba*</span><br></pre></td></tr></table></figure>
+
+<p>接着，连上网络，安装samba</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install samba* -y</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置一个完全权限的共享目录"><a href="#配置一个完全权限的共享目录" class="headerlink" title="配置一个完全权限的共享目录"></a>配置一个完全权限的共享目录</h2><h3 id="查看windows的工作组"><a href="#查看windows的工作组" class="headerlink" title="查看windows的工作组"></a>查看windows的工作组</h3><p>打开win的cmd窗口，快捷键 win+r 然后输入 cmd<br>回车即可，并在窗口输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net config workstation</span><br></pre></td></tr></table></figure>
+
+<p>找到 <code>Workstation domain</code> 一行，值应该是 <code>WORKGROUP</code> 下面配置Samba要用到</p>
+<h3 id="配置Samba"><a href="#配置Samba" class="headerlink" title="配置Samba"></a>配置Samba</h3><ul>
+<li>创建共享目录</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /samba/anonymous</span><br><span class="line"><span class="built_in">chmod</span> -R 0777 /samba/anonymous</span><br><span class="line"><span class="built_in">chown</span> -R nobody:nobody /samba/anonymous</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>关掉防火墙和selinux</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service <span class="comment">#停止firewall</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service <span class="comment">#禁止firewall开机启动</span></span><br><span class="line"></span><br><span class="line">setenforce 0    <span class="comment"># 关闭selinux</span></span><br><span class="line">getenforce      <span class="comment"># 查看selinux的状态，应该是 Permissive</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 彻底禁用selinux 编辑配置文件</span></span><br><span class="line">vim /etc/sysconfig/selinux    </span><br><span class="line"><span class="comment"># 修改SELINUX</span></span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
+
+<p><em>如果防火墙不关闭，查看共享会出现连接失败；如果selinux不关闭，则无法看到共享目录的内容</em></p>
+<p><em>当然为了安全期间，可以对Samba的端口放行，设置selinux分享Samba的目录，大家可以参考其他博文</em></p>
+<ul>
+<li>备份配置文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /etc/samba/smb.conf /etc/samba/smb.conf.bak</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改配置文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/samba/smb.conf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以把之前的内容注释掉，加入如下内容</span></span><br><span class="line">[global]</span><br><span class="line">        workgroup = WORKGROUP    <span class="comment"># 跟win的工作组同名</span></span><br><span class="line">        server string = Samba Server Version %v    <span class="comment"># 服务器描述</span></span><br><span class="line">        netbios name = CentOS    <span class="comment"># 共享服务器在网络上显示的名字</span></span><br><span class="line">        security = user    <span class="comment"># 使用 SAMBA 服务器本身的密码数据库</span></span><br><span class="line">    <span class="comment"># 将所有Samba系统主机所不能正确识别的用户都映射成guest用户</span></span><br><span class="line">        map to guest = bad user    </span><br><span class="line">        dns proxy = no</span><br><span class="line">        <span class="built_in">log</span> file = /var/log/samba/log.%m    <span class="comment"># 日志文件位置</span></span><br><span class="line">        max <span class="built_in">log</span> size = 50    <span class="comment"># 日志大小</span></span><br><span class="line"></span><br><span class="line">[Anonymous]</span><br><span class="line">        comment = Anonymous File Server Share</span><br><span class="line">        path = /samba/anonymous</span><br><span class="line">        browsable = <span class="built_in">yes</span>    <span class="comment"># 让所有的用户看到这个项目</span></span><br><span class="line">        writable = <span class="built_in">yes</span>    <span class="comment"># 是否可以写入</span></span><br><span class="line">        guest ok = <span class="built_in">yes</span>    <span class="comment"># 是否允许guest账户访问</span></span><br><span class="line">        <span class="built_in">read</span> only = no    <span class="comment"># 是否只读，与wirtable类似，谁在后面听谁的</span></span><br></pre></td></tr></table></figure>
+
+<p><em>保存配置文件，并退出，到此一个完全共享的目录基本配置完毕</em></p>
+<h3 id="重启smaba"><a href="#重启smaba" class="headerlink" title="重启smaba"></a>重启smaba</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> smb.service    <span class="comment"># 加入开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> nmb.service</span><br><span class="line">systemctl restart smb.service</span><br><span class="line">systemctl restart nmb.service</span><br></pre></td></tr></table></figure>
+
+<p><em>配置完成，可在其他系统查看共享目录和文件</em></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://lintut.com/easy-samba-installation-on-rhel-centos-7/">Easy Samba installation on RHEL&#x2F;CentOS<br>7</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.unixmen.com/install-configure-samba-server-centos-7/">Install And Configure Samba Server In CentOS<br>7</a></li>
+<li><a target="_blank" rel="noopener" href="http://billtym.blog.51cto.com/1745172/569551">Samba常用配置及GUEST访问</a></li>
+<li><a target="_blank" rel="noopener" href="https://wiki.centos.org/zh/HowTos/SetUpSamba">设置 SAMBA</a></li>
+<li><a target="_blank" rel="noopener" href="http://cn.linux.vbird.org/linux_server/0370samba_2.php">鸟哥文件服务器</a></li>
+</ul>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2017/11/02/suid-test/">文件特殊权限SUID测试</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2017/04/29/website-collect/">网站备份</a></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@aoenian</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
